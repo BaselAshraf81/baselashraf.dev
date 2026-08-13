@@ -1,0 +1,61 @@
+BASEL ASHRAF FIKRY
++20 102 886 3334 · u2679054@uel.ac.uk · linkedin.com/in/basel-askar · github.com/BaselAshraf81
+WORK EXPERIENCE
+Founder & Solo Engineer | AlertaCert · alertacert.com
+Jan 2026 – Present
+• Built and launched a certificate management SaaS for accounting firms. Currently serving 55+ firms across Latin America, Europe, and
+India with 99.94% uptime
+• Automated expiry alerts (email + WhatsApp), nightly revocation checks that catch issues before clients notice, and multi-signer PDF
+workflows where external parties sign without needing an account
+• Sole engineer handling product, billing, infrastructure, security, and customer support end-to-end
+Founder & Solo Engineer | Prolific Tea · prolifictea.com
+Apr 2026 – Present
+• Built a review platform where Prolific study participants rate researchers on pay fairness and rejection behavior — live in production,
+indexed by Google, growing organically
+• Full-stack Next.js app with Chrome extension (auto-detects researchers via network interception), PWA push notifications, image
+uploads, threaded comments, and admin moderation tools
+Data Engineer | Passion Of Rugs · Part-time
+Oct 2025 – Present
+• Built a Python pipeline that cleaned and restructured 120K+ records from 1200+ inconsistent spreadsheets into a unified CRM schema,
+using the OpenAI API for intelligent field mapping
+• Reduced API costs by 13% through request deduplication and caching; pipeline now runs unattended on a schedule
+PROJECTS & OPEN SOURCE
+layout-sans (65 ⋆)
+TypeScript · npm published
+• 2D flex/grid layout engine in ~17 kB (no DOM, no WASM). Benchmarked at 30–166× faster than browser layout and 2–3× faster than
+Facebook’s Yoga. Supports canvas text selection, copy, Ctrl+F, hyperlinks, and screen-reader accessibility
+holystitch (18 ⋆)
+TypeScript · MCP Tool
+• MCP tool that converts Google Stitch designs to production React/Next.js code without using AI tokens — calls the Stitch API directly
+and outputs a complete component tree
+fastemporal
+Rust
+• Rust implementation of the Luxon date/time API with 47× average speedup over the JS original; 332 tests ported from Luxon, date-fns,
+and TC39 Temporal conformance suites
+Nextron — PR #531 (merged, released same day)
+Electron + Next.js
+• Upgraded a popular Electron + Next.js framework from Next.js 14 →16 and React 18 →19 across 33 files — shipped as nextron@9.6.0
+M-Pesa Bug Bounty
+HackerOne · Security Research
+• Found and reported a Stored XSS in M-Pesa’s PDF receipt generator (font descriptor injection leading to code execution) — accepted
+via HackerOne
+Legal RAG System
+Python · LlamaIndex · FAISS
+• AI search over 25K+ legal documents; handled 230+ concurrent users on a single T4 GPU with a custom request queue and zero
+OOM crashes
+SKILLS
+Languages: TypeScript, Rust, Python, Java, SQL
+Web: Next.js, React, Spring Boot, Tailwind CSS, Prisma, Stripe, Chrome Extensions
+Data & AI: OpenAI API, LlamaIndex, FAISS, TensorFlow, Pandas
+Infrastructure: PostgreSQL, Supabase, Docker, Vercel, Linux, Git
+Security: Burp Suite, OWASP, WebAuthn, Bug Bounty
+EDUCATION
+BSc in Computer Engineering and Software Systems (Dual Degree)
+Feb 2021 – Expected Nov 2026
+University of East London & Ain Shams University
+Università di Pisa — Graduate Summer School
+Sep 2025
+Human-Centric ICT for Industry 5.0, Pisa, Italy (Scholarship) | Grade: 29/30
+Hanyang University — Foreign Exchange
+Sep 2024 – Jan 2025
+Seoul, South Korea | GPA: 4.0/4.5
