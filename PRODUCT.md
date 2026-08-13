@@ -94,7 +94,7 @@ Deno, Cloudflare Workers, browser. Zero dependencies. Built on chenglou/pretext.
 Note: npm downloads are ~900 for the trailing year. Deliberately not published on the site,
 because the figure is weak and would undercut the star count and the benchmark.
 
-ProlificTea (prolifictea.com, live, HTTP 200): the site itself reports 290.5K page views and
+ProlificTea (prolifictea.com, live, HTTP 200): the site itself reports 90.5K page views and
 1,582 researchers indexed. Chrome extension, PWA push, threaded comments, image uploads, admin
 moderation. Self-reported Reddit milestones: 1.2K clicks and 400+ registered users in the
 first 28 days; ~700 visitors/day; crossed 3K visitors.

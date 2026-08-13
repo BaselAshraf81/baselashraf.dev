@@ -1,0 +1,9 @@
+# Raw captures. Multi-megabyte PNGs straight off the browser; the cropped and
+# compressed versions in media/ are what the page actually serves. Regenerate
+# with `node tools/shoot.js` then `powershell tools/images.ps1`.
+shots/
+
+# Editor tooling, not part of the site. This is currently still tracked from the
+# first commit -- untrack it before the next one:
+#   git rm -r --cached .kiro shots
+.kiro/

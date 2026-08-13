@@ -628,6 +628,87 @@ kbd {
 .foot__fine a { color: var(--fg-2); }
 
 /* ============================================================
+   captures — the work photographed, framed as figures
+   ============================================================ */
+
+.shot {
+  grid-column: 1 / -1;
+  margin-top: var(--s4);
+}
+
+/* inside a plate the grid gap already does this spacing; doubling it
+   leaves the figure stranded */
+.plate .shot { margin-top: 0; }
+
+.shot__frame {
+  display: block;
+  position: relative;
+  border: 1px solid var(--edge-hair);
+  border-radius: 3px;
+  background: #04070a;
+  overflow: hidden;
+  line-height: 0;
+  transition: border-color 0.5s var(--ease);
+}
+
+/* the plates carry a lit top edge; a capture gets the same one so it reads
+   as part of the page rather than pasted onto it */
+.shot__frame::after {
+  content: '';
+  position: absolute; inset-inline: 0; top: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 246, 226, 0.26) 50%, transparent);
+  pointer-events: none;
+}
+
+a.shot__frame:hover,
+a.shot__frame:focus-visible { border-color: var(--edge-soft); }
+
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* a square, light-ground figure would shout next to the wide dark ones */
+.shot--tight .shot__frame { max-width: 24rem; }
+
+.shot figcaption {
+  display: flex;
+  gap: 0.7rem;
+  align-items: baseline;
+  margin-top: var(--s2);
+  color: var(--fg-3);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  max-width: 68ch;
+}
+
+.shot figcaption b {
+  color: var(--fg);
+  font-variation-settings: 'wdth' 100, 'wght' 660;
+  font-variant-numeric: tabular-nums;
+}
+
+.shot figcaption code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9em;
+  color: var(--fg-2);
+}
+
+.shot__tag {
+  flex: none;
+  color: var(--edge);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-variation-settings: 'wdth' 92, 'wght' 620;
+  border: 1px solid var(--edge-hair);
+  border-radius: 2px;
+  padding: 0.16rem 0.4rem;
+  white-space: nowrap;
+}
+
+/* ============================================================
    adaptation
    ============================================================ */
 
@@ -686,6 +767,9 @@ kbd {
 
   .readout { grid-template-columns: 1fr 1fr; }
   .strip { grid-template-columns: 1fr; }
+  .shot--tight .shot__frame { max-width: none; }
+  .shot figcaption { flex-direction: column; gap: 0.5rem; }
+  .shot__tag { align-self: start; }
   .foot__nav { grid-template-columns: 1fr 1fr; }
 }
 

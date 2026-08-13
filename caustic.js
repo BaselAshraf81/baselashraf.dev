@@ -35,7 +35,7 @@
   var BW = 180, BH = 102;
   var CELLS = BW * BH;
 
-  var RX = 440, RY = 250;
+  var RX = 380, RY = 216;
   var NR = RX * RY;
 
   var accR = new Float32Array(CELLS);
@@ -72,6 +72,7 @@
   }
 
   var pointerX = 0.62, pointerY = 0.34;   /* where the lamp is        */
+  var rowStep = 1;                        /* 2 = half the rays, on slow machines */
   var lampX = 0.62, lampY = 0.34;         /* eased toward the pointer */
 
   /* dispersion: how hard each channel bends. Kept tight, so colour
@@ -143,8 +144,8 @@
 
     for (var s = 0; s < NW; s++) ph[s] = WV[s][4] + t * WV[s][5];
 
-    var k = 0;
-    for (var ry = 0; ry < RY; ry++) {
+    for (var ry = 0; ry < RY; ry += rowStep) {
+      var k = ry * RX;
       for (var rx = 0; rx < RX; rx++, k++) {
         var x = (rx + 0.5 + jx[k]) / RX;
         var y = (ry + 0.5 + jy[k]) / RY;
@@ -173,7 +174,7 @@
     /* Exposed for the folds, not for the average. The unfocused ground
        sits near black and the convergence lines clip white, which is the
        actual dynamic range of a caustic. */
-    var mean = NR / CELLS;
+    var mean = (RX * Math.ceil(RY / rowStep)) / CELLS;
     var gain = 0.62 / mean;
 
     for (var p = 0, o = 0; p < CELLS; p++, o += 4) {
@@ -216,10 +217,34 @@
   var t0 = performance.now();
   var visible = true, running = false, raf = 0;
 
+  /* The lamp drifts slowly, so there is nothing to see above 30fps and no
+     reason to spend a core proving it. On a machine that cannot hold that,
+     halve the rays instead of dropping frames: the blur hides it, and a
+     softer caustic beats a stuttering one. */
+  var FRAME_MS = 1000 / 24;
+  var lastDraw = -1e9;
+  var cost = 0, warm = 0;
+
   function frame(now) {
     if (!visible) { running = false; return; }
-    render((now - t0) / 1000);
     raf = requestAnimationFrame(frame);
+
+    if (now - lastDraw < FRAME_MS - 1) return;
+    lastDraw = now;
+
+    var a = performance.now();
+    render((now - t0) / 1000);
+    var ms = performance.now() - a;
+
+    cost = cost ? cost * 0.9 + ms * 0.1 : ms;
+
+    /* The first frames run before the JIT has settled and cost roughly twice
+       what the steady state does. Judging quality on those would permanently
+       halve it on a machine that could have managed full rays. */
+    if (++warm > 15) {
+      if (cost > 26 && rowStep === 1) { rowStep = 2; cost = 0; }
+      else if (cost < 11 && rowStep === 2) { rowStep = 1; cost = 0; }
+    }
   }
   function start() {
     if (running || reduce || !visible) return;

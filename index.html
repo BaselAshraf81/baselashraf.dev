@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Basel Ashraf — software engineer</title>
-<meta name="description" content="Undergraduate engineer. A 17 kB layout engine that outruns Meta's Yoga, a review platform with 290,500 page views, and a certificate SaaS serving 55+ accounting firms.">
+<meta name="description" content="Undergraduate engineer. A 17 kB layout engine that outruns Meta's Yoga, a review platform with 90,500 page views, and a certificate SaaS serving 55+ accounting firms.">
 <link rel="canonical" href="https://baselashraf81.github.io/">
 <meta name="theme-color" content="#070b10">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Basel Ashraf — software engineer">
-<meta property="og:description" content="A 17 kB layout engine that outruns Meta's Yoga. A review platform with 290,500 page views. A certificate SaaS serving 55+ firms.">
+<meta property="og:description" content="A 17 kB layout engine that outruns Meta's Yoga. A review platform with 90,500 page views. A certificate SaaS serving 55+ firms.">
 <meta property="og:url" content="https://baselashraf81.github.io/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@BaselAshraf81">
@@ -67,7 +67,7 @@
     <p class="hero__claim">
       I&nbsp;am an undergraduate engineer who ships production software. A&nbsp;layout engine that
       outruns Meta&rsquo;s Yoga while shipping an eighteenth of the code. A&nbsp;review platform
-      that has served <span class="lit">290,500</span> page views. A&nbsp;certificate&nbsp;SaaS
+      that has served <span class="lit">90,500</span> page views. A&nbsp;certificate&nbsp;SaaS
       running for <span class="lit">55+</span> accounting firms.
     </p>
     <p class="hero__actions">
@@ -92,14 +92,14 @@
           <strong>LayoutSans</strong> takes a tree of boxes with flex and grid rules and returns
           exact pixel positions for every one of them. No DOM. No WASM. It runs on Node, Bun, Deno,
           Cloudflare Workers and the browser, with zero dependencies, in about
-          <strong>17&nbsp;kB gzipped</strong> &mdash; against the 300&nbsp;kB+ that Meta&rsquo;s
+          <strong>17&nbsp;kB gzipped</strong>, against the 300&nbsp;kB+ that Meta&rsquo;s
           Yoga ships before it can lay out a single box.
         </p>
       </div>
 
       <figure class="bench">
         <figcaption class="bench__cap">
-          Milliseconds to lay out a tree, lower is better. Log scale &mdash; each step is
+          Milliseconds to lay out a tree, lower is better. Log scale: each step is
           ten times the last. Figures from the project&rsquo;s own published benchmark.
         </figcaption>
 
@@ -154,7 +154,7 @@
           <p>
             Version 0.2 added the part everyone skips: selection, clipboard copy,
             <kbd>Ctrl</kbd>+<kbd>F</kbd> search, working hyperlinks and screen-reader
-            accessibility &mdash; on a canvas, with no visible DOM layout, and a node count that
+            accessibility, on a canvas, with no visible DOM layout, and a node count that
             stays proportional to the viewport rather than to the number of items. It sits on top
             of <a href="https://github.com/chenglou/pretext">chenglou/pretext</a>: pretext measures
             how big text is, LayoutSans decides where everything goes.
@@ -167,6 +167,21 @@
           <div><dt>Licence</dt><dd>MIT</dd></div>
         </dl>
       </div>
+
+      <figure class="shot">
+        <a class="shot__frame" href="https://baselashraf81.github.io/layout-sans/demo/interactive-text.html">
+          <img src="media/layoutsans.webp" width="1400" height="826" loading="lazy" decoding="async"
+               alt="The LayoutSans demo: a fully rendered article on a canvas, flanked by counters reading 204 DOM nodes and zero measureText() calls in the hot path, and a checklist of interaction features all ticked.">
+        </a>
+        <figcaption>
+          <span class="shot__tag">layout-sans</span>
+          <span>The engine&rsquo;s own instrument panel, running. On the left it counts what it costs
+          the page: <b>204</b> DOM nodes for that entire document, <b>zero</b> <code>measureText()</code>
+          calls in the hot path, one proxy caret, and <code>::selection</code> never used. On the right,
+          every v0.2 interaction accounted for: drag selection, clipboard, search, focus rings,
+          screen&#8209;reader tree.</span>
+        </figcaption>
+      </figure>
 
       <p class="links">
         <a class="lnk" href="https://baselashraf81.github.io/layout-sans/demo/interactive-text.html">Live demo, 100k items<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg></a>
@@ -206,10 +221,21 @@
           </p>
         </div>
         <dl class="readout">
-          <div><dt>Page views</dt><dd>290,500</dd></div>
+          <div><dt>Page views</dt><dd>90,500</dd></div>
           <div><dt>Researchers indexed</dt><dd>1,582</dd></div>
           <div><dt>Languages</dt><dd>5</dd></div>
         </dl>
+        <figure class="shot">
+          <a class="shot__frame" href="https://prolifictea.com">
+            <img src="media/prolifictea.webp" width="1400" height="856" loading="lazy" decoding="async"
+                 alt="The Prolific Tea homepage: a searchable, paginated index of researchers, each row carrying an aggregate rating and review count, beside the site's own usage figures.">
+          </a>
+          <figcaption>
+            <span class="shot__tag">prolifictea.com</span>
+            <span>The index as a participant meets it: searchable, sortable, no account needed
+            to read it. The counters are the site&rsquo;s own, not mine.</span>
+          </figcaption>
+        </figure>
       </article>
 
       <article class="plate product">
@@ -234,6 +260,18 @@
           <div><dt>Uptime</dt><dd>99.94%</dd></div>
           <div><dt>Engineers</dt><dd>1</dd></div>
         </dl>
+        <figure class="shot">
+          <a class="shot__frame" href="https://alertacert.com">
+            <img src="media/alertacert.webp" width="1400" height="875" loading="lazy" decoding="async"
+                 alt="The AlertaCert site, showing certificate expiry monitoring and multi-signer PDF workflows alongside published status figures.">
+          </a>
+          <figcaption>
+            <span class="shot__tag">alertacert.com</span>
+            <span>The product states its own numbers in public: <b>280+</b> certificates under watch
+            for firms in <b>seven</b> countries, and <b>99.94%</b> uptime across the last ninety days
+            with no unplanned outage.</span>
+          </figcaption>
+        </figure>
       </article>
       <p class="footnote">Prolific&nbsp;Tea&rsquo;s figures are reported by the site itself. AlertaCert&rsquo;s are mine, from my own monitoring.</p>
     </div>
@@ -254,8 +292,8 @@
           <h3 class="h3"><a href="https://eigendrum.com">Eigendrum</a></h3>
           <p>
             Draw any closed shape and hear what it would sound like as a drum. It solves the
-            eigenmodes of the membrane you drew &mdash; the standing waves a real drumhead of that
-            outline would settle into &mdash; then plays them, and animates the nodal patterns
+            eigenmodes of the membrane you drew (the standing waves a real drumhead of that
+            outline would settle into), then plays them, and animates the nodal patterns
             while they ring. The front page of r/InternetIsBeautiful liked it.
           </p>
           <p class="links">
@@ -264,6 +302,18 @@
           </p>
         </div>
         <p class="tally"><b>219</b><span>upvotes on r/InternetIsBeautiful, 31 comments</span></p>
+        <figure class="shot shot--tight">
+          <a class="shot__frame" href="https://eigendrum.com/#p=star">
+            <img src="media/eigendrum-star.webp" width="900" height="900" loading="lazy" decoding="async"
+                 alt="A five-pointed star outline drawn on pale ground, filled with a smooth two-tone blue field showing how far the membrane is displaced in the mode that is ringing.">
+          </a>
+          <figcaption>
+            <span class="shot__tag">eigendrum.com</span>
+            <span>A five&#8209;pointed membrane, struck off&#8209;centre. The blue field is displacement;
+            the outline is the shape as drawn. Getting there meant solving <b>2,051</b> unknowns on a
+            <b>4,392</b>&#8209;triangle mesh: <b>802&nbsp;ms</b>, in the browser, no server.</span>
+          </figcaption>
+        </figure>
       </article>
 
       <article class="plate feature feature--origin">
@@ -273,7 +323,7 @@
             Drop in a photograph and it computes a clear plate you can 3D print. The plate looks
             like a blank slab on a table. Point a torch through it and your photograph lands on
             the wall, formed entirely by refracted light. The effect is called a caustic, and it
-            is the reason this page looks the way it does &mdash; the light behind my name up there
+            is the reason this page looks the way it does: the light behind my name up there
             is computed the same way.
           </p>
           <p class="links">
@@ -282,6 +332,19 @@
           </p>
         </div>
         <p class="tally"><b>48</b><span>upvotes on r/photogrammetry</span></p>
+        <figure class="shot">
+          <a class="shot__frame" href="https://baselashraf81.github.io/photophane/">
+            <img src="media/photophane.webp" width="1500" height="935" loading="lazy" decoding="async"
+                 alt="A measured three-dimensional diagram: a lamp, a clear plate, and the photograph of a cat that the plate's refracted light forms in warm amber on the wall behind it.">
+          </a>
+          <figcaption>
+            <span class="shot__tag">photophane</span>
+            <span>The arrangement it solves for: a lamp <b>1.42&nbsp;m</b> out, the plate in the middle,
+            and the photograph landing on a wall <b>300&nbsp;mm</b> behind, carried entirely by
+            <b>10.97&nbsp;mm</b> of relief cut into a 100&nbsp;mm body. That warm image on the wall is a
+            caustic, the same thing burning behind my name at the top of this page.</span>
+          </figcaption>
+        </figure>
       </article>
 
       <h3 class="h3 h3--rule">Open source, tools and findings</h3>
@@ -290,7 +353,7 @@
           <h4><a href="https://github.com/BaselAshraf81/holystitch">holystitch</a></h4>
           <p>
             An MCP tool that turns Google Stitch designs into production React and Next.js code
-            without spending a single AI token &mdash; it calls the Stitch API directly and emits
+            without spending a single AI token: it calls the Stitch API directly and emits
             the whole component tree.
           </p>
           <p class="strip__stat">23 stars &middot; TypeScript</p>
@@ -371,7 +434,7 @@
           <li>
             <h3>BSc Computer Engineering and Software Systems</h3>
             <p class="tl__where">University of East London &amp; Ain Shams University &mdash; dual degree</p>
-            <p class="tl__when">February 2021 &mdash; expected November 2026</p>
+            <p class="tl__when">February 2021 &ndash; expected November 2026</p>
           </li>
           <li>
             <h3>Graduate summer school, Universit&agrave; di Pisa</h3>
@@ -381,7 +444,7 @@
           <li>
             <h3>Exchange year, Hanyang University</h3>
             <p class="tl__where">Seoul, South Korea &mdash; GPA 4.0 of 4.5</p>
-            <p class="tl__when">September 2024 &mdash; January 2025</p>
+            <p class="tl__when">September 2024 &ndash; January 2025</p>
           </li>
         </ol>
         <div class="kit">
@@ -416,7 +479,7 @@
   </div>
   <p class="shell foot__fine">
     Built as a static page with no framework and no build step, which felt like the honest choice
-    given what is above. <a href="https://github.com/BaselAshraf81/BaselAshraf81.github.io">Source</a>.
+    given what is above. <a href="https://github.com/BaselAshraf81/baselashraf.dev">Source</a>.
   </p>
 </footer>
 
