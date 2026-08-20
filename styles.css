@@ -516,7 +516,77 @@ kbd {
   color: var(--fg-3); font-size: 0.8125rem; line-height: 1.4;
 }
 
-/* ---------- dense strip ---------- */
+/* ---------- press strip ---------- */
+
+.press-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: var(--s3);
+  list-style: none;
+  padding: 0;
+}
+
+.press-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.22rem 0.6rem;
+  border: 1px solid var(--edge-hair);
+  border-radius: 2px;
+  color: var(--fg-3);
+  font-size: 0.75rem;
+  font-variation-settings: 'wdth' 92, 'wght' 540;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+  transition: color 0.35s var(--ease), border-color 0.35s var(--ease);
+  white-space: nowrap;
+}
+.press-chip:hover { color: var(--light); border-color: var(--edge-soft); }
+.press-chip--more {
+  color: var(--fg-3);
+  border-style: dashed;
+  cursor: default;
+}
+.press-chip-sub {
+  font-size: 0.6875rem;
+  color: var(--fg-3);
+  opacity: 0.7;
+  letter-spacing: 0.08em;
+}
+
+/* ---------- academic facts (DOI / ORCID) ---------- */
+
+.academic {
+  margin-top: var(--s3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+}
+.academic dt {
+  display: none;
+}
+.academic dd {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--fg-3);
+  font-variation-settings: 'wdth' 92, 'wght' 500;
+  letter-spacing: 0.02em;
+}
+.academic dd a {
+  color: var(--fg-3);
+  text-decoration: none;
+  border-bottom: 1px solid var(--edge-hair);
+  transition: color 0.35s var(--ease), border-color 0.35s var(--ease);
+}
+.academic dd a:hover { color: var(--edge); border-color: var(--edge); }
+.academic dd::before {
+  content: attr(data-label) ' ';
+  color: var(--fg-3);
+  opacity: 0.6;
+}
+
+
 
 .h3--rule {
   margin-top: var(--s6);

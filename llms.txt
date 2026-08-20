@@ -1,0 +1,130 @@
+# Basel Ashraf
+
+> Basel Ashraf Fikry is a software engineer and undergraduate student building production
+> systems alone. He ships layout engines, browser physics simulations, SaaS products, and
+> open-source tools — each one instrumented, measured, and backed by real usage figures.
+
+Canonical URL: https://baselashraf.com
+GitHub: https://github.com/BaselAshraf81
+ORCID: https://orcid.org/0009-0009-3441-6196
+Contact: u2679054@uel.ac.uk
+Last updated: 2026-08-21
+
+## Key Projects
+
+### Eigendrum
+URL: https://eigendrum.com
+DOI: https://doi.org/10.5281/zenodo.22019539
+Cite as: Ashraf, B. (2026). Eigendrum: Hearing the shape of a drum. Zenodo. doi:10.5281/zenodo.22019539
+
+A free browser tool that meshes any drawn outline, solves the Dirichlet eigenvalue problem for
+the Laplacian on that exact region with P1 finite elements, and synthesises every frequency it
+finds. Nothing is sampled. A 2,051-unknown drum solves in ~800 ms in a browser Web Worker with
+zero dependencies and no backend.
+
+Verified accuracy against closed-form spectra:
+- Unit square: 0.160% worst error over 8 modes at 6,000 nodes
+- Unit disk: 0.192% worst error
+- Right isosceles triangle: 0.227%
+- Rectangle 1.5×0.8: 0.233%
+
+Includes both Gordon–Webb–Wolpert isospectral drums. Eigendrum reports their 16 lowest
+frequencies agree to within 1.07×10⁻⁷ percent — you can hear a theorem be true.
+
+150 GitHub stars. Featured in 52+ named sources across 8 languages:
+- Wikipedia external links (Hearing the shape of a drum)
+- Hacker News front page ×2
+- kottke.org editorial
+- r/InternetIsBeautiful, r/oddlysatisfying
+- Sidebar.io newsletter
+- Daily Tech Feed, Agent Amigos (YouTube)
+- International: drweb.de (DE), Vostok Magazine (RU), diginews.fr (FR), Meneame (ES),
+  SheepNav (ZH), TheNote.app (JA)
+- Archived by Zenodo (OpenAIRE), cited with CITATION.cff
+
+Source: https://github.com/BaselAshraf81/eigendrum
+Tech: Vanilla JavaScript, Web Workers, Web Audio API, zero dependencies
+
+---
+
+### LayoutSans
+URL: https://github.com/BaselAshraf81/layout-sans
+npm: https://www.npmjs.com/package/layout-sans
+
+A TypeScript flex/grid layout engine that runs without a DOM. Takes a tree of boxes with flex
+and grid rules, returns exact pixel positions for every one of them. Ships ~17 kB gzipped
+vs Meta Yoga's 300+ kB. Benchmarks (measured, reproducible):
+- 1,000 boxes: 0.185 ms (vs Yoga 0.80 ms, DOM 8.0 ms)
+- 10,000 boxes: 4.82 ms (vs Yoga 8.0 ms, DOM 800 ms)
+- 100,000 rows variable height: 46 ms (vs Yoga 85 ms, DOM crashes)
+
+Version 0.2 adds canvas text interaction: selection, Ctrl+F search, clipboard, hyperlinks,
+and screen-reader accessibility — sitting on top of chenglou/pretext for measurement.
+
+67 GitHub stars. TypeScript. MIT licence. 0 dependencies.
+
+---
+
+### Prolific Tea
+URL: https://prolifictea.com
+
+A review platform for Prolific research participants to rate researchers on fairness and
+rejection behaviour. Built alone with Next.js, a Chrome extension, PWA push notifications,
+image uploads, threaded comments, and moderation tooling.
+- 90,500 page views
+- 1,582 researchers indexed
+- 5 languages
+
+---
+
+### AlertaCert
+URL: https://alertacert.com
+
+Certificate management SaaS for accounting firms. Watches digital certificates for expiry,
+sends email and WhatsApp warnings, re-checks revocation nightly, and supports multi-signer
+PDF workflows without requiring accounts for outside signatories.
+- 55+ firms served across Latin America, Europe, and India
+- 99.94% uptime
+- Sole engineer on product, billing, infrastructure, security, and support
+
+---
+
+### Other open source
+
+- **holystitch** — MCP tool converting Google Stitch designs to React/Next.js with zero AI
+  tokens. 23 stars. https://github.com/BaselAshraf81/holystitch
+- **fastemporal** — Luxon + Temporal API in Rust, 40× faster, 332 tests.
+  https://docs.rs/fastemporal
+- **Photophane** — Computes a clear 3D-printable plate that projects a photograph via refracted
+  light (caustic). https://baselashraf81.github.io/photophane/
+- **Legal document RAG** — Retrieval over 25,303 Epstein documents with hybrid search,
+  230+ concurrent users on a single T4 GPU with a custom request queue.
+- **fx-inject-shim** — Firefox 152 compat shim for tabs/scripting injection APIs.
+  21 upvotes on r/firefox.
+- **Stored XSS in M-Pesa** — Found via font descriptor injection in PDF receipts. Reported
+  and accepted through HackerOne.
+
+## Background
+
+- BSc Computer Engineering and Software Systems — University of East London &
+  Ain Shams University (dual degree, expected Nov 2026)
+- Exchange year — Hanyang University, Seoul, GPA 4.0 / 4.5
+- Graduate summer school — Università di Pisa, Human-Centric ICT for Industry 5.0,
+  graded 29/30 on scholarship
+
+## Skills
+
+Languages: TypeScript, Rust, Python, Java, SQL
+Web: Next.js, React, Spring Boot, Tailwind, Prisma, Stripe, Chrome extensions
+Data & AI: OpenAI API, LlamaIndex, FAISS, TensorFlow, pandas
+Infrastructure: PostgreSQL, Supabase, Docker, Vercel, Linux, Git
+Security: Burp Suite, OWASP, WebAuthn, bug bounty
+
+## Links
+
+- Portfolio: https://baselashraf.com
+- GitHub: https://github.com/BaselAshraf81
+- LinkedIn: https://www.linkedin.com/in/basel-askar/
+- ORCID: https://orcid.org/0009-0009-3441-6196
+- Eigendrum (flagship project): https://eigendrum.com
+- Eigendrum DOI: https://doi.org/10.5281/zenodo.22019539

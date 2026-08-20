@@ -34,25 +34,116 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Basel Ashraf Fikry",
-  "alternateName": "BaselAshraf81",
-  "url": "https://baselashraf.com/",
-  "email": "mailto:u2679054@uel.ac.uk",
-  "jobTitle": "Software Engineer",
-  "sameAs": [
-    "https://github.com/BaselAshraf81",
-    "https://www.linkedin.com/in/basel-askar/",
-    "https://x.com/BaselAshraf81",
-    "https://www.reddit.com/user/Sad_Steak_6813/"
-  ],
-  "alumniOf": [
-    { "@type": "CollegeOrUniversity", "name": "University of East London" },
-    { "@type": "CollegeOrUniversity", "name": "Ain Shams University" },
-    { "@type": "CollegeOrUniversity", "name": "Hanyang University" },
-    { "@type": "CollegeOrUniversity", "name": "Universit\u00e0 di Pisa" }
-  ],
-  "knowsAbout": ["TypeScript", "Rust", "Python", "Layout engines", "Next.js", "Web security"]
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://baselashraf.com/#person",
+      "name": "Basel Ashraf Fikry",
+      "alternateName": "BaselAshraf81",
+      "url": "https://baselashraf.com/",
+      "email": "mailto:u2679054@uel.ac.uk",
+      "jobTitle": "Software Engineer",
+      "sameAs": [
+        "https://github.com/BaselAshraf81",
+        "https://www.linkedin.com/in/basel-askar/",
+        "https://x.com/BaselAshraf81",
+        "https://www.reddit.com/user/Sad_Steak_6813/",
+        "https://orcid.org/0009-0009-3441-6196"
+      ],
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "University of East London" },
+        { "@type": "CollegeOrUniversity", "name": "Ain Shams University" },
+        { "@type": "CollegeOrUniversity", "name": "Hanyang University" },
+        { "@type": "CollegeOrUniversity", "name": "Universit\u00e0 di Pisa" }
+      ],
+      "knowsAbout": ["TypeScript", "Rust", "Python", "Layout engines", "Next.js", "Web security", "Finite element methods", "Modal synthesis"],
+      "author": [
+        { "@id": "https://baselashraf.com/#eigendrum" }
+      ]
+    },
+    {
+      "@type": ["SoftwareApplication", "CreativeWork"],
+      "@id": "https://baselashraf.com/#eigendrum",
+      "name": "Eigendrum",
+      "url": "https://eigendrum.com/",
+      "description": "A free browser tool that turns any shape you draw into a drum you can hear. It solves the Dirichlet eigenvalue problem for the Laplacian on the exact drawn region with P1 finite elements and synthesises the resulting frequencies. Nothing is sampled and no overtone is faked.",
+      "author": { "@id": "https://baselashraf.com/#person" },
+      "datePublished": "2026-08-20",
+      "license": "https://github.com/BaselAshraf81/eigendrum/blob/master/LICENSE",
+      "codeRepository": "https://github.com/BaselAshraf81/eigendrum",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.5281/zenodo.22019539",
+        "url": "https://doi.org/10.5281/zenodo.22019539"
+      },
+      "citation": [
+        {
+          "@type": "ScholarlyArticle",
+          "name": "Can One Hear the Shape of a Drum?",
+          "author": "Mark Kac",
+          "datePublished": "1966",
+          "isPartOf": "American Mathematical Monthly 73",
+          "url": "https://www.jstor.org/stable/2313748"
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "name": "One cannot hear the shape of a drum",
+          "author": "Carolyn Gordon, David Webb, Scott Wolpert",
+          "datePublished": "1992",
+          "isPartOf": "Bulletin of the American Mathematical Society 27"
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "name": "Eigenmodes of Isospectral Drums",
+          "author": "Tobin Driscoll",
+          "datePublished": "1997",
+          "isPartOf": "SIAM Review 39",
+          "url": "https://epubs.siam.org/doi/abs/10.1137/S0036144595285069"
+        }
+      ],
+      "subjectOf": [
+        {
+          "@type": "WebPage",
+          "name": "Hearing the shape of a drum — External links",
+          "url": "https://en.wikipedia.org/wiki/Hearing_the_shape_of_a_drum#External_links",
+          "publisher": { "@type": "Organization", "name": "Wikipedia" }
+        },
+        {
+          "@type": "DiscussionForumPosting",
+          "url": "https://news.ycombinator.com/item?id=49305250",
+          "publisher": { "@type": "Organization", "name": "Hacker News" }
+        },
+        {
+          "@type": "Article",
+          "name": "Eigendrum",
+          "url": "https://kottke.org/26/08/0049489-eigendrum",
+          "publisher": { "@type": "Organization", "name": "kottke.org" }
+        },
+        {
+          "@type": "Article",
+          "name": "Eigendrum Hit Hacker News. But Its Best Trick Is Exposing Imperfect Physics.",
+          "url": "https://www.remio.ai/post/eigendrum-hit-hacker-news-but-its-best-trick-is-exposing-imperfect-physics",
+          "publisher": { "@type": "Organization", "name": "remio.ai" }
+        }
+      ],
+      "about": [
+        { "@type": "Thing", "name": "Spectral geometry", "sameAs": "https://en.wikipedia.org/wiki/Spectral_geometry" },
+        { "@type": "Thing", "name": "Hearing the shape of a drum", "sameAs": "https://en.wikipedia.org/wiki/Hearing_the_shape_of_a_drum" },
+        { "@type": "Thing", "name": "Finite element method", "sameAs": "https://en.wikipedia.org/wiki/Finite_element_method" },
+        { "@type": "Thing", "name": "Modal synthesis", "sameAs": "https://en.wikipedia.org/wiki/Physical_modelling_synthesis" }
+      ],
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Any (web browser)",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -305,17 +396,49 @@
         <div class="feature__body">
           <h3 class="h3"><a href="https://eigendrum.com">Eigendrum</a></h3>
           <p>
-            Draw any closed shape and hear what it would sound like as a drum. It solves the
-            eigenmodes of the membrane you drew (the standing waves a real drumhead of that
-            outline would settle into), then plays them, and animates the nodal patterns
-            while they ring. The front page of r/InternetIsBeautiful liked it.
+            Draw any closed shape and hear the drum it physically is. Eigendrum meshes the outline,
+            solves the Dirichlet eigenvalue problem for the Laplacian on that exact region with
+            P1 finite elements, and synthesises every frequency it finds. Nothing is sampled and
+            no overtone is faked — a circle produces ratios of Bessel function zeros, a star
+            produces its own inharmonic spectrum, and the two <a href="https://eigendrum.com/hearing-the-shape-of-a-drum">Gordon–Webb–Wolpert isospectral drums</a>
+            produce frequencies that agree to within 1.07×10⁻⁷ percent: you can hear a theorem be true.
           </p>
+          <p>
+            A 2,051-unknown solve runs in about 800 ms in a browser worker with no server and no
+            dependencies. The solver is verified against closed-form spectra on every commit;
+            worst relative error over the lowest 8 modes at 6,000 nodes is 0.160% for the unit square
+            and 0.192% for the unit disk.
+          </p>
+
+          <dl class="academic" aria-label="Academic metadata">
+            <div><dt>DOI</dt><dd data-label="DOI"><a href="https://doi.org/10.5281/zenodo.22019539" target="_blank" rel="noopener">doi:10.5281/zenodo.22019539</a></dd></div>
+            <div><dt>Stars</dt><dd data-label="★">150 GitHub stars</dd></div>
+            <div><dt>Coverage</dt><dd data-label="Press">52+ sources · 8 languages</dd></div>
+            <div><dt>Cite as</dt><dd data-label="Cite">Ashraf, B. (2026). <em>Eigendrum</em>. Zenodo.</dd></div>
+          </dl>
+
+          <ul class="press-strip" aria-label="Press coverage">
+            <li><a class="press-chip" href="https://en.wikipedia.org/wiki/Hearing_the_shape_of_a_drum#External_links" target="_blank" rel="noopener nofollow">Wikipedia <span class="press-chip-sub">External links</span></a></li>
+            <li><a class="press-chip" href="https://news.ycombinator.com/item?id=49305250" target="_blank" rel="noopener nofollow">Hacker News <span class="press-chip-sub">front page ×2</span></a></li>
+            <li><a class="press-chip" href="https://kottke.org/26/08/0049489-eigendrum" target="_blank" rel="noopener nofollow">kottke.org <span class="press-chip-sub">editorial</span></a></li>
+            <li><a class="press-chip" href="https://www.reddit.com/r/InternetIsBeautiful/comments/1vqhylx/eigendrum_draw_a_shape_and_hear_it_as_a_drum/" target="_blank" rel="noopener nofollow">r/InternetIsBeautiful</a></li>
+            <li><a class="press-chip" href="https://www.reddit.com/r/oddlysatisfying/" target="_blank" rel="noopener nofollow">r/oddlysatisfying</a></li>
+            <li><a class="press-chip" href="https://sidebar.io" target="_blank" rel="noopener nofollow">Sidebar.io <span class="press-chip-sub">newsletter</span></a></li>
+            <li><span class="press-chip press-chip--more">+ 46 more in DE · FR · RU · ZH · JA · ES</span></li>
+          </ul>
+
           <p class="links">
             <a class="lnk" href="https://eigendrum.com">eigendrum.com<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg></a>
             <a class="lnk" href="https://github.com/BaselAshraf81/eigendrum">Source<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg></a>
+            <a class="lnk" href="https://doi.org/10.5281/zenodo.22019539">Cite (DOI)<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg></a>
           </p>
         </div>
-        <p class="tally"><b>219</b><span>upvotes on r/InternetIsBeautiful, 31 comments</span></p>
+        <dl class="facts">
+          <div><dt>Stars</dt><dd>150</dd></div>
+          <div><dt>Language</dt><dd>JavaScript</dd></div>
+          <div><dt>Dependencies</dt><dd>0</dd></div>
+          <div><dt>DOI</dt><dd>Zenodo</dd></div>
+        </dl>
         <figure class="shot shot--tight">
           <a class="shot__frame" href="https://eigendrum.com/#p=star">
             <img src="media/eigendrum-star.webp" width="900" height="900" loading="lazy" decoding="async"
