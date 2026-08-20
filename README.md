@@ -54,24 +54,9 @@ git rm -r --cached .kiro shots
 `.kiro/` is editor tooling and `shots/` is ~14 MB of raw captures. Both are now
 in `.gitignore`, but gitignore does not untrack what is already committed.
 
-## Deployment — needs a decision
+## Deployment
 
-The page declares a canonical URL in three places (`<link rel=canonical>`,
-`og:url`, and the JSON-LD `url`), currently pointing at
-`https://baselashraf81.github.io/`. As of writing, nothing is published yet:
-`baselashraf.dev` does not resolve, and both github.io URLs return 404.
-
-Pick one and make all three agree:
-
-- **Custom domain** (what the repo name implies) — point the DNS at GitHub, add
-  a `CNAME` file containing `baselashraf.dev`, and change the three URLs to
-  `https://baselashraf.dev/`.
-- **User pages** — rename this repo to `BaselAshraf81.github.io`, and the
-  current URLs become correct as they stand.
-
-Leaving them disagreeing costs you the OpenGraph preview and lets Google index
-the wrong address, so it is worth settling before sharing the link.
+The portfolio is deployed to Vercel and served at `https://baselashraf.com/` via Cloudflare DNS. Canonical URLs, OpenGraph tags, and JSON-LD schema in `index.html` point to `https://baselashraf.com/`.
 
 The outbound project links (`baselashraf81.github.io/photophane/`,
-`/layout-sans/…`, `/blackhole/`) are project pages and are already live; they
-are unaffected by either choice.
+`/layout-sans/…`, `/blackhole/`) are individual project demo pages hosted on GitHub Pages.
