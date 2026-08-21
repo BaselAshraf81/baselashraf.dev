@@ -3,41 +3,52 @@ BASEL ASHRAF FIKRY
 
 WORK EXPERIENCE
 
-Founder & Solo Engineer | Eigendrum · eigendrum.com
-Aug 2026 – Present
-• Built a browser finite element simulation that meshes arbitrary drawn outlines, solves the 2D Dirichlet Laplacian eigenvalue problem with P1 finite elements, and synthesizes vibrational audio modes in ~800 ms in a Web Worker (zero backend).
-• Verified <0.2% error against closed-form spectra; computationally proved Gordon-Webb-Wolpert isospectral drum theorem with 16 lowest frequencies matching to within 1.07×10⁻⁷%.
-• Earned 150 GitHub stars, registered DOI (10.5281/zenodo.22019539), and featured on Hacker News (front page ×2), Wikipedia, and 52+ publications in 8 languages.
+Eigendrum | Founder & Solo Engineer                                          Aug 2026 – Present
+Stack: JavaScript, Web Audio API, Web Workers, P1 FEM                        eigendrum.com
+• Architected in-browser finite element engine solving 2D Dirichlet Laplacian eigenvalue problems on arbitrary user outlines and synthesizing acoustic modes in ~800 ms via Web Workers with zero backend.
+• Achieved <0.2% numerical error against analytical closed-form spectra; computationally proved Gordon-Webb-Wolpert isospectral theorem with 16 lowest frequencies matching to within 1.07×10⁻⁷%.
+• Reached 150 GitHub stars, registered DOI (10.5281/zenodo.22019539), and featured on Hacker News (front page ×2), Wikipedia, and 52+ publications in 8 languages.
 
-Founder & Solo Engineer | Prolific Tea · prolifictea.com
-Apr 2026 – Present
-• Engineered a researcher review platform serving 100,000+ page views and 1,582 indexed researchers, built with Next.js, PostgreSQL, and PWA push notifications.
-• Developed companion Chrome extension that intercepts network traffic on study feeds to display researcher fairness and rejection ratings inline before participants accept tasks.
+Prolific Tea | Founder & Solo Engineer                                       Apr 2026 – Present
+Stack: Next.js, React, PostgreSQL, PWA, Chrome Extension API                 prolifictea.com
+• Scaled researcher transparency platform to 100,000+ page views and 1,582 indexed researchers with aggregate ratings, rejection tracking, and moderation tools.
+• Engineered companion Chrome extension intercepting study network requests to match and render researcher fairness ratings inline before participants accept tasks.
 
-Data Engineer | Passion Of Rugs · Part-time
-Oct 2025 – Present
-• Built a Python ETL pipeline that cleaned and structured 120,000+ records from 1,200+ heterogeneous spreadsheets into a unified CRM schema using the OpenAI API for schema alignment.
-• Reduced API costs by 13% through request deduplication and response caching; runs fully unattended in production.
+Passion Of Rugs | Data Engineer (Part-time)                                  Oct 2025 – Present
+Stack: Python, OpenAI API, Pandas, ETL Pipelines                             Scheduled Automation
+• Engineered automated Python ETL pipeline restructuring 120,000+ records from 1,200+ heterogeneous spreadsheets into a normalized CRM schema using OpenAI API for schema mapping.
+• Reduced API operating costs by 13% through batch request deduplication and response caching; runs unattended in production.
 
 PROJECTS & OPEN SOURCE
 
-layout-sans (67 ★) | TypeScript · npm package (npmjs.com/package/layout-sans)
-• Created a 2D flex/grid layout engine in ~17 kB gzipped (zero dependencies, no DOM/WASM) running 2–3× faster than Meta's Yoga with an 18× smaller bundle. Implemented interactive canvas text selection, clipboard copy, Ctrl+F, and accessibility tree.
+Systems & Developer Tooling
 
-fastemporal | Rust · docs.rs (docs.rs/fastemporal)
-• Reimplemented Luxon and TC39 Temporal date/time APIs in pure Rust with zero heap allocations in hot paths, validated against 332 ported conformance tests from Luxon and date-fns.
+layout-sans | Creator (67 ★) · TypeScript                                    npm: layout-sans
+Stack: TypeScript, pretext, Canvas 2D, Zero Dependencies                     github.com/BaselAshraf81/layout-sans
+• Architected 2D flex/grid layout engine in ~17 kB gzipped (no DOM/WASM) executing 2–3× faster than Meta's Yoga with an 18× smaller bundle size.
+• Implemented interactive canvas text layer supporting drag selection, clipboard copy, Ctrl+F search, hyperlinks, and screen-reader accessibility tree.
 
-Nextron — PR #531 | Electron + Next.js (Merged upstream as nextron@9.6.0)
-• Upgraded an Electron + Next.js framework from Next 14 → 16 and React 18 → 19 across 33 files (+1,218 / -416 lines), merged and shipped upstream.
+fastemporal | Creator · Rust                                                 docs.rs/fastemporal
+Stack: Rust, Temporal Conformance Suite, docs.rs                             github.com/BaselAshraf81/fastemporal
+• Reimplemented Luxon and TC39 Temporal date/time APIs in pure Rust with zero heap allocations in hot paths, validated against 332 ported conformance tests.
 
-Legal Document RAG | Python · LlamaIndex · FAISS
-• Built hybrid vector/keyword search over 25,303 legal documents, serving 230+ concurrent users on a single T4 GPU via a custom asynchronous request queue with zero out-of-memory errors.
+Nextron — PR #531 | Open Source Contributor                                  Released: nextron@9.6.0
+Stack: Next.js 16, React 19, Electron, Turbopack                             github.com/saltyshiomix/nextron/pull/531
+• Upgraded popular Electron + Next.js framework from Next 14 → 16 and React 18 → 19 across 33 files (+1,218 / -416 lines); merged and published same day.
 
-Photophane (72 upvotes on r/photogrammetry) | TypeScript · WebGL
-• Developed an optical simulation computing 3D-printable continuous relief plates (10.97 mm depth) that project target photographs onto walls via refracted caustic light rays.
+AI Systems & Security Operations
 
-M-Pesa Security Research | HackerOne · Bug Bounty
-• Discovered and reported a Stored XSS vulnerability in M-Pesa's PDF receipt generator via font descriptor injection; accepted and rewarded through HackerOne.
+Legal Document RAG | Creator · Python / AI Search                            github.com/BaselAshraf81/epstein-rag-abliterated-llm
+Stack: Python, LlamaIndex, FAISS, PyTorch, GPU Queue
+• Built hybrid vector/keyword retrieval over 25,303 legal documents, serving 230+ concurrent users on a single T4 GPU via custom asynchronous queue with 0 OOM crashes.
+
+Photophane | Creator (72 upvotes on r/photogrammetry)                        github.com/BaselAshraf81/photophane
+Stack: TypeScript, WebGL, 3D Mesh Generation
+• Computed continuous 3D-printable optical heightmaps (10.97 mm relief) projecting target photographs onto walls purely via refracted caustic light rays.
+
+M-Pesa Vulnerability Research | Security Researcher                          Accepted Bounty
+Stack: Burp Suite, PDF Structure Analysis, Font Descriptors                  HackerOne
+• Discovered and reported Stored XSS flaw in M-Pesa PDF receipt generator via font descriptor injection; validated, accepted, and rewarded through HackerOne.
 
 SKILLS
 
@@ -48,14 +59,11 @@ Security: OWASP, Burp Suite, WebAuthn, Vulnerability Research
 
 EDUCATION
 
-BSc in Computer Engineering and Software Systems (Dual Degree)
-Feb 2021 – Expected Nov 2026
+BSc in Computer Engineering and Software Systems (Dual Degree)               Feb 2021 – Expected Nov 2026
 University of East London & Ain Shams University
 
-Università di Pisa — Graduate Summer School
-Sep 2025
+Università di Pisa — Graduate Summer School                                  Sep 2025
 Human-Centric ICT for Industry 5.0, Pisa, Italy (Scholarship) | Grade: 29/30
 
-Hanyang University — Foreign Exchange
-Sep 2024 – Jan 2025
+Hanyang University — Foreign Exchange                                        Sep 2024 – Jan 2025
 Seoul, South Korea | GPA: 4.0/4.5
