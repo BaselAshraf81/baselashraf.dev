@@ -1,0 +1,128 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[left=0.58in,right=0.58in,top=0.38in,bottom=0.38in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{charter}
+\usepackage{amssymb}
+\usepackage{microtype}
+
+\definecolor{accent}{RGB}{20, 45, 95}
+\definecolor{subtext}{RGB}{90, 90, 90}
+\definecolor{rule}{RGB}{200, 205, 215}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\setlist{
+  itemsep=1.3pt,
+  topsep=1.5pt,
+  parsep=0pt,
+  leftmargin=14pt
+}
+
+\titleformat{\section}
+  {\normalsize\bfseries\scshape\color{accent}}{}{0em}{}
+  [\vspace{1pt}{\color{rule}\titlerule[0.8pt]}]
+\titlespacing*{\section}{0pt}{7pt}{3pt}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+\newcommand{\resumeItem}[1]{\item{#1}}
+
+\newcommand{\resumeHeading}[3]{
+  \vspace{1pt}
+  \noindent\begin{minipage}[t]{0.74\textwidth}
+    \raggedright\textbf{#1} \enspace {\color{subtext}\small #2}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.24\textwidth}
+    \raggedleft{\small\color{subtext} #3}
+  \end{minipage}\par\vspace{1.5pt}
+}
+
+\newcommand{\sectionlabel}[1]{\textbf{\color{accent}#1}}
+
+\linespread{1.0}
+
+\begin{document}
+
+% ---------- HEADER ----------
+\begin{center}
+    {\Large \bfseries \scshape Basel Ashraf Fikry}\\[3pt]
+    \small
+    \href{tel:+201028863334}{+20 102 886 3334}
+    \ {\color{rule}|}\
+    \href{mailto:hello@baselashraf.com}{hello@baselashraf.com}
+    \ {\color{rule}|}\
+    \href{https://baselashraf.com}{baselashraf.com}
+    \ {\color{rule}|}\
+    \href{https://github.com/BaselAshraf81}{github.com/BaselAshraf81}
+    \ {\color{rule}|}\
+    \href{https://linkedin.com/in/basel-askar}{linkedin.com/in/basel-askar}
+\end{center}
+\vspace{4pt}
+
+\small
+Solo systems and software engineer building production tools with a zero-dependency, client-first philosophy. Work spans in-browser numerical PDE solvers, layout engine internals, MCP developer tools, and scalable web platforms. Multiple projects organically validated by 100K+ users, Hacker News front page ($\times$2), Wikipedia citations, and a citable Zenodo DOI.
+\normalsize
+
+% ---------- FEATURED PROJECTS ----------
+\section*{Featured Engineering \& Products}
+
+\resumeHeading{Eigendrum}{Creator \& Solo Engineer \ $\cdot$ \ \href{https://eigendrum.com}{eigendrum.com}}{Aug 2026 -- Present}
+\begin{itemize}
+  \resumeItem{Built a browser physics engine meshing arbitrary outlines and solving 2D Dirichlet Laplacian eigenvalue problems via custom P1 finite elements; synthesizes modal acoustics in \textasciitilde800\,ms in a Web Worker (zero dependencies, no backend).}
+  \resumeItem{Computationally verified the 1992 resolution to Mark Kac's 1966 open problem (\textit{``Can one hear the shape of a drum?''}), confirming Gordon--Webb--Wolpert isospectral drum frequencies match published spectra to \textbf{1.07$\times$10$^{-7}$\%}.}
+  \resumeItem{Earned \textbf{150 GitHub stars}, registered DOI (\href{https://doi.org/10.5281/zenodo.22019539}{10.5281/zenodo.22019539}), and was featured on Hacker News (front page $\times$2), Wikipedia's external links, kottke.org, and 52+ publications across 8 languages.}
+\end{itemize}
+\vspace{2pt}
+
+\resumeHeading{Prolific Tea}{Creator \& Solo Engineer \ $\cdot$ \ \href{https://prolifictea.com}{prolifictea.com}}{Apr 2026 -- Present}
+\begin{itemize}
+  \resumeItem{Built a community-funded researcher review and pay-transparency platform serving \textbf{100,000+ page views} and 1,582 indexed researchers, with zero ads, investors, or required accounts (Next.js, PostgreSQL, PWA).}
+  \resumeItem{Developed a companion Chrome extension that intercepts study network traffic to match and surface researcher fairness and rejection ratings inline, before participants accept a task.}
+\end{itemize}
+\vspace{2pt}
+
+\resumeHeading{holystitch}{Creator \ $\cdot$ \ \href{https://github.com/BaselAshraf81/holystitch}{github.com/BaselAshraf81/holystitch} \ (23~$\bigstar$)}{TypeScript \ $\cdot$ \ MCP Server}
+\begin{itemize}
+  \resumeItem{Built a Model Context Protocol (MCP) server that compiles Google Stitch designs directly into production React and Next.js component trees via native API calls, with zero LLM inference tokens spent.}
+\end{itemize}
+\vspace{2pt}
+
+\resumeHeading{layout-sans}{Creator \ $\cdot$ \ \href{https://github.com/BaselAshraf81/layout-sans}{github.com/BaselAshraf81/layout-sans} \ (67~$\bigstar$)}{TypeScript \ $\cdot$ \ \href{https://www.npmjs.com/package/layout-sans}{npm package}}
+\begin{itemize}
+  \resumeItem{Engineered a 2D flex/grid layout engine in \textasciitilde17\,kB gzipped (zero dependencies, no DOM/WASM), running \textbf{2--3$\times$ faster} than Meta's Yoga with an 18$\times$ smaller bundle. Added interactive canvas text: selection, clipboard copy, Ctrl+F search, and a screen-reader accessibility tree.}
+\end{itemize}
+
+% ---------- SELECTED WORK ----------
+\section*{Selected Systems, Security \& Data}
+
+\begin{itemize}
+  \resumeItem{\textbf{Legal Document RAG} \ {\small\color{subtext}(Python $\cdot$ LlamaIndex $\cdot$ FAISS)} --- Built hybrid vector/keyword search over \textbf{25,303 legal documents}, serving \textbf{230+ concurrent users} on a single T4 GPU via a custom asynchronous request queue with zero out-of-memory failures.}
+  \resumeItem{\textbf{fastemporal} \ {\small\color{subtext}(Rust $\cdot$ \href{https://docs.rs/fastemporal}{docs.rs})} --- Reimplemented Luxon and TC39 Temporal in pure Rust, benchmarked \textbf{7--216$\times$ faster} and validated against \textbf{332 ported conformance tests}.}
+  \resumeItem{\textbf{Photophane} \ {\small\color{subtext}(TypeScript $\cdot$ WebGL)} --- Computed 3D-printable optical relief plates (10.97\,mm depth) projecting photographs onto a wall via refracted caustic light (\textbf{72 upvotes} on r/photogrammetry).}
+  \resumeItem{\textbf{M-Pesa Bug Bounty} \ {\small\color{subtext}(HackerOne)} --- Found and reported a stored XSS in M-Pesa's PDF receipt generator via font descriptor injection; accepted through HackerOne.}
+  \resumeItem{\textbf{Passion of Rugs ETL} \ {\small\color{subtext}(Python, part-time)} --- Unattended pipeline restructuring \textbf{120,000+ records} from 1,200+ inconsistent spreadsheets into a normalized CRM schema, using the OpenAI API for field mapping; cut API costs 13\% via deduplication and caching.}
+\end{itemize}
+
+% ---------- SKILLS ----------
+\section*{Skills}
+
+\begin{tabular}{@{}p{1.55in}p{5.15in}@{}}
+\textbf{Languages} & TypeScript, JavaScript, Rust, Python, Java, SQL \\[3pt]
+\textbf{Frontend \& Web} & Next.js, React, Node.js, Web Audio API, Web Workers, Chrome Extension API, Canvas API, Tailwind CSS \\[3pt]
+\textbf{Systems \& AI} & Finite Element Method (FEM), Model Context Protocol (MCP), LlamaIndex, FAISS, PostgreSQL, Supabase, Docker, Linux, Git \\[3pt]
+\textbf{Security \& Testing} & Burp Suite, web security research, conformance testing (TC39 / Luxon) \\
+\end{tabular}
+
+% ---------- EDUCATION ----------
+\section*{Education}
+
+\resumeHeading{BSc in Computer Engineering and Software Systems \textit{(Dual Degree)}}{University of East London \& Ain Shams University}{Feb 2021 -- Expected Nov 2026}
+\resumeHeading{Graduate Summer School --- Universit\`a di Pisa}{Human-Centric ICT for Industry 5.0, Pisa, Italy --- scholarship, graded 29/30}{Sep 2025}
+\resumeHeading{Foreign Exchange, Hanyang University}{Seoul, South Korea --- GPA 4.0/4.5}{Sep 2024 -- Jan 2025}
+
+\end{document}
