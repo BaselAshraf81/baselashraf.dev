@@ -14,7 +14,6 @@ Write-Output ("b64 chars: " + $b64.Length)
 #    crop=w:h:x:y then scale to a sane delivery width.
 $jobs = @(
   @{ src = 'raw-prolifictea.png'; out = 'prolifictea.webp'; f = 'crop=2880:1740:0:60,scale=1400:-1:flags=lanczos'; q = 76 },
-  @{ src = 'raw-alertacert.png';  out = 'alertacert.webp';  f = 'crop=2880:1800:0:0,scale=1400:-1:flags=lanczos';  q = 76 },
   @{ src = 'raw-layoutsans.png';  out = 'layoutsans.webp';  f = 'crop=2880:1700:0:100,scale=1400:-1:flags=lanczos'; q = 78 }
 )
 

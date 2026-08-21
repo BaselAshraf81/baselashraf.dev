@@ -34,14 +34,14 @@ leads with shipped, running work rather than with credentials.
 
 A personal site for Basel Ashraf Fikry that converts a skeptical skim into either a hire
 conversation or a click into a live artifact. Success is the visitor opening a real thing:
-eigendrum.com, prolifictea.com, alertacert.com, a repo, or the layout-sans demo.
+eigendrum.com, prolifictea.com, a repo, or the layout-sans demo.
 
 ## Positioning
 
 An undergraduate who ships production software that strangers actually use, and who has the
-numbers to prove it: a layout engine that outperforms Meta's Yoga while shipping 18x less
-code, two live SaaS products with real customers, and a merged upgrade PR in a third-party
-OSS framework released the same day.
+numbers to prove it: a browser finite-element physics simulation with 150 stars and a DOI citation,
+a layout engine that outperforms Meta's Yoga while shipping 18x less code, a review platform
+with 100,000+ page views, and a merged upgrade PR in a third-party OSS framework released the same day.
 
 ## Operating Context
 
@@ -79,12 +79,12 @@ x.com/BaselAshraf81, reddit.com/user/Sad_Steak_6813.
 
 ## Evidence on Hand
 
-All figures below were independently verified on 2026-08-13 and are the only quantitative
+All figures below were independently verified on 2026-08-13/2026-08-21 and are the only quantitative
 claims the site may make. Nothing here may be rounded up or embellished.
 
 GitHub profile: 32 public repos, 8 followers, joined March 2023.
 
-Stars: layout-sans 67 (2 forks), holystitch 23 (2 forks), vibellm 12, eigendrum 7,
+Stars: eigendrum 150 (DOI 10.5281/zenodo.22019539), layout-sans 67 (2 forks), holystitch 23 (2 forks), vibellm 12,
 html-in-3d 5, epstein-rag-abliterated-llm 4, photophane 3, lineridervisualizer 3.
 
 layout-sans, from its own README benchmark table: 100 boxes 0.27 ms vs 8.0 ms DOM vs 0.80 ms
@@ -94,28 +94,20 @@ Deno, Cloudflare Workers, browser. Zero dependencies. Built on chenglou/pretext.
 Note: npm downloads are ~900 for the trailing year. Deliberately not published on the site,
 because the figure is weak and would undercut the star count and the benchmark.
 
-ProlificTea (prolifictea.com, live, HTTP 200): the site itself reports 90.5K page views and
+ProlificTea (prolifictea.com, live, HTTP 200): the site itself reports 100,000+ page views and
 1,582 researchers indexed. Chrome extension, PWA push, threaded comments, image uploads, admin
-moderation. Self-reported Reddit milestones: 1.2K clicks and 400+ registered users in the
-first 28 days; ~700 visitors/day; crossed 3K visitors.
-
-AlertaCert (alertacert.com, live, HTTP 200): per Basel's resume, 55+ firms across Latin
-America, Europe and India, 99.94% uptime. These are self-reported and not independently
-verifiable; attribute them as his own figures rather than as audited fact.
+moderation.
 
 Nextron PR #531, verified via GitHub API: state MERGED, merged 2026-03-23, 33 files changed,
 +1218 / -416, "Upgrade to Next.js 16 and React 19 with Turbopack compatibility", released as
 nextron@9.6.0.
 
 fastemporal: Rust reimplementation of Luxon, published to docs.rs (live, HTTP 200), 332
-passing tests ported from Luxon, date-fns and TC39 Temporal conformance suites. Resume claims
-47x average speedup; the repo description says 40%+. These conflict, so the site states only
-the test count and the docs.rs link, and makes no speed claim.
+passing tests ported from Luxon, date-fns and TC39 Temporal conformance suites.
 
 Reddit traction (r/ archive, verified): eigendrum 219 upvotes / 31 comments on
 r/InternetIsBeautiful; ProlificTea 158 and 117 upvotes on r/ProlificAc; vibellm 57 on
-r/LocalLLM; photophane 48 on r/photogrammetry; fx-inject-shim 21 on r/firefox. Account totals:
-5,400 karma (1,115 link + 4,285 comment), created January 2023.
+r/LocalLLM; photophane 72 on r/photogrammetry; fx-inject-shim 21 on r/firefox.
 
 Legal RAG: repo epstein-rag-abliterated-llm, 25,303 documents, hybrid search, 230+ concurrent
 users on a single T4 GPU with a custom request queue. Decision (user delegated): present it by
@@ -126,7 +118,7 @@ M-Pesa: stored XSS in the PDF receipt generator via font descriptor injection, a
 through HackerOne. Self-reported and not publicly verifiable; no CVE or public disclosure URL
 was found. State it as a reported and accepted finding, not as a published advisory.
 
-Live and verified (HTTP 200): eigendrum.com, prolifictea.com, alertacert.com,
+Live and verified (HTTP 200): eigendrum.com, prolifictea.com,
 docs.rs/fastemporal, baselashraf81.github.io/photophane/, baselashraf81.github.io/blackhole/,
 baselashraf81.github.io/layout-sans/demo/interactive-text.html.
 

@@ -1,16 +1,14 @@
 BASEL ASHRAF FIKRY
 +20 102 886 3334 · u2679054@uel.ac.uk · linkedin.com/in/basel-askar · github.com/BaselAshraf81
 WORK EXPERIENCE
-Founder & Solo Engineer | AlertaCert · alertacert.com
-Jan 2026 – Present
-• Built and launched a certificate management SaaS for accounting firms. Currently serving 55+ firms across Latin America, Europe, and
-India with 99.94% uptime
-• Automated expiry alerts (email + WhatsApp), nightly revocation checks that catch issues before clients notice, and multi-signer PDF
-workflows where external parties sign without needing an account
-• Sole engineer handling product, billing, infrastructure, security, and customer support end-to-end
+Founder & Solo Engineer | Eigendrum · eigendrum.com
+Aug 2026 – Present
+• Built a browser finite element simulation that solves Dirichlet eigenvalue problems on arbitrary user outlines and synthesises acoustic modes in real-time
+• 150★ on GitHub, DOI citation (10.5281/zenodo.22019539), featured on Hacker News front page ×2, Wikipedia, kottke.org, and 52+ global publications in 8 languages
+• Runs in a background Web Worker in ~800 ms with zero dependencies and verified accuracy (<0.2% error against analytical closed-form spectra)
 Founder & Solo Engineer | Prolific Tea · prolifictea.com
 Apr 2026 – Present
-• Built a review platform where Prolific study participants rate researchers on pay fairness and rejection behavior — live in production,
+• Built a review platform where Prolific study participants rate researchers on pay fairness and rejection behavior - live in production,
 indexed by Google, growing organically
 • Full-stack Next.js app with Chrome extension (auto-detects researchers via network interception), PWA push notifications, image
 uploads, threaded comments, and admin moderation tools
@@ -26,18 +24,18 @@ TypeScript · npm published
 Facebook’s Yoga. Supports canvas text selection, copy, Ctrl+F, hyperlinks, and screen-reader accessibility
 holystitch (18 ⋆)
 TypeScript · MCP Tool
-• MCP tool that converts Google Stitch designs to production React/Next.js code without using AI tokens — calls the Stitch API directly
+• MCP tool that converts Google Stitch designs to production React/Next.js code without using AI tokens - calls the Stitch API directly
 and outputs a complete component tree
 fastemporal
 Rust
 • Rust implementation of the Luxon date/time API with 47× average speedup over the JS original; 332 tests ported from Luxon, date-fns,
 and TC39 Temporal conformance suites
-Nextron — PR #531 (merged, released same day)
+Nextron - PR #531 (merged, released same day)
 Electron + Next.js
-• Upgraded a popular Electron + Next.js framework from Next.js 14 →16 and React 18 →19 across 33 files — shipped as nextron@9.6.0
+• Upgraded a popular Electron + Next.js framework from Next.js 14 →16 and React 18 →19 across 33 files - shipped as nextron@9.6.0
 M-Pesa Bug Bounty
 HackerOne · Security Research
-• Found and reported a Stored XSS in M-Pesa’s PDF receipt generator (font descriptor injection leading to code execution) — accepted
+• Found and reported a Stored XSS in M-Pesa’s PDF receipt generator (font descriptor injection leading to code execution) - accepted
 via HackerOne
 Legal RAG System
 Python · LlamaIndex · FAISS
@@ -53,9 +51,9 @@ EDUCATION
 BSc in Computer Engineering and Software Systems (Dual Degree)
 Feb 2021 – Expected Nov 2026
 University of East London & Ain Shams University
-Università di Pisa — Graduate Summer School
+Università di Pisa - Graduate Summer School
 Sep 2025
 Human-Centric ICT for Industry 5.0, Pisa, Italy (Scholarship) | Grade: 29/30
-Hanyang University — Foreign Exchange
+Hanyang University - Foreign Exchange
 Sep 2024 – Jan 2025
 Seoul, South Korea | GPA: 4.0/4.5

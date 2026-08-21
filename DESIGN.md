@@ -5,7 +5,7 @@ undo a decision by accident.
 
 ## The one idea
 
-Photophane — one of the projects listed on the page — computes a clear plate
+Photophane - one of the projects listed on the page - computes a clear plate
 that throws a photograph onto a wall in refracted light. The physics term for
 that focused light is a **caustic**.
 
@@ -43,7 +43,7 @@ border, the same lit top edge the content plates carry, and a caption tagged
 with the source domain.
 
 Two are on light grounds and three on dark. That inconsistency is kept on
-purpose — they are photographs of real artifacts, and normalising their colour
+purpose - they are photographs of real artifacts, and normalising their colour
 would be the first step toward making them look like mockups. The frame and the
 caption do the work of making them belong.
 
@@ -55,8 +55,8 @@ path is a stronger argument than any sentence about it.
 
 One family, Archivo Variable, worked through `wdth` and `wght` axes instead of
 loading more files. Display sizes run wide and heavy and tighten their tracking;
-body text sits at normal width. Small instrument labels — the readouts, the
-figure tags — run narrow, uppercase and letter-spaced, which is the visual idiom
+body text sits at normal width. Small instrument labels - the readouts, the
+figure tags - run narrow, uppercase and letter-spaced, which is the visual idiom
 LayoutSans and Photophane already use in their own UIs.
 
 Numbers use `font-variant-numeric: tabular-nums` everywhere they are compared,
@@ -67,7 +67,7 @@ so digits line up in columns instead of shimmering.
 `caustic.js` is ~200 lines, no dependencies, 2D canvas only.
 
 It renders to a 180×102 accumulation buffer and upscales, because a caustic is
-mostly smooth gradient with a few sharp folds — the folds survive the upscale,
+mostly smooth gradient with a few sharp folds - the folds survive the upscale,
 and the buffer keeps the per-frame cost linear in rays rather than in screen
 pixels. Three separate colour channels are refracted at slightly different
 indices, which is where the prismatic fringing on the fold edges comes from; it
@@ -93,7 +93,7 @@ Budget, measured rather than assumed:
 
 Lighthouse: 100 accessibility, 100 best practices, 100 SEO, 35 audits passed.
 
-- The canvas is `aria-hidden` — it is decoration, and its meaning is carried by
+- The canvas is `aria-hidden` - it is decoration, and its meaning is carried by
   the Photophane caption in text.
 - Captures carry descriptive `alt` text stating what is visible, including the
   numbers, so the evidence survives without the image.

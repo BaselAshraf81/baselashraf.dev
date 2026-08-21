@@ -24,7 +24,7 @@ python -m http.server 8899
 ## The captures
 
 `media/` holds five screenshots of the real, deployed projects. They are not
-mockups, and nothing in them has been retouched — the numbers visible inside
+mockups, and nothing in them has been retouched - the numbers visible inside
 them are the products reporting their own figures.
 
 They are regenerated in two steps:
@@ -40,7 +40,7 @@ anything worth photographing. `--screenshot` fires at load and catches them
 mid-solve; driving the protocol lets the script wait in real time, strike the
 drum, and only then capture.
 
-`shots/` is gitignored — those are multi-megabyte raw PNGs. Only the compressed
+`shots/` is gitignored - those are multi-megabyte raw PNGs. Only the compressed
 `media/` versions ship.
 
 ## Before the next commit

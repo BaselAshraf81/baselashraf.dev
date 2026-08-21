@@ -2,7 +2,7 @@
 
 > Basel Ashraf Fikry is a software engineer and undergraduate student building production
 > systems alone. He ships layout engines, browser physics simulations, SaaS products, and
-> open-source tools — each one instrumented, measured, and backed by real usage figures.
+> open-source tools - each one instrumented, measured, and backed by real usage figures.
 
 Canonical URL: https://baselashraf.com
 GitHub: https://github.com/BaselAshraf81
@@ -29,7 +29,7 @@ Verified accuracy against closed-form spectra:
 - Rectangle 1.5×0.8: 0.233%
 
 Includes both Gordon–Webb–Wolpert isospectral drums. Eigendrum reports their 16 lowest
-frequencies agree to within 1.07×10⁻⁷ percent — you can hear a theorem be true.
+frequencies agree to within 1.07×10⁻⁷ percent - you can hear a theorem be true.
 
 150 GitHub stars. Featured in 52+ named sources across 8 languages:
 - Wikipedia external links (Hearing the shape of a drum)
@@ -59,7 +59,7 @@ vs Meta Yoga's 300+ kB. Benchmarks (measured, reproducible):
 - 100,000 rows variable height: 46 ms (vs Yoga 85 ms, DOM crashes)
 
 Version 0.2 adds canvas text interaction: selection, Ctrl+F search, clipboard, hyperlinks,
-and screen-reader accessibility — sitting on top of chenglou/pretext for measurement.
+and screen-reader accessibility - sitting on top of chenglou/pretext for measurement.
 
 67 GitHub stars. TypeScript. MIT licence. 0 dependencies.
 
@@ -71,45 +71,33 @@ URL: https://prolifictea.com
 A review platform for Prolific research participants to rate researchers on fairness and
 rejection behaviour. Built alone with Next.js, a Chrome extension, PWA push notifications,
 image uploads, threaded comments, and moderation tooling.
-- 90,500 page views
+- 100,000+ page views
 - 1,582 researchers indexed
 - 5 languages
 
 ---
 
-### AlertaCert
-URL: https://alertacert.com
-
-Certificate management SaaS for accounting firms. Watches digital certificates for expiry,
-sends email and WhatsApp warnings, re-checks revocation nightly, and supports multi-signer
-PDF workflows without requiring accounts for outside signatories.
-- 55+ firms served across Latin America, Europe, and India
-- 99.94% uptime
-- Sole engineer on product, billing, infrastructure, security, and support
-
----
-
 ### Other open source
 
-- **holystitch** — MCP tool converting Google Stitch designs to React/Next.js with zero AI
+- **holystitch** - MCP tool converting Google Stitch designs to React/Next.js with zero AI
   tokens. 23 stars. https://github.com/BaselAshraf81/holystitch
-- **fastemporal** — Luxon + Temporal API in Rust, 40× faster, 332 tests.
+- **fastemporal** - Luxon + Temporal API in Rust, 40× faster, 332 tests.
   https://docs.rs/fastemporal
-- **Photophane** — Computes a clear 3D-printable plate that projects a photograph via refracted
-  light (caustic). https://baselashraf81.github.io/photophane/
-- **Legal document RAG** — Retrieval over 25,303 Epstein documents with hybrid search,
+- **Photophane** - Computes a clear 3D-printable plate that projects a photograph via refracted
+  light (caustic). 72 upvotes on r/photogrammetry. https://baselashraf81.github.io/photophane/
+- **Legal document RAG** - Retrieval over 25,303 Epstein documents with hybrid search,
   230+ concurrent users on a single T4 GPU with a custom request queue.
-- **fx-inject-shim** — Firefox 152 compat shim for tabs/scripting injection APIs.
+- **fx-inject-shim** - Firefox 152 compat shim for tabs/scripting injection APIs.
   21 upvotes on r/firefox.
-- **Stored XSS in M-Pesa** — Found via font descriptor injection in PDF receipts. Reported
+- **Stored XSS in M-Pesa** - Found via font descriptor injection in PDF receipts. Reported
   and accepted through HackerOne.
 
 ## Background
 
-- BSc Computer Engineering and Software Systems — University of East London &
+- BSc Computer Engineering and Software Systems - University of East London &
   Ain Shams University (dual degree, expected Nov 2026)
-- Exchange year — Hanyang University, Seoul, GPA 4.0 / 4.5
-- Graduate summer school — Università di Pisa, Human-Centric ICT for Industry 5.0,
+- Exchange year - Hanyang University, Seoul, GPA 4.0 / 4.5
+- Graduate summer school - Università di Pisa, Human-Centric ICT for Industry 5.0,
   graded 29/30 on scholarship
 
 ## Skills
