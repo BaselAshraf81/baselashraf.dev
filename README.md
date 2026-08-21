@@ -1,62 +1,46 @@
-# baselashraf.dev
+# baselashraf.com
 
-A single-page portfolio. Three static files, no build step, no framework, no
-dependencies. Open `index.html` and it works.
+Live portfolio: **[https://baselashraf.com](https://baselashraf.com/)**
+
+A single-page engineering portfolio for Basel Ashraf. Static HTML/CSS/JS with no build step, no framework, and zero runtime dependencies. Open `index.html` and it runs.
 
 ```
-index.html      the page
-styles.css      the whole design system
-caustic.js      the hero light field
-media/*.webp    captures of the live projects (235 kB total)
+index.html      the page (with Schema.org graph & SEO meta)
+styles.css      the whole design system (dark glass + caustic optics)
+caustic.js      the hero light field canvas simulation
+llms.txt        machine-readable AI agent index (llmstxt.org spec)
+media/*.webp    captures of the live projects
 tools/          how those captures are made
-PRODUCT.md      every claim on the page, with its source
+PRODUCT.md      every claim on the page, with its verified source
 ```
 
-## Running it
+## Running it locally
 
-Any static server will do:
+Any static file server:
 
 ```powershell
 python -m http.server 8899
-# then http://localhost:8899
+# then open http://localhost:8899
 ```
 
 ## The captures
 
-`media/` holds five screenshots of the real, deployed projects. They are not
-mockups, and nothing in them has been retouched - the numbers visible inside
-them are the products reporting their own figures.
+`media/` holds screenshots of the real, deployed projects (Eigendrum, LayoutSans, Prolific Tea, Photophane). They are not mockups, and nothing in them has been retouched &mdash; the numbers visible inside them are the products reporting their own live figures.
 
-They are regenerated in two steps:
+They are generated in two steps:
 
 ```powershell
 node tools/shoot.js            # drives headless Chrome over CDP -> shots/*.png
 powershell tools/images.ps1    # crops and compresses -> media/*.webp
 ```
 
-`tools/shoot.js` talks CDP directly rather than using `chrome --screenshot`,
-because two of these projects compute for 10–45 seconds before there is
-anything worth photographing. `--screenshot` fires at load and catches them
-mid-solve; driving the protocol lets the script wait in real time, strike the
-drum, and only then capture.
+`tools/shoot.js` talks CDP directly rather than using `chrome --screenshot`, because these projects compute in the browser before there is anything to capture. Driving the protocol lets the script wait in real time, strike the drum, solve the mesh, and only then capture.
 
-`shots/` is gitignored - those are multi-megabyte raw PNGs. Only the compressed
-`media/` versions ship.
+`shots/` is gitignored &mdash; those are raw PNGs. Only the compressed `media/` WebP versions ship.
 
-## Before the next commit
+## Deployment & Domain
 
-Two things are tracked that should not be:
+- **Canonical URL**: `https://baselashraf.com/`
+- **Hosting**: Deployed on **Vercel** with DNS managed via **Cloudflare**.
+- **GitHub Pages mirror**: Redirects automatically to `https://baselashraf.com/` with deep-link preservation.
 
-```powershell
-git rm -r --cached .kiro shots
-```
-
-`.kiro/` is editor tooling and `shots/` is ~14 MB of raw captures. Both are now
-in `.gitignore`, but gitignore does not untrack what is already committed.
-
-## Deployment
-
-The portfolio is deployed to Vercel and served at `https://baselashraf.com/` via Cloudflare DNS. Canonical URLs, OpenGraph tags, and JSON-LD schema in `index.html` point to `https://baselashraf.com/`.
-
-The outbound project links (`baselashraf81.github.io/photophane/`,
-`/layout-sans/…`, `/blackhole/`) are individual project demo pages hosted on GitHub Pages.
