@@ -1,8 +1,8 @@
 # YouTube Videos That Get Cited by AI
 
-YouTube is one of the most-cited third-party surfaces in AI answers — Google AI Overviews and Gemini cite it heavily, and ChatGPT/Perplexity lift from it for how-to queries. The core insight that changes how you produce for it:
+YouTube is one of the most-cited third-party surfaces in AI answers - Google AI Overviews and Gemini cite it heavily, and ChatGPT/Perplexity lift from it for how-to queries. The core insight that changes how you produce for it:
 
-**Models don't watch your video. They read everything around it.** The citation is earned by the text layer — title, transcript, captions, chapters, description, and comments — not the footage. A mediocre-looking video with a clean, structured text layer beats a beautiful one that's opaque to a crawler.
+**Models don't watch your video. They read everything around it.** The citation is earned by the text layer - title, transcript, captions, chapters, description, and comments - not the footage. A mediocre-looking video with a clean, structured text layer beats a beautiful one that's opaque to a crawler.
 
 ## The anatomy
 
@@ -14,11 +14,11 @@ This is what the model actually reads. Optimize the *spoken words*:
 
 - **Answer questions in complete, liftable sentences.** "The five steps to create an SOP are…" extracts cleanly; a rambling answer spread across three tangents doesn't.
 - Script or outline the key answers before recording so each core question gets a clear, structured spoken answer in one place.
-- Say the important terms out loud — the product name, the category, the entities you want associated. If it's only on a slide, the model may never see it.
+- Say the important terms out loud - the product name, the category, the entities you want associated. If it's only on a slide, the model may never see it.
 
 ### 2. Accurate captions
 
-Auto-captions are messy — misheard product names, no punctuation, broken sentences — and messy captions are what the model reads if you don't fix them. Upload cleaned captions (or at minimum correct the auto-generated ones). This is the cheapest fix on the list.
+Auto-captions are messy - misheard product names, no punctuation, broken sentences - and messy captions are what the model reads if you don't fix them. Upload cleaned captions (or at minimum correct the auto-generated ones). This is the cheapest fix on the list.
 
 ### 3. A question-shaped title
 
@@ -30,7 +30,7 @@ Chapters let the model (and viewers) jump to the exact answer. Structure = extra
 
 ### 5. A keyword-rich, structured description
 
-Restate the video's key points *as text* in the description — a short summary, then a bulleted list of what's covered, then resource links. This reinforces the topic and entities in plain crawlable text and gives the model a second, cleaner copy of the answer.
+Restate the video's key points *as text* in the description - a short summary, then a bulleted list of what's covered, then resource links. This reinforces the topic and entities in plain crawlable text and gives the model a second, cleaner copy of the answer.
 
 ### 6. A pinned comment with the summary
 
@@ -38,7 +38,7 @@ An extra liftable text block: pin a comment with the core answer in numbered ste
 
 ### 7. Thumbnail and engagement
 
-Engagement isn't read directly by LLMs, but it drives the watch signals that lift YouTube ranking — and YouTube ranking feeds what AI systems surface and cite. The thumbnail's job is the click; the text layer's job is the citation.
+Engagement isn't read directly by LLMs, but it drives the watch signals that lift YouTube ranking - and YouTube ranking feeds what AI systems surface and cite. The thumbnail's job is the click; the text layer's job is the citation.
 
 ## Publishing checklist
 
@@ -52,7 +52,7 @@ Engagement isn't read directly by LLMs, but it drives the watch signals that lif
 
 ## Related
 
-- The same "models read the text layer" logic applies to podcasts: episodes get transcribed and show notes get published, so podcast guesting is earned media that compounds in AI answers — see the `public-relations` skill's podcast guest prep reference.
+- The same "models read the text layer" logic applies to podcasts: episodes get transcribed and show notes get published, so podcast guesting is earned media that compounds in AI answers - see the `public-relations` skill's podcast guest prep reference.
 - For producing the videos themselves, see the `video` skill.
 
 ---
