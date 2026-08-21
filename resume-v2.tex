@@ -1,5 +1,5 @@
 \documentclass[10pt,letterpaper]{article}
-\usepackage[left=0.58in,right=0.58in,top=0.38in,bottom=0.38in]{geometry}
+\usepackage[left=0.55in,right=0.55in,top=0.32in,bottom=0.32in]{geometry}
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{titlesec}
@@ -17,29 +17,29 @@
 \setlength{\parskip}{0pt}
 
 \setlist{
-  itemsep=1.3pt,
-  topsep=1.5pt,
+  itemsep=0.8pt,
+  topsep=1.0pt,
   parsep=0pt,
-  leftmargin=14pt
+  leftmargin=13pt
 }
 
 \titleformat{\section}
   {\normalsize\bfseries\scshape\color{accent}}{}{0em}{}
   [\vspace{1pt}{\color{rule}\titlerule[0.8pt]}]
-\titlespacing*{\section}{0pt}{7pt}{3pt}
+\titlespacing*{\section}{0pt}{5pt}{2.5pt}
 
 \hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
 
 \newcommand{\resumeItem}[1]{\item{#1}}
 
 \newcommand{\resumeHeading}[3]{
-  \vspace{1pt}
+  \vspace{0.5pt}
   \noindent\begin{minipage}[t]{0.74\textwidth}
     \raggedright\textbf{#1} \enspace {\color{subtext}\small #2}
   \end{minipage}\hfill
   \begin{minipage}[t]{0.24\textwidth}
     \raggedleft{\small\color{subtext} #3}
-  \end{minipage}\par\vspace{1.5pt}
+  \end{minipage}\par\vspace{1pt}
 }
 
 \newcommand{\sectionlabel}[1]{\textbf{\color{accent}#1}}
@@ -50,10 +50,8 @@
 
 % ---------- HEADER ----------
 \begin{center}
-    {\Large \bfseries \scshape Basel Ashraf Fikry}\\[3pt]
+    {\Large \bfseries \scshape Basel Ashraf Fikry}\\[2pt]
     \small
-    \href{tel:+201028863334}{+20 102 886 3334}
-    \ {\color{rule}|}\
     \href{mailto:hello@baselashraf.com}{hello@baselashraf.com}
     \ {\color{rule}|}\
     \href{https://baselashraf.com}{baselashraf.com}
@@ -62,7 +60,7 @@
     \ {\color{rule}|}\
     \href{https://linkedin.com/in/basel-askar}{linkedin.com/in/basel-askar}
 \end{center}
-\vspace{4pt}
+\vspace{1pt}
 
 \small
 Solo systems and software engineer building production tools with a zero-dependency, client-first philosophy. Work spans in-browser numerical PDE solvers, layout engine internals, MCP developer tools, and scalable web platforms. Multiple projects organically validated by 100K+ users, Hacker News front page ($\times$2), Wikipedia citations, and a citable Zenodo DOI.
@@ -77,20 +75,17 @@ Solo systems and software engineer building production tools with a zero-depende
   \resumeItem{Computationally verified the 1992 resolution to Mark Kac's 1966 open problem (\textit{``Can one hear the shape of a drum?''}), confirming Gordon--Webb--Wolpert isospectral drum frequencies match published spectra to \textbf{1.07$\times$10$^{-7}$\%}.}
   \resumeItem{Earned \textbf{150 GitHub stars}, registered DOI (\href{https://doi.org/10.5281/zenodo.22019539}{10.5281/zenodo.22019539}), and was featured on Hacker News (front page $\times$2), Wikipedia's external links, kottke.org, and 52+ publications across 8 languages.}
 \end{itemize}
-\vspace{2pt}
 
 \resumeHeading{Prolific Tea}{Creator \& Solo Engineer \ $\cdot$ \ \href{https://prolifictea.com}{prolifictea.com}}{Apr 2026 -- Present}
 \begin{itemize}
   \resumeItem{Built a community-funded researcher review and pay-transparency platform serving \textbf{100,000+ page views} and 1,582 indexed researchers, with zero ads, investors, or required accounts (Next.js, PostgreSQL, PWA).}
   \resumeItem{Developed a companion Chrome extension that intercepts study network traffic to match and surface researcher fairness and rejection ratings inline, before participants accept a task.}
 \end{itemize}
-\vspace{2pt}
 
 \resumeHeading{holystitch}{Creator \ $\cdot$ \ \href{https://github.com/BaselAshraf81/holystitch}{github.com/BaselAshraf81/holystitch} \ (23~$\bigstar$)}{TypeScript \ $\cdot$ \ MCP Server}
 \begin{itemize}
   \resumeItem{Built a Model Context Protocol (MCP) server that compiles Google Stitch designs directly into production React and Next.js component trees via native API calls, with zero LLM inference tokens spent.}
 \end{itemize}
-\vspace{2pt}
 
 \resumeHeading{layout-sans}{Creator \ $\cdot$ \ \href{https://github.com/BaselAshraf81/layout-sans}{github.com/BaselAshraf81/layout-sans} \ (67~$\bigstar$)}{TypeScript \ $\cdot$ \ \href{https://www.npmjs.com/package/layout-sans}{npm package}}
 \begin{itemize}
@@ -112,9 +107,9 @@ Solo systems and software engineer building production tools with a zero-depende
 \section*{Skills}
 
 \begin{tabular}{@{}p{1.55in}p{5.15in}@{}}
-\textbf{Languages} & TypeScript, JavaScript, Rust, Python, Java, SQL \\[3pt]
-\textbf{Frontend \& Web} & Next.js, React, Node.js, Web Audio API, Web Workers, Chrome Extension API, Canvas API, Tailwind CSS \\[3pt]
-\textbf{Systems \& AI} & Finite Element Method (FEM), Model Context Protocol (MCP), LlamaIndex, FAISS, PostgreSQL, Supabase, Docker, Linux, Git \\[3pt]
+\textbf{Languages} & TypeScript, JavaScript, Rust, Python, Java, SQL \\[2pt]
+\textbf{Frontend \& Web} & Next.js, React, Node.js, Web Audio API, Web Workers, Chrome Extension API, Canvas API, Tailwind CSS \\[2pt]
+\textbf{Systems \& AI} & Finite Element Method (FEM), Model Context Protocol (MCP), LlamaIndex, FAISS, PostgreSQL, Supabase, Docker, Linux, Git \\[2pt]
 \textbf{Security \& Testing} & Burp Suite, web security research, conformance testing (TC39 / Luxon) \\
 \end{tabular}
 

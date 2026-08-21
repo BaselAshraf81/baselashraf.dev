@@ -1,5 +1,5 @@
 BASEL ASHRAF FIKRY
-+20 102 886 3334 · hello@baselashraf.com · baselashraf.com · github.com/BaselAshraf81 · linkedin.com/in/basel-askar
+hello@baselashraf.com · baselashraf.com · github.com/BaselAshraf81 · linkedin.com/in/basel-askar
 
 Solo systems and software engineer building production tools with a zero-dependency, client-first philosophy. Work spans in-browser numerical PDE solvers, layout engine internals, MCP developer tools, and scalable web platforms. Multiple projects organically validated by 100K+ users, Hacker News front page (×2), Wikipedia citations, and a citable Zenodo DOI.
 
