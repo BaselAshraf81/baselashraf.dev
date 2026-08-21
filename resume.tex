@@ -1,0 +1,143 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[left=0.55in,right=0.55in,top=0.38in,bottom=0.38in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{XCharter}
+\usepackage{amssymb}
+\usepackage{microtype}
+
+\definecolor{accent}{RGB}{15, 40, 90}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\setlist{
+  itemsep=1.5pt,
+  topsep=1.5pt,
+  parsep=0pt,
+  leftmargin=12pt
+}
+
+\titleformat{\section}
+  {\large\bfseries\color{accent}}{}{0em}{}
+  [\color{accent}\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{2.5pt}
+
+\titleformat{\subsection}[runin]{\bfseries}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{2pt}{0.5em}
+
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{1.5pt}
+  {\textbf{#1}}~{\color{accent}|} \textit{#2} \hfill \textit{\small #3}%
+  \ifx&#4&\else\\\textit{\small #4}\fi
+  \vspace{0pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{2pt}
+  \textbf{#1} \hfill {\small\textit{#2}}
+  \vspace{0pt}
+}
+
+\linespread{1.03}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{BASEL ASHRAF FIKRY}}\\
+    \vspace{2.5pt}
+    \small \href{tel:+201028863334}{+20 102 886 3334} \enspace$\cdot$\enspace \href{mailto:hello@baselashraf.com}{hello@baselashraf.com} \enspace$\cdot$\enspace \href{https://baselashraf.com}{baselashraf.com} \enspace$\cdot$\enspace \href{https://github.com/BaselAshraf81}{github.com/BaselAshraf81} \enspace$\cdot$\enspace \href{https://linkedin.com/in/basel-askar}{linkedin.com/in/basel-askar}
+\end{center}
+\vspace{-8pt}
+
+\section*{WORK EXPERIENCE}
+
+\resumeSubheading
+  {Founder \& Solo Engineer}{Eigendrum · \href{https://eigendrum.com}{eigendrum.com}}{Aug 2026 -- Present}{}
+  \begin{itemize}
+    \resumeItem{Built a browser finite element simulation that meshes arbitrary drawn outlines, solves the 2D Dirichlet Laplacian eigenvalue problem with P1 finite elements, and synthesizes vibrational audio modes in \textasciitilde800\,ms in a Web Worker (zero backend).}
+    \resumeItem{Verified $<$0.2\% error against closed-form spectra; computationally proved Gordon-Webb-Wolpert isospectral drum theorem with 16 lowest frequencies matching to within \textbf{1.07\(\times\)10\(^{-7}\)\%}.}
+    \resumeItem{Earned \textbf{150 GitHub stars}, registered DOI (\href{https://doi.org/10.5281/zenodo.22019539}{10.5281/zenodo.22019539}), and featured on Hacker News (front page $\times$2), Wikipedia, and 52+ publications in 8 languages.}
+  \end{itemize}
+
+\resumeSubheading
+  {Founder \& Solo Engineer}{Prolific Tea · \href{https://prolifictea.com}{prolifictea.com}}{Apr 2026 -- Present}{}
+  \begin{itemize}
+    \resumeItem{Engineered a researcher review platform serving \textbf{100,000+ page views} and 1,582 indexed researchers, built with Next.js, PostgreSQL, and PWA push notifications.}
+    \resumeItem{Developed companion Chrome extension that intercepts network traffic on study feeds to display researcher fairness and rejection ratings inline before participants accept tasks.}
+  \end{itemize}
+
+\resumeSubheading
+  {Data Engineer}{Passion Of Rugs · Part-time}{Oct 2025 -- Present}{}
+  \begin{itemize}
+    \resumeItem{Built a Python ETL pipeline that cleaned and structured \textbf{120,000+ records} from 1,200+ heterogeneous spreadsheets into a unified CRM schema using the OpenAI API for schema alignment.}
+    \resumeItem{Reduced API costs by 13\% through request deduplication and response caching; runs fully unattended in production.}
+  \end{itemize}
+
+\section*{PROJECTS \& OPEN SOURCE}
+
+\resumeProjectHeading
+  {\href{https://github.com/BaselAshraf81/layout-sans}{layout-sans} \textnormal{(67\,\(\bigstar\))}}{TypeScript · \href{https://www.npmjs.com/package/layout-sans}{npm package}}
+  \begin{itemize}
+    \resumeItem{Created a 2D flex/grid layout engine in \textasciitilde17\,kB gzipped (zero dependencies, no DOM/WASM) running \textbf{2--3\(\times\) faster} than Meta's Yoga with an 18\(\times\) smaller bundle. Implemented interactive canvas text selection, clipboard copy, Ctrl+F, and accessibility tree.}
+  \end{itemize}
+
+\resumeProjectHeading
+  {\href{https://github.com/BaselAshraf81/fastemporal}{fastemporal}}{Rust · \href{https://docs.rs/fastemporal}{docs.rs}}
+  \begin{itemize}
+    \resumeItem{Reimplemented Luxon and TC39 Temporal date/time APIs in pure Rust with zero heap allocations in hot paths, validated against \textbf{332 ported conformance tests} from Luxon and date-fns.}
+  \end{itemize}
+
+\resumeProjectHeading
+  {\href{https://github.com/saltyshiomix/nextron/pull/531}{Nextron --- PR \#531}}{Electron + Next.js (Merged)}
+  \begin{itemize}
+    \resumeItem{Upgraded an Electron + Next.js framework from Next 14 \(\rightarrow\) 16 and React 18 \(\rightarrow\) 19 across 33 files (+1,218 / -416 lines), merged and shipped upstream as \textbf{nextron@9.6.0}.}
+  \end{itemize}
+
+\resumeProjectHeading
+  {\href{https://github.com/BaselAshraf81/epstein-rag-abliterated-llm}{Legal Document RAG}}{Python · LlamaIndex · FAISS}
+  \begin{itemize}
+    \resumeItem{Built hybrid vector/keyword search over \textbf{25,303 legal documents}, serving \textbf{230+ concurrent users} on a single T4 GPU via a custom asynchronous request queue with zero out-of-memory errors.}
+  \end{itemize}
+
+\resumeProjectHeading
+  {\href{https://github.com/BaselAshraf81/photophane}{Photophane} \textnormal{(72 upvotes on r/photogrammetry)}}{TypeScript · WebGL}
+  \begin{itemize}
+    \resumeItem{Developed an optical simulation computing 3D-printable continuous relief plates (10.97\,mm depth) that project target photographs onto walls via refracted caustic light rays.}
+  \end{itemize}
+
+\resumeProjectHeading
+  {M-Pesa Security Research}{HackerOne · Bug Bounty}
+  \begin{itemize}
+    \resumeItem{Discovered and reported a Stored XSS vulnerability in M-Pesa's PDF receipt generator via font descriptor injection; accepted and rewarded through HackerOne.}
+  \end{itemize}
+
+\section*{SKILLS}
+\begin{itemize}[leftmargin=0pt, label={}]
+    \small{\item{
+     \textbf{Languages:} TypeScript, Rust, Python, JavaScript, Java, SQL, C/C++ \\
+     \textbf{Web \& Frontend:} Next.js, React, Node.js, Spring Boot, Web Audio API, Web Workers, Chrome Extensions, Tailwind CSS \\
+     \textbf{Systems \& AI:} Finite Element Method (FEM), LlamaIndex, FAISS, PyTorch, PostgreSQL, Supabase, Docker, Linux, Git \\
+     \textbf{Security:} OWASP, Burp Suite, WebAuthn, Vulnerability Research
+    }}
+\end{itemize}
+
+\section*{EDUCATION}
+
+\textbf{BSc in Computer Engineering and Software Systems (Dual Degree)} \hfill \textit{Feb 2021 -- Expected Nov 2026}\\
+\textit{University of East London \& Ain Shams University}
+
+\textbf{Università di Pisa --- Graduate Summer School} \hfill \textit{Sep 2025}\\
+Human-Centric ICT for Industry 5.0, Pisa, Italy (Scholarship) | \textit{Grade: 29/30}
+
+\textbf{Hanyang University --- Foreign Exchange} \hfill \textit{Sep 2024 -- Jan 2025}\\
+Seoul, South Korea | \textit{GPA: 4.0/4.5}
+
+\end{document}

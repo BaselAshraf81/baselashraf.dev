@@ -1,59 +1,61 @@
 BASEL ASHRAF FIKRY
-+20 102 886 3334 · hello@baselashraf.com · linkedin.com/in/basel-askar · github.com/BaselAshraf81
++20 102 886 3334 · hello@baselashraf.com · baselashraf.com · github.com/BaselAshraf81 · linkedin.com/in/basel-askar
+
 WORK EXPERIENCE
+
 Founder & Solo Engineer | Eigendrum · eigendrum.com
 Aug 2026 – Present
-• Built a browser finite element simulation that solves Dirichlet eigenvalue problems on arbitrary user outlines and synthesises acoustic modes in real-time
-• 150★ on GitHub, DOI citation (10.5281/zenodo.22019539), featured on Hacker News front page ×2, Wikipedia, kottke.org, and 52+ global publications in 8 languages
-• Runs in a background Web Worker in ~800 ms with zero dependencies and verified accuracy (<0.2% error against analytical closed-form spectra)
+• Built a browser finite element simulation that meshes arbitrary drawn outlines, solves the 2D Dirichlet Laplacian eigenvalue problem with P1 finite elements, and synthesizes vibrational audio modes in ~800 ms in a Web Worker (zero backend).
+• Verified <0.2% error against closed-form spectra; computationally proved Gordon-Webb-Wolpert isospectral drum theorem with 16 lowest frequencies matching to within 1.07×10⁻⁷%.
+• Earned 150 GitHub stars, registered DOI (10.5281/zenodo.22019539), and featured on Hacker News (front page ×2), Wikipedia, and 52+ publications in 8 languages.
+
 Founder & Solo Engineer | Prolific Tea · prolifictea.com
 Apr 2026 – Present
-• Built a review platform where Prolific study participants rate researchers on pay fairness and rejection behavior - live in production,
-indexed by Google, growing organically
-• Full-stack Next.js app with Chrome extension (auto-detects researchers via network interception), PWA push notifications, image
-uploads, threaded comments, and admin moderation tools
+• Engineered a researcher review platform serving 100,000+ page views and 1,582 indexed researchers, built with Next.js, PostgreSQL, and PWA push notifications.
+• Developed companion Chrome extension that intercepts network traffic on study feeds to display researcher fairness and rejection ratings inline before participants accept tasks.
+
 Data Engineer | Passion Of Rugs · Part-time
 Oct 2025 – Present
-• Built a Python pipeline that cleaned and restructured 120K+ records from 1200+ inconsistent spreadsheets into a unified CRM schema,
-using the OpenAI API for intelligent field mapping
-• Reduced API costs by 13% through request deduplication and caching; pipeline now runs unattended on a schedule
+• Built a Python ETL pipeline that cleaned and structured 120,000+ records from 1,200+ heterogeneous spreadsheets into a unified CRM schema using the OpenAI API for schema alignment.
+• Reduced API costs by 13% through request deduplication and response caching; runs fully unattended in production.
+
 PROJECTS & OPEN SOURCE
-layout-sans (65 ⋆)
-TypeScript · npm published
-• 2D flex/grid layout engine in ~17 kB (no DOM, no WASM). Benchmarked at 30–166× faster than browser layout and 2–3× faster than
-Facebook’s Yoga. Supports canvas text selection, copy, Ctrl+F, hyperlinks, and screen-reader accessibility
-holystitch (18 ⋆)
-TypeScript · MCP Tool
-• MCP tool that converts Google Stitch designs to production React/Next.js code without using AI tokens - calls the Stitch API directly
-and outputs a complete component tree
-fastemporal
-Rust
-• Rust implementation of the Luxon date/time API with 47× average speedup over the JS original; 332 tests ported from Luxon, date-fns,
-and TC39 Temporal conformance suites
-Nextron - PR #531 (merged, released same day)
-Electron + Next.js
-• Upgraded a popular Electron + Next.js framework from Next.js 14 →16 and React 18 →19 across 33 files - shipped as nextron@9.6.0
-M-Pesa Bug Bounty
-HackerOne · Security Research
-• Found and reported a Stored XSS in M-Pesa’s PDF receipt generator (font descriptor injection leading to code execution) - accepted
-via HackerOne
-Legal RAG System
-Python · LlamaIndex · FAISS
-• AI search over 25K+ legal documents; handled 230+ concurrent users on a single T4 GPU with a custom request queue and zero
-OOM crashes
+
+layout-sans (67 ★) | TypeScript · npm package (npmjs.com/package/layout-sans)
+• Created a 2D flex/grid layout engine in ~17 kB gzipped (zero dependencies, no DOM/WASM) running 2–3× faster than Meta's Yoga with an 18× smaller bundle. Implemented interactive canvas text selection, clipboard copy, Ctrl+F, and accessibility tree.
+
+fastemporal | Rust · docs.rs (docs.rs/fastemporal)
+• Reimplemented Luxon and TC39 Temporal date/time APIs in pure Rust with zero heap allocations in hot paths, validated against 332 ported conformance tests from Luxon and date-fns.
+
+Nextron — PR #531 | Electron + Next.js (Merged upstream as nextron@9.6.0)
+• Upgraded an Electron + Next.js framework from Next 14 → 16 and React 18 → 19 across 33 files (+1,218 / -416 lines), merged and shipped upstream.
+
+Legal Document RAG | Python · LlamaIndex · FAISS
+• Built hybrid vector/keyword search over 25,303 legal documents, serving 230+ concurrent users on a single T4 GPU via a custom asynchronous request queue with zero out-of-memory errors.
+
+Photophane (72 upvotes on r/photogrammetry) | TypeScript · WebGL
+• Developed an optical simulation computing 3D-printable continuous relief plates (10.97 mm depth) that project target photographs onto walls via refracted caustic light rays.
+
+M-Pesa Security Research | HackerOne · Bug Bounty
+• Discovered and reported a Stored XSS vulnerability in M-Pesa's PDF receipt generator via font descriptor injection; accepted and rewarded through HackerOne.
+
 SKILLS
-Languages: TypeScript, Rust, Python, Java, SQL
-Web: Next.js, React, Spring Boot, Tailwind CSS, Prisma, Stripe, Chrome Extensions
-Data & AI: OpenAI API, LlamaIndex, FAISS, TensorFlow, Pandas
-Infrastructure: PostgreSQL, Supabase, Docker, Vercel, Linux, Git
-Security: Burp Suite, OWASP, WebAuthn, Bug Bounty
+
+Languages: TypeScript, Rust, Python, JavaScript, Java, SQL, C/C++
+Web & Frontend: Next.js, React, Node.js, Spring Boot, Web Audio API, Web Workers, Chrome Extensions, Tailwind CSS
+Systems & AI: Finite Element Method (FEM), LlamaIndex, FAISS, PyTorch, PostgreSQL, Supabase, Docker, Linux, Git
+Security: OWASP, Burp Suite, WebAuthn, Vulnerability Research
+
 EDUCATION
+
 BSc in Computer Engineering and Software Systems (Dual Degree)
 Feb 2021 – Expected Nov 2026
 University of East London & Ain Shams University
-Università di Pisa - Graduate Summer School
+
+Università di Pisa — Graduate Summer School
 Sep 2025
 Human-Centric ICT for Industry 5.0, Pisa, Italy (Scholarship) | Grade: 29/30
-Hanyang University - Foreign Exchange
+
+Hanyang University — Foreign Exchange
 Sep 2024 – Jan 2025
 Seoul, South Korea | GPA: 4.0/4.5
