@@ -1,7 +1,7 @@
 BASEL ASHRAF FIKRY
 +20 102 886 3334 · hello@baselashraf.com · baselashraf.com · github.com/BaselAshraf81 · linkedin.com/in/basel-askar
 
-Solo systems and software engineer building production tools with a zero-dependency, client-first philosophy. Work spans in-browser numerical PDE solvers, layout engine internals, MCP developer tools, and scalable web platforms. Multiple projects organically validated by 100K+ users, Hacker News front page (×2), Wikipedia citations, and peer-reviewed Zenodo DOI.
+Solo systems and software engineer building production tools with a zero-dependency, client-first philosophy. Work spans in-browser numerical PDE solvers, layout engine internals, MCP developer tools, and scalable web platforms. Multiple projects organically validated by 100K+ users, Hacker News front page (×2), Wikipedia citations, and a citable Zenodo DOI.
 
 FEATURED ENGINEERING & PRODUCTS
 
@@ -23,7 +23,7 @@ layout-sans (67 ★) | Creator · npmjs.com/package/layout-sans | TypeScript · 
 SELECTED SYSTEMS, SECURITY & DATA
 
 • Legal Document RAG (Python · LlamaIndex · FAISS): Built hybrid vector/keyword search over 25,303 legal documents, serving 230+ concurrent users on a single T4 GPU via a custom asynchronous request queue with zero out-of-memory errors.
-• fastemporal (Rust · docs.rs/fastemporal): Reimplemented Luxon and TC39 Temporal date-time APIs in pure Rust to eliminate V8 GC latency in high-throughput pipelines, validated against 332 conformance tests from Luxon and date-fns.
+• fastemporal (Rust · docs.rs/fastemporal): Reimplemented Luxon and TC39 Temporal datetime APIs in pure Rust with embedded IANA timezone data and zero heap allocations in hot paths (benchmarked 7–216× faster than JS Luxon), passing 332 ported conformance tests.
 • Photophane (TypeScript · WebGL): Computed 3D-printable continuous optical relief plates (10.97 mm depth) projecting photographs onto walls via refracted caustic light rays (72 upvotes on r/photogrammetry).
 • M-Pesa Bug Bounty & OSS (HackerOne): Discovered Stored XSS in M-Pesa's PDF generator via font descriptor injection (accepted on HackerOne); upgraded Electron+Next.js framework to Next 16 / React 19 across 33 files, shipped as nextron@9.6.0.
 • Passion of Rugs (Python ETL · Part-time): Automated ETL restructuring 120,000+ records from 1,200+ spreadsheets into a normalized CRM schema with OpenAI API schema mapping, reducing API costs by 13% via deduplication.
