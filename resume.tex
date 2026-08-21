@@ -9,37 +9,31 @@
 \usepackage{microtype}
 
 \definecolor{accent}{RGB}{15, 40, 90}
-\definecolor{subtext}{RGB}{70, 80, 95}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 
 \setlist{
-  itemsep=1pt,
-  topsep=1pt,
+  itemsep=1.2pt,
+  topsep=1.2pt,
   parsep=0pt,
-  leftmargin=11pt
+  leftmargin=12pt
 }
 
 \titleformat{\section}
   {\large\bfseries\color{accent}}{}{0em}{}
   [\color{accent}\titlerule]
-\titlespacing*{\section}{0pt}{5pt}{2.5pt}
-
-\titleformat{\subsection}
-  {\small\bfseries\color{subtext}\uppercase}{}{0em}{}
-\titlespacing*{\subsection}{0pt}{3.5pt}{1.5pt}
+\titlespacing*{\section}{0pt}{5pt}{2pt}
 
 \hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
 
 \newcommand{\resumeItem}[1]{\item\small{#1}}
 
-\newcommand{\resumeEntry}[4]{
+\newcommand{\resumeHeading}[3]{
   \vspace{1.5pt}
-  \textbf{#1} $|$ \textit{#2} \hfill \textit{\small #3}\\
-  \small{\textit{#4}}
-  \vspace{0.5pt}
+  {\textbf{#1}}~{\color{accent}|} \textit{#2} \hfill \textit{\small #3}
+  \vspace{0pt}
 }
 
 \linespread{1.02}
@@ -49,93 +43,56 @@
 \begin{center}
     {\LARGE \textbf{BASEL ASHRAF FIKRY}}\\
     \vspace{2pt}
-    \small +20 102 886 3334 \enspace$\cdot$\enspace \href{mailto:hello@baselashraf.com}{hello@baselashraf.com} \enspace$\cdot$\enspace \href{https://baselashraf.com}{baselashraf.com} \enspace$\cdot$\enspace \href{https://github.com/BaselAshraf81}{GitHub} \enspace$\cdot$\enspace \href{https://linkedin.com/in/basel-askar}{LinkedIn}
+    \small \href{tel:+201028863334}{+20 102 886 3334} \enspace$\cdot$\enspace \href{mailto:hello@baselashraf.com}{hello@baselashraf.com} \enspace$\cdot$\enspace \href{https://baselashraf.com}{baselashraf.com} \enspace$\cdot$\enspace \href{https://github.com/BaselAshraf81}{github.com/BaselAshraf81} \enspace$\cdot$\enspace \href{https://linkedin.com/in/basel-askar}{linkedin.com/in/basel-askar}
 \end{center}
-\vspace{-8pt}
+\vspace{-7pt}
 
-\section*{WORK EXPERIENCE}
+\small
+Solo systems and software engineer building production tools with a zero-dependency, client-first philosophy. Work spans in-browser numerical PDE solvers, layout engine internals, MCP developer tools, and scalable web platforms. Multiple projects organically validated by 100K+ users, Hacker News front page ($\times$2), Wikipedia citations, and peer-reviewed Zenodo DOI.
+\vspace{-2pt}
 
-\resumeEntry
-  {Eigendrum}{Founder \& Solo Engineer}{Aug 2026 -- Present}
-  {Stack: JavaScript, Web Audio API, Web Workers, P1 FEM \hfill \href{https://eigendrum.com}{eigendrum.com}}
-  \begin{itemize}
-    \resumeItem{Architected in-browser finite element engine solving 2D Dirichlet Laplacian eigenvalue problems on arbitrary user outlines and synthesizing acoustic modes in \textasciitilde800\,ms via Web Workers with zero backend.}
-    \resumeItem{Achieved $<$0.2\% numerical error against analytical closed-form spectra; computationally proved Gordon-Webb-Wolpert isospectral theorem with 16 lowest frequencies matching to within \textbf{1.07\(\times\)10\(^{-7}\)\%}.}
-    \resumeItem{Reached \textbf{150 GitHub stars}, registered DOI (\href{https://doi.org/10.5281/zenodo.22019539}{10.5281/zenodo.22019539}), and featured on Hacker News (front page $\times$2), Wikipedia, and 52+ publications in 8 languages.}
-  \end{itemize}
+\section*{FEATURED ENGINEERING \& PRODUCTS}
 
-\resumeEntry
-  {Prolific Tea}{Founder \& Solo Engineer}{Apr 2026 -- Present}
-  {Stack: Next.js, React, PostgreSQL, PWA, Chrome Extension API \hfill \href{https://prolifictea.com}{prolifictea.com}}
-  \begin{itemize}
-    \resumeItem{Scaled researcher transparency platform to \textbf{100,000+ page views} and 1,582 indexed researchers with aggregate ratings, rejection tracking, and moderation tools.}
-    \resumeItem{Engineered companion Chrome extension intercepting study network requests to match and render researcher fairness ratings inline before participants accept tasks.}
-  \end{itemize}
+\resumeHeading{Eigendrum}{Creator \& Solo Engineer · \href{https://eigendrum.com}{eigendrum.com}}{Aug 2026 -- Present}
+\begin{itemize}
+  \resumeItem{Built a browser physics engine meshing arbitrary outlines and solving 2D Dirichlet Laplacian eigenvalue problems via custom P1 finite elements; synthesizes modal acoustics in \textasciitilde800\,ms in a Web Worker (zero dependencies, no backend).}
+  \resumeItem{Computationally verified the 1992 resolution to Mark Kac's 1966 open problem (\textit{``Can one hear the shape of a drum?''}), proving Gordon-Webb-Wolpert isospectral drum frequencies match published spectra to \textbf{1.07\(\times\)10\(^{-7}\)\%}.}
+  \resumeItem{Earned \textbf{150 GitHub stars}, registered DOI (\href{https://doi.org/10.5281/zenodo.22019539}{10.5281/zenodo.22019539}), and featured on Hacker News (front page $\times$2), Wikipedia external links, kottke.org, and 52+ publications across 8 languages.}
+\end{itemize}
 
-\resumeEntry
-  {Passion Of Rugs}{Data Engineer (Part-time)}{Oct 2025 -- Present}
-  {Stack: Python, OpenAI API, Pandas, ETL Pipelines \hfill Scheduled Automation}
-  \begin{itemize}
-    \resumeItem{Engineered automated Python ETL pipeline restructuring \textbf{120,000+ records} from 1,200+ heterogeneous spreadsheets into a normalized CRM schema using OpenAI API for schema mapping.}
-    \resumeItem{Reduced API operating costs by 13\% through batch request deduplication and response caching; runs unattended in production.}
-  \end{itemize}
+\resumeHeading{Prolific Tea}{Creator \& Solo Engineer · \href{https://prolifictea.com}{prolifictea.com}}{Apr 2026 -- Present}
+\begin{itemize}
+  \resumeItem{Built a community-funded researcher review and pay transparency platform serving \textbf{100,000+ page views} and 1,582 indexed researchers with zero ads, investors, or accounts required (Next.js, PostgreSQL, PWA).}
+  \resumeItem{Developed a companion Chrome extension intercepting study network traffic to match and display researcher fairness and rejection ratings inline before participants accept tasks.}
+\end{itemize}
 
-\section*{PROJECTS \& OPEN SOURCE}
+\resumeHeading{holystitch}{Creator · \href{https://github.com/BaselAshraf81/holystitch}{github.com/BaselAshraf81/holystitch} (23\,\(\bigstar\))}{TypeScript · MCP Server}
+\begin{itemize}
+  \resumeItem{Built a Model Context Protocol (MCP) server that compiles Google Stitch designs directly into production React and Next.js component trees via native API calls without consuming LLM inference tokens.}
+\end{itemize}
 
-\subsection*{Systems \& Developer Tooling}
+\resumeHeading{layout-sans}{Creator · \href{https://github.com/BaselAshraf81/layout-sans}{github.com/BaselAshraf81/layout-sans} (67\,\(\bigstar\))}{TypeScript · \href{https://www.npmjs.com/package/layout-sans}{npm package}}
+\begin{itemize}
+  \resumeItem{Engineered a 2D flex/grid layout engine in \textasciitilde17\,kB gzipped (0 dependencies, no DOM/WASM) executing \textbf{2--3\(\times\) faster} than Meta's Yoga with an 18\(\times\) smaller bundle. Implemented interactive canvas text selection, clipboard copy, Ctrl+F, and accessibility tree on pretext.}
+\end{itemize}
 
-\resumeEntry
-  {layout-sans}{Creator (67\,\(\bigstar\))}{TypeScript}
-  {Stack: TypeScript, pretext, Canvas 2D, Zero Dependencies \hfill \href{https://www.npmjs.com/package/layout-sans}{npm: layout-sans}}
-  \begin{itemize}
-    \resumeItem{Architected 2D flex/grid layout engine in \textasciitilde17\,kB gzipped (no DOM/WASM) executing \textbf{2--3\(\times\) faster} than Meta's Yoga with an 18\(\times\) smaller bundle size.}
-    \resumeItem{Implemented interactive canvas text layer supporting drag selection, clipboard copy, Ctrl+F search, hyperlinks, and screen-reader accessibility tree.}
-  \end{itemize}
+\section*{SELECTED SYSTEMS, SECURITY \& DATA}
 
-\resumeEntry
-  {fastemporal}{Creator}{Rust}
-  {Stack: Rust, Temporal Conformance Suite, docs.rs \hfill \href{https://docs.rs/fastemporal}{docs.rs/fastemporal}}
-  \begin{itemize}
-    \resumeItem{Reimplemented Luxon and TC39 Temporal date/time APIs in pure Rust with zero heap allocations in hot paths, validated against \textbf{332 ported conformance tests}.}
-  \end{itemize}
-
-\resumeEntry
-  {Nextron --- PR \#531}{Open Source Contributor}{Electron + Next.js}
-  {Stack: Next.js 16, React 19, Electron, Turbopack \hfill \href{https://github.com/saltyshiomix/nextron/pull/531}{Released: nextron@9.6.0}}
-  \begin{itemize}
-    \resumeItem{Upgraded popular Electron + Next.js framework from Next 14 \(\rightarrow\) 16 and React 18 \(\rightarrow\) 19 across 33 files (+1,218 / -416 lines); merged and published same day.}
-  \end{itemize}
-
-\subsection*{AI Systems \& Security Operations}
-
-\resumeEntry
-  {Legal Document RAG}{Creator}{Python · AI Search}
-  {Stack: Python, LlamaIndex, FAISS, PyTorch, GPU Queue \hfill \href{https://github.com/BaselAshraf81/epstein-rag-abliterated-llm}{github/epstein-rag-abliterated-llm}}
-  \begin{itemize}
-    \resumeItem{Built hybrid vector/keyword retrieval over \textbf{25,303 legal documents}, serving \textbf{230+ concurrent users} on a single T4 GPU via custom asynchronous queue with 0 OOM crashes.}
-  \end{itemize}
-
-\resumeEntry
-  {Photophane}{Creator (72 upvotes on r/photogrammetry)}{TypeScript · Optics}
-  {Stack: TypeScript, WebGL, 3D Mesh Generation \hfill \href{https://github.com/BaselAshraf81/photophane}{github/photophane}}
-  \begin{itemize}
-    \resumeItem{Computed continuous 3D-printable optical heightmaps (10.97\,mm relief) projecting target photographs onto walls purely via refracted caustic light rays.}
-  \end{itemize}
-
-\resumeEntry
-  {M-Pesa Vulnerability Research}{Security Researcher}{HackerOne}
-  {Stack: Burp Suite, PDF Structure Analysis, Font Descriptors \hfill Accepted Bounty}
-  \begin{itemize}
-    \resumeItem{Discovered and reported Stored XSS flaw in M-Pesa PDF receipt generator via font descriptor injection; validated, accepted, and rewarded through HackerOne.}
-  \end{itemize}
+\begin{itemize}
+  \resumeItem{\textbf{Legal Document RAG} (\href{https://github.com/BaselAshraf81/epstein-rag-abliterated-llm}{Python · LlamaIndex · FAISS}): Built hybrid vector/keyword search over \textbf{25,303 legal documents}, serving \textbf{230+ concurrent users} on a single T4 GPU via a custom asynchronous request queue with zero out-of-memory errors.}
+  \resumeItem{\textbf{fastemporal} (\href{https://docs.rs/fastemporal}{Rust · docs.rs}): Reimplemented Luxon and TC39 Temporal date-time APIs in pure Rust to eliminate V8 GC latency in high-throughput pipelines, validated against \textbf{332 conformance tests} from Luxon and date-fns.}
+  \resumeItem{\textbf{Photophane} (\href{https://github.com/BaselAshraf81/photophane}{TypeScript · WebGL}): Computed 3D-printable continuous optical relief plates (10.97\,mm depth) projecting photographs onto walls via refracted caustic light rays (\textbf{72 upvotes} on r/photogrammetry).}
+  \resumeItem{\textbf{M-Pesa Bug Bounty \& OSS} (HackerOne): Discovered Stored XSS in M-Pesa's PDF generator via font descriptor injection (accepted on HackerOne); upgraded Electron+Next.js framework to Next 16 / React 19 across 33 files, shipped as \textbf{nextron@9.6.0}.}
+  \resumeItem{\textbf{Passion of Rugs} (Python ETL · Part-time): Automated ETL restructuring \textbf{120,000+ records} from 1,200+ spreadsheets into a normalized CRM schema with OpenAI API schema mapping, reducing API costs by 13\% via deduplication.}
+\end{itemize}
 
 \section*{SKILLS}
 \begin{itemize}[leftmargin=0pt, label={}]
     \small{\item{
-     \textbf{Languages:} TypeScript, Rust, Python, JavaScript, Java, SQL, C/C++ \\
-     \textbf{Web \& Frontend:} Next.js, React, Node.js, Spring Boot, Web Audio API, Web Workers, Chrome Extensions, Tailwind CSS \\
-     \textbf{Systems \& AI:} Finite Element Method (FEM), LlamaIndex, FAISS, PyTorch, PostgreSQL, Supabase, Docker, Linux, Git \\
-     \textbf{Security:} OWASP, Burp Suite, WebAuthn, Vulnerability Research
+     \textbf{Languages:} TypeScript, JavaScript, Rust, Python, Java, SQL \\
+     \textbf{Frontend \& Web:} Next.js, React, Node.js, Web Audio API, Web Workers, Chrome Extension API, Canvas API, Tailwind CSS \\
+     \textbf{Systems \& AI:} Finite Element Method (FEM), Model Context Protocol (MCP), LlamaIndex, FAISS, PostgreSQL, Supabase, Docker, Linux, Git \\
+     \textbf{Security \& Testing:} Burp Suite, Web Security Research, Conformance Testing (TC39 / Luxon)
     }}
 \end{itemize}
 
@@ -145,9 +102,9 @@
 \textit{University of East London \& Ain Shams University}
 
 \textbf{Università di Pisa --- Graduate Summer School} \hfill \textit{Sep 2025}\\
-\textit{Human-Centric ICT for Industry 5.0, Pisa, Italy (Scholarship) $|$ Grade: 29/30}
+Human-Centric ICT for Industry 5.0, Pisa, Italy (Scholarship) | \textit{Grade: 29/30}
 
-\textbf{Hanyang University --- Foreign Exchange} \hfill \textit{Sep 2024 -- Jan 2025}\\
-\textit{Seoul, South Korea $|$ GPA: 4.0/4.5}
+\textbf{Hanyang University --- Foreign Exchange in Computer Science} \hfill \textit{Sep 2024 -- Jan 2025}\\
+Seoul, South Korea | \textit{GPA: 4.0/4.5}
 
 \end{document}

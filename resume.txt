@@ -1,69 +1,47 @@
 BASEL ASHRAF FIKRY
 +20 102 886 3334 · hello@baselashraf.com · baselashraf.com · github.com/BaselAshraf81 · linkedin.com/in/basel-askar
 
-WORK EXPERIENCE
+Solo systems and software engineer building production tools with a zero-dependency, client-first philosophy. Work spans in-browser numerical PDE solvers, layout engine internals, MCP developer tools, and scalable web platforms. Multiple projects organically validated by 100K+ users, Hacker News front page (×2), Wikipedia citations, and peer-reviewed Zenodo DOI.
 
-Eigendrum | Founder & Solo Engineer                                          Aug 2026 – Present
-Stack: JavaScript, Web Audio API, Web Workers, P1 FEM                        eigendrum.com
-• Architected in-browser finite element engine solving 2D Dirichlet Laplacian eigenvalue problems on arbitrary user outlines and synthesizing acoustic modes in ~800 ms via Web Workers with zero backend.
-• Achieved <0.2% numerical error against analytical closed-form spectra; computationally proved Gordon-Webb-Wolpert isospectral theorem with 16 lowest frequencies matching to within 1.07×10⁻⁷%.
-• Reached 150 GitHub stars, registered DOI (10.5281/zenodo.22019539), and featured on Hacker News (front page ×2), Wikipedia, and 52+ publications in 8 languages.
+FEATURED ENGINEERING & PRODUCTS
 
-Prolific Tea | Founder & Solo Engineer                                       Apr 2026 – Present
-Stack: Next.js, React, PostgreSQL, PWA, Chrome Extension API                 prolifictea.com
-• Scaled researcher transparency platform to 100,000+ page views and 1,582 indexed researchers with aggregate ratings, rejection tracking, and moderation tools.
-• Engineered companion Chrome extension intercepting study network requests to match and render researcher fairness ratings inline before participants accept tasks.
+Eigendrum | Creator & Solo Engineer · eigendrum.com | Aug 2026 – Present
+• Built a browser physics engine meshing arbitrary outlines and solving 2D Dirichlet Laplacian eigenvalue problems via custom P1 finite elements; synthesizes modal acoustics in ~800 ms in a Web Worker (zero dependencies, no backend).
+• Computationally verified the 1992 resolution to Mark Kac's 1966 open problem ("Can one hear the shape of a drum?"), proving Gordon-Webb-Wolpert isospectral drum frequencies match published spectra to 1.07×10⁻⁷%.
+• Earned 150 GitHub stars, registered DOI (10.5281/zenodo.22019539), and featured on Hacker News (front page ×2), Wikipedia external links, kottke.org, and 52+ publications across 8 languages.
 
-Passion Of Rugs | Data Engineer (Part-time)                                  Oct 2025 – Present
-Stack: Python, OpenAI API, Pandas, ETL Pipelines                             Scheduled Automation
-• Engineered automated Python ETL pipeline restructuring 120,000+ records from 1,200+ heterogeneous spreadsheets into a normalized CRM schema using OpenAI API for schema mapping.
-• Reduced API operating costs by 13% through batch request deduplication and response caching; runs unattended in production.
+Prolific Tea | Creator & Solo Engineer · prolifictea.com | Apr 2026 – Present
+• Built a community-funded researcher review and pay transparency platform serving 100,000+ page views and 1,582 indexed researchers with zero ads, investors, or accounts required (Next.js, PostgreSQL, PWA).
+• Developed a companion Chrome extension intercepting study network traffic to match and display researcher fairness and rejection ratings inline before participants accept tasks.
 
-PROJECTS & OPEN SOURCE
+holystitch (23 ★) | Creator · github.com/BaselAshraf81/holystitch | TypeScript · MCP Server
+• Built a Model Context Protocol (MCP) server that compiles Google Stitch designs directly into production React and Next.js component trees via native API calls without consuming LLM inference tokens.
 
-Systems & Developer Tooling
+layout-sans (67 ★) | Creator · npmjs.com/package/layout-sans | TypeScript · npm package
+• Engineered a 2D flex/grid layout engine in ~17 kB gzipped (0 dependencies, no DOM/WASM) executing 2–3× faster than Meta's Yoga with an 18× smaller bundle. Implemented interactive canvas text selection, clipboard copy, Ctrl+F, and accessibility tree on pretext.
 
-layout-sans | Creator (67 ★) · TypeScript                                    npm: layout-sans
-Stack: TypeScript, pretext, Canvas 2D, Zero Dependencies                     github.com/BaselAshraf81/layout-sans
-• Architected 2D flex/grid layout engine in ~17 kB gzipped (no DOM/WASM) executing 2–3× faster than Meta's Yoga with an 18× smaller bundle size.
-• Implemented interactive canvas text layer supporting drag selection, clipboard copy, Ctrl+F search, hyperlinks, and screen-reader accessibility tree.
+SELECTED SYSTEMS, SECURITY & DATA
 
-fastemporal | Creator · Rust                                                 docs.rs/fastemporal
-Stack: Rust, Temporal Conformance Suite, docs.rs                             github.com/BaselAshraf81/fastemporal
-• Reimplemented Luxon and TC39 Temporal date/time APIs in pure Rust with zero heap allocations in hot paths, validated against 332 ported conformance tests.
-
-Nextron — PR #531 | Open Source Contributor                                  Released: nextron@9.6.0
-Stack: Next.js 16, React 19, Electron, Turbopack                             github.com/saltyshiomix/nextron/pull/531
-• Upgraded popular Electron + Next.js framework from Next 14 → 16 and React 18 → 19 across 33 files (+1,218 / -416 lines); merged and published same day.
-
-AI Systems & Security Operations
-
-Legal Document RAG | Creator · Python / AI Search                            github.com/BaselAshraf81/epstein-rag-abliterated-llm
-Stack: Python, LlamaIndex, FAISS, PyTorch, GPU Queue
-• Built hybrid vector/keyword retrieval over 25,303 legal documents, serving 230+ concurrent users on a single T4 GPU via custom asynchronous queue with 0 OOM crashes.
-
-Photophane | Creator (72 upvotes on r/photogrammetry)                        github.com/BaselAshraf81/photophane
-Stack: TypeScript, WebGL, 3D Mesh Generation
-• Computed continuous 3D-printable optical heightmaps (10.97 mm relief) projecting target photographs onto walls purely via refracted caustic light rays.
-
-M-Pesa Vulnerability Research | Security Researcher                          Accepted Bounty
-Stack: Burp Suite, PDF Structure Analysis, Font Descriptors                  HackerOne
-• Discovered and reported Stored XSS flaw in M-Pesa PDF receipt generator via font descriptor injection; validated, accepted, and rewarded through HackerOne.
+• Legal Document RAG (Python · LlamaIndex · FAISS): Built hybrid vector/keyword search over 25,303 legal documents, serving 230+ concurrent users on a single T4 GPU via a custom asynchronous request queue with zero out-of-memory errors.
+• fastemporal (Rust · docs.rs/fastemporal): Reimplemented Luxon and TC39 Temporal date-time APIs in pure Rust to eliminate V8 GC latency in high-throughput pipelines, validated against 332 conformance tests from Luxon and date-fns.
+• Photophane (TypeScript · WebGL): Computed 3D-printable continuous optical relief plates (10.97 mm depth) projecting photographs onto walls via refracted caustic light rays (72 upvotes on r/photogrammetry).
+• M-Pesa Bug Bounty & OSS (HackerOne): Discovered Stored XSS in M-Pesa's PDF generator via font descriptor injection (accepted on HackerOne); upgraded Electron+Next.js framework to Next 16 / React 19 across 33 files, shipped as nextron@9.6.0.
+• Passion of Rugs (Python ETL · Part-time): Automated ETL restructuring 120,000+ records from 1,200+ spreadsheets into a normalized CRM schema with OpenAI API schema mapping, reducing API costs by 13% via deduplication.
 
 SKILLS
 
-Languages: TypeScript, Rust, Python, JavaScript, Java, SQL, C/C++
-Web & Frontend: Next.js, React, Node.js, Spring Boot, Web Audio API, Web Workers, Chrome Extensions, Tailwind CSS
-Systems & AI: Finite Element Method (FEM), LlamaIndex, FAISS, PyTorch, PostgreSQL, Supabase, Docker, Linux, Git
-Security: OWASP, Burp Suite, WebAuthn, Vulnerability Research
+Languages: TypeScript, JavaScript, Rust, Python, Java, SQL
+Frontend & Web: Next.js, React, Node.js, Web Audio API, Web Workers, Chrome Extension API, Canvas API, Tailwind CSS
+Systems & AI: Finite Element Method (FEM), Model Context Protocol (MCP), LlamaIndex, FAISS, PostgreSQL, Supabase, Docker, Linux, Git
+Security & Testing: Burp Suite, Web Security Research, Conformance Testing (TC39 / Luxon)
 
 EDUCATION
 
-BSc in Computer Engineering and Software Systems (Dual Degree)               Feb 2021 – Expected Nov 2026
+BSc in Computer Engineering and Software Systems (Dual Degree) | Feb 2021 – Expected Nov 2026
 University of East London & Ain Shams University
 
-Università di Pisa — Graduate Summer School                                  Sep 2025
+Università di Pisa — Graduate Summer School | Sep 2025
 Human-Centric ICT for Industry 5.0, Pisa, Italy (Scholarship) | Grade: 29/30
 
-Hanyang University — Foreign Exchange                                        Sep 2024 – Jan 2025
+Hanyang University — Foreign Exchange in Computer Science | Sep 2024 – Jan 2025
 Seoul, South Korea | GPA: 4.0/4.5
