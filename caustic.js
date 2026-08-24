@@ -1,21 +1,12 @@
 /* ============================================================
-   Caustic renderer.
+   Caustic renderer (Forward physics model of Photophane).
 
-   This is not a blurred gradient pretending to be light. It is the
-   same computation photophane does, run forwards instead of backwards:
-   a height field stands in for the surface of a thick clear plate,
-   parallel light refracts through it by the local surface gradient,
-   and every ray is accumulated where it lands. Light piles up along
-   the folds and cusps of that mapping, which is what a caustic is.
-
-   The three colour channels refract with slightly different strength,
-   because glass bends short wavelengths harder than long ones. That is
-   why the fringes go cyan on one side and amber on the other, and it
-   is dispersion rather than decoration.
-
-   Rays are splatted bilinearly and the accumulation is blurred before
-   exposure, because a caustic is a smooth density of light and photon
-   noise is an artefact of sampling it, not a feature of it.
+   Parallel light refracts through a dynamic height field
+   via Snell's law gradient calculation and accumulates bilinearly.
+   Renders in both Light Mode (warm amber refraction on paper)
+   and Dark Mode (white/gold filaments on ink).
+   Includes interactive mouse light tracking, intersection observer
+   lifecycle pausing, and prefers-reduced-motion safety.
    ============================================================ */
 
 (function () {
@@ -29,9 +20,6 @@
 
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* Buffer kept small so each cell collects enough rays to be smooth.
-     It is upscaled on paint; caustic folds are high-contrast structures
-     and survive that comfortably. */
   var BW = 180, BH = 102;
   var CELLS = BW * BH;
 
@@ -49,15 +37,12 @@
   var img = bctx.createImageData(BW, BH);
   var px = img.data;
 
-  /* stable per-ray jitter, so the ray grid never moires against the buffer */
   var jx = new Float32Array(NR), jy = new Float32Array(NR);
   var seed = 1337;
   function rnd() { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; }
   for (var i = 0; i < NR; i++) { jx[i] = rnd() - 0.5; jy[i] = rnd() - 0.5; }
 
-  /* ---- the plate surface: crossed waves, enough amplitude to fold ---- */
   var WV = [
-    /* amp   freq   dirX    dirY    phase  speed */
     [0.60,  3.10,  1.000,  0.000,  0.00,  0.075],
     [0.46,  4.70,  0.310,  0.951,  1.90,  0.055],
     [0.38,  6.30, -0.707,  0.707,  3.60, -0.043],
@@ -71,12 +56,10 @@
     amp[w] = WV[w][0]; fq[w] = WV[w][1]; wdx[w] = WV[w][2]; wdy[w] = WV[w][3];
   }
 
-  var pointerX = 0.62, pointerY = 0.34;   /* where the lamp is        */
-  var rowStep = 1;                        /* 2 = half the rays, on slow machines */
-  var lampX = 0.62, lampY = 0.34;         /* eased toward the pointer */
+  var pointerX = 0.65, pointerY = 0.35;
+  var lampX = 0.65, lampY = 0.35;
+  var rowStep = 1;
 
-  /* dispersion: how hard each channel bends. Kept tight, so colour
-     only separates where the surface curves hard. */
   var KR = 0.0530, KG = 0.0556, KB = 0.0584;
 
   var vign = new Float32Array(CELLS);
@@ -86,7 +69,7 @@
         var nx = (x / BW - 0.5) * 2.0;
         var ny = (y / BH - 0.5) * 2.0;
         var d = Math.sqrt(nx * nx * 0.66 + ny * ny * 1.05);
-        var v = 1.0 - d * 0.80;
+        var v = 1.0 - d * 0.75;
         if (v < 0) v = 0;
         vign[y * BW + x] = v * v;
       }
@@ -105,8 +88,6 @@
     acc[o + BW + 1] += weight * fx * fy;
   }
 
-  /* separable 1-2-1; one pass only, enough to kill sampling noise while
-     leaving the bright filaments along each fold intact */
   function blur(acc) {
     var x, y, o;
     for (var pass = 0; pass < 1; pass++) {
@@ -136,8 +117,8 @@
   function render(t) {
     accR.fill(0); accG.fill(0); accB.fill(0);
 
-    lampX += (pointerX - lampX) * 0.04;
-    lampY += (pointerY - lampY) * 0.04;
+    lampX += (pointerX - lampX) * 0.05;
+    lampY += (pointerY - lampY) * 0.05;
 
     var tiltX = (lampX - 0.5) * 0.30;
     var tiltY = (lampY - 0.5) * 0.20;
@@ -157,7 +138,6 @@
           gy += c * wdy[q];
         }
 
-        /* the far face of the plate refracts a second time, sharpening folds */
         var gx2 = gx + 0.58 * gx * Math.abs(gy);
         var gy2 = gy + 0.58 * gy * Math.abs(gx);
 
@@ -171,28 +151,32 @@
 
     blur(accR); blur(accG); blur(accB);
 
-    /* Exposed for the folds, not for the average. The unfocused ground
-       sits near black and the convergence lines clip white, which is the
-       actual dynamic range of a caustic. */
     var mean = (RX * Math.ceil(RY / rowStep)) / CELLS;
     var gain = 0.62 / mean;
+    var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
 
     for (var p = 0, o = 0; p < CELLS; p++, o += 4) {
       var vg = vign[p];
       var r = 1.0 - Math.exp(-accR[p] * gain);
       var g = 1.0 - Math.exp(-accG[p] * gain);
       var b = 1.0 - Math.exp(-accB[p] * gain);
-
       var lum = (r + g + b) * 0.3333;
 
-      /* the ground falls away faster than the folds do, which is what
-         gives a caustic its range: near-black between, clipped white on */
-      var a = Math.pow(lum, 1.45) * vg * 2.15;
-
-      px[o]     = 255 * Math.min(1, r * 1.00 + lum * 0.20);
-      px[o + 1] = 255 * Math.min(1, g * 0.95 + lum * 0.14);
-      px[o + 2] = 255 * Math.min(1, b * 0.84 + lum * 0.07);
-      px[o + 3] = 255 * Math.min(1, a);
+      if (isDark) {
+        // Dark Mode: warm white/tungsten filaments on dark ground
+        var aDark = Math.pow(lum, 1.45) * vg * 2.15;
+        px[o]     = 255 * Math.min(1, r * 1.00 + lum * 0.20);
+        px[o + 1] = 255 * Math.min(1, g * 0.95 + lum * 0.14);
+        px[o + 2] = 255 * Math.min(1, b * 0.84 + lum * 0.07);
+        px[o + 3] = 255 * Math.min(1, aDark);
+      } else {
+        // Light Mode: rich warm amber-ochre refractive caustics visible on paper
+        var aLight = Math.min(0.85, Math.pow(lum, 1.1) * vg * 1.8);
+        px[o]     = Math.round(185 * r + 50 * lum);
+        px[o + 1] = Math.round(115 * g + 30 * lum);
+        px[o + 2] = Math.round(45 * b + 15 * lum);
+        px[o + 3] = Math.round(255 * aLight);
+      }
     }
 
     bctx.putImageData(img, 0, 0);
@@ -216,11 +200,6 @@
 
   var t0 = performance.now();
   var visible = true, running = false, raf = 0;
-
-  /* The lamp drifts slowly, so there is nothing to see above 30fps and no
-     reason to spend a core proving it. On a machine that cannot hold that,
-     halve the rays instead of dropping frames: the blur hides it, and a
-     softer caustic beats a stuttering one. */
   var FRAME_MS = 1000 / 24;
   var lastDraw = -1e9;
   var cost = 0, warm = 0;
@@ -237,20 +216,18 @@
     var ms = performance.now() - a;
 
     cost = cost ? cost * 0.9 + ms * 0.1 : ms;
-
-    /* The first frames run before the JIT has settled and cost roughly twice
-       what the steady state does. Judging quality on those would permanently
-       halve it on a machine that could have managed full rays. */
     if (++warm > 15) {
       if (cost > 26 && rowStep === 1) { rowStep = 2; cost = 0; }
       else if (cost < 11 && rowStep === 2) { rowStep = 1; cost = 0; }
     }
   }
+
   function start() {
     if (running || reduce || !visible) return;
     running = true;
     raf = requestAnimationFrame(frame);
   }
+
   function stop() {
     running = false;
     if (raf) cancelAnimationFrame(raf);
@@ -260,12 +237,13 @@
   resize();
   render(0);
 
+  // Lifecycle & Motion Safeguards
   if (!reduce) {
     if ('IntersectionObserver' in window) {
-      new IntersectionObserver(function (es) {
-        visible = es[0].isIntersecting;
+      new IntersectionObserver(function (entries) {
+        visible = entries[0].isIntersecting;
         if (visible) start(); else stop();
-      }, { threshold: 0 }).observe(canvas);
+      }, { threshold: 0.05 }).observe(canvas);
     } else {
       start();
     }
@@ -274,20 +252,16 @@
       if (document.hidden) stop(); else start();
     });
 
-    if (window.matchMedia('(hover: hover)').matches) {
-      window.addEventListener('pointermove', function (e) {
-        var r = canvas.getBoundingClientRect();
-        pointerX = (e.clientX - r.left) / r.width;
-        pointerY = (e.clientY - r.top) / r.height;
-      }, { passive: true });
-    } else {
-      /* on touch, let the lamp drift on its own */
-      setInterval(function () {
-        var n = performance.now();
-        pointerX = 0.60 + Math.sin(n / 7000) * 0.26;
-        pointerY = 0.34 + Math.cos(n / 9100) * 0.14;
-      }, 100);
-    }
+    // Interactive Light Tracking on Mouse/Pointer Hover
+    window.addEventListener('pointermove', function (e) {
+      var r = canvas.getBoundingClientRect();
+      if (r.width > 0 && r.height > 0) {
+        var rawX = (e.clientX - r.left) / r.width;
+        var rawY = (e.clientY - r.top) / r.height;
+        pointerX = Math.max(0.05, Math.min(0.95, rawX));
+        pointerY = Math.max(0.05, Math.min(0.95, rawY));
+      }
+    }, { passive: true });
   }
 
   var rt;
