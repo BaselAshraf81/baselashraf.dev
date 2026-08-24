@@ -8,7 +8,7 @@
   <meta name="description"
     content="Case study of Prolific Tea: community-funded researcher review platform with 100,000+ page views, Chrome extension network interception, and Next.js full-stack.">
   <link rel="canonical" href="https://baselashraf.com/work/prolific-tea.html">
-  <meta name="theme-color" content="#070b10">
+  <meta name="theme-color" content="#0a0c10">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Prolific Tea: Researcher Review &amp; Pay Transparency Platform">
   <meta property="og:description"
@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap">
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
   <link rel="stylesheet" href="../styles.css">
   <script type="application/ld+json">
 {
@@ -60,27 +60,6 @@
         "name": "Basel Ashraf Fikry",
         "url": "https://baselashraf.com/"
       }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is Prolific Tea?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Prolific Tea is a community-funded researcher review and pay transparency platform for academic research participants on Prolific. It indexes 1,582 researchers, tracks rejection rates and fairness ratings, and includes a companion Chrome extension that inspects study network requests in real time."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does the Prolific Tea Chrome extension work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The companion Chrome extension intercepts incoming study feed network responses on Prolific, extracts researcher IDs, and injects aggregate fairness ratings and rejection counts directly onto the participant dashboard before they accept a study."
-          }
-        }
-      ]
     }
   ]
 }
@@ -90,17 +69,14 @@
 <body>
   <header class="site-header">
     <div class="shell header__inner">
-      <a class="header__brand" href="../">
-        <span class="header__brand-dot"></span>
-        <span>Basel Ashraf</span>
-      </a>
+      <a class="header__brand" href="../">Basel Ashraf</a>
 
       <nav class="header__nav" aria-label="Main Navigation">
         <a class="nav__link" href="../#work">Work</a>
-        <a class="nav__link" href="../#systems">Systems &amp; Tools</a>
+        <a class="nav__link" href="../#systems">Systems</a>
         <a class="nav__link" href="../#about">Background</a>
-        <a class="nav__link nav__link--resume" href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
-        <a class="btn btn--sm btn--primary header__cta" href="mailto:hello@baselashraf.com">Get in touch</a>
+        <a class="nav__link" href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="nav__link nav__link--cta" href="mailto:hello@baselashraf.com">Get in touch</a>
       </nav>
     </div>
   </header>
@@ -108,39 +84,36 @@
   <main class="case-study">
     <div class="shell">
       <a class="case-study__back" href="../#work">
-        <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 2L4 8l6 6"/></svg>
-        Back to Shipped Work
+        &larr; Back to Work
       </a>
 
       <header class="case-study__header">
         <h1 class="case-study__title">Prolific Tea</h1>
-        <p class="case-study__subtitle">Community Researcher Review &amp; Pay Transparency Platform</p>
+        <div class="case-study__subtitle">Community Researcher Review &amp; Pay Transparency Platform</div>
 
-        <dl class="case-study__quick-facts">
-          <div class="quick-fact">
+        <div class="case-study__facts">
+          <div class="fact-item">
             <dt>Role &amp; Team</dt>
-            <dd>Creator &amp; Sole Engineer</dd>
+            <dd>Creator &amp; Sole Author</dd>
           </div>
-          <div class="quick-fact">
+          <div class="fact-item">
             <dt>Traction</dt>
             <dd>100,000+ Page Views</dd>
           </div>
-          <div class="quick-fact">
+          <div class="fact-item">
             <dt>Index Size</dt>
             <dd>1,582 Researchers Indexed</dd>
           </div>
-          <div class="quick-fact">
+          <div class="fact-item">
             <dt>Stack</dt>
             <dd>Next.js, PostgreSQL, Chrome Ext, PWA</dd>
           </div>
-        </dl>
+        </div>
       </header>
 
       <div class="case-study__layout">
-        <!-- Main Content -->
         <article class="case-study__main">
           
-          <!-- Section 1: Product Overview -->
           <section>
             <h2 class="h3">The Transparency Problem in Academic Crowdsourcing</h2>
             <p>
@@ -151,7 +124,6 @@
             </p>
           </section>
 
-          <!-- Screenshot -->
           <figure class="shot">
             <a class="shot__frame" href="https://prolifictea.com" target="_blank" rel="noopener">
               <img src="../media/prolifictea.webp" width="1400" height="856" loading="lazy"
@@ -163,13 +135,12 @@
             </figcaption>
           </figure>
 
-          <!-- Section 2: Technical Architecture -->
           <section>
             <h2 class="h3">Full-Stack Architecture &amp; Network Interception</h2>
             <p>
               The platform consists of four engineering components:
             </p>
-            <ul style="color: var(--fg-2); padding-left: 1.25rem; line-height: 1.7; margin-bottom: var(--s4);">
+            <ul style="color: var(--fg-secondary); padding-left: 1.25rem; line-height: 1.7; margin-bottom: var(--s4);">
               <li><strong>Full-Stack Web Platform:</strong> Built on Next.js with server-side rendering, PostgreSQL database, image uploads, and threaded discussion boards.</li>
               <li><strong>Chrome Extension Network Interceptor:</strong> Intercepts study feed network requests, extracts researcher IDs, and overlays historical reputation badges onto the participant dashboard before they accept a task.</li>
               <li><strong>PWA Push Notifications:</strong> Delivers updates for dispute resolutions and community notices.</li>
@@ -177,7 +148,6 @@
             </ul>
           </section>
 
-          <!-- Section 3: Organic Growth & Ethos -->
           <section>
             <h2 class="h3">Community Ethos &amp; Zero-Ad Model</h2>
             <p>
@@ -187,25 +157,23 @@
 
         </article>
 
-        <!-- Sidebar -->
         <aside class="case-sidebar">
-          <div class="sidebar-box">
-            <h3 class="sidebar-box__title">Live Platform</h3>
-            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+          <div class="sidebar-card">
+            <div class="sidebar-card__title">Live Platform</div>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
               <a class="btn btn--primary" href="https://prolifictea.com" target="_blank" rel="noopener">
-                Visit prolifictea.com
-                <svg class="i" viewBox="0 0 16 16"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg>
+                Visit prolifictea.com &nearr;
               </a>
             </div>
           </div>
 
-          <div class="sidebar-box">
-            <h3 class="sidebar-box__title">Verified Statistics</h3>
-            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.875rem; color: var(--fg-2); display: flex; flex-direction: column; gap: 0.5rem;">
-              <li><strong>Page Views:</strong> 100,000+</li>
-              <li><strong>Indexed Researchers:</strong> 1,582</li>
-              <li><strong>Languages Supported:</strong> 5</li>
-              <li><strong>Funding Model:</strong> Community funded</li>
+          <div class="sidebar-card">
+            <div class="sidebar-card__title">Statistics</div>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8125rem; color: var(--fg-secondary); display: flex; flex-direction: column; gap: 0.4rem; font-family: var(--font-mono);">
+              <li>Page Views: 100,000+</li>
+              <li>Indexed Researchers: 1,582</li>
+              <li>Languages Supported: 5</li>
+              <li>Funding Model: Community funded</li>
             </ul>
           </div>
         </aside>
@@ -215,8 +183,8 @@
 
   <footer class="site-footer">
     <div class="shell" style="text-align: center;">
-      <p style="color: var(--fg-3); font-size: 0.875rem; margin-bottom: var(--s2);">
-        &copy; 2026 Basel Ashraf &middot; <a href="../#work">All Work</a> &middot; <a href="mailto:hello@baselashraf.com">hello@baselashraf.com</a>
+      <p style="color: var(--fg-muted); font-size: 0.8125rem;">
+        &copy; 2026 Basel Ashraf &middot; <a href="../#work">Work</a> &middot; <a href="mailto:hello@baselashraf.com">hello@baselashraf.com</a>
       </p>
     </div>
   </footer>

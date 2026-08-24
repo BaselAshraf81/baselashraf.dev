@@ -21,7 +21,7 @@
   <meta name="description"
     content="Software engineer building zero-dependency PDE solvers, layout engines, and web platforms. Creator of Eigendrum (150★, Zenodo DOI) and LayoutSans (17 kB).">
   <link rel="canonical" href="https://baselashraf.com/">
-  <meta name="theme-color" content="#070b10">
+  <meta name="theme-color" content="#0a0c10">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Basel Ashraf: Software &amp; Systems Engineer">
   <meta property="og:description"
@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap">
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
 {
@@ -71,23 +71,19 @@
       "alumniOf": [
         {
           "@type": "CollegeOrUniversity",
-          "name": "University of East London",
-          "sameAs": "https://www.uel.ac.uk/"
+          "name": "University of East London"
         },
         {
           "@type": "CollegeOrUniversity",
-          "name": "Ain Shams University",
-          "sameAs": "https://www.asu.edu.eg/"
+          "name": "Ain Shams University"
         },
         {
           "@type": "CollegeOrUniversity",
-          "name": "Hanyang University",
-          "sameAs": "https://www.hanyang.ac.kr/"
+          "name": "Hanyang University"
         },
         {
           "@type": "CollegeOrUniversity",
-          "name": "Università di Pisa",
-          "sameAs": "https://www.unipi.it/"
+          "name": "Università di Pisa"
         }
       ],
       "knowsAbout": [
@@ -139,7 +135,7 @@
           "name": "Who is Basel Ashraf?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Basel Ashraf is a software and systems engineer who builds zero-dependency numerical solvers, headless layout engines, and production web applications. His work includes Eigendrum (a browser finite-element acoustics simulator with 150 GitHub stars and a Zenodo DOI), LayoutSans (a 17 kB layout engine outrunning Meta's Yoga), and Prolific Tea (a review platform with over 100,000 page views)."
+            "text": "Basel Ashraf is a software engineer who builds zero-dependency numerical solvers, headless layout engines, and web platforms. His work includes Eigendrum (browser finite-element acoustics simulator with 150 GitHub stars and Zenodo DOI), LayoutSans (17 kB layout engine outrunning Meta's Yoga), and Prolific Tea (review platform with over 100,000 page views)."
           }
         },
         {
@@ -147,7 +143,7 @@
           "name": "What is Eigendrum?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Eigendrum is a free in-browser physics engine and acoustic synthesizer. It meshes arbitrary user-drawn polygons, solves the 2D Dirichlet Laplacian eigenvalue problem with P1 finite elements in a Web Worker in about 800 ms, and synthesizes overtones with the Web Audio API without pre-recorded samples."
+            "text": "Eigendrum is an in-browser physics engine and acoustic synthesizer. It meshes user-drawn polygons, solves the 2D Dirichlet Laplacian eigenvalue problem with P1 finite elements in a Web Worker in about 800 ms, and synthesizes overtones with the Web Audio API without pre-recorded samples."
           }
         },
         {
@@ -156,14 +152,6 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "LayoutSans is a pure TypeScript flex and grid layout engine that ships in about 17 kB gzipped with zero dependencies and no WebAssembly. Benchmarks show it lays out 100 boxes in 0.27 ms compared to 0.80 ms in Yoga WASM and 8.0 ms in the browser DOM, while adding canvas text selection and accessibility tree generation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How can I contact Basel Ashraf for engineering roles or research collaboration?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Basel Ashraf is reachable via email at hello@baselashraf.com. He is completing his dual BSc degree in November 2026 and is open to full-time engineering roles, contract projects, and academic research collaborations."
           }
         }
       ]
@@ -176,23 +164,17 @@
 <body>
   <a class="skip" href="#work">Skip to main content</a>
 
-  <!-- ============ STICKY NAVIGATION HEADER ============ -->
+  <!-- Navigation -->
   <header class="site-header" id="header">
     <div class="shell header__inner">
-      <a class="header__brand" href="#top">
-        <span class="header__brand-dot"></span>
-        <span>Basel Ashraf</span>
-      </a>
+      <a class="header__brand" href="#top">Basel Ashraf</a>
 
       <nav class="header__nav" id="nav-menu" aria-label="Main Navigation">
         <a class="nav__link" href="#work">Work</a>
-        <a class="nav__link" href="#systems">Systems &amp; Tools</a>
+        <a class="nav__link" href="#systems">Systems</a>
         <a class="nav__link" href="#about">Background</a>
-        <a class="nav__link nav__link--resume" href="/resume.pdf" target="_blank" rel="noopener">
-          Resume
-          <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg>
-        </a>
-        <a class="btn btn--sm btn--primary header__cta" href="mailto:hello@baselashraf.com">Get in touch</a>
+        <a class="nav__link" href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="nav__link nav__link--cta" href="mailto:hello@baselashraf.com">Get in touch</a>
       </nav>
 
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -201,75 +183,55 @@
     </div>
   </header>
 
-  <!-- ============ HERO SECTION ============ -->
+  <!-- Hero Section -->
   <section class="hero" id="top">
     <canvas id="caustic" class="hero__caustic" aria-hidden="true"></canvas>
-    <div class="hero__edge" aria-hidden="true"></div>
 
     <div class="shell hero__inner">
-      <!-- Above-the-fold availability badge -->
-      <div class="hero__status-wrap">
-        <div class="status-pill">
-          <span class="status-dot"></span>
-          <span>Open to full-time engineering roles and research collaboration: Dual Degree Nov 2026</span>
-        </div>
+      <div class="hero__status">
+        Available for software engineering roles &amp; research collaboration. Graduating Nov 2026.
       </div>
 
-      <h1 class="hero__name">Basel<span class="hero__break"> </span>Ashraf</h1>
+      <h1 class="hero__name">Basel Ashraf</h1>
 
       <p class="hero__pitch">
-        Solo software and systems engineer building zero-dependency numerical PDE solvers, high-performance layout internals, and production platforms strangers actually use.
+        Software and systems engineer building zero-dependency PDE solvers, headless layout engines, and production web applications.
       </p>
 
       <p class="hero__subpitch">
-        Creator of <span class="lit">Eigendrum</span> (150★, Zenodo DOI, Wikipedia link), <span class="lit">LayoutSans</span> (17 kB layout engine outrunning Meta's Yoga), and <span class="lit">Prolific Tea</span> (100,000+ page views).
+        Author of <span class="lit">Eigendrum</span> (150★, Zenodo DOI, Wikipedia link), <span class="lit">LayoutSans</span> (17 kB layout engine outperforming Meta's Yoga), and <span class="lit">Prolific Tea</span> (100,000+ page views).
       </p>
 
       <div class="hero__actions">
         <a class="btn btn--primary" href="#work">
-          Explore Shipped Work
+          Explore Work
           <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v10M3 7l5 5 5-5"/></svg>
         </a>
-        <a class="btn" href="mailto:hello@baselashraf.com" id="email-hero-btn">
-          <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4h12v8H2zM2 4l6 5 6-5"/></svg>
+        <a class="btn" href="mailto:hello@baselashraf.com">
           hello@baselashraf.com
         </a>
         <a class="btn" href="/resume.pdf" target="_blank" rel="noopener">
-          <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2h7l4 4v8H3zM10 2v4h4"/></svg>
           Resume (PDF)
         </a>
       </div>
 
-      <div class="hero__trust-strip">
-        <a class="trust-item" href="https://github.com/BaselAshraf81" target="_blank" rel="noopener">
-          <svg class="i i--solid" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1a7 7 0 0 0-2.2 13.6c.3.1.4-.2.4-.4v-1.5c-2 .4-2.4-.9-2.4-.9-.3-.9-.8-1.1-.8-1.1-.7-.4 0-.4 0-.4.7 0 1.1.8 1.1.8.7 1.1 1.7.8 2.2.6.1-.5.3-.9.5-1.1-1.6-.2-3.3-.8-3.3-3.6 0-.8.3-1.4.7-1.9-.1-.2-.3-.9.1-1.9 0 0 .6-.2 2 .7a6.6 6.6 0 0 1 3.6 0c1.4-.9 2-.7 2-.7.4 1 .2 1.7.1 1.9.4.5.7 1.1.7 1.9 0 2.8-1.7 3.4-3.3 3.6.3.3.6.8.6 1.6v2.3c0 .2.1.5.5.4A7 7 0 0 0 8 1Z"/></svg>
-          GitHub (150★ Eigendrum, 67★ LayoutSans)
-        </a>
-        <a class="trust-item" href="https://doi.org/10.5281/zenodo.22019539" target="_blank" rel="noopener">
-          <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 5v6M5 8h6"/></svg>
-          DOI: 10.5281/zenodo.22019539
-        </a>
-        <a class="trust-item" href="https://orcid.org/0009-0009-3441-6196" target="_blank" rel="noopener">
-          <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M7 5h2v6H7z"/></svg>
-          ORCID: 0009-0009-3441-6196
-        </a>
-        <a class="trust-item" href="https://www.linkedin.com/in/basel-askar/" target="_blank" rel="noopener">
-          <svg class="i i--solid" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.8 5.2H1.5V15h2.3V5.2ZM2.65 1a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8ZM14.5 9.4c0-2.6-1.4-3.8-3.2-3.8-1.5 0-2.2.8-2.5 1.4V5.2H6.5V15h2.3V9.8c0-1.2.5-2 1.6-2s1.5.8 1.5 2V15h2.6V9.4Z"/></svg>
-          LinkedIn
-        </a>
+      <div class="hero__meta">
+        <span>GitHub: <a href="https://github.com/BaselAshraf81" target="_blank" rel="noopener">BaselAshraf81</a></span>
+        <span>DOI: <a href="https://doi.org/10.5281/zenodo.22019539" target="_blank" rel="noopener">10.5281/zenodo.22019539</a></span>
+        <span>ORCID: <a href="https://orcid.org/0009-0009-3441-6196" target="_blank" rel="noopener">0009-0009-3441-6196</a></span>
+        <span>LinkedIn: <a href="https://www.linkedin.com/in/basel-askar/" target="_blank" rel="noopener">in/basel-askar</a></span>
       </div>
     </div>
   </section>
 
   <main>
-    <!-- ============ FEATURED WORK (CARD GRID) ============ -->
+    <!-- Featured Work -->
     <section class="band" id="work">
       <div class="shell">
         <div class="band__header">
-          <span class="band__eyebrow">Shipped Projects</span>
-          <h2 class="h2">Featured Engineering Work</h2>
+          <h2 class="h2">Work</h2>
           <p class="lede">
-            Production tools and numerical engines. Every benchmark, star count, and usage counter is independently checkable.
+            Four selected projects across numerical physics, layout internals, and web platforms.
           </p>
         </div>
 
@@ -280,36 +242,31 @@
             <div class="project-card__thumb">
               <img src="media/eigendrum-hero.webp" width="700" height="437" loading="lazy" decoding="async"
                    alt="The Eigendrum interface solving 2D Dirichlet Laplacian modes on drawn geometry.">
-              <div class="project-card__badge-overlay">
-                <span class="tag-pill" style="border-color: var(--edge-soft); color: var(--light); background: rgba(7,11,16,0.85);">150★: Zenodo DOI</span>
-              </div>
             </div>
             <div class="project-card__content">
-              <div class="project-card__header">
-                <h3 class="project-card__title"><a href="work/eigendrum.html">Eigendrum</a></h3>
-                <p class="project-card__tagline">In-browser finite-element acoustics solver and modal synthesizer</p>
-              </div>
+              <h3 class="project-card__title"><a href="work/eigendrum.html">Eigendrum</a></h3>
+              <div class="project-card__tagline">In-browser finite-element acoustics solver and modal synthesizer</div>
               <p class="project-card__desc">
                 Solves the 2D Dirichlet Laplacian eigenvalue problem on hand-drawn shapes using P1 finite elements in a background Web Worker in about 800 ms. Synthesizes physical acoustic overtones without pre-recorded audio. Verified Kac's isospectral drum theorem to within 1.07&times;10<sup>&minus;7</sup>%.
               </p>
               <div class="project-card__metrics">
-                <span class="metric-badge"><b>150★</b> GitHub Stars</span>
-                <span class="metric-badge"><b>52+</b> Press Sources in 8 Langs</span>
-                <span class="metric-badge"><b>0.16%</b> Rel. Error vs Closed Form</span>
+                <span class="metric-pill"><b>150★</b> GitHub</span>
+                <span class="metric-pill"><b>DOI</b> Zenodo</span>
+                <span class="metric-pill"><b>0.16%</b> Analytic Error</span>
               </div>
               <div class="project-card__tags">
-                <span class="tag-pill">JavaScript</span>
-                <span class="tag-pill">Web Audio API</span>
-                <span class="tag-pill">Finite Element Method</span>
-                <span class="tag-pill">Web Workers</span>
-                <span class="tag-pill">Zero Deps</span>
+                <span class="tag-item">JavaScript</span>
+                <span class="tag-item">Web Audio API</span>
+                <span class="tag-item">Finite Elements</span>
+                <span class="tag-item">Web Workers</span>
+                <span class="tag-item">Zero Deps</span>
               </div>
               <div class="project-card__footer">
                 <div class="project-card__links">
-                  <a class="card-link" href="https://eigendrum.com" target="_blank" rel="noopener">Live App<svg class="i" viewBox="0 0 16 16"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg></a>
-                  <a class="card-link" href="https://github.com/BaselAshraf81/eigendrum" target="_blank" rel="noopener">Source<svg class="i" viewBox="0 0 16 16"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg></a>
+                  <a class="card-link" href="https://eigendrum.com" target="_blank" rel="noopener">Live App &nearr;</a>
+                  <a class="card-link" href="https://github.com/BaselAshraf81/eigendrum" target="_blank" rel="noopener">Source &nearr;</a>
                 </div>
-                <a class="card-link card-link--accent" href="work/eigendrum.html">Read Case Study &rarr;</a>
+                <a class="card-link card-link--case" href="work/eigendrum.html">Case Study &rarr;</a>
               </div>
             </div>
           </article>
@@ -319,36 +276,31 @@
             <div class="project-card__thumb">
               <img src="media/layoutsans.webp" width="700" height="437" loading="lazy" decoding="async"
                    alt="LayoutSans instrument panel demonstrating 100k items layout with zero measureText calls.">
-              <div class="project-card__badge-overlay">
-                <span class="tag-pill" style="border-color: var(--edge-soft); color: var(--light); background: rgba(7,11,16,0.85);">67★: npm package</span>
-              </div>
             </div>
             <div class="project-card__content">
-              <div class="project-card__header">
-                <h3 class="project-card__title"><a href="work/layout-sans.html">LayoutSans</a></h3>
-                <p class="project-card__tagline">17 kB headless layout engine outrunning Meta's Yoga by 2 to 3 times</p>
-              </div>
+              <h3 class="project-card__title"><a href="work/layout-sans.html">LayoutSans</a></h3>
+              <div class="project-card__tagline">17 kB headless layout engine outrunning Meta's Yoga by 2 to 3 times</div>
               <p class="project-card__desc">
                 High-performance 2D flex and grid layout engine for Node, Bun, Deno, Cloudflare Workers, and Canvas. Ships zero DOM and zero WASM in about 17 kB gzipped (18 times smaller than Yoga), with canvas text selection, clipboard copy, and screen-reader accessibility.
               </p>
               <div class="project-card__metrics">
-                <span class="metric-badge"><b>17 kB</b> vs 300+ kB Yoga</span>
-                <span class="metric-badge"><b>0.27 ms</b> 100 Boxes (3x Yoga)</span>
-                <span class="metric-badge"><b>0 Deps</b> Pure TypeScript</span>
+                <span class="metric-pill"><b>17 kB</b> vs 300+ kB Yoga</span>
+                <span class="metric-pill"><b>0.27 ms</b> 100 Boxes (3x Yoga)</span>
+                <span class="metric-pill"><b>67★</b> npm</span>
               </div>
               <div class="project-card__tags">
-                <span class="tag-pill">TypeScript</span>
-                <span class="tag-pill">Layout Engine</span>
-                <span class="tag-pill">Canvas A11y</span>
-                <span class="tag-pill">npm</span>
-                <span class="tag-pill">Zero WASM</span>
+                <span class="tag-item">TypeScript</span>
+                <span class="tag-item">Layout Engine</span>
+                <span class="tag-item">Canvas A11y</span>
+                <span class="tag-item">npm</span>
+                <span class="tag-item">Zero WASM</span>
               </div>
               <div class="project-card__footer">
                 <div class="project-card__links">
-                  <a class="card-link" href="https://baselashraf81.github.io/layout-sans/demo/interactive-text.html" target="_blank" rel="noopener">Live Demo<svg class="i" viewBox="0 0 16 16"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg></a>
-                  <a class="card-link" href="https://github.com/BaselAshraf81/layout-sans" target="_blank" rel="noopener">Source<svg class="i" viewBox="0 0 16 16"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg></a>
+                  <a class="card-link" href="https://baselashraf81.github.io/layout-sans/demo/interactive-text.html" target="_blank" rel="noopener">Live Demo &nearr;</a>
+                  <a class="card-link" href="https://github.com/BaselAshraf81/layout-sans" target="_blank" rel="noopener">Source &nearr;</a>
                 </div>
-                <a class="card-link card-link--accent" href="work/layout-sans.html">Read Case Study &rarr;</a>
+                <a class="card-link card-link--case" href="work/layout-sans.html">Case Study &rarr;</a>
               </div>
             </div>
           </article>
@@ -358,35 +310,30 @@
             <div class="project-card__thumb">
               <img src="media/prolifictea.webp" width="700" height="437" loading="lazy" decoding="async"
                    alt="Prolific Tea researcher review platform interface with search and ratings.">
-              <div class="project-card__badge-overlay">
-                <span class="tag-pill" style="border-color: var(--edge-soft); color: var(--light); background: rgba(7,11,16,0.85);">100K+ Page Views</span>
-              </div>
             </div>
             <div class="project-card__content">
-              <div class="project-card__header">
-                <h3 class="project-card__title"><a href="work/prolific-tea.html">Prolific Tea</a></h3>
-                <p class="project-card__tagline">Community researcher review and pay transparency platform</p>
-              </div>
+              <h3 class="project-card__title"><a href="work/prolific-tea.html">Prolific Tea</a></h3>
+              <div class="project-card__tagline">Community researcher review and pay transparency platform</div>
               <p class="project-card__desc">
                 Review platform where academic participants rate researchers on fairness and rejection rates. Includes a companion Chrome extension intercepting study network requests, PWA push notifications, threaded reviews, and custom moderation tooling.
               </p>
               <div class="project-card__metrics">
-                <span class="metric-badge"><b>100,000+</b> Page Views</span>
-                <span class="metric-badge"><b>1,582</b> Researchers Indexed</span>
-                <span class="metric-badge"><b>0 Ads</b> Community Funded</span>
+                <span class="metric-pill"><b>100,000+</b> Views</span>
+                <span class="metric-pill"><b>1,582</b> Researchers</span>
+                <span class="metric-pill"><b>0 Ads</b> Community Funded</span>
               </div>
               <div class="project-card__tags">
-                <span class="tag-pill">Next.js</span>
-                <span class="tag-pill">PostgreSQL</span>
-                <span class="tag-pill">Chrome Extension</span>
-                <span class="tag-pill">PWA</span>
-                <span class="tag-pill">Tailwind CSS</span>
+                <span class="tag-item">Next.js</span>
+                <span class="tag-item">PostgreSQL</span>
+                <span class="tag-item">Chrome Extension</span>
+                <span class="tag-item">PWA</span>
+                <span class="tag-item">Tailwind CSS</span>
               </div>
               <div class="project-card__footer">
                 <div class="project-card__links">
-                  <a class="card-link" href="https://prolifictea.com" target="_blank" rel="noopener">prolifictea.com<svg class="i" viewBox="0 0 16 16"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg></a>
+                  <a class="card-link" href="https://prolifictea.com" target="_blank" rel="noopener">prolifictea.com &nearr;</a>
                 </div>
-                <a class="card-link card-link--accent" href="work/prolific-tea.html">Read Case Study &rarr;</a>
+                <a class="card-link card-link--case" href="work/prolific-tea.html">Case Study &rarr;</a>
               </div>
             </div>
           </article>
@@ -396,36 +343,31 @@
             <div class="project-card__thumb">
               <img src="media/photophane.webp" width="700" height="437" loading="lazy" decoding="async"
                    alt="Photophane diagram showing 3D caustic relief plate projecting photo onto wall.">
-              <div class="project-card__badge-overlay">
-                <span class="tag-pill" style="border-color: var(--edge-soft); color: var(--light); background: rgba(7,11,16,0.85);">72 r/photogrammetry</span>
-              </div>
             </div>
             <div class="project-card__content">
-              <div class="project-card__header">
-                <h3 class="project-card__title"><a href="work/photophane.html">Photophane</a></h3>
-                <p class="project-card__tagline">Inverse ray-tracing engine computing optical caustic plates</p>
-              </div>
+              <h3 class="project-card__title"><a href="work/photophane.html">Photophane</a></h3>
+              <div class="project-card__tagline">Inverse ray-tracing engine computing optical caustic plates</div>
               <p class="project-card__desc">
-                Computes 3D-printable continuous acrylic relief plates (10.97 mm depth) that project focused photographs onto distant walls through torchlight refraction. The physical optics algorithm is the exact forward model running the live Caustic simulation on this website.
+                Computes 3D-printable continuous acrylic relief plates (10.97 mm depth) that project focused photographs onto distant walls through torchlight refraction. The physical optics algorithm is the forward model running the live Caustic simulation on this website.
               </p>
               <div class="project-card__metrics">
-                <span class="metric-badge"><b>72</b> Reddit Upvotes</span>
-                <span class="metric-badge"><b>10.97 mm</b> Acrylic Relief Depth</span>
-                <span class="metric-badge"><b>3D-Printable</b> STL Engine</span>
+                <span class="metric-pill"><b>72</b> Reddit Upvotes</span>
+                <span class="metric-pill"><b>10.97 mm</b> Cut Depth</span>
+                <span class="metric-pill"><b>STL</b> 3D Printing</span>
               </div>
               <div class="project-card__tags">
-                <span class="tag-pill">TypeScript</span>
-                <span class="tag-pill">Optics Physics</span>
-                <span class="tag-pill">WebGL</span>
-                <span class="tag-pill">3D Printing</span>
-                <span class="tag-pill">Caustics</span>
+                <span class="tag-item">TypeScript</span>
+                <span class="tag-item">Optics Physics</span>
+                <span class="tag-item">WebGL</span>
+                <span class="tag-item">3D Printing</span>
+                <span class="tag-item">Caustics</span>
               </div>
               <div class="project-card__footer">
                 <div class="project-card__links">
-                  <a class="card-link" href="https://baselashraf81.github.io/photophane/" target="_blank" rel="noopener">Try Generator<svg class="i" viewBox="0 0 16 16"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg></a>
-                  <a class="card-link" href="https://github.com/BaselAshraf81/photophane" target="_blank" rel="noopener">Source<svg class="i" viewBox="0 0 16 16"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg></a>
+                  <a class="card-link" href="https://baselashraf81.github.io/photophane/" target="_blank" rel="noopener">Try Generator &nearr;</a>
+                  <a class="card-link" href="https://github.com/BaselAshraf81/photophane" target="_blank" rel="noopener">Source &nearr;</a>
                 </div>
-                <a class="card-link card-link--accent" href="work/photophane.html">Read Case Study &rarr;</a>
+                <a class="card-link card-link--case" href="work/photophane.html">Case Study &rarr;</a>
               </div>
             </div>
           </article>
@@ -434,14 +376,13 @@
       </div>
     </section>
 
-    <!-- ============ SYSTEMS, TOOLS & FINDINGS (STRUCTURED CARDS) ============ -->
+    <!-- Systems & Tools -->
     <section class="band band--surface" id="systems">
       <div class="shell">
         <div class="band__header">
-          <span class="band__eyebrow">Developer Tools &amp; Security</span>
-          <h2 class="h2">Systems, Open Source &amp; Research</h2>
+          <h2 class="h2">Systems &amp; Tools</h2>
           <p class="lede">
-            Developer tooling, protocol servers, conformance suites, and security disclosures.
+            Open source contributions, protocol servers, conformance suites, and security disclosures.
           </p>
         </div>
 
@@ -457,10 +398,10 @@
               <a href="https://github.com/BaselAshraf81/holystitch" target="_blank" rel="noopener">holystitch</a>
             </h3>
             <p class="system-card__body">
-              Model Context Protocol (MCP) server compiling Google Stitch designs directly into React and Next.js component trees via native API calls without consuming LLM inference tokens.
+              Model Context Protocol server compiling Google Stitch designs directly into React and Next.js component trees via native API calls without consuming LLM inference tokens.
             </p>
             <div class="system-card__meta">
-              <span>TypeScript: MCP SDK</span>
+              <span>TypeScript</span>
               <a href="https://github.com/BaselAshraf81/holystitch" target="_blank" rel="noopener">Repo &rarr;</a>
             </div>
           </article>
@@ -468,7 +409,7 @@
           <!-- System 2: fastemporal -->
           <article class="system-card">
             <div class="system-card__top">
-              <span class="system-card__category">Systems: Rust</span>
+              <span class="system-card__category">Rust</span>
               <span class="system-card__metric">docs.rs</span>
             </div>
             <h3 class="system-card__title">
@@ -478,7 +419,7 @@
               Pure Rust reimplementation of Luxon and TC39 Temporal datetime APIs with zero heap allocations in hot paths. Passes 332 ported tests and benchmarks 7 to 216 times faster than JS Luxon.
             </p>
             <div class="system-card__meta">
-              <span>Rust: 332 Conformance Tests</span>
+              <span>332 Conformance Tests</span>
               <a href="https://docs.rs/fastemporal" target="_blank" rel="noopener">Docs &rarr;</a>
             </div>
           </article>
@@ -486,7 +427,7 @@
           <!-- System 3: Legal Document RAG -->
           <article class="system-card">
             <div class="system-card__top">
-              <span class="system-card__category">AI &amp; Retrieval</span>
+              <span class="system-card__category">Retrieval</span>
               <span class="system-card__metric">25.3K Docs</span>
             </div>
             <h3 class="system-card__title">
@@ -504,7 +445,7 @@
           <!-- System 4: Nextron PR #531 -->
           <article class="system-card">
             <div class="system-card__top">
-              <span class="system-card__category">OSS Contribution</span>
+              <span class="system-card__category">OSS Upgrade</span>
               <span class="system-card__metric">nextron@9.6.0</span>
             </div>
             <h3 class="system-card__title">
@@ -514,7 +455,7 @@
               Upgraded Electron and Next.js framework to Next 16 and React 19 with Turbopack compatibility across 33 files (+1,218 / &minus;416 lines). Merged and released the same day.
             </p>
             <div class="system-card__meta">
-              <span>Electron: Next.js 16, React 19</span>
+              <span>Next 16, React 19</span>
               <a href="https://github.com/saltyshiomix/nextron/pull/531" target="_blank" rel="noopener">PR #531 &rarr;</a>
             </div>
           </article>
@@ -522,7 +463,7 @@
           <!-- System 5: M-Pesa Bug Bounty -->
           <article class="system-card">
             <div class="system-card__top">
-              <span class="system-card__category">Security Research</span>
+              <span class="system-card__category">Security</span>
               <span class="system-card__metric">HackerOne</span>
             </div>
             <h3 class="system-card__title">Stored XSS in M-Pesa</h3>
@@ -530,7 +471,7 @@
               Discovered and reported a stored cross-site scripting vulnerability in M-Pesa's PDF receipt generator through font descriptor injection. Validated and accepted on HackerOne.
             </p>
             <div class="system-card__meta">
-              <span>PDF Parsing: Font Injection</span>
+              <span>Font Descriptor Injection</span>
               <span>Accepted Bounty</span>
             </div>
           </article>
@@ -554,7 +495,7 @@
           <!-- System 7: fx-inject-shim -->
           <article class="system-card">
             <div class="system-card__top">
-              <span class="system-card__category">Browser Extension</span>
+              <span class="system-card__category">Extension</span>
               <span class="system-card__metric">21 r/firefox</span>
             </div>
             <h3 class="system-card__title">
@@ -564,7 +505,7 @@
               Drop-in JavaScript shim restoring Firefox 152 tab and scripting injection APIs with zero call-site modifications for existing extensions.
             </p>
             <div class="system-card__meta">
-              <span>JavaScript: WebExtensions</span>
+              <span>WebExtensions</span>
               <a href="https://github.com/BaselAshraf81/fx-inject-shim" target="_blank" rel="noopener">Repo &rarr;</a>
             </div>
           </article>
@@ -572,7 +513,7 @@
           <!-- System 8: vibellm -->
           <article class="system-card">
             <div class="system-card__top">
-              <span class="system-card__category">LLM Research</span>
+              <span class="system-card__category">Research</span>
               <span class="system-card__metric">57 r/LocalLLM</span>
             </div>
             <h3 class="system-card__title">
@@ -582,7 +523,7 @@
               Instant browser language model topology generator: randomizes both layer structures and weights to inspect untreated neural architecture behaviors.
             </p>
             <div class="system-card__meta">
-              <span>TypeScript: 12★</span>
+              <span>TypeScript (12★)</span>
               <a href="https://github.com/BaselAshraf81/vibellm" target="_blank" rel="noopener">Repo &rarr;</a>
             </div>
           </article>
@@ -591,67 +532,62 @@
       </div>
     </section>
 
-    <!-- ============ BACKGROUND & EDUCATION ============ -->
+    <!-- Background & Education -->
     <section class="band band--deep" id="about">
       <div class="shell">
         <div class="band__header">
-          <span class="band__eyebrow">Education &amp; Background</span>
-          <h2 class="h2">Background &amp; Core Stack</h2>
+          <h2 class="h2">Background</h2>
           <p class="lede">
-            Dual-degree computer engineering background combined with international research exchanges and verified implementations.
+            Dual-degree computer engineering background combined with international research exchanges.
           </p>
         </div>
 
         <div class="about-layout">
           <!-- Timeline / Education -->
-          <div class="about-education">
-            <h3 class="h3" style="margin-bottom: var(--s4);">Academic Milestones</h3>
+          <div>
             <ol class="timeline">
               <li class="timeline__item">
-                <h4 class="timeline__title">BSc Computer Engineering &amp; Software Systems</h4>
+                <h3 class="timeline__title">BSc Computer Engineering &amp; Software Systems</h3>
                 <p class="timeline__institution">University of East London &amp; Ain Shams University (Dual Degree)</p>
-                <span class="timeline__badge">Dual Degree Program</span>
-                <p class="timeline__date">February 2021 to Expected November 2026</p>
+                <p class="timeline__meta">February 2021 to Expected November 2026</p>
               </li>
 
               <li class="timeline__item">
-                <h4 class="timeline__title">Graduate Summer School: Universit&agrave; di Pisa</h4>
+                <h3 class="timeline__title">Graduate Summer School: Universit&agrave; di Pisa</h3>
                 <p class="timeline__institution">Human-Centric ICT for Industry 5.0, Pisa, Italy</p>
-                <span class="timeline__badge">Merit Scholarship: Graded 29/30</span>
-                <p class="timeline__date">September 2025</p>
+                <p class="timeline__meta">September 2025: Merit Scholarship (29/30)</p>
               </li>
 
               <li class="timeline__item">
-                <h4 class="timeline__title">Exchange Program: Hanyang University</h4>
+                <h3 class="timeline__title">Exchange Program: Hanyang University</h3>
                 <p class="timeline__institution">Seoul, South Korea: Computer Science Department</p>
-                <span class="timeline__badge">GPA 4.0 / 4.5</span>
-                <p class="timeline__date">September 2024 to January 2025</p>
+                <p class="timeline__meta">September 2024 to January 2025: GPA 4.0 / 4.5</p>
               </li>
             </ol>
           </div>
 
           <!-- Skills & Tooling -->
           <div class="skills-panel">
-            <h3 class="skills-panel__title">Technical Core</h3>
+            <h3 class="skills-panel__title">Technical Competencies</h3>
 
-            <div class="skill-category">
-              <div class="skill-category__name">Languages</div>
-              <p class="skill-category__items">TypeScript, JavaScript, Rust, Python, Java, SQL, C/C++</p>
+            <div class="skill-row">
+              <div class="skill-row__label">Languages</div>
+              <p class="skill-row__text">TypeScript, JavaScript, Rust, Python, Java, SQL, C/C++</p>
             </div>
 
-            <div class="skill-category">
-              <div class="skill-category__name">Systems &amp; Numerical PDE Solvers</div>
-              <p class="skill-category__items">Finite Element Method (FEM), Web Workers, Canvas 2D/WebGL, Model Context Protocol (MCP), FAISS, TC39 Conformance</p>
+            <div class="skill-row">
+              <div class="skill-row__label">Systems &amp; PDE Solvers</div>
+              <p class="skill-row__text">Finite Element Method (FEM), Web Workers, Canvas 2D/WebGL, Model Context Protocol (MCP), FAISS</p>
             </div>
 
-            <div class="skill-category">
-              <div class="skill-category__name">Web &amp; Infrastructure</div>
-              <p class="skill-category__items">Next.js, React, Node.js, Web Audio API, Chrome Extensions, PostgreSQL, Supabase, Docker, Linux, Git</p>
+            <div class="skill-row">
+              <div class="skill-row__label">Web &amp; Infrastructure</div>
+              <p class="skill-row__text">Next.js, React, Node.js, Web Audio API, Chrome Extensions, PostgreSQL, Supabase, Docker, Linux, Git</p>
             </div>
 
-            <div class="skill-category">
-              <div class="skill-category__name">Security &amp; Analysis</div>
-              <p class="skill-category__items">Burp Suite, OWASP, Web Security Auditing, Font &amp; Parser Exploitation, HackerOne Bug Bounty</p>
+            <div class="skill-row">
+              <div class="skill-row__label">Security &amp; Analysis</div>
+              <p class="skill-row__text">Burp Suite, OWASP, Web Security Auditing, Font &amp; Parser Exploitation, HackerOne Bug Bounty</p>
             </div>
           </div>
         </div>
@@ -659,63 +595,44 @@
     </section>
   </main>
 
-  <!-- ============ FOOTER & CONTACT ============ -->
+  <!-- Footer -->
   <footer class="site-footer" id="contact">
     <div class="shell">
       <div class="footer__grid">
         <div>
           <h2 class="footer__h">Making software free again</h2>
           <p class="footer__p">
-            I am finishing my degree in November 2026 and actively open to full-time software engineering roles, high-impact contract work, and academic research collaborations.
+            Finishing dual degree in November 2026. Open to full-time software engineering roles, contract work, and academic research collaborations.
           </p>
-          <div class="footer__cta-group">
+          <div class="footer__actions">
             <a class="btn btn--primary" href="mailto:hello@baselashraf.com">
-              <svg class="i" viewBox="0 0 16 16"><path d="M2 4h12v8H2zM2 4l6 5 6-5"/></svg>
               hello@baselashraf.com
             </a>
             <a class="btn" href="/resume.pdf" target="_blank" rel="noopener">
-              <svg class="i" viewBox="0 0 16 16"><path d="M3 2h7l4 4v8H3zM10 2v4h4"/></svg>
               Resume (PDF)
             </a>
           </div>
         </div>
 
         <div class="footer__nav">
-          <span class="footer__nav-title">Profiles &amp; Citations</span>
-          <a href="https://github.com/BaselAshraf81" target="_blank" rel="noopener">
-            <svg class="i i--solid" viewBox="0 0 16 16"><path d="M8 1a7 7 0 0 0-2.2 13.6c.3.1.4-.2.4-.4v-1.5c-2 .4-2.4-.9-2.4-.9-.3-.9-.8-1.1-.8-1.1-.7-.4 0-.4 0-.4.7 0 1.1.8 1.1.8.7 1.1 1.7.8 2.2.6.1-.5.3-.9.5-1.1-1.6-.2-3.3-.8-3.3-3.6 0-.8.3-1.4.7-1.9-.1-.2-.3-.9.1-1.9 0 0 .6-.2 2 .7a6.6 6.6 0 0 1 3.6 0c1.4-.9 2-.7 2-.7.4 1 .2 1.7.1 1.9.4.5.7 1.1.7 1.9 0 2.8-1.7 3.4-3.3 3.6.3.3.6.8.6 1.6v2.3c0 .2.1.5.5.4A7 7 0 0 0 8 1Z"/></svg>
-            GitHub (BaselAshraf81)
-          </a>
-          <a href="https://www.linkedin.com/in/basel-askar/" target="_blank" rel="noopener">
-            <svg class="i i--solid" viewBox="0 0 16 16"><path d="M3.8 5.2H1.5V15h2.3V5.2ZM2.65 1a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8ZM14.5 9.4c0-2.6-1.4-3.8-3.2-3.8-1.5 0-2.2.8-2.5 1.4V5.2H6.5V15h2.3V9.8c0-1.2.5-2 1.6-2s1.5.8 1.5 2V15h2.6V9.4Z"/></svg>
-            LinkedIn (/in/basel-askar)
-          </a>
-          <a href="https://doi.org/10.5281/zenodo.22019539" target="_blank" rel="noopener">
-            <svg class="i" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6"/><path d="M8 5v6M5 8h6"/></svg>
-            Zenodo DOI (Eigendrum)
-          </a>
-          <a href="https://orcid.org/0009-0009-3441-6196" target="_blank" rel="noopener">
-            <svg class="i" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6"/><path d="M7 5h2v6H7z"/></svg>
-            ORCID Profile
-          </a>
-          <a href="https://x.com/BaselAshraf81" target="_blank" rel="noopener">
-            <svg class="i i--solid" viewBox="0 0 16 16"><path d="M1.5 1.5h3.9l3.2 4.4 3.9-4.4h2.1L9.9 7.2l5 7.3h-3.9l-3.4-4.7-4.2 4.7H1.3l5.4-6.1L1.5 1.5Zm2.2 1.3 7.6 10.4h1.1L4.8 2.8H3.7Z"/></svg>
-            X (@BaselAshraf81)
-          </a>
+          <div class="footer__nav-title">Profiles &amp; Citations</div>
+          <a href="https://github.com/BaselAshraf81" target="_blank" rel="noopener">GitHub: BaselAshraf81</a>
+          <a href="https://www.linkedin.com/in/basel-askar/" target="_blank" rel="noopener">LinkedIn: /in/basel-askar</a>
+          <a href="https://doi.org/10.5281/zenodo.22019539" target="_blank" rel="noopener">Zenodo DOI: 10.5281/zenodo.22019539</a>
+          <a href="https://orcid.org/0009-0009-3441-6196" target="_blank" rel="noopener">ORCID: 0009-0009-3441-6196</a>
+          <a href="https://x.com/BaselAshraf81" target="_blank" rel="noopener">X: @BaselAshraf81</a>
         </div>
       </div>
 
       <div class="footer__bottom">
-        <span>&copy; 2026 Basel Ashraf Fikry: Sole engineer on all listed projects</span>
-        <span>Built with engineering restraint: pure static HTML/CSS/JS, zero runtime dependencies.</span>
+        <span>&copy; 2026 Basel Ashraf Fikry</span>
+        <span>Cairo, Egypt &amp; London, UK</span>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="caustic.js" defer></script>
   <script>
-    // Mobile navigation toggle
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
     if (navToggle && navMenu) {
@@ -723,7 +640,6 @@
         const isOpen = navMenu.classList.toggle('open');
         navToggle.setAttribute('aria-expanded', isOpen);
       });
-      // Close menu when clicking links
       navMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
           navMenu.classList.remove('open');
