@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  </script>
   <title>Eigendrum: In-Browser Finite-Element Acoustics &amp; Spectral Geometry</title>
   <meta name="description"
     content="Technical case study of Eigendrum: solving 2D Dirichlet Laplacian eigenvalue problems in a Web Worker in 800 ms with 0 dependencies. 150★ and Zenodo DOI.">
   <link rel="canonical" href="https://baselashraf.com/work/eigendrum.html">
-  <meta name="theme-color" content="#0a0c10">
+  <meta name="theme-color" content="#f9f8f5">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Eigendrum: In-Browser Finite-Element Acoustics &amp; Spectral Geometry">
   <meta property="og:description"
@@ -24,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap">
   <link rel="stylesheet" href="../styles.css">
   <script type="application/ld+json">
 {
@@ -84,6 +92,10 @@
         <a class="nav__link" href="../#about">Background</a>
         <a class="nav__link" href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
         <a class="nav__link nav__link--cta" href="mailto:hello@baselashraf.com">Get in touch</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <span id="theme-text">Dark</span>
+        </button>
       </nav>
     </div>
   </header>
@@ -184,7 +196,7 @@
             <p>
               The solver pipeline executes on the client side across four stages:
             </p>
-            <ol style="color: var(--fg-secondary); padding-left: 1.25rem; line-height: 1.7; margin-bottom: var(--s4);">
+            <ol style="color: var(--ink-secondary); padding-left: 1.25rem; line-height: 1.7; margin-bottom: var(--s4);">
               <li><strong>Boundary Simplification &amp; Delaunay Triangulation:</strong> Hand-drawn input points are simplified using Ramer-Douglas-Peucker and meshed into a conforming triangular mesh using constrained Delaunay triangulation.</li>
               <li><strong>Stiffness and Mass Matrix Assembly:</strong> Linear P1 finite elements formulate the generalized discrete eigenvalue problem <code>K u = &lambda; M u</code>, where <code>K</code> is the discrete Laplace-Beltrami stiffness matrix and <code>M</code> is the lumped mass matrix.</li>
               <li><strong>Rayleigh Quotient Eigensolver:</strong> Eigenvalues (&lambda;) and eigenvectors (u) are computed via Rayleigh quotient minimization with Chebyshev-accelerated subspace iteration in a dedicated Web Worker.</li>
@@ -252,7 +264,7 @@
 
           <div class="sidebar-card">
             <div class="sidebar-card__title">Academic Citation</div>
-            <p style="font-size: 0.8125rem; color: var(--fg-secondary); line-height: 1.5; margin-bottom: 0.5rem;">
+            <p style="font-size: 0.8125rem; color: var(--ink-secondary); line-height: 1.5; margin-bottom: 0.5rem;">
               <strong>Ashraf, B. (2026).</strong> <em>Eigendrum: In-browser Dirichlet Laplacian finite-element solver and modal acoustics synthesizer</em>. Zenodo.
             </p>
             <a class="card-link card-link--case" href="https://doi.org/10.5281/zenodo.22019539" target="_blank" rel="noopener">
@@ -262,7 +274,7 @@
 
           <div class="sidebar-card">
             <div class="sidebar-card__title">Specifications</div>
-            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8125rem; color: var(--fg-secondary); display: flex; flex-direction: column; gap: 0.4rem; font-family: var(--font-mono);">
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8125rem; color: var(--ink-secondary); display: flex; flex-direction: column; gap: 0.4rem; font-family: var(--font-mono);">
               <li>Solve Time: ~800 ms (2,051 unknowns)</li>
               <li>Analytic Error: 0.160% (Unit Square)</li>
               <li>WASM: 0 kB (Pure JS)</li>
@@ -276,11 +288,34 @@
 
   <footer class="site-footer">
     <div class="shell" style="text-align: center;">
-      <p style="color: var(--fg-muted); font-size: 0.8125rem;">
+      <p style="color: var(--ink-muted); font-size: 0.8125rem;">
         &copy; 2026 Basel Ashraf &middot; <a href="../#work">Work</a> &middot; <a href="mailto:hello@baselashraf.com">hello@baselashraf.com</a>
       </p>
     </div>
   </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const themeText = document.getElementById('theme-text');
+    
+    function updateThemeUI(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      if (themeText) {
+        themeText.textContent = theme === 'dark' ? 'Light' : 'Dark';
+      }
+    }
+
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    updateThemeUI(currentTheme);
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        const nextTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        updateThemeUI(nextTheme);
+      });
+    }
+  </script>
 </body>
 
 </html>

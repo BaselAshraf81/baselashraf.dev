@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  </script>
   <title>LayoutSans: 17 kB Headless Layout Engine Outperforming Meta's Yoga</title>
   <meta name="description"
     content="Technical case study of LayoutSans: a 17 kB zero-dependency TypeScript flex/grid engine executing 2-3x faster than Yoga WASM with canvas accessibility.">
   <link rel="canonical" href="https://baselashraf.com/work/layout-sans.html">
-  <meta name="theme-color" content="#0a0c10">
+  <meta name="theme-color" content="#f9f8f5">
   <meta property="og:type" content="article">
   <meta property="og:title" content="LayoutSans: 17 kB Headless Layout Engine Outperforming Meta's Yoga">
   <meta property="og:description"
@@ -24,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap">
   <link rel="stylesheet" href="../styles.css">
   <script type="application/ld+json">
 {
@@ -78,6 +86,10 @@
         <a class="nav__link" href="../#about">Background</a>
         <a class="nav__link" href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
         <a class="nav__link nav__link--cta" href="mailto:hello@baselashraf.com">Get in touch</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <span id="theme-text">Dark</span>
+        </button>
       </nav>
     </div>
   </header>
@@ -120,7 +132,7 @@
             <p>
               When rendering complex documents, virtualized data tables, or custom canvas user interfaces outside the standard DOM, developers face two main bottlenecks:
             </p>
-            <ul style="color: var(--fg-secondary); padding-left: 1.25rem; line-height: 1.7; margin-bottom: var(--s3);">
+            <ul style="color: var(--ink-secondary); padding-left: 1.25rem; line-height: 1.7; margin-bottom: var(--s3);">
               <li><strong>The Browser DOM:</strong> Heavy memory footprints, synchronous reflow costs, and browser tab crashes when laying out 100,000 or more elements.</li>
               <li><strong>WebAssembly Layout Engines (such as Meta's Yoga):</strong> Requires shipping over 300 kB of C++ binaries compiled to WebAssembly, incurring compilation cold-starts, JS-to-WASM bridge serialization delays, and zero native text interaction or accessibility tree support.</li>
             </ul>
@@ -197,7 +209,7 @@
             <p>
               Version 0.2 added text interaction for canvas rendering. Integrated directly with Cheng Lou's <code>pretext</code> text measurement primitive, LayoutSans positions glyphs in advance and constructs a headless accessibility tree:
             </p>
-            <ul style="color: var(--fg-secondary); padding-left: 1.25rem; line-height: 1.7; margin-bottom: var(--s4);">
+            <ul style="color: var(--ink-secondary); padding-left: 1.25rem; line-height: 1.7; margin-bottom: var(--s4);">
               <li><strong>Native Drag Selection &amp; Clipboard:</strong> Dragging across canvas elements produces standard highlight rects and native clipboard text.</li>
               <li><strong>Keyboard Navigation &amp; Search:</strong> Supports <kbd>Ctrl</kbd>+<kbd>F</kbd> search jumping and tabbed focus rings.</li>
               <li><strong>Screen Reader Tree:</strong> Uses a proxy virtual DOM maintaining 204 active accessibility nodes regardless of document length.</li>
@@ -224,12 +236,12 @@
 
           <div class="sidebar-card">
             <div class="sidebar-card__title">Quick Install</div>
-            <pre style="background: rgba(0,0,0,0.5); padding: 0.6rem; border-radius: 4px; border: 1px solid var(--border-subtle); font-size: 0.8125rem; color: var(--light); overflow-x: auto; margin: 0;"><code>npm install layout-sans</code></pre>
+            <pre style="background: var(--bg-subtle); padding: 0.6rem; border-radius: 4px; border: 1px solid var(--border); font-size: 0.8125rem; color: var(--ink); overflow-x: auto; margin: 0;"><code>npm install layout-sans</code></pre>
           </div>
 
           <div class="sidebar-card">
             <div class="sidebar-card__title">Key Advantages</div>
-            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8125rem; color: var(--fg-secondary); display: flex; flex-direction: column; gap: 0.4rem; font-family: var(--font-mono);">
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8125rem; color: var(--ink-secondary); display: flex; flex-direction: column; gap: 0.4rem; font-family: var(--font-mono);">
               <li>Speed: 0.27 ms for 100 boxes</li>
               <li>Bundle: 17 kB vs Yoga 300+ kB</li>
               <li>Runtime Deps: 0</li>
@@ -243,11 +255,34 @@
 
   <footer class="site-footer">
     <div class="shell" style="text-align: center;">
-      <p style="color: var(--fg-muted); font-size: 0.8125rem;">
+      <p style="color: var(--ink-muted); font-size: 0.8125rem;">
         &copy; 2026 Basel Ashraf &middot; <a href="../#work">Work</a> &middot; <a href="mailto:hello@baselashraf.com">hello@baselashraf.com</a>
       </p>
     </div>
   </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const themeText = document.getElementById('theme-text');
+    
+    function updateThemeUI(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      if (themeText) {
+        themeText.textContent = theme === 'dark' ? 'Light' : 'Dark';
+      }
+    }
+
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    updateThemeUI(currentTheme);
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        const nextTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        updateThemeUI(nextTheme);
+      });
+    }
+  </script>
 </body>
 
 </html>
