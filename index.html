@@ -184,6 +184,7 @@
   <!-- Hero Section -->
   <section class="hero" id="top">
     <canvas id="caustic" class="hero__caustic" aria-hidden="true"></canvas>
+    <div class="hero__shield" aria-hidden="true"></div>
 
     <div class="shell hero__inner">
       <div class="hero__status">
@@ -374,7 +375,7 @@
       </div>
     </section>
 
-    <!-- Systems & Tools (Clustered) -->
+    <!-- Systems & Tools (Clustered & Categorized) -->
     <section class="band band--surface" id="systems">
       <div class="shell">
         <div class="band__header">
@@ -388,7 +389,10 @@
 
           <!-- Cluster 1: Open Source & Developer Tools -->
           <div class="systems-cluster">
-            <div class="systems-cluster__title">Open Source &amp; Developer Tools</div>
+            <div class="systems-cluster__header">
+              <h3 class="systems-cluster__title">Open Source &amp; Developer Tools</h3>
+              <p class="systems-cluster__desc">Framework upgrades, protocol engines, and runtime shims.</p>
+            </div>
             <div class="systems-grid">
 
               <!-- System: Nextron PR #531 -->
@@ -397,15 +401,19 @@
                   <span class="system-card__category">OSS Upgrade</span>
                   <span class="system-card__metric">nextron@9.6.0</span>
                 </div>
-                <h3 class="system-card__title">
+                <h4 class="system-card__title">
                   <a href="https://github.com/saltyshiomix/nextron/pull/531" target="_blank" rel="noopener">Nextron PR #531</a>
-                </h3>
+                </h4>
                 <p class="system-card__body">
-                  Upgraded Electron and Next.js framework to Next 16 and React 19 with Turbopack compatibility across 33 files (+1,218 / &minus;416 lines). Merged and released the same day.
+                  Upgraded major Electron and Next.js framework to Next 16 and React 19 with Turbopack compatibility across 33 files (+1,218 / &minus;416 lines). Merged and released the same day.
                 </p>
+                <div class="system-card__badges">
+                  <span class="metric-pill metric-pill--impact"><b>Next 16 &amp; React 19</b> Upgrade</span>
+                  <span class="metric-pill metric-pill--credibility">33 Files Modified</span>
+                </div>
                 <div class="system-card__meta">
-                  <span>Next 16, React 19</span>
-                  <a href="https://github.com/saltyshiomix/nextron/pull/531" target="_blank" rel="noopener">PR #531 &rarr;</a>
+                  <span>Electron Ecosystem</span>
+                  <a class="system-card__cta" href="https://github.com/saltyshiomix/nextron/pull/531" target="_blank" rel="noopener">View Pull Request &nearr;</a>
                 </div>
               </article>
 
@@ -413,17 +421,21 @@
               <article class="system-card">
                 <div class="system-card__top">
                   <span class="system-card__category">MCP Server</span>
-                  <span class="system-card__metric">23★</span>
+                  <span class="system-card__metric">23★ GitHub</span>
                 </div>
-                <h3 class="system-card__title">
+                <h4 class="system-card__title">
                   <a href="https://github.com/BaselAshraf81/holystitch" target="_blank" rel="noopener">holystitch</a>
-                </h3>
+                </h4>
                 <p class="system-card__body">
                   Model Context Protocol server compiling Google Stitch designs directly into React and Next.js component trees via native API calls without consuming LLM inference tokens.
                 </p>
+                <div class="system-card__badges">
+                  <span class="metric-pill metric-pill--impact"><b>0 LLM Tokens</b> Native AST</span>
+                  <span class="metric-pill metric-pill--credibility">TypeScript MCP</span>
+                </div>
                 <div class="system-card__meta">
-                  <span>TypeScript</span>
-                  <a href="https://github.com/BaselAshraf81/holystitch" target="_blank" rel="noopener">Repo &rarr;</a>
+                  <span>Developer Tooling</span>
+                  <a class="system-card__cta" href="https://github.com/BaselAshraf81/holystitch" target="_blank" rel="noopener">GitHub Repo &nearr;</a>
                 </div>
               </article>
 
@@ -431,17 +443,21 @@
               <article class="system-card">
                 <div class="system-card__top">
                   <span class="system-card__category">Rust Engine</span>
-                  <span class="system-card__metric">docs.rs</span>
+                  <span class="system-card__metric">docs.rs/fastemporal</span>
                 </div>
-                <h3 class="system-card__title">
+                <h4 class="system-card__title">
                   <a href="https://docs.rs/fastemporal" target="_blank" rel="noopener">fastemporal</a>
-                </h3>
+                </h4>
                 <p class="system-card__body">
                   Pure Rust reimplementation of Luxon and TC39 Temporal datetime APIs with zero heap allocations in hot paths. Passes 332 ported tests and benchmarks 7 to 216 times faster than JS Luxon.
                 </p>
+                <div class="system-card__badges">
+                  <span class="metric-pill metric-pill--impact"><b>332 Tests Passed</b> 100% Conformance</span>
+                  <span class="metric-pill metric-pill--credibility">7 to 216x Faster</span>
+                </div>
                 <div class="system-card__meta">
-                  <span>332 Conformance Tests</span>
-                  <a href="https://docs.rs/fastemporal" target="_blank" rel="noopener">Docs &rarr;</a>
+                  <span>Systems / Rust</span>
+                  <a class="system-card__cta" href="https://docs.rs/fastemporal" target="_blank" rel="noopener">View Documentation &nearr;</a>
                 </div>
               </article>
 
@@ -451,15 +467,19 @@
                   <span class="system-card__category">Extension Shim</span>
                   <span class="system-card__metric">21 r/firefox</span>
                 </div>
-                <h3 class="system-card__title">
+                <h4 class="system-card__title">
                   <a href="https://github.com/BaselAshraf81/fx-inject-shim" target="_blank" rel="noopener">fx-inject-shim</a>
-                </h3>
+                </h4>
                 <p class="system-card__body">
                   Drop-in JavaScript shim restoring Firefox 152 tab and scripting injection APIs with zero call-site modifications for existing extensions.
                 </p>
+                <div class="system-card__badges">
+                  <span class="metric-pill metric-pill--impact"><b>Firefox 152</b> API Compatibility</span>
+                  <span class="metric-pill metric-pill--credibility">Zero Call-Site Changes</span>
+                </div>
                 <div class="system-card__meta">
                   <span>WebExtensions</span>
-                  <a href="https://github.com/BaselAshraf81/fx-inject-shim" target="_blank" rel="noopener">Repo &rarr;</a>
+                  <a class="system-card__cta" href="https://github.com/BaselAshraf81/fx-inject-shim" target="_blank" rel="noopener">GitHub Repo &nearr;</a>
                 </div>
               </article>
 
@@ -468,22 +488,29 @@
 
           <!-- Cluster 2: Security & Neural Research -->
           <div class="systems-cluster">
-            <div class="systems-cluster__title">Security &amp; Neural Research</div>
+            <div class="systems-cluster__header">
+              <h3 class="systems-cluster__title">Security &amp; Neural Research</h3>
+              <p class="systems-cluster__desc">Vulnerability disclosures, parser exploits, and neural architectures.</p>
+            </div>
             <div class="systems-grid">
 
               <!-- System: M-Pesa Bug Bounty -->
               <article class="system-card">
                 <div class="system-card__top">
                   <span class="system-card__category">Security Bounty</span>
-                  <span class="system-card__metric">HackerOne</span>
+                  <span class="system-card__metric">HackerOne Verified</span>
                 </div>
-                <h3 class="system-card__title">Stored XSS in M-Pesa</h3>
+                <h4 class="system-card__title">Stored XSS in M-Pesa</h4>
                 <p class="system-card__body">
                   Discovered and reported a stored cross-site scripting vulnerability in M-Pesa's PDF receipt generator through font descriptor injection. Validated and accepted on HackerOne.
                 </p>
+                <div class="system-card__badges">
+                  <span class="metric-pill metric-pill--impact"><b>Accepted Bounty</b> HackerOne</span>
+                  <span class="metric-pill metric-pill--credibility">PDF Font Injection</span>
+                </div>
                 <div class="system-card__meta">
-                  <span>Font Descriptor Injection</span>
-                  <span>Accepted Bounty</span>
+                  <span>Parser Security</span>
+                  <span class="system-card__cta">Security Advisory (Accepted)</span>
                 </div>
               </article>
 
@@ -493,15 +520,19 @@
                   <span class="system-card__category">Neural Topologies</span>
                   <span class="system-card__metric">57 r/LocalLLM</span>
                 </div>
-                <h3 class="system-card__title">
+                <h4 class="system-card__title">
                   <a href="https://github.com/BaselAshraf81/vibellm" target="_blank" rel="noopener">vibellm</a>
-                </h3>
+                </h4>
                 <p class="system-card__body">
                   Instant browser language model topology generator: randomizes both layer structures and weights to inspect untreated neural architecture behaviors.
                 </p>
+                <div class="system-card__badges">
+                  <span class="metric-pill metric-pill--impact"><b>Dynamic Architecture</b> Generator</span>
+                  <span class="metric-pill metric-pill--credibility">12★ GitHub</span>
+                </div>
                 <div class="system-card__meta">
-                  <span>TypeScript (12★)</span>
-                  <a href="https://github.com/BaselAshraf81/vibellm" target="_blank" rel="noopener">Repo &rarr;</a>
+                  <span>LLM Research</span>
+                  <a class="system-card__cta" href="https://github.com/BaselAshraf81/vibellm" target="_blank" rel="noopener">GitHub Repo &nearr;</a>
                 </div>
               </article>
 
@@ -510,24 +541,31 @@
 
           <!-- Cluster 3: Data Pipelines & Retrieval Systems -->
           <div class="systems-cluster">
-            <div class="systems-cluster__title">Data Pipelines &amp; Retrieval Systems</div>
+            <div class="systems-cluster__header">
+              <h3 class="systems-cluster__title">Data Pipelines &amp; Retrieval Systems</h3>
+              <p class="systems-cluster__desc">Large-scale document search, concurrency queues, and schema normalization.</p>
+            </div>
             <div class="systems-grid">
 
               <!-- System: Legal Document RAG -->
               <article class="system-card">
                 <div class="system-card__top">
                   <span class="system-card__category">Hybrid Retrieval</span>
-                  <span class="system-card__metric">25.3K Docs</span>
+                  <span class="system-card__metric">25.3K Documents</span>
                 </div>
-                <h3 class="system-card__title">
+                <h4 class="system-card__title">
                   <a href="https://github.com/BaselAshraf81/epstein-rag-abliterated-llm" target="_blank" rel="noopener">Legal Document RAG</a>
-                </h3>
+                </h4>
                 <p class="system-card__body">
                   Hybrid vector and keyword search over 25,303 legal documents. Handles 230+ concurrent users on a single T4 GPU via a custom async request queue with zero out-of-memory errors.
                 </p>
+                <div class="system-card__badges">
+                  <span class="metric-pill metric-pill--impact"><b>230+ Concurrent Users</b> 1 T4 GPU</span>
+                  <span class="metric-pill metric-pill--credibility">25,303 Docs Indexed</span>
+                </div>
                 <div class="system-card__meta">
-                  <span>Python: LlamaIndex, FAISS</span>
-                  <a href="https://github.com/BaselAshraf81/epstein-rag-abliterated-llm" target="_blank" rel="noopener">Repo &rarr;</a>
+                  <span>AI Infrastructure</span>
+                  <a class="system-card__cta" href="https://github.com/BaselAshraf81/epstein-rag-abliterated-llm" target="_blank" rel="noopener">GitHub Repo &nearr;</a>
                 </div>
               </article>
 
@@ -537,13 +575,17 @@
                   <span class="system-card__category">Data Pipeline</span>
                   <span class="system-card__metric">120K+ Records</span>
                 </div>
-                <h3 class="system-card__title">Automated CRM ETL</h3>
+                <h4 class="system-card__title">Automated CRM ETL</h4>
                 <p class="system-card__body">
                   Unattended Python ETL pipeline restructuring 120,000+ records across 1,200+ inconsistent spreadsheets into a normalized CRM schema with OpenAI API schema mapping, reducing API costs by 13%.
                 </p>
+                <div class="system-card__badges">
+                  <span class="metric-pill metric-pill--impact"><b>120,000+ Records</b> 1,200+ Spreadsheets</span>
+                  <span class="metric-pill metric-pill--credibility">-13% LLM API Cost</span>
+                </div>
                 <div class="system-card__meta">
-                  <span>Python: OpenAI API, Pandas</span>
-                  <span>Production Pipeline</span>
+                  <span>Data Engineering</span>
+                  <span class="system-card__cta">Production Pipeline &nearr;</span>
                 </div>
               </article>
 
