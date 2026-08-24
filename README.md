@@ -35,7 +35,7 @@ powershell tools/images.ps1    # crops and compresses -> media/*.webp
 ```
 
 `tools/shoot.js` talks CDP directly rather than using `chrome --screenshot`,
-because two of these projects compute for 10–45 seconds before there is
+because two of these projects compute for 10-45 seconds before there is
 anything worth photographing. `--screenshot` fires at load and catches them
 mid-solve; driving the protocol lets the script wait in real time, strike the
 drum, and only then capture.

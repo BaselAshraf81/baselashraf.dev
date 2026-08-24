@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prolific Tea: Researcher Review &amp; Pay Transparency Platform</title>
+  <meta name="description"
+    content="Case study of Prolific Tea: community-funded researcher review platform with 100,000+ page views, Chrome extension network interception, and Next.js full-stack.">
+  <link rel="canonical" href="https://baselashraf.com/work/prolific-tea.html">
+  <meta name="theme-color" content="#070b10">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Prolific Tea: Researcher Review &amp; Pay Transparency Platform">
+  <meta property="og:description"
+    content="Case study of Prolific Tea: community-funded researcher review platform with 100,000+ page views, Chrome extension network interception, and Next.js full-stack.">
+  <meta property="og:url" content="https://baselashraf.com/work/prolific-tea.html">
+  <meta property="og:image" content="https://baselashraf.com/media/prolifictea.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@BaselAshraf81">
+  <meta name="twitter:title" content="Prolific Tea: Researcher Review &amp; Pay Transparency Platform">
+  <meta name="twitter:description"
+    content="Case study of Prolific Tea: community-funded researcher review platform with 100,000+ page views, Chrome extension network interception, and Next.js full-stack.">
+  <meta name="twitter:image" content="https://baselashraf.com/media/prolifictea.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://baselashraf.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Prolific Tea Case Study",
+          "item": "https://baselashraf.com/work/prolific-tea.html"
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://baselashraf.com/#prolifictea",
+      "name": "Prolific Tea",
+      "url": "https://prolifictea.com/",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Web Browser, Chrome Extension, PWA",
+      "description": "Community review and pay transparency platform indexing 1,582 academic researchers with 100,000+ page views and zero ads.",
+      "author": {
+        "@type": "Person",
+        "name": "Basel Ashraf Fikry",
+        "url": "https://baselashraf.com/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Prolific Tea?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Prolific Tea is a community-funded researcher review and pay transparency platform for academic research participants on Prolific. It indexes 1,582 researchers, tracks rejection rates and fairness ratings, and includes a companion Chrome extension that inspects study network requests in real time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Prolific Tea Chrome extension work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The companion Chrome extension intercepts incoming study feed network responses on Prolific, extracts researcher IDs, and injects aggregate fairness ratings and rejection counts directly onto the participant dashboard before they accept a study."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="shell header__inner">
+      <a class="header__brand" href="../">
+        <span class="header__brand-dot"></span>
+        <span>Basel Ashraf</span>
+      </a>
+
+      <nav class="header__nav" aria-label="Main Navigation">
+        <a class="nav__link" href="../#work">Work</a>
+        <a class="nav__link" href="../#systems">Systems &amp; Tools</a>
+        <a class="nav__link" href="../#about">Background</a>
+        <a class="nav__link nav__link--resume" href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="btn btn--sm btn--primary header__cta" href="mailto:hello@baselashraf.com">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="case-study">
+    <div class="shell">
+      <a class="case-study__back" href="../#work">
+        <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 2L4 8l6 6"/></svg>
+        Back to Shipped Work
+      </a>
+
+      <header class="case-study__header">
+        <h1 class="case-study__title">Prolific Tea</h1>
+        <p class="case-study__subtitle">Community Researcher Review &amp; Pay Transparency Platform</p>
+
+        <dl class="case-study__quick-facts">
+          <div class="quick-fact">
+            <dt>Role &amp; Team</dt>
+            <dd>Creator &amp; Sole Engineer</dd>
+          </div>
+          <div class="quick-fact">
+            <dt>Traction</dt>
+            <dd>100,000+ Page Views</dd>
+          </div>
+          <div class="quick-fact">
+            <dt>Index Size</dt>
+            <dd>1,582 Researchers Indexed</dd>
+          </div>
+          <div class="quick-fact">
+            <dt>Stack</dt>
+            <dd>Next.js, PostgreSQL, Chrome Ext, PWA</dd>
+          </div>
+        </dl>
+      </header>
+
+      <div class="case-study__layout">
+        <!-- Main Content -->
+        <article class="case-study__main">
+          
+          <!-- Section 1: Product Overview -->
+          <section>
+            <h2 class="h3">The Transparency Problem in Academic Crowdsourcing</h2>
+            <p>
+              Academic participants on research platforms such as Prolific frequently encounter unfair submission rejections, unpaid wage clawbacks, and unclear study demands with no central reputation record.
+            </p>
+            <p>
+              <strong>Prolific Tea</strong> provides participants with a searchable database where they rate researchers on fairness, payment timeliness, and rejection behaviors.
+            </p>
+          </section>
+
+          <!-- Screenshot -->
+          <figure class="shot">
+            <a class="shot__frame" href="https://prolifictea.com" target="_blank" rel="noopener">
+              <img src="../media/prolifictea.webp" width="1400" height="856" loading="lazy"
+                   alt="Prolific Tea index: searchable database of researchers with ratings and community reviews.">
+            </a>
+            <figcaption>
+              <span class="shot__tag">prolifictea.com</span>
+              <span>The live researcher index: searchable, filterable, and accessible with no registration required.</span>
+            </figcaption>
+          </figure>
+
+          <!-- Section 2: Technical Architecture -->
+          <section>
+            <h2 class="h3">Full-Stack Architecture &amp; Network Interception</h2>
+            <p>
+              The platform consists of four engineering components:
+            </p>
+            <ul style="color: var(--fg-2); padding-left: 1.25rem; line-height: 1.7; margin-bottom: var(--s4);">
+              <li><strong>Full-Stack Web Platform:</strong> Built on Next.js with server-side rendering, PostgreSQL database, image uploads, and threaded discussion boards.</li>
+              <li><strong>Chrome Extension Network Interceptor:</strong> Intercepts study feed network requests, extracts researcher IDs, and overlays historical reputation badges onto the participant dashboard before they accept a task.</li>
+              <li><strong>PWA Push Notifications:</strong> Delivers updates for dispute resolutions and community notices.</li>
+              <li><strong>Anti-Abuse Tooling:</strong> Custom administrative moderation workflows and rate limiting to prevent coordinated spam while preserving honest feedback.</li>
+            </ul>
+          </section>
+
+          <!-- Section 3: Organic Growth & Ethos -->
+          <section>
+            <h2 class="h3">Community Ethos &amp; Zero-Ad Model</h2>
+            <p>
+              Prolific Tea operates without venture capital, banner ads, paywalls, or tracking scripts. The platform has grown to <strong>100,000+ page views</strong> and <strong>1,582 indexed researchers</strong> funded by community donations and word-of-mouth adoption across research forums.
+            </p>
+          </section>
+
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="case-sidebar">
+          <div class="sidebar-box">
+            <h3 class="sidebar-box__title">Live Platform</h3>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <a class="btn btn--primary" href="https://prolifictea.com" target="_blank" rel="noopener">
+                Visit prolifictea.com
+                <svg class="i" viewBox="0 0 16 16"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="sidebar-box">
+            <h3 class="sidebar-box__title">Verified Statistics</h3>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.875rem; color: var(--fg-2); display: flex; flex-direction: column; gap: 0.5rem;">
+              <li><strong>Page Views:</strong> 100,000+</li>
+              <li><strong>Indexed Researchers:</strong> 1,582</li>
+              <li><strong>Languages Supported:</strong> 5</li>
+              <li><strong>Funding Model:</strong> Community funded</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell" style="text-align: center;">
+      <p style="color: var(--fg-3); font-size: 0.875rem; margin-bottom: var(--s2);">
+        &copy; 2026 Basel Ashraf &middot; <a href="../#work">All Work</a> &middot; <a href="mailto:hello@baselashraf.com">hello@baselashraf.com</a>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

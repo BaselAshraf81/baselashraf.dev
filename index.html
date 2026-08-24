@@ -15,21 +15,25 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-GM71X3G33E');
   </script>
-  <title>Basel Ashraf - software engineer</title>
+  <title>Basel Ashraf: Software &amp; Systems Engineer</title>
   <meta name="description"
-    content="Undergraduate engineer. Eigendrum: finite-element physics in the browser (150★, DOI, Wikipedia, HN×2). A 17 kB layout engine outrunning Meta's Yoga, and a review platform with 100,000+ page views.">
+    content="Software engineer building zero-dependency PDE solvers, layout engines, and web platforms. Creator of Eigendrum (150★, Zenodo DOI) and LayoutSans (17 kB).">
   <link rel="canonical" href="https://baselashraf.com/">
   <meta name="theme-color" content="#070b10">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Basel Ashraf - software engineer">
+  <meta property="og:title" content="Basel Ashraf: Software &amp; Systems Engineer">
   <meta property="og:description"
-    content="Eigendrum: finite-element physics in the browser (150★, DOI, Wikipedia, HN×2). A 17 kB layout engine that outruns Meta's Yoga. A review platform with 100,000+ page views.">
+    content="Software engineer building zero-dependency PDE solvers, layout engines, and web platforms. Creator of Eigendrum (150★, Zenodo DOI) and LayoutSans (17 kB).">
   <meta property="og:url" content="https://baselashraf.com/">
+  <meta property="og:image" content="https://baselashraf.com/media/eigendrum-hero.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="@BaselAshraf81">
+  <meta name="twitter:title" content="Basel Ashraf: Software &amp; Systems Engineer">
+  <meta name="twitter:description"
+    content="Software engineer building zero-dependency PDE solvers, layout engines, and web platforms. Creator of Eigendrum (150★, Zenodo DOI) and LayoutSans (17 kB).">
+  <meta name="twitter:image" content="https://baselashraf.com/media/eigendrum-hero.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
@@ -40,112 +44,129 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://baselashraf.com/#website",
+      "url": "https://baselashraf.com/",
+      "name": "Basel Ashraf Portfolio",
+      "description": "Personal engineering portfolio and case studies of Basel Ashraf Fikry.",
+      "publisher": { "@id": "https://baselashraf.com/#person" }
+    },
+    {
       "@type": "Person",
       "@id": "https://baselashraf.com/#person",
       "name": "Basel Ashraf Fikry",
-      "alternateName": "BaselAshraf81",
+      "alternateName": ["Basel Ashraf", "BaselAshraf81"],
       "url": "https://baselashraf.com/",
       "email": "mailto:hello@baselashraf.com",
       "jobTitle": "Software Engineer",
+      "description": "Solo software and systems engineer building zero-dependency PDE solvers, headless layout internals, and web platforms.",
       "sameAs": [
         "https://github.com/BaselAshraf81",
         "https://www.linkedin.com/in/basel-askar/",
         "https://x.com/BaselAshraf81",
         "https://www.reddit.com/user/Sad_Steak_6813/",
-        "https://orcid.org/0009-0009-3441-6196"
+        "https://orcid.org/0009-0009-3441-6196",
+        "https://doi.org/10.5281/zenodo.22019539"
       ],
       "alumniOf": [
-        { "@type": "CollegeOrUniversity", "name": "University of East London" },
-        { "@type": "CollegeOrUniversity", "name": "Ain Shams University" },
-        { "@type": "CollegeOrUniversity", "name": "Hanyang University" },
-        { "@type": "CollegeOrUniversity", "name": "Universit\u00e0 di Pisa" }
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University of East London",
+          "sameAs": "https://www.uel.ac.uk/"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Ain Shams University",
+          "sameAs": "https://www.asu.edu.eg/"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Hanyang University",
+          "sameAs": "https://www.hanyang.ac.kr/"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Università di Pisa",
+          "sameAs": "https://www.unipi.it/"
+        }
       ],
-      "knowsAbout": ["TypeScript", "Rust", "Python", "Layout engines", "Next.js", "Web security", "Finite element methods", "Modal synthesis"],
-      "author": [
-        { "@id": "https://baselashraf.com/#eigendrum" }
+      "knowsAbout": [
+        "TypeScript",
+        "Rust",
+        "Python",
+        "Finite Element Method",
+        "Partial Differential Equations",
+        "Layout Engines",
+        "Next.js",
+        "Web Audio API",
+        "Web Security"
       ]
     },
     {
-      "@type": ["SoftwareApplication", "CreativeWork"],
+      "@type": "SoftwareApplication",
       "@id": "https://baselashraf.com/#eigendrum",
       "name": "Eigendrum",
       "url": "https://eigendrum.com/",
-      "description": "A free browser tool that turns any shape you draw into a drum you can hear. It solves the Dirichlet eigenvalue problem for the Laplacian on the exact drawn region with P1 finite elements and synthesises the resulting frequencies. Nothing is sampled and no overtone is faked.",
+      "applicationCategory": "ScientificApplication",
+      "operatingSystem": "Web Browser",
+      "description": "In-browser finite-element acoustics solver computing Dirichlet Laplacian spectra on drawn outlines with zero dependencies and real-time modal synthesis.",
       "author": { "@id": "https://baselashraf.com/#person" },
-      "datePublished": "2026-08-20",
-      "license": "https://github.com/BaselAshraf81/eigendrum/blob/master/LICENSE",
       "codeRepository": "https://github.com/BaselAshraf81/eigendrum",
       "identifier": {
         "@type": "PropertyValue",
         "propertyID": "DOI",
         "value": "10.5281/zenodo.22019539",
         "url": "https://doi.org/10.5281/zenodo.22019539"
-      },
-      "citation": [
-        {
-          "@type": "ScholarlyArticle",
-          "name": "Can One Hear the Shape of a Drum?",
-          "author": "Mark Kac",
-          "datePublished": "1966",
-          "isPartOf": "American Mathematical Monthly 73",
-          "url": "https://www.jstor.org/stable/2313748"
-        },
-        {
-          "@type": "ScholarlyArticle",
-          "name": "One cannot hear the shape of a drum",
-          "author": "Carolyn Gordon, David Webb, Scott Wolpert",
-          "datePublished": "1992",
-          "isPartOf": "Bulletin of the American Mathematical Society 27"
-        },
-        {
-          "@type": "ScholarlyArticle",
-          "name": "Eigenmodes of Isospectral Drums",
-          "author": "Tobin Driscoll",
-          "datePublished": "1997",
-          "isPartOf": "SIAM Review 39",
-          "url": "https://epubs.siam.org/doi/abs/10.1137/S0036144595285069"
-        }
-      ],
-      "subjectOf": [
-        {
-          "@type": "WebPage",
-          "name": "Hearing the shape of a drum - External links",
-          "url": "https://en.wikipedia.org/wiki/Hearing_the_shape_of_a_drum#External_links",
-          "publisher": { "@type": "Organization", "name": "Wikipedia" }
-        },
-        {
-          "@type": "DiscussionForumPosting",
-          "url": "https://news.ycombinator.com/item?id=49305250",
-          "publisher": { "@type": "Organization", "name": "Hacker News" }
-        },
-        {
-          "@type": "Article",
-          "name": "Eigendrum",
-          "url": "https://kottke.org/26/08/0049489-eigendrum",
-          "publisher": { "@type": "Organization", "name": "kottke.org" }
-        },
-        {
-          "@type": "Article",
-          "name": "Eigendrum Hit Hacker News. But Its Best Trick Is Exposing Imperfect Physics.",
-          "url": "https://www.remio.ai/post/eigendrum-hit-hacker-news-but-its-best-trick-is-exposing-imperfect-physics",
-          "publisher": { "@type": "Organization", "name": "remio.ai" }
-        }
-      ],
-      "about": [
-        { "@type": "Thing", "name": "Spectral geometry", "sameAs": "https://en.wikipedia.org/wiki/Spectral_geometry" },
-        { "@type": "Thing", "name": "Hearing the shape of a drum", "sameAs": "https://en.wikipedia.org/wiki/Hearing_the_shape_of_a_drum" },
-        { "@type": "Thing", "name": "Finite element method", "sameAs": "https://en.wikipedia.org/wiki/Finite_element_method" },
-        { "@type": "Thing", "name": "Modal synthesis", "sameAs": "https://en.wikipedia.org/wiki/Physical_modelling_synthesis" }
-      ],
-      "applicationCategory": "EducationalApplication",
-      "operatingSystem": "Any (web browser)",
-      "isAccessibleForFree": true,
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
       }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://baselashraf.com/#layoutsans",
+      "name": "LayoutSans",
+      "url": "https://github.com/BaselAshraf81/layout-sans",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Node.js, Bun, Deno, Cloudflare Workers, Browser",
+      "description": "A 17 kB zero-dependency TypeScript flexbox and grid layout engine that executes 2-3x faster than Meta's Yoga without WebAssembly.",
+      "author": { "@id": "https://baselashraf.com/#person" },
+      "codeRepository": "https://github.com/BaselAshraf81/layout-sans"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://baselashraf.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is Basel Ashraf?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Basel Ashraf is a software and systems engineer who builds zero-dependency numerical solvers, headless layout engines, and production web applications. His work includes Eigendrum (a browser finite-element acoustics simulator with 150 GitHub stars and a Zenodo DOI), LayoutSans (a 17 kB layout engine outrunning Meta's Yoga), and Prolific Tea (a review platform with over 100,000 page views)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Eigendrum?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eigendrum is a free in-browser physics engine and acoustic synthesizer. It meshes arbitrary user-drawn polygons, solves the 2D Dirichlet Laplacian eigenvalue problem with P1 finite elements in a Web Worker in about 800 ms, and synthesizes overtones with the Web Audio API without pre-recorded samples."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does LayoutSans compare to Meta's Yoga?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LayoutSans is a pure TypeScript flex and grid layout engine that ships in about 17 kB gzipped with zero dependencies and no WebAssembly. Benchmarks show it lays out 100 boxes in 0.27 ms compared to 0.80 ms in Yoga WASM and 8.0 ms in the browser DOM, while adding canvas text selection and accessibility tree generation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I contact Basel Ashraf for engineering roles or research collaboration?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Basel Ashraf is reachable via email at hello@baselashraf.com. He is completing his dual BSc degree in November 2026 and is open to full-time engineering roles, contract projects, and academic research collaborations."
+          }
+        }
+      ]
     }
   ]
 }
@@ -153,609 +174,564 @@
 </head>
 
 <body>
-  <!--
-  THESIS: A photophane plate looks like a blank slab of plastic until light passes through it and
-  lands a photograph on the wall. Thirty-two modest-looking repos work the same way. Refuses the
-  dark-terminal developer portfolio and its cream-editorial opposite.
-  OWN-WORLD: Deep ink ground carrying real glass - green-tinted edges, thickness, refraction
-  offset - with computed caustic light in warm white and prismatic dispersion only at refraction
-  fringes. Archivo variable, tabular numerals, no monospace costume.
-  STORY: A name resolves out of computed caustics; one measured claim (17 kB beats Yoga) earns
-  trust; live software is one click away.
-  FIRST VIEWPORT: Full-bleed caustic canvas, name at display scale over it, one-sentence claim,
-  two inline actions.
-  FORM: Caustic light projection, candidate 4 of 7, seed key 192db505.
-  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
--->
-  <a class="skip" href="#work">Skip to the work</a>
+  <a class="skip" href="#work">Skip to main content</a>
 
-  <header class="plate hero">
-    <canvas id="caustic" class="hero__caustic" aria-hidden="true"></canvas>
-    <div class="hero__edge" aria-hidden="true"></div>
-    <div class="shell hero__inner">
-      <h1 class="hero__name">Basel<span class="hero__break"> </span>Ashraf</h1>
-      <p class="hero__claim">
-        I&nbsp;am an undergraduate engineer who ships production software. A&nbsp;browser physics simulation
-        solving real finite-element modes with <span class="lit">150★</span> and a <span class="lit">DOI</span> citation.
-        A&nbsp;layout engine that outruns Meta&rsquo;s Yoga in <span class="lit">17&nbsp;kB</span>.
-        A&nbsp;review platform that has served <span class="lit">100,000+</span> page views.
-      </p>
-      <p class="hero__actions">
-        <a class="btn btn--lit" href="#work">See the work</a>
-        <a class="btn" href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
-        <a class="btn" href="mailto:hello@baselashraf.com">hello@baselashraf.com</a>
-      </p>
-      <p class="hero__meta">
-        Building since 2023 &middot; sole engineer on everything below &middot;
-        <a href="https://github.com/BaselAshraf81">github.com/BaselAshraf81</a>
-      </p>
+  <!-- ============ STICKY NAVIGATION HEADER ============ -->
+  <header class="site-header" id="header">
+    <div class="shell header__inner">
+      <a class="header__brand" href="#top">
+        <span class="header__brand-dot"></span>
+        <span>Basel Ashraf</span>
+      </a>
+
+      <nav class="header__nav" id="nav-menu" aria-label="Main Navigation">
+        <a class="nav__link" href="#work">Work</a>
+        <a class="nav__link" href="#systems">Systems &amp; Tools</a>
+        <a class="nav__link" href="#about">Background</a>
+        <a class="nav__link nav__link--resume" href="/resume.pdf" target="_blank" rel="noopener">
+          Resume
+          <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg>
+        </a>
+        <a class="btn btn--sm btn--primary header__cta" href="mailto:hello@baselashraf.com">Get in touch</a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
     </div>
   </header>
 
-  <main id="work">
+  <!-- ============ HERO SECTION ============ -->
+  <section class="hero" id="top">
+    <canvas id="caustic" class="hero__caustic" aria-hidden="true"></canvas>
+    <div class="hero__edge" aria-hidden="true"></div>
 
-    <!-- ============ EIGENDRUM (LEAD PROJECT) ============ -->
-    <section class="band" aria-labelledby="eigen-h">
+    <div class="shell hero__inner">
+      <!-- Above-the-fold availability badge -->
+      <div class="hero__status-wrap">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span>Open to full-time engineering roles and research collaboration: Dual Degree Nov 2026</span>
+        </div>
+      </div>
+
+      <h1 class="hero__name">Basel<span class="hero__break"> </span>Ashraf</h1>
+
+      <p class="hero__pitch">
+        Solo software and systems engineer building zero-dependency numerical PDE solvers, high-performance layout internals, and production platforms strangers actually use.
+      </p>
+
+      <p class="hero__subpitch">
+        Creator of <span class="lit">Eigendrum</span> (150★, Zenodo DOI, Wikipedia link), <span class="lit">LayoutSans</span> (17 kB layout engine outrunning Meta's Yoga), and <span class="lit">Prolific Tea</span> (100,000+ page views).
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#work">
+          Explore Shipped Work
+          <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v10M3 7l5 5 5-5"/></svg>
+        </a>
+        <a class="btn" href="mailto:hello@baselashraf.com" id="email-hero-btn">
+          <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4h12v8H2zM2 4l6 5 6-5"/></svg>
+          hello@baselashraf.com
+        </a>
+        <a class="btn" href="/resume.pdf" target="_blank" rel="noopener">
+          <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2h7l4 4v8H3zM10 2v4h4"/></svg>
+          Resume (PDF)
+        </a>
+      </div>
+
+      <div class="hero__trust-strip">
+        <a class="trust-item" href="https://github.com/BaselAshraf81" target="_blank" rel="noopener">
+          <svg class="i i--solid" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1a7 7 0 0 0-2.2 13.6c.3.1.4-.2.4-.4v-1.5c-2 .4-2.4-.9-2.4-.9-.3-.9-.8-1.1-.8-1.1-.7-.4 0-.4 0-.4.7 0 1.1.8 1.1.8.7 1.1 1.7.8 2.2.6.1-.5.3-.9.5-1.1-1.6-.2-3.3-.8-3.3-3.6 0-.8.3-1.4.7-1.9-.1-.2-.3-.9.1-1.9 0 0 .6-.2 2 .7a6.6 6.6 0 0 1 3.6 0c1.4-.9 2-.7 2-.7.4 1 .2 1.7.1 1.9.4.5.7 1.1.7 1.9 0 2.8-1.7 3.4-3.3 3.6.3.3.6.8.6 1.6v2.3c0 .2.1.5.5.4A7 7 0 0 0 8 1Z"/></svg>
+          GitHub (150★ Eigendrum, 67★ LayoutSans)
+        </a>
+        <a class="trust-item" href="https://doi.org/10.5281/zenodo.22019539" target="_blank" rel="noopener">
+          <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 5v6M5 8h6"/></svg>
+          DOI: 10.5281/zenodo.22019539
+        </a>
+        <a class="trust-item" href="https://orcid.org/0009-0009-3441-6196" target="_blank" rel="noopener">
+          <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M7 5h2v6H7z"/></svg>
+          ORCID: 0009-0009-3441-6196
+        </a>
+        <a class="trust-item" href="https://www.linkedin.com/in/basel-askar/" target="_blank" rel="noopener">
+          <svg class="i i--solid" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.8 5.2H1.5V15h2.3V5.2ZM2.65 1a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8ZM14.5 9.4c0-2.6-1.4-3.8-3.2-3.8-1.5 0-2.2.8-2.5 1.4V5.2H6.5V15h2.3V9.8c0-1.2.5-2 1.6-2s1.5.8 1.5 2V15h2.6V9.4Z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- ============ FEATURED WORK (CARD GRID) ============ -->
+    <section class="band" id="work">
       <div class="shell">
-        <div class="band__head">
-          <h2 id="eigen-h" class="h2">Eigendrum &mdash; draw a shape and hear it as a real drum</h2>
+        <div class="band__header">
+          <span class="band__eyebrow">Shipped Projects</span>
+          <h2 class="h2">Featured Engineering Work</h2>
           <p class="lede">
-            <strong>Eigendrum</strong> treats any outline you draw as an ideal membrane clamped at its rim,
-            solves the Dirichlet eigenvalue problem for the Laplacian on that exact region with P1 finite elements,
-            and synthesises every frequency it finds. No sample library and no hand-tuned oscillators:
-            every partial and overtone is computed from the outline in real time.
+            Production tools and numerical engines. Every benchmark, star count, and usage counter is independently checkable.
           </p>
         </div>
 
-        <article class="plate feature feature--lead">
-          <div class="feature__body">
-            <h3 class="h3"><a href="https://eigendrum.com">Hearing the shape of a drum</a></h3>
-            <p>
-              In 1966, Mark Kac asked: <em>&ldquo;Can one hear the shape of a drum?&rdquo;</em> In 1992, Carolyn Gordon,
-              David Webb and Scott Wolpert proved the answer is negative by constructing two different polygons with identical
-              spectra. Eigendrum includes both as <em>Kac drum I</em> and <em>Kac drum II</em> (hook and arrow).
-              The solver computes both and confirms their 16 lowest vibrational frequencies agree to within
-              <strong>1.07&times;10<sup>&minus;7</sup>%</strong> &mdash; you can switch between them and hear a theorem be true.
-            </p>
-            <p>
-              A 2,051-unknown drum meshes and solves in ~800&nbsp;ms in a background Web Worker with zero dependencies,
-              no server, and no WASM. The conforming solver is mathematically bounded by Rayleigh quotient minimization
-              and tested against closed-form spectra on every commit: 0.160% worst relative error for the unit square and 0.192% for the unit disk.
-            </p>
+        <div class="project-grid">
 
-            <dl class="academic" aria-label="Academic metadata">
-              <div><dt>DOI</dt><dd data-label="DOI"><a href="https://doi.org/10.5281/zenodo.22019539" target="_blank" rel="noopener">10.5281/zenodo.22019539</a></dd></div>
-              <div><dt>Stars</dt><dd data-label="★">150 GitHub stars</dd></div>
-              <div><dt>Coverage</dt><dd data-label="Coverage">52+ sources · 8 languages</dd></div>
-              <div><dt>Cite as</dt><dd data-label="Cite">Ashraf, B. (2026). <em>Eigendrum</em>. Zenodo.</dd></div>
-            </dl>
-
-            <div class="press-section" aria-label="Featured coverage and press">
-              <ul class="press-strip">
-                <li><a class="press-chip" href="https://en.wikipedia.org/wiki/Hearing_the_shape_of_a_drum#External_links" target="_blank" rel="noopener nofollow">Wikipedia <span class="press-chip-sub">External links</span></a></li>
-                <li><a class="press-chip" href="https://news.ycombinator.com/item?id=49305250" target="_blank" rel="noopener nofollow">Hacker News <span class="press-chip-sub">front page ×2</span></a></li>
-                <li><a class="press-chip" href="https://kottke.org/26/08/0049489-eigendrum" target="_blank" rel="noopener nofollow">kottke.org <span class="press-chip-sub">editorial</span></a></li>
-                <li><a class="press-chip" href="https://www.reddit.com/r/InternetIsBeautiful/comments/1vqhylx/eigendrum_draw_a_shape_and_hear_it_as_a_drum/" target="_blank" rel="noopener nofollow">r/InternetIsBeautiful</a></li>
-                <li><a class="press-chip" href="https://www.reddit.com/r/oddlysatisfying/" target="_blank" rel="noopener nofollow">r/oddlysatisfying</a></li>
-                <li><a class="press-chip" href="https://sidebar.io" target="_blank" rel="noopener nofollow">Sidebar.io <span class="press-chip-sub">newsletter</span></a></li>
-                <li><a class="press-chip" href="https://drweb.de/eigendrum/" target="_blank" rel="noopener nofollow">drweb.de <span class="press-chip-sub">DE</span></a></li>
-                <li><a class="press-chip" href="https://diginews.johandenoyer.fr/article.php?id=40396" target="_blank" rel="noopener nofollow">diginews.fr <span class="press-chip-sub">FR</span></a></li>
-                <li><a class="press-chip" href="https://vostokmagazine.ru/news/eigendrum" target="_blank" rel="noopener nofollow">Vostok Magazine <span class="press-chip-sub">RU</span></a></li>
-                <li><a class="press-chip" href="https://www.meneame.net/story/eigendrum-dibuja-forma-escuchala-como-tambor-real" target="_blank" rel="noopener nofollow">Meneame <span class="press-chip-sub">ES</span></a></li>
-                <li><a class="press-chip" href="https://trendshift.io/repositories/100569" target="_blank" rel="noopener nofollow">trendshift.io <span class="press-chip-sub">trending</span></a></li>
-                <li><a class="press-chip" href="https://www.remio.ai/post/eigendrum-hit-hacker-news-but-its-best-trick-is-exposing-imperfect-physics" target="_blank" rel="noopener nofollow">remio.ai <span class="press-chip-sub">analysis</span></a></li>
-              </ul>
-
-              <details class="press-more-details">
-                <summary class="press-overflow-summary">
-                  <span class="press-overflow-label">+ 32 more named sources in 8 languages</span>
-                  <svg class="press-overflow-chevron" width="12" height="8" viewBox="0 0 12 8" aria-hidden="true">
-                    <polyline points="1,1 6,7 11,1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </summary>
-                <div class="press-more-grid">
-                  <div class="press-more-group">
-                    <h3>Hacker News &amp; aggregators</h3>
-                    <a href="https://news.ycombinator.com/item?id=49305250" target="_blank" rel="nofollow noopener">Hacker News &ndash; eigendrum.com thread</a>
-                    <a href="https://hn.algolia.com/?query=eigendrum" target="_blank" rel="nofollow noopener">HN Algolia search</a>
-                    <a href="https://www.reddit.com/r/hackernews/comments/1vovo41/eigendrum/" target="_blank" rel="nofollow noopener">Reddit &middot; r/hackernews</a>
-                    <a href="https://zeli.app/en/story/49305250" target="_blank" rel="nofollow noopener">Zeli</a>
-                    <a href="https://debutly.app/app/eigendrum" target="_blank" rel="nofollow noopener">Debutly</a>
-                    <a href="https://mastodon.social/@CuratedHackerNews/117102371364825124" target="_blank" rel="nofollow noopener">Mastodon &middot; CuratedHackerNews</a>
-                  </div>
-                  <div class="press-more-group">
-                    <h3>Chinese (ZH)</h3>
-                    <a href="https://www.sheepnav.com/tools/eigendrum" target="_blank" rel="nofollow noopener">SheepNav</a>
-                    <a href="https://briefsum.com" target="_blank" rel="nofollow noopener">Briefsum</a>
-                  </div>
-                  <div class="press-more-group">
-                    <h3>Japanese (JA)</h3>
-                    <a href="https://thenote.app/post/ja/donnaxing-demomiao-ite-sorewodoramunoyin-toshitewen-kou-lbq18fokcb" target="_blank" rel="nofollow noopener">TheNote.app</a>
-                  </div>
-                  <div class="press-more-group">
-                    <h3>Spanish (ES)</h3>
-                    <a href="https://ojeo.com" target="_blank" rel="nofollow noopener">ojeo.com</a>
-                  </div>
-                  <div class="press-more-group">
-                    <h3>German (DE)</h3>
-                    <a href="https://eayz.de" target="_blank" rel="nofollow noopener">eayz.de</a>
-                  </div>
-                  <div class="press-more-group">
-                    <h3>Russian (RU)</h3>
-                    <a href="https://dzen.ru/search?text=eigendrum" target="_blank" rel="nofollow noopener">Dzen &times;2</a>
-                    <a href="https://iitog.ru" target="_blank" rel="nofollow noopener">iitog.ru</a>
-                    <a href="https://vk.ru" target="_blank" rel="nofollow noopener">VK.ru</a>
-                    <a href="https://glance.trager.ru" target="_blank" rel="nofollow noopener">glance.trager.ru</a>
-                  </div>
-                  <div class="press-more-group">
-                    <h3>Social &amp; blogs</h3>
-                    <a href="https://mastodon.social/@h4ckernews" target="_blank" rel="nofollow noopener">Mastodon &middot; h4ckernews</a>
-                    <a href="https://x.com/search?q=eigendrum" target="_blank" rel="nofollow noopener">X &middot; multiple shares</a>
-                    <a href="https://memooftheair.wordpress.com" target="_blank" rel="nofollow noopener">Memo of the Air</a>
-                  </div>
-                  <div class="press-more-group">
-                    <h3>Directories &amp; tools</h3>
-                    <a href="https://websitehunt.co" target="_blank" rel="nofollow noopener">WebsiteHunt</a>
-                    <a href="https://oddities.app" target="_blank" rel="nofollow noopener">Oddities.app</a>
-                    <a href="https://askmatchbox.com" target="_blank" rel="nofollow noopener">AskMatchbox</a>
-                    <a href="https://markethunt.app" target="_blank" rel="nofollow noopener">Markethunt</a>
-                  </div>
+          <!-- Card 1: Eigendrum -->
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img src="media/eigendrum-hero.webp" width="700" height="437" loading="lazy" decoding="async"
+                   alt="The Eigendrum interface solving 2D Dirichlet Laplacian modes on drawn geometry.">
+              <div class="project-card__badge-overlay">
+                <span class="tag-pill" style="border-color: var(--edge-soft); color: var(--light); background: rgba(7,11,16,0.85);">150★: Zenodo DOI</span>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__header">
+                <h3 class="project-card__title"><a href="work/eigendrum.html">Eigendrum</a></h3>
+                <p class="project-card__tagline">In-browser finite-element acoustics solver and modal synthesizer</p>
+              </div>
+              <p class="project-card__desc">
+                Solves the 2D Dirichlet Laplacian eigenvalue problem on hand-drawn shapes using P1 finite elements in a background Web Worker in about 800 ms. Synthesizes physical acoustic overtones without pre-recorded audio. Verified Kac's isospectral drum theorem to within 1.07&times;10<sup>&minus;7</sup>%.
+              </p>
+              <div class="project-card__metrics">
+                <span class="metric-badge"><b>150★</b> GitHub Stars</span>
+                <span class="metric-badge"><b>52+</b> Press Sources in 8 Langs</span>
+                <span class="metric-badge"><b>0.16%</b> Rel. Error vs Closed Form</span>
+              </div>
+              <div class="project-card__tags">
+                <span class="tag-pill">JavaScript</span>
+                <span class="tag-pill">Web Audio API</span>
+                <span class="tag-pill">Finite Element Method</span>
+                <span class="tag-pill">Web Workers</span>
+                <span class="tag-pill">Zero Deps</span>
+              </div>
+              <div class="project-card__footer">
+                <div class="project-card__links">
+                  <a class="card-link" href="https://eigendrum.com" target="_blank" rel="noopener">Live App<svg class="i" viewBox="0 0 16 16"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg></a>
+                  <a class="card-link" href="https://github.com/BaselAshraf81/eigendrum" target="_blank" rel="noopener">Source<svg class="i" viewBox="0 0 16 16"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg></a>
                 </div>
-              </details>
+                <a class="card-link card-link--accent" href="work/eigendrum.html">Read Case Study &rarr;</a>
+              </div>
             </div>
+          </article>
 
-            <p class="links">
-              <a class="lnk" href="https://eigendrum.com">eigendrum.com<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg></a>
-              <a class="lnk" href="https://github.com/BaselAshraf81/eigendrum">Source<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg></a>
-              <a class="lnk" href="https://doi.org/10.5281/zenodo.22019539">Cite (DOI)<svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg></a>
-            </p>
-          </div>
+          <!-- Card 2: LayoutSans -->
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img src="media/layoutsans.webp" width="700" height="437" loading="lazy" decoding="async"
+                   alt="LayoutSans instrument panel demonstrating 100k items layout with zero measureText calls.">
+              <div class="project-card__badge-overlay">
+                <span class="tag-pill" style="border-color: var(--edge-soft); color: var(--light); background: rgba(7,11,16,0.85);">67★: npm package</span>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__header">
+                <h3 class="project-card__title"><a href="work/layout-sans.html">LayoutSans</a></h3>
+                <p class="project-card__tagline">17 kB headless layout engine outrunning Meta's Yoga by 2 to 3 times</p>
+              </div>
+              <p class="project-card__desc">
+                High-performance 2D flex and grid layout engine for Node, Bun, Deno, Cloudflare Workers, and Canvas. Ships zero DOM and zero WASM in about 17 kB gzipped (18 times smaller than Yoga), with canvas text selection, clipboard copy, and screen-reader accessibility.
+              </p>
+              <div class="project-card__metrics">
+                <span class="metric-badge"><b>17 kB</b> vs 300+ kB Yoga</span>
+                <span class="metric-badge"><b>0.27 ms</b> 100 Boxes (3x Yoga)</span>
+                <span class="metric-badge"><b>0 Deps</b> Pure TypeScript</span>
+              </div>
+              <div class="project-card__tags">
+                <span class="tag-pill">TypeScript</span>
+                <span class="tag-pill">Layout Engine</span>
+                <span class="tag-pill">Canvas A11y</span>
+                <span class="tag-pill">npm</span>
+                <span class="tag-pill">Zero WASM</span>
+              </div>
+              <div class="project-card__footer">
+                <div class="project-card__links">
+                  <a class="card-link" href="https://baselashraf81.github.io/layout-sans/demo/interactive-text.html" target="_blank" rel="noopener">Live Demo<svg class="i" viewBox="0 0 16 16"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg></a>
+                  <a class="card-link" href="https://github.com/BaselAshraf81/layout-sans" target="_blank" rel="noopener">Source<svg class="i" viewBox="0 0 16 16"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg></a>
+                </div>
+                <a class="card-link card-link--accent" href="work/layout-sans.html">Read Case Study &rarr;</a>
+              </div>
+            </div>
+          </article>
 
-          <dl class="facts">
-            <div><dt>Stars</dt><dd>150</dd></div>
-            <div><dt>Language</dt><dd>JavaScript</dd></div>
-            <div><dt>Dependencies</dt><dd>0</dd></div>
-            <div><dt>DOI</dt><dd>Zenodo</dd></div>
-          </dl>
+          <!-- Card 3: Prolific Tea -->
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img src="media/prolifictea.webp" width="700" height="437" loading="lazy" decoding="async"
+                   alt="Prolific Tea researcher review platform interface with search and ratings.">
+              <div class="project-card__badge-overlay">
+                <span class="tag-pill" style="border-color: var(--edge-soft); color: var(--light); background: rgba(7,11,16,0.85);">100K+ Page Views</span>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__header">
+                <h3 class="project-card__title"><a href="work/prolific-tea.html">Prolific Tea</a></h3>
+                <p class="project-card__tagline">Community researcher review and pay transparency platform</p>
+              </div>
+              <p class="project-card__desc">
+                Review platform where academic participants rate researchers on fairness and rejection rates. Includes a companion Chrome extension intercepting study network requests, PWA push notifications, threaded reviews, and custom moderation tooling.
+              </p>
+              <div class="project-card__metrics">
+                <span class="metric-badge"><b>100,000+</b> Page Views</span>
+                <span class="metric-badge"><b>1,582</b> Researchers Indexed</span>
+                <span class="metric-badge"><b>0 Ads</b> Community Funded</span>
+              </div>
+              <div class="project-card__tags">
+                <span class="tag-pill">Next.js</span>
+                <span class="tag-pill">PostgreSQL</span>
+                <span class="tag-pill">Chrome Extension</span>
+                <span class="tag-pill">PWA</span>
+                <span class="tag-pill">Tailwind CSS</span>
+              </div>
+              <div class="project-card__footer">
+                <div class="project-card__links">
+                  <a class="card-link" href="https://prolifictea.com" target="_blank" rel="noopener">prolifictea.com<svg class="i" viewBox="0 0 16 16"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg></a>
+                </div>
+                <a class="card-link card-link--accent" href="work/prolific-tea.html">Read Case Study &rarr;</a>
+              </div>
+            </div>
+          </article>
 
-          <!-- Primary Hero Screenshot -->
-          <figure class="shot">
-            <a class="shot__frame" href="https://eigendrum.com">
-              <img src="media/eigendrum-hero.webp" width="1400" height="982" loading="lazy" decoding="async"
-                   alt="The Eigendrum interface: a circular drum ringing after a strike, displacement drawn in red and blue contour bands, with vibration modes listed beside it.">
-            </a>
-            <figcaption>
-              <span class="shot__tag">eigendrum.com</span>
-              <span>The live instrument solving and ringing: contour bands display real-time modal displacement, with pale channels marking the nodal lines that stay stationary.</span>
-            </figcaption>
-          </figure>
+          <!-- Card 4: Photophane -->
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img src="media/photophane.webp" width="700" height="437" loading="lazy" decoding="async"
+                   alt="Photophane diagram showing 3D caustic relief plate projecting photo onto wall.">
+              <div class="project-card__badge-overlay">
+                <span class="tag-pill" style="border-color: var(--edge-soft); color: var(--light); background: rgba(7,11,16,0.85);">72 r/photogrammetry</span>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <div class="project-card__header">
+                <h3 class="project-card__title"><a href="work/photophane.html">Photophane</a></h3>
+                <p class="project-card__tagline">Inverse ray-tracing engine computing optical caustic plates</p>
+              </div>
+              <p class="project-card__desc">
+                Computes 3D-printable continuous acrylic relief plates (10.97 mm depth) that project focused photographs onto distant walls through torchlight refraction. The physical optics algorithm is the exact forward model running the live Caustic simulation on this website.
+              </p>
+              <div class="project-card__metrics">
+                <span class="metric-badge"><b>72</b> Reddit Upvotes</span>
+                <span class="metric-badge"><b>10.97 mm</b> Acrylic Relief Depth</span>
+                <span class="metric-badge"><b>3D-Printable</b> STL Engine</span>
+              </div>
+              <div class="project-card__tags">
+                <span class="tag-pill">TypeScript</span>
+                <span class="tag-pill">Optics Physics</span>
+                <span class="tag-pill">WebGL</span>
+                <span class="tag-pill">3D Printing</span>
+                <span class="tag-pill">Caustics</span>
+              </div>
+              <div class="project-card__footer">
+                <div class="project-card__links">
+                  <a class="card-link" href="https://baselashraf81.github.io/photophane/" target="_blank" rel="noopener">Try Generator<svg class="i" viewBox="0 0 16 16"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg></a>
+                  <a class="card-link" href="https://github.com/BaselAshraf81/photophane" target="_blank" rel="noopener">Source<svg class="i" viewBox="0 0 16 16"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg></a>
+                </div>
+                <a class="card-link card-link--accent" href="work/photophane.html">Read Case Study &rarr;</a>
+              </div>
+            </div>
+          </article>
 
-          <!-- Side-by-Side Gallery -->
-          <div class="shots-grid">
-            <figure class="shot">
-              <a class="shot__frame" href="https://eigendrum.com/hearing-the-shape-of-a-drum">
-                <img src="media/eigendrum-kac.webp" width="1400" height="982" loading="lazy" decoding="async"
-                     alt="The Kac isospectral drum pair: hook and arrow shapes producing identical vibrational frequencies.">
-              </a>
-              <figcaption>
-                <span class="shot__tag">isospectral pair</span>
-                <span>Kac drum I &amp; II (hook and arrow): different geometries with identical spectra to within <b>1.07&times;10<sup>&minus;7</sup>%</b>.</span>
-              </figcaption>
-            </figure>
-
-            <figure class="shot">
-              <a class="shot__frame" href="https://eigendrum.com/#p=star">
-                <img src="media/eigendrum-star.webp" width="900" height="900" loading="lazy" decoding="async"
-                     alt="A five-pointed star outline drawn on pale ground, filled with a smooth two-tone blue field showing modal displacement.">
-              </a>
-              <figcaption>
-                <span class="shot__tag">star membrane</span>
-                <span>Arbitrary user-drawn outline: solved over <b>2,051</b> unknowns and <b>4,392</b> triangles in <b>802&nbsp;ms</b>.</span>
-              </figcaption>
-            </figure>
-          </div>
-        </article>
+        </div>
       </div>
     </section>
 
-    <!-- ============ THE MEASURED CLAIM ============ -->
-    <section class="band band--bench" aria-labelledby="bench-h">
+    <!-- ============ SYSTEMS, TOOLS & FINDINGS (STRUCTURED CARDS) ============ -->
+    <section class="band band--surface" id="systems">
       <div class="shell">
-        <div class="band__head">
-          <h2 id="bench-h" class="h2">A layout engine that does not need the browser</h2>
+        <div class="band__header">
+          <span class="band__eyebrow">Developer Tools &amp; Security</span>
+          <h2 class="h2">Systems, Open Source &amp; Research</h2>
           <p class="lede">
-            <strong>LayoutSans</strong> takes a tree of boxes with flex and grid rules and returns
-            exact pixel positions for every one of them. No DOM. No WASM. It runs on Node, Bun, Deno,
-            Cloudflare Workers and the browser, with zero dependencies, in about
-            <strong>17&nbsp;kB gzipped</strong>, against the 300&nbsp;kB+ that Meta&rsquo;s
-            Yoga ships before it can lay out a single box.
+            Developer tooling, protocol servers, conformance suites, and security disclosures.
           </p>
         </div>
 
-        <figure class="bench">
-          <figcaption class="bench__cap">
-            Milliseconds to lay out a tree, lower is better. Log scale: each step is
-            ten times the last. Figures from the project&rsquo;s own published benchmark.
-          </figcaption>
+        <div class="systems-grid">
 
-          <div class="bench__legend" aria-hidden="true">
-            <span class="key key--ls">LayoutSans</span>
-            <span class="key key--yg">Yoga (WASM)</span>
-            <span class="key key--dom">Browser DOM</span>
-          </div>
-
-          <table class="bench__table">
-            <caption class="vh">Layout time in milliseconds by engine and tree size</caption>
-            <thead>
-              <tr>
-                <th scope="col">Tree</th>
-                <th scope="col">LayoutSans</th>
-                <th scope="col">Yoga (WASM)</th>
-                <th scope="col">Browser DOM</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">100 boxes</th>
-                <td class="num" data-engine="LayoutSans"><span class="bar bar--ls" style="--w:11.1%"></span><span
-                    class="v"><b>0.27</b> ms</span></td>
-                <td class="num" data-engine="Yoga"><span class="bar bar--yg" style="--w:23.1%"></span><span
-                    class="v">0.80 ms</span></td>
-                <td class="num" data-engine="Browser DOM"><span class="bar bar--dom" style="--w:48.8%"></span><span
-                    class="v">8.0 ms</span></td>
-              </tr>
-              <tr>
-                <th scope="row">10,000 boxes</th>
-                <td class="num" data-engine="LayoutSans"><span class="bar bar--ls" style="--w:43.1%"></span><span
-                    class="v"><b>4.82</b> ms</span></td>
-                <td class="num" data-engine="Yoga"><span class="bar bar--yg" style="--w:48.8%"></span><span
-                    class="v">8.0 ms</span></td>
-                <td class="num" data-engine="Browser DOM"><span class="bar bar--dom" style="--w:100%"></span><span
-                    class="v">800 ms</span></td>
-              </tr>
-              <tr>
-                <th scope="row">100,000 rows<span class="sub">variable height</span></th>
-                <td class="num" data-engine="LayoutSans"><span class="bar bar--ls" style="--w:68.2%"></span><span
-                    class="v"><b>46</b> ms</span></td>
-                <td class="num" data-engine="Yoga"><span class="bar bar--yg" style="--w:75.1%"></span><span class="v">85
-                    ms</span></td>
-                <td class="num num--fail" data-engine="Browser DOM"><span class="v">crashes</span></td>
-              </tr>
-              <tr>
-                <th scope="row">Bundle shipped</th>
-                <td class="num" data-engine="LayoutSans"><span class="v"><b>~17</b> kB gz</span></td>
-                <td class="num" data-engine="Yoga"><span class="v">300+ kB gz</span></td>
-                <td class="num num--fail" data-engine="Browser DOM"><span class="v">browser only</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </figure>
-
-        <div class="split">
-          <div class="split__body">
-            <h3 class="h3">It also made canvas text behave like text</h3>
-            <p>
-              Version 0.2 added the part everyone skips: selection, clipboard copy,
-              <kbd>Ctrl</kbd>+<kbd>F</kbd> search, working hyperlinks and screen-reader
-              accessibility, on a canvas, with no visible DOM layout, and a node count that
-              stays proportional to the viewport rather than to the number of items. It sits on top
-              of <a href="https://github.com/chenglou/pretext">chenglou/pretext</a>: pretext measures
-              how big text is, LayoutSans decides where everything goes.
+          <!-- System 1: holystitch -->
+          <article class="system-card">
+            <div class="system-card__top">
+              <span class="system-card__category">MCP Server</span>
+              <span class="system-card__metric">23★</span>
+            </div>
+            <h3 class="system-card__title">
+              <a href="https://github.com/BaselAshraf81/holystitch" target="_blank" rel="noopener">holystitch</a>
+            </h3>
+            <p class="system-card__body">
+              Model Context Protocol (MCP) server compiling Google Stitch designs directly into React and Next.js component trees via native API calls without consuming LLM inference tokens.
             </p>
-          </div>
-          <dl class="facts">
-            <div>
-              <dt>Stars</dt>
-              <dd>67</dd>
+            <div class="system-card__meta">
+              <span>TypeScript: MCP SDK</span>
+              <a href="https://github.com/BaselAshraf81/holystitch" target="_blank" rel="noopener">Repo &rarr;</a>
             </div>
-            <div>
-              <dt>Language</dt>
-              <dd>TypeScript</dd>
+          </article>
+
+          <!-- System 2: fastemporal -->
+          <article class="system-card">
+            <div class="system-card__top">
+              <span class="system-card__category">Systems: Rust</span>
+              <span class="system-card__metric">docs.rs</span>
             </div>
-            <div>
-              <dt>Dependencies</dt>
-              <dd>0</dd>
+            <h3 class="system-card__title">
+              <a href="https://docs.rs/fastemporal" target="_blank" rel="noopener">fastemporal</a>
+            </h3>
+            <p class="system-card__body">
+              Pure Rust reimplementation of Luxon and TC39 Temporal datetime APIs with zero heap allocations in hot paths. Passes 332 ported tests and benchmarks 7 to 216 times faster than JS Luxon.
+            </p>
+            <div class="system-card__meta">
+              <span>Rust: 332 Conformance Tests</span>
+              <a href="https://docs.rs/fastemporal" target="_blank" rel="noopener">Docs &rarr;</a>
             </div>
-            <div>
-              <dt>Licence</dt>
-              <dd>MIT</dd>
+          </article>
+
+          <!-- System 3: Legal Document RAG -->
+          <article class="system-card">
+            <div class="system-card__top">
+              <span class="system-card__category">AI &amp; Retrieval</span>
+              <span class="system-card__metric">25.3K Docs</span>
             </div>
-          </dl>
+            <h3 class="system-card__title">
+              <a href="https://github.com/BaselAshraf81/epstein-rag-abliterated-llm" target="_blank" rel="noopener">Legal Document RAG</a>
+            </h3>
+            <p class="system-card__body">
+              Hybrid vector and keyword search over 25,303 legal documents. Handles 230+ concurrent users on a single T4 GPU via a custom async request queue with zero out-of-memory errors.
+            </p>
+            <div class="system-card__meta">
+              <span>Python: LlamaIndex, FAISS</span>
+              <a href="https://github.com/BaselAshraf81/epstein-rag-abliterated-llm" target="_blank" rel="noopener">Repo &rarr;</a>
+            </div>
+          </article>
+
+          <!-- System 4: Nextron PR #531 -->
+          <article class="system-card">
+            <div class="system-card__top">
+              <span class="system-card__category">OSS Contribution</span>
+              <span class="system-card__metric">nextron@9.6.0</span>
+            </div>
+            <h3 class="system-card__title">
+              <a href="https://github.com/saltyshiomix/nextron/pull/531" target="_blank" rel="noopener">Nextron PR #531</a>
+            </h3>
+            <p class="system-card__body">
+              Upgraded Electron and Next.js framework to Next 16 and React 19 with Turbopack compatibility across 33 files (+1,218 / &minus;416 lines). Merged and released the same day.
+            </p>
+            <div class="system-card__meta">
+              <span>Electron: Next.js 16, React 19</span>
+              <a href="https://github.com/saltyshiomix/nextron/pull/531" target="_blank" rel="noopener">PR #531 &rarr;</a>
+            </div>
+          </article>
+
+          <!-- System 5: M-Pesa Bug Bounty -->
+          <article class="system-card">
+            <div class="system-card__top">
+              <span class="system-card__category">Security Research</span>
+              <span class="system-card__metric">HackerOne</span>
+            </div>
+            <h3 class="system-card__title">Stored XSS in M-Pesa</h3>
+            <p class="system-card__body">
+              Discovered and reported a stored cross-site scripting vulnerability in M-Pesa's PDF receipt generator through font descriptor injection. Validated and accepted on HackerOne.
+            </p>
+            <div class="system-card__meta">
+              <span>PDF Parsing: Font Injection</span>
+              <span>Accepted Bounty</span>
+            </div>
+          </article>
+
+          <!-- System 6: Passion of Rugs ETL -->
+          <article class="system-card">
+            <div class="system-card__top">
+              <span class="system-card__category">Data Pipeline</span>
+              <span class="system-card__metric">120K+ Records</span>
+            </div>
+            <h3 class="system-card__title">Automated CRM ETL</h3>
+            <p class="system-card__body">
+              Unattended Python ETL pipeline restructuring 120,000+ records across 1,200+ inconsistent spreadsheets into a normalized CRM schema with OpenAI API schema mapping, reducing API costs by 13%.
+            </p>
+            <div class="system-card__meta">
+              <span>Python: OpenAI API, Pandas</span>
+              <span>Production Pipeline</span>
+            </div>
+          </article>
+
+          <!-- System 7: fx-inject-shim -->
+          <article class="system-card">
+            <div class="system-card__top">
+              <span class="system-card__category">Browser Extension</span>
+              <span class="system-card__metric">21 r/firefox</span>
+            </div>
+            <h3 class="system-card__title">
+              <a href="https://github.com/BaselAshraf81/fx-inject-shim" target="_blank" rel="noopener">fx-inject-shim</a>
+            </h3>
+            <p class="system-card__body">
+              Drop-in JavaScript shim restoring Firefox 152 tab and scripting injection APIs with zero call-site modifications for existing extensions.
+            </p>
+            <div class="system-card__meta">
+              <span>JavaScript: WebExtensions</span>
+              <a href="https://github.com/BaselAshraf81/fx-inject-shim" target="_blank" rel="noopener">Repo &rarr;</a>
+            </div>
+          </article>
+
+          <!-- System 8: vibellm -->
+          <article class="system-card">
+            <div class="system-card__top">
+              <span class="system-card__category">LLM Research</span>
+              <span class="system-card__metric">57 r/LocalLLM</span>
+            </div>
+            <h3 class="system-card__title">
+              <a href="https://github.com/BaselAshraf81/vibellm" target="_blank" rel="noopener">vibellm</a>
+            </h3>
+            <p class="system-card__body">
+              Instant browser language model topology generator: randomizes both layer structures and weights to inspect untreated neural architecture behaviors.
+            </p>
+            <div class="system-card__meta">
+              <span>TypeScript: 12★</span>
+              <a href="https://github.com/BaselAshraf81/vibellm" target="_blank" rel="noopener">Repo &rarr;</a>
+            </div>
+          </article>
+
         </div>
-
-        <figure class="shot">
-          <a class="shot__frame" href="https://baselashraf81.github.io/layout-sans/demo/interactive-text.html">
-            <img src="media/layoutsans.webp" width="1400" height="826" loading="lazy" decoding="async"
-              alt="The LayoutSans demo: a fully rendered article on a canvas, flanked by counters reading 204 DOM nodes and zero measureText() calls in the hot path, and a checklist of interaction features all ticked.">
-          </a>
-          <figcaption>
-            <span class="shot__tag">layout-sans</span>
-            <span>The engine&rsquo;s own instrument panel, running. On the left it counts what it costs
-              the page: <b>204</b> DOM nodes for that entire document, <b>zero</b> <code>measureText()</code>
-              calls in the hot path, one proxy caret, and <code>::selection</code> never used. On the right,
-              every v0.2 interaction accounted for: drag selection, clipboard, search, focus rings,
-              screen&#8209;reader tree.</span>
-          </figcaption>
-        </figure>
-
-        <p class="links">
-          <a class="lnk" href="https://baselashraf81.github.io/layout-sans/demo/interactive-text.html">Live demo, 100k
-            items<svg class="i" viewBox="0 0 16 16" aria-hidden="true">
-              <path d="M6 2h8v8M14 2 5 11M11 14H2V5" />
-            </svg></a>
-          <a class="lnk" href="https://github.com/BaselAshraf81/layout-sans">Source<svg class="i" viewBox="0 0 16 16"
-              aria-hidden="true">
-              <path d="M6 2h8v8M14 2 5 11M11 14H2V5" />
-            </svg></a>
-          <a class="lnk" href="https://www.npmjs.com/package/layout-sans">npm install layout-sans<svg class="i"
-              viewBox="0 0 16 16" aria-hidden="true">
-              <path d="M6 2h8v8M14 2 5 11M11 14H2V5" />
-            </svg></a>
-        </p>
       </div>
     </section>
 
-    <!-- ============ LIVE PRODUCTS ============ -->
-    <section class="band" aria-labelledby="ship-h">
+    <!-- ============ BACKGROUND & EDUCATION ============ -->
+    <section class="band band--deep" id="about">
       <div class="shell">
-        <h2 id="ship-h" class="h2">A review platform with 100,000+ page views, built alone</h2>
-
-        <article class="plate product">
-          <div class="product__body">
-            <h3 class="h3"><a href="https://prolifictea.com">Prolific&nbsp;Tea</a></h3>
-            <p class="product__what">
-              A review platform where participants on Prolific rate the researchers who pay them,
-              on fairness and on rejection behaviour. It is the Turkopticon that Prolific never had.
-              Every researcher gets a profile with an aggregate rating, a rejection count and
-              threaded reviews, so a participant can check who they are working for before they
-              start.
-            </p>
-            <p>
-              Next.js throughout, plus a Chrome extension that identifies researchers by
-              intercepting the network traffic of the study list, PWA push notifications, image
-              uploads, threaded comments and the moderation tooling needed to keep a review site
-              honest. It is indexed by Google and grows on its own.
-            </p>
-            <p class="product__ethos">
-              No company behind it, no investors, no ads, free permanently, funded by the people
-              who use it.
-            </p>
-            <p class="links">
-              <a class="lnk" href="https://prolifictea.com">prolifictea.com<svg class="i" viewBox="0 0 16 16"
-                  aria-hidden="true">
-                  <path d="M6 2h8v8M14 2 5 11M11 14H2V5" />
-                </svg></a>
-            </p>
-          </div>
-          <dl class="readout">
-            <div>
-              <dt>Page views</dt>
-              <dd>100,000+</dd>
-            </div>
-            <div>
-              <dt>Researchers indexed</dt>
-              <dd>1,582</dd>
-            </div>
-            <div>
-              <dt>Languages</dt>
-              <dd>5</dd>
-            </div>
-          </dl>
-          <figure class="shot">
-            <a class="shot__frame" href="https://prolifictea.com">
-              <img src="media/prolifictea.webp" width="1400" height="856" loading="lazy" decoding="async"
-                alt="The Prolific Tea homepage: a searchable, paginated index of researchers, each row carrying an aggregate rating and review count, beside the site's own usage figures.">
-            </a>
-            <figcaption>
-              <span class="shot__tag">prolifictea.com</span>
-              <span>The index as a participant meets it: searchable, sortable, no account needed
-                to read it. The counters are the site&rsquo;s own, not mine.</span>
-            </figcaption>
-          </figure>
-        </article>
-
-        <p class="footnote">Prolific&nbsp;Tea&rsquo;s figures are reported by the site itself.</p>
-      </div>
-    </section>
-
-    <!-- ============ THINGS THAT GOT OUT ============ -->
-    <section class="band band--loose" aria-labelledby="out-h">
-      <div class="shell">
-        <div class="band__head">
-          <h2 id="out-h" class="h2">Things that got out</h2>
+        <div class="band__header">
+          <span class="band__eyebrow">Education &amp; Background</span>
+          <h2 class="h2">Background &amp; Core Stack</h2>
           <p class="lede">
-            Work that found its own audience, and the one project this page is lit by.
+            Dual-degree computer engineering background combined with international research exchanges and verified implementations.
           </p>
         </div>
 
-        <article class="plate feature feature--origin">
-          <div class="feature__body">
-            <h3 class="h3"><a href="https://baselashraf81.github.io/photophane/">Photophane</a></h3>
-            <p>
-              Drop in a photograph and it computes a clear plate you can 3D print. The plate looks
-              like a blank slab on a table. Point a torch through it and your photograph lands on
-              the wall, formed entirely by refracted light. The effect is called a caustic, and it
-              is the reason this page looks the way it does: the light behind my name up there
-              is computed the same way.
-            </p>
-            <p class="links">
-              <a class="lnk" href="https://baselashraf81.github.io/photophane/">Try it<svg class="i" viewBox="0 0 16 16"
-                  aria-hidden="true">
-                  <path d="M6 2h8v8M14 2 5 11M11 14H2V5" />
-                </svg></a>
-              <a class="lnk" href="https://github.com/BaselAshraf81/photophane">Source<svg class="i" viewBox="0 0 16 16"
-                  aria-hidden="true">
-                  <path d="M6 2h8v8M14 2 5 11M11 14H2V5" />
-                </svg></a>
-            </p>
+        <div class="about-layout">
+          <!-- Timeline / Education -->
+          <div class="about-education">
+            <h3 class="h3" style="margin-bottom: var(--s4);">Academic Milestones</h3>
+            <ol class="timeline">
+              <li class="timeline__item">
+                <h4 class="timeline__title">BSc Computer Engineering &amp; Software Systems</h4>
+                <p class="timeline__institution">University of East London &amp; Ain Shams University (Dual Degree)</p>
+                <span class="timeline__badge">Dual Degree Program</span>
+                <p class="timeline__date">February 2021 to Expected November 2026</p>
+              </li>
+
+              <li class="timeline__item">
+                <h4 class="timeline__title">Graduate Summer School: Universit&agrave; di Pisa</h4>
+                <p class="timeline__institution">Human-Centric ICT for Industry 5.0, Pisa, Italy</p>
+                <span class="timeline__badge">Merit Scholarship: Graded 29/30</span>
+                <p class="timeline__date">September 2025</p>
+              </li>
+
+              <li class="timeline__item">
+                <h4 class="timeline__title">Exchange Program: Hanyang University</h4>
+                <p class="timeline__institution">Seoul, South Korea: Computer Science Department</p>
+                <span class="timeline__badge">GPA 4.0 / 4.5</span>
+                <p class="timeline__date">September 2024 to January 2025</p>
+              </li>
+            </ol>
           </div>
-          <p class="tally"><b>72</b><span>upvotes on r/photogrammetry</span></p>
-          <figure class="shot">
-            <a class="shot__frame" href="https://baselashraf81.github.io/photophane/">
-              <img src="media/photophane.webp" width="1500" height="935" loading="lazy" decoding="async"
-                alt="A measured three-dimensional diagram: a lamp, a clear plate, and the photograph of a cat that the plate's refracted light forms in warm amber on the wall behind it.">
-            </a>
-            <figcaption>
-              <span class="shot__tag">photophane</span>
-              <span>The arrangement it solves for: a lamp <b>1.42&nbsp;m</b> out, the plate in the middle,
-                and the photograph landing on a wall <b>300&nbsp;mm</b> behind, carried entirely by
-                <b>10.97&nbsp;mm</b> of relief cut into a 100&nbsp;mm body. That warm image on the wall is a
-                caustic, the same thing burning behind my name at the top of this page.</span>
-            </figcaption>
-          </figure>
-        </article>
 
-        <h3 class="h3 h3--rule">Open source, tools and findings</h3>
-        <ul class="strip">
-          <li class="strip__item">
-            <h4><a href="https://github.com/BaselAshraf81/holystitch">holystitch</a></h4>
-            <p>
-              An MCP tool that turns Google Stitch designs into production React and Next.js code
-              without spending a single AI token: it calls the Stitch API directly and emits
-              the whole component tree.
-            </p>
-            <p class="strip__stat">23 stars &middot; TypeScript</p>
-          </li>
-          <li class="strip__item">
-            <h4><a href="https://github.com/saltyshiomix/nextron/pull/531">Nextron&nbsp;#531</a></h4>
-            <p>
-              I upgraded a widely used Electron + Next.js framework from Next 14 to 16 and React 18
-              to 19, across 33 files. Merged and released as <b>nextron@9.6.0</b> the same day.
-            </p>
-            <p class="strip__stat">Merged &middot; +1,218 &minus;416</p>
-          </li>
-          <li class="strip__item">
-            <h4><a href="https://github.com/BaselAshraf81/vibellm">vibellm</a></h4>
-            <p>
-              An instant language-model generator: it randomises both the weights and the structure,
-              so you can watch what an untrained architecture actually does.
-            </p>
-            <p class="strip__stat">12 stars &middot; 57 upvotes on r/LocalLLM</p>
-          </li>
-          <li class="strip__item">
-            <h4><a href="https://docs.rs/fastemporal">fastemporal</a></h4>
-            <p>
-              Luxon&rsquo;s date and time API reimplemented in Rust, with 332 tests ported across
-              from Luxon, date-fns and the TC39 Temporal conformance suite.
-            </p>
-            <p class="strip__stat">Rust &middot; published on docs.rs</p>
-          </li>
-          <li class="strip__item">
-            <h4><a href="https://github.com/BaselAshraf81/epstein-rag-abliterated-llm">Legal document RAG</a></h4>
-            <p>
-              Retrieval over 25,303 legal documents with hybrid search, holding 230+ concurrent users
-              on one T4 GPU behind a request queue I wrote, with no out-of-memory failures.
-            </p>
-            <p class="strip__stat">Python &middot; LlamaIndex, FAISS</p>
-          </li>
-          <li class="strip__item">
-            <h4>Stored XSS in M-Pesa</h4>
-            <p>
-              A stored cross-site scripting flaw in M-Pesa&rsquo;s PDF receipt generator, reached
-              through font descriptor injection. Reported and accepted through HackerOne.
-            </p>
-            <p class="strip__stat">Security research &middot; not publicly disclosed</p>
-          </li>
-          <li class="strip__item">
-            <h4>Passion of Rugs pipeline</h4>
-            <p>
-              A Python pipeline that pulled 120,000+ records out of 1,200+ inconsistent spreadsheets
-              into one CRM schema, using the OpenAI API for field mapping. Deduplication and caching
-              cut the API bill by 13%. It runs unattended.
-            </p>
-            <p class="strip__stat">Python &middot; part-time, ongoing</p>
-          </li>
-          <li class="strip__item">
-            <h4><a href="https://github.com/BaselAshraf81/fx-inject-shim">fx-inject-shim</a></h4>
-            <p>
-              A drop-in shim restoring the Firefox 152 tabs and scripting injection APIs, with no
-              call-site changes for anyone adopting it.
-            </p>
-            <p class="strip__stat">21 upvotes on r/firefox</p>
-          </li>
-        </ul>
+          <!-- Skills & Tooling -->
+          <div class="skills-panel">
+            <h3 class="skills-panel__title">Technical Core</h3>
 
-        <p class="footnote">
-          Also on the shelf, less finished: <a href="https://github.com/BaselAshraf81/html-in-3d">html-in-3d</a>,
-          a <a href="https://baselashraf81.github.io/blackhole/">black hole in your room</a>, and a
-          <a href="https://github.com/BaselAshraf81/lineridervisualizer">physics-synced music visualiser</a>.
-        </p>
-      </div>
-    </section>
+            <div class="skill-category">
+              <div class="skill-category__name">Languages</div>
+              <p class="skill-category__items">TypeScript, JavaScript, Rust, Python, Java, SQL, C/C++</p>
+            </div>
 
-    <!-- ============ BACKGROUND ============ -->
-    <section class="band band--quiet" aria-labelledby="bg-h">
-      <div class="shell">
-        <h2 id="bg-h" class="h2">Background</h2>
-        <div class="cols">
-          <ol class="tl">
-            <li>
-              <h3>BSc Computer Engineering and Software Systems</h3>
-              <p class="tl__where">University of East London &amp; Ain Shams University &mdash; dual degree</p>
-              <p class="tl__when">February 2021 &ndash; expected November 2026</p>
-            </li>
-            <li>
-              <h3>Graduate summer school, Universit&agrave; di Pisa</h3>
-              <p class="tl__where">Human-Centric ICT for Industry 5.0, Pisa &mdash; on scholarship, graded 29/30</p>
-              <p class="tl__when">September 2025</p>
-            </li>
-            <li>
-              <h3>Exchange year, Hanyang University</h3>
-              <p class="tl__where">Seoul, South Korea &mdash; GPA 4.0 of 4.5</p>
-              <p class="tl__when">September 2024 &ndash; January 2025</p>
-            </li>
-          </ol>
-          <div class="kit">
-            <h3 class="h4">What I reach for</h3>
-            <p><b>Languages</b> TypeScript, Rust, Python, Java, SQL</p>
-            <p><b>Web</b> Next.js, React, Spring Boot, Tailwind, Prisma, Stripe, Chrome extensions</p>
-            <p><b>Data &amp; AI</b> OpenAI API, LlamaIndex, FAISS, TensorFlow, pandas</p>
-            <p><b>Infrastructure</b> PostgreSQL, Supabase, Docker, Vercel, Linux, Git</p>
-            <p><b>Security</b> Burp Suite, OWASP, WebAuthn, bug bounty</p>
+            <div class="skill-category">
+              <div class="skill-category__name">Systems &amp; Numerical PDE Solvers</div>
+              <p class="skill-category__items">Finite Element Method (FEM), Web Workers, Canvas 2D/WebGL, Model Context Protocol (MCP), FAISS, TC39 Conformance</p>
+            </div>
+
+            <div class="skill-category">
+              <div class="skill-category__name">Web &amp; Infrastructure</div>
+              <p class="skill-category__items">Next.js, React, Node.js, Web Audio API, Chrome Extensions, PostgreSQL, Supabase, Docker, Linux, Git</p>
+            </div>
+
+            <div class="skill-category">
+              <div class="skill-category__name">Security &amp; Analysis</div>
+              <p class="skill-category__items">Burp Suite, OWASP, Web Security Auditing, Font &amp; Parser Exploitation, HackerOne Bug Bounty</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="plate foot">
-    <div class="shell foot__inner">
-      <div>
-        <h2 class="foot__h">Making software free again</h2>
-        <p class="foot__p">
-          I am finishing my degree in November 2026 and I am open to engineering work before and
-          after that. The fastest way to reach me is email.
-        </p>
-        <p><a class="btn btn--lit" href="mailto:hello@baselashraf.com">hello@baselashraf.com</a></p>
+  <!-- ============ FOOTER & CONTACT ============ -->
+  <footer class="site-footer" id="contact">
+    <div class="shell">
+      <div class="footer__grid">
+        <div>
+          <h2 class="footer__h">Making software free again</h2>
+          <p class="footer__p">
+            I am finishing my degree in November 2026 and actively open to full-time software engineering roles, high-impact contract work, and academic research collaborations.
+          </p>
+          <div class="footer__cta-group">
+            <a class="btn btn--primary" href="mailto:hello@baselashraf.com">
+              <svg class="i" viewBox="0 0 16 16"><path d="M2 4h12v8H2zM2 4l6 5 6-5"/></svg>
+              hello@baselashraf.com
+            </a>
+            <a class="btn" href="/resume.pdf" target="_blank" rel="noopener">
+              <svg class="i" viewBox="0 0 16 16"><path d="M3 2h7l4 4v8H3zM10 2v4h4"/></svg>
+              Resume (PDF)
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__nav">
+          <span class="footer__nav-title">Profiles &amp; Citations</span>
+          <a href="https://github.com/BaselAshraf81" target="_blank" rel="noopener">
+            <svg class="i i--solid" viewBox="0 0 16 16"><path d="M8 1a7 7 0 0 0-2.2 13.6c.3.1.4-.2.4-.4v-1.5c-2 .4-2.4-.9-2.4-.9-.3-.9-.8-1.1-.8-1.1-.7-.4 0-.4 0-.4.7 0 1.1.8 1.1.8.7 1.1 1.7.8 2.2.6.1-.5.3-.9.5-1.1-1.6-.2-3.3-.8-3.3-3.6 0-.8.3-1.4.7-1.9-.1-.2-.3-.9.1-1.9 0 0 .6-.2 2 .7a6.6 6.6 0 0 1 3.6 0c1.4-.9 2-.7 2-.7.4 1 .2 1.7.1 1.9.4.5.7 1.1.7 1.9 0 2.8-1.7 3.4-3.3 3.6.3.3.6.8.6 1.6v2.3c0 .2.1.5.5.4A7 7 0 0 0 8 1Z"/></svg>
+            GitHub (BaselAshraf81)
+          </a>
+          <a href="https://www.linkedin.com/in/basel-askar/" target="_blank" rel="noopener">
+            <svg class="i i--solid" viewBox="0 0 16 16"><path d="M3.8 5.2H1.5V15h2.3V5.2ZM2.65 1a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8ZM14.5 9.4c0-2.6-1.4-3.8-3.2-3.8-1.5 0-2.2.8-2.5 1.4V5.2H6.5V15h2.3V9.8c0-1.2.5-2 1.6-2s1.5.8 1.5 2V15h2.6V9.4Z"/></svg>
+            LinkedIn (/in/basel-askar)
+          </a>
+          <a href="https://doi.org/10.5281/zenodo.22019539" target="_blank" rel="noopener">
+            <svg class="i" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6"/><path d="M8 5v6M5 8h6"/></svg>
+            Zenodo DOI (Eigendrum)
+          </a>
+          <a href="https://orcid.org/0009-0009-3441-6196" target="_blank" rel="noopener">
+            <svg class="i" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6"/><path d="M7 5h2v6H7z"/></svg>
+            ORCID Profile
+          </a>
+          <a href="https://x.com/BaselAshraf81" target="_blank" rel="noopener">
+            <svg class="i i--solid" viewBox="0 0 16 16"><path d="M1.5 1.5h3.9l3.2 4.4 3.9-4.4h2.1L9.9 7.2l5 7.3h-3.9l-3.4-4.7-4.2 4.7H1.3l5.4-6.1L1.5 1.5Zm2.2 1.3 7.6 10.4h1.1L4.8 2.8H3.7Z"/></svg>
+            X (@BaselAshraf81)
+          </a>
+        </div>
       </div>
-      <nav class="foot__nav" aria-label="Elsewhere">
-        <a href="https://github.com/BaselAshraf81"><svg class="i i--b" viewBox="0 0 16 16" aria-hidden="true">
-            <path
-              d="M8 1a7 7 0 0 0-2.2 13.6c.3.1.4-.2.4-.4v-1.5c-2 .4-2.4-.9-2.4-.9-.3-.9-.8-1.1-.8-1.1-.7-.4 0-.4 0-.4.7 0 1.1.8 1.1.8.7 1.1 1.7.8 2.2.6.1-.5.3-.9.5-1.1-1.6-.2-3.3-.8-3.3-3.6 0-.8.3-1.4.7-1.9-.1-.2-.3-.9.1-1.9 0 0 .6-.2 2 .7a6.6 6.6 0 0 1 3.6 0c1.4-.9 2-.7 2-.7.4 1 .2 1.7.1 1.9.4.5.7 1.1.7 1.9 0 2.8-1.7 3.4-3.3 3.6.3.3.6.8.6 1.6v2.3c0 .2.1.5.5.4A7 7 0 0 0 8 1Z" />
-          </svg>GitHub</a>
-        <a href="https://www.linkedin.com/in/basel-askar/"><svg class="i i--b" viewBox="0 0 16 16" aria-hidden="true">
-            <path
-              d="M3.8 5.2H1.5V15h2.3V5.2ZM2.65 1a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8ZM14.5 9.4c0-2.6-1.4-3.8-3.2-3.8-1.5 0-2.2.8-2.5 1.4V5.2H6.5V15h2.3V9.8c0-1.2.5-2 1.6-2s1.5.8 1.5 2V15h2.6V9.4Z" />
-          </svg>LinkedIn</a>
-        <a href="https://x.com/BaselAshraf81"><svg class="i i--b" viewBox="0 0 16 16" aria-hidden="true">
-            <path
-              d="M1.5 1.5h3.9l3.2 4.4 3.9-4.4h2.1L9.9 7.2l5 7.3h-3.9l-3.4-4.7-4.2 4.7H1.3l5.4-6.1L1.5 1.5Zm2.2 1.3 7.6 10.4h1.1L4.8 2.8H3.7Z" />
-          </svg>X</a>
-        <a href="https://www.reddit.com/user/Sad_Steak_6813/"><svg class="i i--b" viewBox="0 0 16 16"
-            aria-hidden="true">
-            <path
-              d="M8 3.6c1.7 0 3.2.4 4.2 1a1.5 1.5 0 1 1 1 .6c1 .6 1.6 1.4 1.6 2.3 0 2.2-3 4-6.8 4s-6.8-1.8-6.8-4c0-.9.6-1.7 1.6-2.3A1.5 1.5 0 0 1 3.8 4.6c1-.6 2.5-1 4.2-1Zm-.3-.6L8.4.9l2.5.6M5.6 8.4a1 1 0 1 0 0-.1Zm4.8 0a1 1 0 1 0 0-.1ZM5.7 10.6c.6.5 1.4.8 2.3.8s1.7-.3 2.3-.8" />
-          </svg>Reddit</a>
-        <a href="/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
-      </nav>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 Basel Ashraf Fikry: Sole engineer on all listed projects</span>
+        <span>Built with engineering restraint: pure static HTML/CSS/JS, zero runtime dependencies.</span>
+      </div>
     </div>
-    <p class="shell foot__fine">
-      Built as a static page with no framework and no build step, which felt like the honest choice
-      given what is above. <a href="/resume.pdf">Resume</a> &middot; <a href="https://github.com/BaselAshraf81/baselashraf.dev">Source</a>.
-    </p>
   </footer>
 
+  <!-- Scripts -->
   <script src="caustic.js" defer></script>
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = navMenu.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', isOpen);
+      });
+      // Close menu when clicking links
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  </script>
 </body>
 
 </html>

@@ -5,12 +5,12 @@ Solo systems and software engineer building production tools with a zero-depende
 
 FEATURED ENGINEERING & PRODUCTS
 
-Eigendrum | Creator & Solo Engineer · eigendrum.com | Aug 2026 – Present
+Eigendrum | Creator & Solo Engineer · eigendrum.com | Aug 2026 - Present
 • Built a browser physics engine meshing arbitrary outlines and solving 2D Dirichlet Laplacian eigenvalue problems via custom P1 finite elements; synthesizes modal acoustics in ~800 ms in a Web Worker (zero dependencies, no backend).
 • Computationally verified the 1992 resolution to Mark Kac's 1966 open problem ("Can one hear the shape of a drum?"), proving Gordon-Webb-Wolpert isospectral drum frequencies match published spectra to 1.07×10⁻⁷%.
 • Earned 150 GitHub stars, registered DOI (10.5281/zenodo.22019539), and featured on Hacker News (front page ×2), Wikipedia external links, kottke.org, and 52+ publications across 8 languages.
 
-Prolific Tea | Creator & Solo Engineer · prolifictea.com | Apr 2026 – Present
+Prolific Tea | Creator & Solo Engineer · prolifictea.com | Apr 2026 - Present
 • Built a community-funded researcher review and pay transparency platform serving 100,000+ page views and 1,582 indexed researchers with zero ads, investors, or accounts required (Next.js, PostgreSQL, PWA).
 • Developed a companion Chrome extension intercepting study network traffic to match and display researcher fairness and rejection ratings inline before participants accept tasks.
 
@@ -18,12 +18,12 @@ holystitch (23 ★) | Creator · github.com/BaselAshraf81/holystitch | TypeScrip
 • Built a Model Context Protocol (MCP) server that compiles Google Stitch designs directly into production React and Next.js component trees via native API calls without consuming LLM inference tokens.
 
 layout-sans (67 ★) | Creator · npmjs.com/package/layout-sans | TypeScript · npm package
-• Engineered a 2D flex/grid layout engine in ~17 kB gzipped (0 dependencies, no DOM/WASM) executing 2–3× faster than Meta's Yoga with an 18× smaller bundle. Implemented interactive canvas text selection, clipboard copy, Ctrl+F, and accessibility tree on pretext.
+• Engineered a 2D flex/grid layout engine in ~17 kB gzipped (0 dependencies, no DOM/WASM) executing 2-3× faster than Meta's Yoga with an 18× smaller bundle. Implemented interactive canvas text selection, clipboard copy, Ctrl+F, and accessibility tree on pretext.
 
 SELECTED SYSTEMS, SECURITY & DATA
 
 • Legal Document RAG (Python · LlamaIndex · FAISS): Built hybrid vector/keyword search over 25,303 legal documents, serving 230+ concurrent users on a single T4 GPU via a custom asynchronous request queue with zero out-of-memory errors.
-• fastemporal (Rust · docs.rs/fastemporal): Reimplemented Luxon and TC39 Temporal datetime APIs in pure Rust with embedded IANA timezone data and zero heap allocations in hot paths (benchmarked 7–216× faster than JS Luxon), passing 332 ported conformance tests.
+• fastemporal (Rust · docs.rs/fastemporal): Reimplemented Luxon and TC39 Temporal datetime APIs in pure Rust with embedded IANA timezone data and zero heap allocations in hot paths (benchmarked 7-216× faster than JS Luxon), passing 332 ported conformance tests.
 • Photophane (TypeScript · WebGL): Computed 3D-printable continuous optical relief plates (10.97 mm depth) projecting photographs onto walls via refracted caustic light rays (72 upvotes on r/photogrammetry).
 • M-Pesa Bug Bounty & OSS (HackerOne): Discovered Stored XSS in M-Pesa's PDF generator via font descriptor injection (accepted on HackerOne); upgraded Electron+Next.js framework to Next 16 / React 19 across 33 files, shipped as nextron@9.6.0.
 • Passion of Rugs (Python ETL · Part-time): Automated ETL restructuring 120,000+ records from 1,200+ spreadsheets into a normalized CRM schema with OpenAI API schema mapping, reducing API costs by 13% via deduplication.
@@ -37,11 +37,11 @@ Security & Testing: Burp Suite, Web Security Research, Conformance Testing (TC39
 
 EDUCATION
 
-BSc in Computer Engineering and Software Systems (Dual Degree) | Feb 2021 – Expected Nov 2026
+BSc in Computer Engineering and Software Systems (Dual Degree) | Feb 2021 - Expected Nov 2026
 University of East London & Ain Shams University
 
-Università di Pisa — Graduate Summer School | Sep 2025
+Università di Pisa :  Graduate Summer School | Sep 2025
 Human-Centric ICT for Industry 5.0, Pisa, Italy (Scholarship) | Grade: 29/30
 
-Hanyang University — Foreign Exchange in Computer Science | Sep 2024 – Jan 2025
+Hanyang University :  Foreign Exchange in Computer Science | Sep 2024 - Jan 2025
 Seoul, South Korea | GPA: 4.0/4.5

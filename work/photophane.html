@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photophane: Inverse Ray-Tracing &amp; Optical Caustic Plate Computation</title>
+  <meta name="description"
+    content="Technical case study of Photophane: computational optics engine computing 3D-printable continuous acrylic relief plates that project photographs via refracted light.">
+  <link rel="canonical" href="https://baselashraf.com/work/photophane.html">
+  <meta name="theme-color" content="#070b10">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Photophane: Inverse Ray-Tracing &amp; Optical Caustic Plate Computation">
+  <meta property="og:description"
+    content="Technical case study of Photophane: computational optics engine computing 3D-printable continuous acrylic relief plates that project photographs via refracted light.">
+  <meta property="og:url" content="https://baselashraf.com/work/photophane.html">
+  <meta property="og:image" content="https://baselashraf.com/media/photophane.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@BaselAshraf81">
+  <meta name="twitter:title" content="Photophane: Inverse Ray-Tracing &amp; Optical Caustic Plate Computation">
+  <meta name="twitter:description"
+    content="Technical case study of Photophane: computational optics engine computing 3D-printable continuous acrylic relief plates that project photographs via refracted light.">
+  <meta name="twitter:image" content="https://baselashraf.com/media/photophane.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://baselashraf.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Photophane Case Study",
+          "item": "https://baselashraf.com/work/photophane.html"
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://baselashraf.com/#photophane",
+      "name": "Photophane",
+      "url": "https://baselashraf.com/work/photophane.html",
+      "applicationCategory": "GraphicsApplication",
+      "operatingSystem": "Web Browser, 3D Printers",
+      "description": "Inverse ray-tracing optics engine generating 3D-printable continuous acrylic plates that project photographic images via refracted caustic light.",
+      "author": {
+        "@type": "Person",
+        "name": "Basel Ashraf Fikry",
+        "url": "https://baselashraf.com/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is an optical caustic plate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An optical caustic plate is a clear acrylic or glass slab with a continuous micro-relief surface cut into it. When light from a torch or laser passes through the plate, refraction redirects light rays so they converge on a distant wall to form a specified photographic image."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Photophane compute the 3D surface relief?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Photophane solves an inverse optimal transport problem by mapping uniform source light density to target image intensity. It calculates the necessary surface normal gradients with Snell's law and integrates the field into a continuous height map exported as an STL 3D mesh."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="shell header__inner">
+      <a class="header__brand" href="../">
+        <span class="header__brand-dot"></span>
+        <span>Basel Ashraf</span>
+      </a>
+
+      <nav class="header__nav" aria-label="Main Navigation">
+        <a class="nav__link" href="../#work">Work</a>
+        <a class="nav__link" href="../#systems">Systems &amp; Tools</a>
+        <a class="nav__link" href="../#about">Background</a>
+        <a class="nav__link nav__link--resume" href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="btn btn--sm btn--primary header__cta" href="mailto:hello@baselashraf.com">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="case-study">
+    <div class="shell">
+      <a class="case-study__back" href="../#work">
+        <svg class="i" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 2L4 8l6 6"/></svg>
+        Back to Shipped Work
+      </a>
+
+      <header class="case-study__header">
+        <h1 class="case-study__title">Photophane</h1>
+        <p class="case-study__subtitle">Inverse Ray-Tracing &amp; Optical Caustic Plate Computation</p>
+
+        <dl class="case-study__quick-facts">
+          <div class="quick-fact">
+            <dt>Role &amp; Team</dt>
+            <dd>Creator &amp; Solo Engineer</dd>
+          </div>
+          <div class="quick-fact">
+            <dt>Stack</dt>
+            <dd>TypeScript, Computational Optics, WebGL, STL</dd>
+          </div>
+          <div class="quick-fact">
+            <dt>Relief Depth</dt>
+            <dd>10.97 mm Acrylic Relief</dd>
+          </div>
+          <div class="quick-fact">
+            <dt>Community Impact</dt>
+            <dd>72 Upvotes on r/photogrammetry</dd>
+          </div>
+        </dl>
+      </header>
+
+      <div class="case-study__layout">
+        <!-- Main Content -->
+        <article class="case-study__main">
+          
+          <!-- Section 1: Overview -->
+          <section>
+            <h2 class="h3">The Physics of Refractive Caustics</h2>
+            <p>
+              A <strong>caustic</strong> is the envelope of light rays reflected or refracted by a curved surface, concentrating light into bright filaments and cusps. While most computer graphics software treats caustics as an expensive rendering artifact, <strong>Photophane</strong> solves the inverse problem:
+            </p>
+            <p>
+              <em>Given a target grayscale photograph, what 3D surface topography must be machined into a clear acrylic plate such that parallel rays passing through it bend and accumulate on a distant wall to form the exact photograph?</em>
+            </p>
+          </section>
+
+          <!-- Diagram Screenshot -->
+          <figure class="shot">
+            <a class="shot__frame" href="https://baselashraf81.github.io/photophane/" target="_blank" rel="noopener">
+              <img src="../media/photophane.webp" width="1500" height="935" loading="lazy"
+                   alt="Photophane measured diagram: torch, acrylic plate with relief, and projected photograph on wall.">
+            </a>
+            <figcaption>
+              <span class="shot__tag">Optical Setup</span>
+              <span>The solved physical geometry: light source <b>1.42 m</b> away, plate in the middle, and image forming on a wall <b>300 mm</b> behind via <b>10.97 mm</b> of relief cut into a 100 mm acrylic slab.</span>
+            </figcaption>
+          </figure>
+
+          <!-- Section 2: Algorithm & Fabrication -->
+          <section>
+            <h2 class="h3">Inverse Optimal Transport &amp; Surface Integration</h2>
+            <p>
+              Photophane solves an inverse optimal transport problem by formulating a mapping from a uniform light distribution to target image intensity. It derives the required normal vector field via Snell's law of refraction and integrates the gradient field into a continuous, height-bounded 3D surface mesh.
+            </p>
+            <p>
+              The system exports watertight STL geometry suitable for stereolithography (SLA) resin 3D printing or high-precision 5-axis CNC acrylic milling.
+            </p>
+          </section>
+
+          <!-- Section 3: Connection to Portfolio Theme -->
+          <section>
+            <h2 class="h3">The Core Theme Behind this Portfolio</h2>
+            <p>
+              The animated light simulation running on the homepage hero of this portfolio is the exact forward physics engine of Photophane: 82,000 rays refracting across a simulated dynamic fluid surface and accumulating on a 2D density grid with chromatic dispersion.
+            </p>
+          </section>
+
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="case-sidebar">
+          <div class="sidebar-box">
+            <h3 class="sidebar-box__title">Live Generator &amp; Code</h3>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <a class="btn btn--primary" href="https://baselashraf81.github.io/photophane/" target="_blank" rel="noopener">
+                Launch Generator
+                <svg class="i" viewBox="0 0 16 16"><path d="M6 2h8v8M14 2 5 11M11 14H2V5"/></svg>
+              </a>
+              <a class="btn" href="https://github.com/BaselAshraf81/photophane" target="_blank" rel="noopener">
+                <svg class="i i--solid" viewBox="0 0 16 16"><path d="M8 1a7 7 0 0 0-2.2 13.6c.3.1.4-.2.4-.4v-1.5c-2 .4-2.4-.9-2.4-.9-.3-.9-.8-1.1-.8-1.1-.7-.4 0-.4 0-.4.7 0 1.1.8 1.1.8.7 1.1 1.7.8 2.2.6.1-.5.3-.9.5-1.1-1.6-.2-3.3-.8-3.3-3.6 0-.8.3-1.4.7-1.9-.1-.2-.3-.9.1-1.9 0 0 .6-.2 2 .7a6.6 6.6 0 0 1 3.6 0c1.4-.9 2-.7 2-.7.4 1 .2 1.7.1 1.9.4.5.7 1.1.7 1.9 0 2.8-1.7 3.4-3.3 3.6.3.3.6.8.6 1.6v2.3c0 .2.1.5.5.4A7 7 0 0 0 8 1Z"/></svg>
+                GitHub Source
+              </a>
+            </div>
+          </div>
+
+          <div class="sidebar-box">
+            <h3 class="sidebar-box__title">Physical Parameters</h3>
+            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.875rem; color: var(--fg-2); display: flex; flex-direction: column; gap: 0.5rem;">
+              <li><strong>Plate Dimensions:</strong> 100 x 100 mm</li>
+              <li><strong>Max Cut Depth:</strong> 10.97 mm</li>
+              <li><strong>Refractive Index:</strong> n = 1.491 (PMMA)</li>
+              <li><strong>Mesh Resolution:</strong> 512 x 512 grid</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell" style="text-align: center;">
+      <p style="color: var(--fg-3); font-size: 0.875rem; margin-bottom: var(--s2);">
+        &copy; 2026 Basel Ashraf &middot; <a href="../#work">All Work</a> &middot; <a href="mailto:hello@baselashraf.com">hello@baselashraf.com</a>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

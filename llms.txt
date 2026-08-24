@@ -10,12 +10,13 @@ ORCID: https://orcid.org/0009-0009-3441-6196
 Resume (PDF): https://baselashraf.com/resume.pdf
 Resume (Text): https://baselashraf.com/resume.txt
 Contact: hello@baselashraf.com
-Last updated: 2026-08-21
+Last updated: 2026-08-24
 
-## Key Projects
+## Key Projects & Case Studies
 
 ### Eigendrum
 URL: https://eigendrum.com
+Case Study: https://baselashraf.com/work/eigendrum.html
 DOI: https://doi.org/10.5281/zenodo.22019539
 Cite as: Ashraf, B. (2026). Eigendrum: Hearing the shape of a drum. Zenodo. doi:10.5281/zenodo.22019539
 
@@ -30,7 +31,7 @@ Verified accuracy against closed-form spectra:
 - Right isosceles triangle: 0.227%
 - Rectangle 1.5×0.8: 0.233%
 
-Includes both Gordon–Webb–Wolpert isospectral drums. Eigendrum reports their 16 lowest
+Includes both Gordon-Webb-Wolpert isospectral drums. Eigendrum reports their 16 lowest
 frequencies agree to within 1.07×10⁻⁷ percent - you can hear a theorem be true.
 
 150 GitHub stars. Featured in 52+ named sources across 8 languages:
@@ -51,12 +52,13 @@ Tech: Vanilla JavaScript, Web Workers, Web Audio API, zero dependencies
 
 ### LayoutSans
 URL: https://github.com/BaselAshraf81/layout-sans
+Case Study: https://baselashraf.com/work/layout-sans.html
 npm: https://www.npmjs.com/package/layout-sans
 
 A TypeScript flex/grid layout engine that runs without a DOM. Takes a tree of boxes with flex
 and grid rules, returns exact pixel positions for every one of them. Ships ~17 kB gzipped
 vs Meta Yoga's 300+ kB. Benchmarks (measured, reproducible):
-- 1,000 boxes: 0.185 ms (vs Yoga 0.80 ms, DOM 8.0 ms)
+- 100 boxes: 0.27 ms (vs Yoga 0.80 ms, DOM 8.0 ms)
 - 10,000 boxes: 4.82 ms (vs Yoga 8.0 ms, DOM 800 ms)
 - 100,000 rows variable height: 46 ms (vs Yoga 85 ms, DOM crashes)
 
@@ -69,6 +71,7 @@ and screen-reader accessibility - sitting on top of chenglou/pretext for measure
 
 ### Prolific Tea
 URL: https://prolifictea.com
+Case Study: https://baselashraf.com/work/prolific-tea.html
 
 A review platform for Prolific research participants to rate researchers on fairness and
 rejection behaviour. Built alone with Next.js, a Chrome extension, PWA push notifications,
@@ -79,16 +82,25 @@ image uploads, threaded comments, and moderation tooling.
 
 ---
 
-### Other open source
+### Photophane
+URL: https://baselashraf81.github.io/photophane/
+Case Study: https://baselashraf.com/work/photophane.html
+
+Computes a clear 3D-printable plate that projects a photograph via refracted light (caustic).
+72 upvotes on r/photogrammetry. The exact forward optics algorithm powers the live Caustic
+simulation on the baselashraf.com homepage.
+
+---
+
+### Systems, Tools & Findings
 
 - **holystitch** - MCP tool converting Google Stitch designs to React/Next.js with zero AI
   tokens. 23 stars. https://github.com/BaselAshraf81/holystitch
 - **fastemporal** - Luxon + Temporal API in Rust, 40× faster, 332 tests.
   https://docs.rs/fastemporal
-- **Photophane** - Computes a clear 3D-printable plate that projects a photograph via refracted
-  light (caustic). 72 upvotes on r/photogrammetry. https://baselashraf81.github.io/photophane/
-- **Legal document RAG** - Retrieval over 25,303 Epstein documents with hybrid search,
+- **Legal document RAG** - Retrieval over 25,303 documents with hybrid search,
   230+ concurrent users on a single T4 GPU with a custom request queue.
+- **Nextron PR #531** - Upgraded Electron+Next framework to Next 16 and React 19 across 33 files.
 - **fx-inject-shim** - Firefox 152 compat shim for tabs/scripting injection APIs.
   21 upvotes on r/firefox.
 - **Stored XSS in M-Pesa** - Found via font descriptor injection in PDF receipts. Reported
@@ -104,11 +116,10 @@ image uploads, threaded comments, and moderation tooling.
 
 ## Skills
 
-Languages: TypeScript, Rust, Python, Java, SQL
-Web: Next.js, React, Spring Boot, Tailwind, Prisma, Stripe, Chrome extensions
-Data & AI: OpenAI API, LlamaIndex, FAISS, TensorFlow, pandas
-Infrastructure: PostgreSQL, Supabase, Docker, Vercel, Linux, Git
-Security: Burp Suite, OWASP, WebAuthn, bug bounty
+Languages: TypeScript, JavaScript, Rust, Python, Java, SQL, C/C++
+Systems: Finite Element Method (FEM), Web Workers, Canvas 2D/WebGL, MCP Servers, FAISS, Docker, Linux
+Web: Next.js, React, Node.js, Web Audio API, Chrome Extensions, Tailwind CSS, PostgreSQL, Supabase
+Security: Burp Suite, OWASP, Web Security Research, Font & Parser Exploitation, HackerOne Bug Bounty
 
 ## Links
 
@@ -116,5 +127,5 @@ Security: Burp Suite, OWASP, WebAuthn, bug bounty
 - GitHub: https://github.com/BaselAshraf81
 - LinkedIn: https://www.linkedin.com/in/basel-askar/
 - ORCID: https://orcid.org/0009-0009-3441-6196
-- Eigendrum (flagship project): https://eigendrum.com
+- Eigendrum: https://eigendrum.com
 - Eigendrum DOI: https://doi.org/10.5281/zenodo.22019539
