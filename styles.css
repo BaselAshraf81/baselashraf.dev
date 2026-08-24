@@ -626,15 +626,42 @@ kbd {
 .metric-pill {
   font-family: var(--font-mono);
   font-size: 0.8125rem;
-  color: var(--pill-text);
-  background: var(--pill-bg);
   padding: 0.25rem 0.6rem;
   border-radius: var(--radius);
-  border: 1px solid var(--pill-border);
+  line-height: 1.3;
 }
 
-.metric-pill b {
+/* Credibility / Verification Badges (White/Neutral framed) */
+.metric-pill--credibility {
+  background: var(--bg-surface);
   color: var(--ink);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.metric-pill--credibility b {
+  color: var(--ink);
+}
+
+/* Reach / Impact / Performance Badges (Warm Accent filled) */
+.metric-pill--impact {
+  background: var(--accent-soft);
+  border: 1px solid rgba(146, 64, 14, 0.25);
+  color: var(--accent-ink);
+}
+
+[data-theme="dark"] .metric-pill--impact {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: rgba(245, 158, 11, 0.3);
+  color: #fde68a;
+}
+
+.metric-pill--impact b {
+  color: var(--accent-ink);
+}
+
+[data-theme="dark"] .metric-pill--impact b {
+  color: #fff;
 }
 
 .project-card__tags {
@@ -693,11 +720,26 @@ kbd {
 }
 
 /* ------------------------------------------------------------
-   10. Systems & Tools Grid
+   10. Systems & Tools Clustered Grid
    ------------------------------------------------------------ */
+.systems-clusters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+}
+
+.systems-cluster__title {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--s2);
+}
+
 .systems-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   gap: var(--s3);
 }
 
