@@ -14,6 +14,38 @@ Last updated: 2026-08-24
 
 ## Key Projects & Case Studies
 
+### Roadwright
+URL: https://baselashraf.com/roadwright/
+Case Study: https://baselashraf.com/work/roadwright.html
+Source: https://github.com/BaselAshraf81/roadwright
+
+A free browser tool that solves the road an arbitrary drawn wheel rolls on while its axle stays
+at a constant height. A square rolls on a row of inverted catenaries; any other shape rolls on
+something else. Both directions of the relation are quadratures rather than iterative solves:
+x(theta) = integral of r dtheta with y = -r, and inverted, theta(x) = integral of dx / (-y). The
+road is therefore recomputed continuously while the axle is dragged. Zero runtime dependencies,
+18 kB gzipped, no backend.
+
+Verified against closed form, by test on every commit:
+- A square of half-side a returns y = -a*cosh(x/a) to better than 1 part in 10^6
+- A circle returns a flat road, to 5e-6 at 2048 segments
+- Road arc length equals wheel perimeter, which is what rolling without slipping means
+- Wheel to road to wheel round-trips
+- 79 tests total
+
+Two results worth citing:
+- The road's horizontal period is NOT the wheel perimeter. For a square of half-side a it is
+  8*a*ln(1 + sqrt(2)), about 7.0509a, against a perimeter of 8a. Only a circle makes them agree.
+- Rut depth does not predict whether a wheel can be built. A rounded rectangle has deeper ruts
+  than an equilateral triangle and rolls cleanly, because what binds a wheel is corner sharpness.
+  Interference is therefore measured directly: 0% for a circle and square, 0.01% for a rounded
+  rectangle, 4.7% for an equilateral triangle, and 21.5% for a five-pointed star. The last two
+  cannot be built, which matches the known fact that a rolling equilateral triangle jams.
+
+Prior art: Leon Hall and Stan Wagon, "Roads and Wheels", Mathematics Magazine 65 (1992);
+G. B. Robison derived the general equations in 1960; Wagon and Loren Kellen built a
+square-wheeled bicycle at Macalester College in 1997; MoMath and the Exploratorium exhibit one.
+
 ### Eigendrum
 URL: https://eigendrum.com
 Case Study: https://baselashraf.com/work/eigendrum.html

@@ -230,11 +230,37 @@
         <div class="band__header">
           <h2 class="h2">Work</h2>
           <p class="lede">
-            Four selected projects across numerical physics, layout internals, and web platforms.
+            Five selected projects across numerical physics, computational geometry, layout internals, and web platforms.
           </p>
         </div>
 
         <div class="project-grid">
+
+          <!-- Card 0: Roadwright -->
+          <article class="project-card">
+            <div class="project-card__content">
+              <h3 class="project-card__title"><a href="work/roadwright.html">Roadwright</a></h3>
+              <div class="project-card__tagline">Solves the road an arbitrary drawn wheel rolls on</div>
+              <p class="project-card__desc">
+                A square wheel rolls smoothly on the right road. Roadwright generalises that to any drawn shape, solving the road profile that holds the axle at constant height from two quadratures rather than an iterative solver, so it recomputes live while the axle is dragged. Verified against closed form to better than 1 part in 10<sup>6</sup>.
+                <a class="card-link" href="/roadwright/">Live App &nearr;</a>
+                <a class="card-link" href="https://github.com/BaselAshraf81/roadwright" target="_blank" rel="noopener">Source &nearr;</a>
+              </p>
+              <div class="project-card__metrics">
+                <span class="metric-pill metric-pill--impact"><b>10<sup>&minus;6</sup></b> Analytic Error</span>
+                <span class="metric-pill metric-pill--impact"><b>79</b> Tests</span>
+                <span class="metric-pill metric-pill--impact"><b>18 kB</b> Gzipped</span>
+                <span class="metric-pill metric-pill--impact"><b>0</b> Runtime Deps</span>
+              </div>
+              <div class="project-card__tags">
+                <span class="tag-item">TypeScript</span>
+                <span class="tag-item">Canvas 2D</span>
+                <span class="tag-item">Computational Geometry</span>
+                <span class="tag-item">Web Audio API</span>
+              </div>
+              <a class="card-link card-link--case" href="work/roadwright.html">Case Study &rarr;</a>
+            </div>
+          </article>
 
           <!-- Card 1: Eigendrum -->
           <article class="project-card">

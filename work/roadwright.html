@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  </script>
+  <title>Roadwright: Solving the Road a Drawn Wheel Rolls On</title>
+  <meta name="description"
+    content="Case study of Roadwright: solving the road profile for an arbitrary drawn wheel from two quadratures, verified against closed form to better than 1 part in 10^6. 79 tests, 0 runtime dependencies, 18 kB gzipped.">
+  <link rel="canonical" href="https://baselashraf.com/work/roadwright.html">
+  <meta name="theme-color" content="#f9f8f5">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Roadwright: Solving the Road a Drawn Wheel Rolls On">
+  <meta property="og:description"
+    content="Case study of Roadwright: solving the road profile for an arbitrary drawn wheel from two quadratures, verified against closed form. 79 tests, 0 runtime dependencies.">
+  <meta property="og:url" content="https://baselashraf.com/work/roadwright.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@BaselAshraf81">
+  <meta name="twitter:title" content="Roadwright: Solving the Road a Drawn Wheel Rolls On">
+  <meta name="twitter:description"
+    content="Case study of Roadwright: solving the road profile for an arbitrary drawn wheel from two quadratures, verified against closed form. 79 tests, 0 runtime dependencies.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://baselashraf.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Roadwright Case Study",
+          "item": "https://baselashraf.com/work/roadwright.html"
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://baselashraf.com/#roadwright",
+      "name": "Roadwright",
+      "url": "https://baselashraf.com/roadwright/",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Any browser",
+      "codeRepository": "https://github.com/BaselAshraf81/roadwright",
+      "license": "https://opensource.org/licenses/MIT",
+      "author": { "@type": "Person", "name": "Basel Ashraf", "url": "https://baselashraf.com/" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header__inner">
+      <a class="header__brand" href="../">Basel Ashraf</a>
+
+      <nav class="header__nav" aria-label="Main Navigation">
+        <a class="nav__link" href="../#work">Work</a>
+        <a class="nav__link" href="../#systems">Systems</a>
+        <a class="nav__link" href="../#about">Background</a>
+        <a class="nav__link" href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="nav__link nav__link--cta" href="mailto:hello@baselashraf.com">Get in touch</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <span id="theme-text">Dark</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="case-study">
+    <div class="shell">
+      <a class="case-study__back" href="../#work">
+        &larr; Back to Work
+      </a>
+
+      <header class="case-study__header">
+        <h1 class="case-study__title">Roadwright</h1>
+        <div class="case-study__subtitle">Solving the Road an Arbitrary Drawn Wheel Rolls On</div>
+
+        <div class="case-study__facts">
+          <div class="fact-item">
+            <dt>Role &amp; Team</dt>
+            <dd>Creator &amp; Sole Author</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Timeline</dt>
+            <dd>Sep 2026 to Present</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Stack</dt>
+            <dd>TypeScript, Canvas 2D, Web Audio, Vite</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Verification</dt>
+            <dd>79 tests, accuracy to 1 part in 10<sup>6</sup></dd>
+          </div>
+        </div>
+      </header>
+
+      <div class="case-study__layout">
+        <article class="case-study__main">
+
+          <section>
+            <h2 class="h3">Overview</h2>
+            <p>
+              A square wheel rolls perfectly smoothly if you build the right road for it. That road is a row of inverted catenaries, and Stan Wagon rode a bicycle on one at Macalester College in 1997. <strong>Roadwright</strong> generalises that result to any closed shape a visitor draws, solving the road profile that carries the wheel with its axle at a constant height and animating the result at 60 fps.
+            </p>
+            <p>
+              Every prior artifact in this space is fixed: a square wheel and its one road, in a museum exhibit, in a 1992 issue of <em>Mathematics Magazine</em>, or in a demo with eight canned examples. Roadwright solves the inverse problem for arbitrary input, live, while the axle is being dragged. It ships with zero runtime dependencies at 18 kB gzipped.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="h3">The Mathematics</h2>
+            <p>
+              Represent the wheel in polar form as <em>r</em>(&theta;), the distance from the axle to the boundary at each angle. Holding the axle at constant height requires the contact point to sit directly beneath it at distance <em>r</em>, so the road height is <em>y</em> = &minus;<em>r</em>. Enforcing rolling without slipping equates arc length along the road to arc length along the wheel, which reduces to d<em>x</em> = <em>r</em>&nbsp;d&theta;. The pair of relations follows:
+            </p>
+            <p>
+              <code>x(&theta;) = &int; r d&theta;</code>, <code>y(&theta;) = &minus;r(&theta;)</code>, and inverting, <code>&theta;(x) = &int; dx / (&minus;y)</code>.
+            </p>
+            <p>
+              Both directions are quadratures rather than iterative solves, so there is no convergence tolerance to defend and no solver to tune. That is what permits continuous recomputation during interaction, in contrast to the roughly 800 ms Web Worker solve that <a href="eigendrum.html">Eigendrum</a> requires for its eigenvalue problem.
+            </p>
+            <p>
+              A periodic road admits a closed wheel only when the total turn over one period is exactly 2&pi;, giving the closure condition <code>&int; dx / (&minus;y) = 2&pi;</code>.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="h3">Verification</h2>
+            <p>
+              Correctness is asserted by test against closed-form results rather than by inspection. All 79 tests run in CI on every commit.
+            </p>
+            <ul>
+              <li>A square wheel of half-side <em>a</em> returns <em>y</em> = &minus;<em>a</em>&nbsp;cosh(<em>x</em>/<em>a</em>) to better than 1 part in 10<sup>6</sup>.</li>
+              <li>A circle returns a flat road, to 5&times;10<sup>&minus;6</sup> at 2048 segments.</li>
+              <li>Road arc length equals wheel perimeter, which is the definition of rolling without slipping.</li>
+              <li>The forward and inverse maps round-trip, so the road remains a valid inverse of the wheel.</li>
+              <li>Contact angle is derived from the same cumulative integral as position, which structurally prevents visible slip.</li>
+            </ul>
+            <p>
+              One non-obvious result: the road's <em>horizontal period</em> is not the wheel perimeter. For a square of half-side <em>a</em> the road spans 8<em>a</em>&nbsp;ln(1+&radic;2) &asymp; 7.0509<em>a</em> against a perimeter of 8<em>a</em>. Road <em>arc length</em> is the quantity that matches. Only a circle makes the two coincide, and conflating them is the most likely error in this problem class.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="h3">Two Engineering Problems Worth Naming</h2>
+            <p>
+              <strong>Admissibility.</strong> A wheel is only well posed when a ray from the axle meets the boundary exactly once in every direction, meaning the region is star-shaped about the axle. Most freehand input violates this. The permissible axle region is the polygon kernel, computed as a half-plane intersection and rendered as a hatched zone so the constraint is visible rather than latent; dragging is clamped to it, making an invalid axle unreachable. Where no kernel exists, the outline is resampled as a radial hull about its pole of inaccessibility, which contains the original and preserves every extremity while bridging the unseen pockets. The original is retained and displayed, so the adjustment is never silent.
+            </p>
+            <p>
+              <strong>Buildability.</strong> A profile can be exact and still impossible to fabricate: sufficiently sharp corners drive into the road as the wheel rotates. This is the established reason a rolling equilateral triangle cannot be constructed. Rut depth turns out to be a poor predictor, since a rounded rectangle has deeper ruts than a triangle and rolls cleanly. Roadwright instead measures interference directly by sweeping the wheel through a full period, reporting the maximum penetration as a fraction of axle height: 0% for a circle and square, 0.01% for a rounded rectangle, 4.7% for an equilateral triangle, and 21.5% for a five-pointed star. The figure is written into the SVG cut file as a fabrication warning.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="h3">Outputs</h2>
+            <p>
+              The road tilts to an arbitrary grade, which is exact rather than approximate: the derivation constrains the axle to a straight line and never invokes gravity, so nothing requires that line to be horizontal. An assembly view carries two independently rotating wheels on a chassis; a wheelbase of a whole number of road periods places them in identical orientation, which follows directly from the closure condition and is asserted by test.
+            </p>
+            <p>
+              Exports are a WebM loop recorded from the canvas, a PNG of the sheet, and an SVG cut file dimensioned in millimetres with a stated kerf. Shapes are shared through the URL fragment, which browsers do not transmit to servers, so drawn geometry never leaves the client.
+            </p>
+          </section>
+
+        </article>
+
+        <aside class="case-sidebar">
+          <div class="sidebar-block">
+            <h3 class="sidebar-block__title">Links</h3>
+            <ul class="sidebar-list">
+              <li><a href="/roadwright/">Live app &nearr;</a></li>
+              <li><a href="https://github.com/BaselAshraf81/roadwright" target="_blank" rel="noopener">Source &nearr;</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-block">
+            <h3 class="sidebar-block__title">Measured</h3>
+            <ul class="sidebar-list">
+              <li>79 tests, CI on every commit</li>
+              <li>Accuracy 1 part in 10<sup>6</sup></li>
+              <li>18 kB gzipped, 0 runtime dependencies</li>
+              <li>Solve is 2 quadratures, not an iterative solver</li>
+            </ul>
+          </div>
+
+          <div class="sidebar-block">
+            <h3 class="sidebar-block__title">Prior Art</h3>
+            <ul class="sidebar-list">
+              <li>Hall &amp; Wagon, <em>Roads and Wheels</em>, Math. Mag. 65 (1992)</li>
+              <li>Robison, general equations, 1960</li>
+              <li>Wagon &amp; Kellen, square-wheeled bicycle, 1997</li>
+              <li>MoMath and the Exploratorium exhibit one</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const label = document.getElementById('theme-text');
+    const sync = () => {
+      const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (label) label.textContent = dark ? 'Light' : 'Dark';
+    };
+    sync();
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+        document.documentElement.setAttribute('data-theme', dark ? 'light' : 'dark');
+        localStorage.setItem('theme', dark ? 'light' : 'dark');
+        sync();
+      });
+    }
+  </script>
+</body>
+</html>
