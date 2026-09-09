@@ -33,13 +33,13 @@
   <meta property="og:description"
     content="I build fast, from-scratch software engines: physics simulators, layout systems, and web apps. Creator of Eigendrum (159★, award-winning, Zenodo DOI) and LayoutSans (17 kB).">
   <meta property="og:url" content="https://baselashraf.com/">
-  <meta property="og:image" content="https://baselashraf.com/media/eigendrum-hero.webp">
+  <meta property="og:image" content="https://baselashraf.com/media/og-cover.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="@BaselAshraf81">
   <meta name="twitter:title" content="Basel Ashraf: Software &amp; Systems Engineer">
   <meta name="twitter:description"
     content="I build fast, from-scratch software engines: physics simulators, layout systems, and web apps. Creator of Eigendrum (159★, award-winning, Zenodo DOI) and LayoutSans (17 kB).">
-  <meta name="twitter:image" content="https://baselashraf.com/media/eigendrum-hero.webp">
+  <meta name="twitter:image" content="https://baselashraf.com/media/og-cover.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
@@ -238,27 +238,29 @@
 
           <!-- Card 0: Roadwright -->
           <article class="project-card">
+            <div class="project-card__thumb">
+              <img src="media/roadwright-hero.webp" width="1400" height="875" loading="lazy" decoding="async"
+                   alt="The Roadwright interface: a drawn car on two rounded-square wheels rolling along the road solved for them, its axle line dead level.">
+            </div>
             <div class="project-card__content">
               <h3 class="project-card__title"><a href="work/roadwright.html">Roadwright</a></h3>
               <div class="project-card__tagline">Solves the road an arbitrary drawn wheel rolls on</div>
               <p class="project-card__desc">
-                A square wheel rolls smoothly on the right road. Roadwright generalises that to any drawn shape, solving the road profile that holds the axle at constant height from two quadratures rather than an iterative solver, so it recomputes live while the axle is dragged. Verified against closed form to better than 1 part in 10<sup>6</sup>.
-                <a class="card-link" href="/roadwright/">Live App &nearr;</a>
-                <a class="card-link" href="https://github.com/BaselAshraf81/roadwright" target="_blank" rel="noopener">Source &nearr;</a>
+                A square wheel rolls smoothly on the right road. Roadwright generalises that to any wheel you draw, solving the road profile that holds the axle at constant height. Because both directions reduce to quadratures rather than an iterative solve, the road recomputes continuously while the axle is dragged. A square returns inverted catenaries to better than 1 part in 10<sup>6</sup>, checked by 79 tests in CI.
               </p>
-              <div class="project-card__metrics">
-                <span class="metric-pill metric-pill--impact"><b>10<sup>&minus;6</sup></b> Analytic Error</span>
-                <span class="metric-pill metric-pill--impact"><b>79</b> Tests</span>
-                <span class="metric-pill metric-pill--impact"><b>18 kB</b> Gzipped</span>
-                <span class="metric-pill metric-pill--impact"><b>0</b> Runtime Deps</span>
-              </div>
               <div class="project-card__tags">
                 <span class="tag-item">TypeScript</span>
                 <span class="tag-item">Canvas 2D</span>
                 <span class="tag-item">Computational Geometry</span>
                 <span class="tag-item">Web Audio API</span>
               </div>
-              <a class="card-link card-link--case" href="work/roadwright.html">Case Study &rarr;</a>
+              <div class="project-card__footer">
+                <div class="project-card__links">
+                  <a class="card-link" href="/roadwright/">Live App &nearr;</a>
+                  <a class="card-link" href="https://github.com/BaselAshraf81/roadwright" target="_blank" rel="noopener">Source &nearr;</a>
+                </div>
+                <a class="card-link card-link--case" href="work/roadwright.html">Case Study &rarr;</a>
+              </div>
             </div>
           </article>
 

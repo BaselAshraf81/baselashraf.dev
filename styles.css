@@ -640,21 +640,28 @@ kbd {
   color: var(--ink);
 }
 
-/* Reach / Impact / Performance Badges (Warm Accent filled) */
+/*
+ * Reach / Impact / Performance Badges.
+ *
+ * These used to be filled with the warm accent, which made a row of them read as
+ * generated badge spam rather than as measured figures. The numbers are real, so the
+ * fix is to stop shouting them: same neutral frame as the credibility pills, with the
+ * figure carried by weight and the accent kept for the value alone.
+ */
 .metric-pill--impact {
-  background: var(--accent-soft);
-  border: 1px solid rgba(146, 64, 14, 0.25);
-  color: var(--accent-ink);
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--ink-muted, var(--ink));
 }
 
 [data-theme="dark"] .metric-pill--impact {
-  background: rgba(245, 158, 11, 0.15);
-  border-color: rgba(245, 158, 11, 0.3);
-  color: #fde68a;
+  background: transparent;
+  border-color: var(--border);
+  color: var(--ink);
 }
 
 .metric-pill--impact b {
-  color: var(--accent-ink);
+  color: var(--ink);
 }
 
 [data-theme="dark"] .metric-pill--impact b {
