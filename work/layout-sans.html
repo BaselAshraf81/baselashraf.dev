@@ -12,6 +12,14 @@
       document.documentElement.setAttribute('data-theme', 'light');
     }
   </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GM71X3G33E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-GM71X3G33E');
+  </script>
   <title>LayoutSans: 17 kB Headless Layout Engine Outperforming Meta's Yoga</title>
   <meta name="description"
     content="Technical case study of LayoutSans: a 17 kB zero-dependency TypeScript flex/grid engine executing 2-3x faster than Yoga WASM with canvas accessibility.">

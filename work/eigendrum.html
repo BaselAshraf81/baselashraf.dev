@@ -12,6 +12,14 @@
       document.documentElement.setAttribute('data-theme', 'light');
     }
   </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GM71X3G33E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-GM71X3G33E');
+  </script>
   <title>Eigendrum: In-Browser Finite-Element Acoustics &amp; Spectral Geometry</title>
   <meta name="description"
     content="Technical case study of Eigendrum: solving 2D Dirichlet Laplacian eigenvalue problems in a Web Worker in 800 ms with 0 dependencies, a Zenodo DOI and a Wikipedia external link.">
