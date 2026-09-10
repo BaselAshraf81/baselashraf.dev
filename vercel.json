@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "roadwright.baselashraf.com" }],
+      "destination": "/roadwright/"
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "roadwright.baselashraf.com" }],
+      "destination": "/roadwright/:path*"
+    }
+  ]
+}
