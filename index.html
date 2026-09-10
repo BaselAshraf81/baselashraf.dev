@@ -15,6 +15,10 @@
       document.documentElement.setAttribute('data-theme', 'light');
     }
   </script>
+  <!-- Inline mark, so there is no favicon round trip and no 404 on every page load.
+       A BA monogram in the site's own ink. Swap it for a drawn mark whenever one exists. -->
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23111827'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' font-weight='700' fill='%23f9f8f5' text-anchor='middle'%3EBA%3C/text%3E%3C/svg%3E">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GM71X3G33E"></script>
   <script>
@@ -25,20 +29,20 @@
   </script>
   <title>Basel Ashraf: Software &amp; Systems Engineer</title>
   <meta name="description"
-    content="I build fast, from-scratch software engines: physics simulators, layout systems, and web apps. Creator of Eigendrum (159★, award-winning, Zenodo DOI) and LayoutSans (17 kB).">
+    content="I build fast, from-scratch software engines: physics simulators, layout systems, and web apps. Creator of Eigendrum (award-winning, Zenodo DOI) and LayoutSans (17 kB).">
   <link rel="canonical" href="https://baselashraf.com/">
   <meta name="theme-color" content="#f9f8f5">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Basel Ashraf: Software &amp; Systems Engineer">
   <meta property="og:description"
-    content="I build fast, from-scratch software engines: physics simulators, layout systems, and web apps. Creator of Eigendrum (159★, award-winning, Zenodo DOI) and LayoutSans (17 kB).">
+    content="I build fast, from-scratch software engines: physics simulators, layout systems, and web apps. Creator of Eigendrum (award-winning, Zenodo DOI) and LayoutSans (17 kB).">
   <meta property="og:url" content="https://baselashraf.com/">
   <meta property="og:image" content="https://baselashraf.com/media/og-cover.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="@BaselAshraf81">
   <meta name="twitter:title" content="Basel Ashraf: Software &amp; Systems Engineer">
   <meta name="twitter:description"
-    content="I build fast, from-scratch software engines: physics simulators, layout systems, and web apps. Creator of Eigendrum (159★, award-winning, Zenodo DOI) and LayoutSans (17 kB).">
+    content="I build fast, from-scratch software engines: physics simulators, layout systems, and web apps. Creator of Eigendrum (award-winning, Zenodo DOI) and LayoutSans (17 kB).">
   <meta name="twitter:image" content="https://baselashraf.com/media/og-cover.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -129,7 +133,7 @@
           "name": "Who is Basel Ashraf?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Basel Ashraf is a software engineer who builds fast from-scratch engines: physics simulators, layout systems, and full-stack web platforms. His work includes Eigendrum (award-winning browser finite-element acoustics simulator with 159 GitHub stars and Zenodo DOI), LayoutSans (17 kB layout engine outrunning Meta's Yoga), and Prolific Tea (review platform with over 100,000 page views)."
+            "text": "Basel Ashraf is a software engineer who builds fast from-scratch engines: physics simulators, layout systems, and full-stack web platforms. His work includes Eigendrum (award-winning browser finite-element acoustics simulator with a Zenodo DOI), LayoutSans (17 kB layout engine outrunning Meta's Yoga), and Prolific Tea (review platform with over 100,000 page views)."
           }
         },
         {
@@ -198,7 +202,7 @@
       </p>
 
       <p class="hero__subpitch">
-        Creator of <span class="lit">Eigendrum</span> (159★, Zenodo DOI, Wikipedia link, Website Design Awards winner), <span class="lit">LayoutSans</span> (17 kB layout engine outperforming Meta's Yoga), and <span class="lit">Prolific Tea</span> (100,000+ page views).
+        Creator of <span class="lit">Eigendrum</span> (Zenodo DOI, Wikipedia link, Website Design Awards winner), <span class="lit">LayoutSans</span> (17 kB layout engine outperforming Meta's Yoga), and <span class="lit">Prolific Tea</span> (100,000+ page views).
       </p>
 
       <div class="hero__actions">
@@ -277,7 +281,7 @@
                 Solves the 2D Dirichlet Laplacian eigenvalue problem on hand-drawn shapes using P1 finite elements in a background Web Worker in about 800 ms. Synthesizes physical acoustic overtones without pre-recorded audio. Verified Kac's isospectral drum theorem to within 1.07&times;10<sup>&minus;7</sup>%.
               </p>
               <div class="project-card__metrics">
-                <span class="metric-pill metric-pill--credibility"><b>159★</b> GitHub</span>
+                <span class="metric-pill metric-pill--credibility"><b data-stars-repo="BaselAshraf81/eigendrum">159★</b> GitHub</span>
                 <span class="metric-pill metric-pill--credibility"><b>DOI</b> Zenodo</span>
                 <span class="metric-pill metric-pill--credibility"><b>Award</b> <a
                     href="https://websitedesignawards.com/site/66fd320f-c593-40c5-9092-c9a90143f1a6" target="_blank"
@@ -460,7 +464,7 @@
                 </p>
                 <div class="system-card__badges">
                   <span class="metric-pill metric-pill--impact"><b>MCP SDK</b> Token Free</span>
-                  <span class="metric-pill metric-pill--credibility"><b>23★</b> GitHub</span>
+                  <span class="metric-pill metric-pill--credibility"><b data-stars-repo="BaselAshraf81/holystitch">23★</b> GitHub</span>
                 </div>
                 <div class="system-card__footer">
                   <span>TypeScript</span>
@@ -553,7 +557,7 @@
                 </p>
                 <div class="system-card__badges">
                   <span class="metric-pill metric-pill--impact"><b>57</b> r/LocalLLM</span>
-                  <span class="metric-pill metric-pill--credibility"><b>12★</b> GitHub</span>
+                  <span class="metric-pill metric-pill--credibility"><b data-stars-repo="BaselAshraf81/vibellm">12★</b> GitHub</span>
                 </div>
                 <div class="system-card__footer">
                   <span>TypeScript</span>
@@ -719,6 +723,7 @@
   </footer>
 
   <script src="caustic.js" defer></script>
+  <script src="stars.js" defer></script>
   <script>
     // Theme toggle
     const toggleBtn = document.getElementById('theme-toggle');

@@ -66,7 +66,7 @@ Verified accuracy against closed-form spectra:
 Includes both Gordon-Webb-Wolpert isospectral drums. Eigendrum reports their 16 lowest
 frequencies agree to within 1.07×10⁻⁷ percent - you can hear a theorem be true.
 
-150 GitHub stars. Featured in 52+ named sources across 8 languages:
+Featured in 52+ named sources across 8 languages:
 - Wikipedia external links (Hearing the shape of a drum)
 - Hacker News front page ×2
 - kottke.org editorial
