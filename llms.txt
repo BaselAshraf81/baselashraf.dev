@@ -15,7 +15,7 @@ Last updated: 2026-08-24
 ## Key Projects & Case Studies
 
 ### Roadwright
-URL: https://baselashraf.com/roadwright/
+URL: https://roadwright.baselashraf.com/
 Case Study: https://baselashraf.com/work/roadwright.html
 Source: https://github.com/BaselAshraf81/roadwright
 
