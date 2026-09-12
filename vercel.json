@@ -15,6 +15,23 @@
       "status": 301,
       "headers": { "Location": "https://roadwright.baselashraf.com/" }
     },
+
+    {
+      "src": "^/$",
+      "has": [{ "type": "host", "value": "winduo.baselashraf.com" }],
+      "dest": "/winduo/"
+    },
+    {
+      "src": "^/(?!winduo/)(.*)$",
+      "has": [{ "type": "host", "value": "winduo.baselashraf.com" }],
+      "dest": "/winduo/$1"
+    },
+    {
+      "src": "^/winduo/?$",
+      "status": 301,
+      "headers": { "Location": "https://winduo.baselashraf.com/" }
+    },
+
     { "handle": "filesystem" }
   ]
 }
