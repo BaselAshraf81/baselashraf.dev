@@ -228,6 +228,13 @@ kbd {
   color: var(--ink);
   font-weight: 600;
   font-variant-numeric: tabular-nums;
+  text-decoration: underline;
+  text-decoration-color: var(--border-hover);
+  text-underline-offset: 0.15em;
+}
+
+.lit:hover {
+  text-decoration-color: currentColor;
 }
 
 .skip {
@@ -559,6 +566,7 @@ kbd {
 
 .project-card__thumb {
   position: relative;
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 10;
   background: #000;
@@ -572,6 +580,11 @@ kbd {
   object-fit: cover;
   object-position: top center;
   display: block;
+  transition: transform 0.3s var(--ease);
+}
+
+.project-card__thumb:hover img {
+  transform: scale(1.03);
 }
 
 .project-card__content {
