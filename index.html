@@ -98,6 +98,18 @@
     },
     {
       "@type": "SoftwareApplication",
+      "@id": "https://baselashraf.com/#winduo",
+      "name": "WinDuo",
+      "url": "https://winduo.baselashraf.com/",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Windows 10 version 2004 or later, Windows 11",
+      "description": "Brings Apple's iPhone Duo fold effect to Windows laptops by measuring lid rotation from the webcam instead of a hinge angle sensor, which Windows laptops don't have.",
+      "author": { "@id": "https://baselashraf.com/#person" },
+      "codeRepository": "https://github.com/BaselAshraf81/winduo",
+      "license": "https://polyformproject.org/licenses/noncommercial/1.0.0"
+    },
+    {
+      "@type": "SoftwareApplication",
       "@id": "https://baselashraf.com/#eigendrum",
       "name": "Eigendrum",
       "url": "https://eigendrum.com/",
@@ -240,7 +252,35 @@
 
         <div class="project-grid">
 
-          <!-- Card 0: Roadwright -->
+          <!-- Card 0: WinDuo -->
+          <article class="project-card">
+            <div class="project-card__thumb">
+              <img src="media/winduo-hero.jpg" width="1080" height="1920" loading="lazy" decoding="async"
+                   alt="A laptop screen leaning back on its hinge, blurred and dimmed toward the top edge, the WinDuo fold effect mid-close.">
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title"><a href="work/winduo.html">WinDuo</a></h3>
+              <div class="project-card__tagline">The iPhone Duo fold effect on Windows, with no hinge sensor</div>
+              <p class="project-card__desc">
+                Mac Duo ported Apple's iPhone Duo fold effect to MacBooks by reading their lid angle sensor. Windows laptops don't have one, so WinDuo measures the lid's rotation from the webcam instead, using phase correlation on the vertical image shift a closing lid produces. Free for personal use, verified by 118 tests.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag-item">Python</span>
+                <span class="tag-item">PyQt6</span>
+                <span class="tag-item">OpenCV</span>
+                <span class="tag-item">GLSL</span>
+              </div>
+              <div class="project-card__footer">
+                <div class="project-card__links">
+                  <a class="card-link" href="https://winduo.baselashraf.com/" target="_blank" rel="noopener">Live Site &nearr;</a>
+                  <a class="card-link" href="https://github.com/BaselAshraf81/winduo" target="_blank" rel="noopener">Source &nearr;</a>
+                </div>
+                <a class="card-link card-link--case" href="work/winduo.html">Case Study &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 1: Roadwright -->
           <article class="project-card">
             <div class="project-card__thumb">
               <img src="media/roadwright-hero.webp" width="1400" height="875" loading="lazy" decoding="async"

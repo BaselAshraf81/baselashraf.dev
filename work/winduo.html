@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GM71X3G33E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-GM71X3G33E');
+  </script>
+  <title>WinDuo: The iPhone Duo Fold Effect, Without a Hinge Sensor</title>
+  <meta name="description"
+    content="Case study of WinDuo: bringing Mac Duo's lid-close fold effect to Windows laptops with no angle sensor, by measuring lid rotation from the webcam. 118 tests, PolyForm Noncommercial license.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23111827'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' font-weight='700' fill='%23f9f8f5' text-anchor='middle'%3EBA%3C/text%3E%3C/svg%3E">
+  <link rel="canonical" href="https://baselashraf.com/work/winduo.html">
+  <meta name="theme-color" content="#f9f8f5">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="WinDuo: The iPhone Duo Fold Effect, Without a Hinge Sensor">
+  <meta property="og:description"
+    content="Case study of WinDuo: bringing Mac Duo's lid-close fold effect to Windows laptops with no angle sensor, by measuring lid rotation from the webcam.">
+  <meta property="og:url" content="https://baselashraf.com/work/winduo.html">
+  <meta property="og:image" content="https://baselashraf.com/media/winduo-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://baselashraf.com/media/winduo-og.png">
+  <meta name="twitter:creator" content="@BaselAshraf81">
+  <meta name="twitter:title" content="WinDuo: The iPhone Duo Fold Effect, Without a Hinge Sensor">
+  <meta name="twitter:description"
+    content="Case study of WinDuo: bringing Mac Duo's lid-close fold effect to Windows laptops with no angle sensor, by measuring lid rotation from the webcam.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://baselashraf.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "WinDuo Case Study",
+          "item": "https://baselashraf.com/work/winduo.html"
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://baselashraf.com/#winduo",
+      "name": "WinDuo",
+      "url": "https://winduo.baselashraf.com/",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Windows 10 version 2004 or later, Windows 11",
+      "codeRepository": "https://github.com/BaselAshraf81/winduo",
+      "license": "https://polyformproject.org/licenses/noncommercial/1.0.0",
+      "isBasedOn": "https://github.com/sumimakito/Mac-Duo",
+      "author": { "@type": "Person", "name": "Basel Ashraf", "url": "https://baselashraf.com/" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header__inner">
+      <a class="header__brand" href="../">Basel Ashraf</a>
+
+      <nav class="header__nav" aria-label="Main Navigation">
+        <a class="nav__link" href="../#work">Work</a>
+        <a class="nav__link" href="../#systems">Systems</a>
+        <a class="nav__link" href="../#about">Background</a>
+        <a class="nav__link" href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="nav__link nav__link--cta" href="mailto:hello@baselashraf.com">Get in touch</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <span id="theme-text">Dark</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="case-study">
+    <div class="shell">
+      <a class="case-study__back" href="../#work">
+        &larr; Back to Work
+      </a>
+
+      <header class="case-study__header">
+        <h1 class="case-study__title">WinDuo</h1>
+        <div class="case-study__subtitle">The iPhone Duo Fold Effect on Windows, With No Hinge Sensor</div>
+
+        <div class="case-study__facts">
+          <div class="fact-item">
+            <dt>Role &amp; Team</dt>
+            <dd>Creator &amp; Sole Author</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Timeline</dt>
+            <dd>Sep 2026</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Stack</dt>
+            <dd>Python, PyQt6, OpenCV, GLSL</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Verification</dt>
+            <dd>118 tests, no camera or lid required</dd>
+          </div>
+        </div>
+      </header>
+
+      <div class="case-study__layout">
+        <article class="case-study__main">
+
+          <section>
+            <h2 class="h3">Overview</h2>
+            <p>
+              Apple's iPhone Duo blurs and dims its screen as it folds shut, tracking the hinge the whole way down. <a href="https://github.com/sumimakito/Mac-Duo">Mac Duo</a> ported that effect to MacBooks days later, reading the lid angle sensor Apple has shipped since the 2019 16-inch MacBook Pro. Almost no other laptop has that sensor, including every Windows machine. <strong>WinDuo</strong> is the same effect for those, measuring the lid's rotation from the webcam instead of a sensor that doesn't exist.
+            </p>
+            <p>
+              It ships as a single 84&nbsp;MB executable with a tray icon, or as a Python package for anyone who wants to run it from source. Both are free for personal use under a license I wrote to require that: <a href="https://polyformproject.org/licenses/noncommercial/1.0.0">PolyForm Noncommercial 1.0.0</a>.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="h3">Measuring a Hinge With No Sensor</h2>
+            <p>
+              A laptop's hinge is a single axis, and the webcam sits on the far side of it. Rotating the lid rotates the camera by the same amount around that axis, with no panning and no roll. Pitch alone slides the whole camera image vertically, at roughly 15 pixels per degree, so the entire measurement reduces to one number per frame: how far the image moved since the last one.
+            </p>
+            <p>
+              WinDuo finds that shift with phase correlation on a pair of downscaled grayscale frames, in under a millisecond. Adding per-frame shifts across a whole lid movement would drift, so nothing tries to track an absolute angle. Whenever the lid holds still for a moment, that position becomes the new zero, and the fold effect runs on movement away from it. That also means the effect works with the laptop flat on a desk, on a lap, or tilted at any angle, and it removes the timeout setting Mac Duo needs to end the effect when the lid stops partway: here a stopped lid just becomes the new rest, so the effect eases back to flat on its own.
+            </p>
+            <p>
+              Converting pixels to degrees needs one known angle, which a camera alone can't supply. A twenty-second calibration wizard asks for it once: drag a silhouette to match the normal viewing position, repeat roughly halfway closed, then close the lid the rest of the way. Windows' own lid switch gives a free, exact zero at that last step.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="h3">Rendering the Fold</h2>
+            <p>
+              The visual effect runs as a GLSL shader over a transparent, click-through overlay window: perspective warp as the screen leans back, a blur that grows toward the far edge, and dimming from the hinge upward. The overlay has to stay out of its own screen capture, which surfaces a real Windows quirk: DXGI Desktop Duplication, the API used to grab the screen content the overlay warps, will happily capture the overlay window itself under independent flip presentation, producing a black frame that is the overlay capturing its own black background. Excluding the overlay from capture explicitly fixes it.
+            </p>
+            <p>
+              A second capture bug showed up only during calibration: the wizard forced a 1/128s exposure to keep motion blur out of the angle estimate, which on some webcams under normal indoor light produced frames that were black rather than merely dark. Exposure is now adaptive instead of fixed.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="h3">What It Won't Do</h2>
+            <p>
+              The camera indicator light stays on the whole time WinDuo runs, because it has to be watching before the lid starts moving; each frame is compared against the last and discarded, and nothing is recorded or leaves the machine. Another app taking the camera, a video call, will stop WinDuo from reading the lid, and it says so in the tray rather than failing silently. Picking the whole laptop up can trigger the effect too, since rotating the machine looks like closing the lid to anything measuring the frame as a whole; a dark room costs accuracy the same way, since the short exposure needed to avoid motion blur is a noisier image with less light behind it.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="h3">Attribution and Verification</h2>
+            <p>
+              Mac Duo is Apache 2.0 licensed, and its geometry, shader, and effect state machine are ported here rather than reinvented; the required attribution is preserved in the repo's NOTICE file, and Apache 2.0's own terms permit relicensing a derivative under different terms as long as that notice stays intact. The webcam angle estimator is the new part, since the sensor Mac Duo reads is exactly what's missing on Windows.
+            </p>
+            <p>
+              118 tests run in CI and need no camera, screen, or physical lid, covering the angle estimator, the effect state machine, and the calibration math directly. The GitHub Actions release build had to be trimmed down separately: an early build pulled in all of PyQt6 and OpenCV's unused video codecs and came out at 151&nbsp;MB; scoping the PyInstaller collection to only the Qt modules actually imported, and dropping OpenCV's ffmpeg decoder before packaging, brought the release executable to 83.7&nbsp;MB.
+            </p>
+          </section>
+
+        </article>
+
+        <aside class="case-sidebar">
+          <div class="sidebar-block">
+            <h3 class="sidebar-block__title">Links</h3>
+            <ul class="sidebar-list">
+              <li><a href="https://winduo.baselashraf.com/" target="_blank" rel="noopener">Live site &nearr;</a></li>
+              <li><a href="https://github.com/BaselAshraf81/winduo" target="_blank" rel="noopener">Source &nearr;</a></li>
+              <li><a href="https://github.com/BaselAshraf81/winduo/releases/latest" target="_blank" rel="noopener">Download &nearr;</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-block">
+            <h3 class="sidebar-block__title">Measured</h3>
+            <ul class="sidebar-list">
+              <li>118 tests, no hardware required to run them</li>
+              <li>~15 px of image shift per degree of lid travel</li>
+              <li>Phase correlation resolves it in &lt;1 ms</li>
+              <li>Release executable: 151 MB &rarr; 83.7 MB</li>
+            </ul>
+          </div>
+
+          <div class="sidebar-block">
+            <h3 class="sidebar-block__title">Prior Art</h3>
+            <ul class="sidebar-list">
+              <li>Apple, iPhone Duo fold transition</li>
+              <li>Makito, <a href="https://github.com/sumimakito/Mac-Duo" target="_blank" rel="noopener">Mac Duo</a>, MacBook lid sensor port</li>
+              <li>WinDuo: same effect, camera instead of a sensor</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const label = document.getElementById('theme-text');
+    const sync = () => {
+      const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (label) label.textContent = dark ? 'Light' : 'Dark';
+    };
+    sync();
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+        document.documentElement.setAttribute('data-theme', dark ? 'light' : 'dark');
+        localStorage.setItem('theme', dark ? 'light' : 'dark');
+        sync();
+      });
+    }
+  </script>
+</body>
+</html>
