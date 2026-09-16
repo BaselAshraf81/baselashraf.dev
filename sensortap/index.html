@@ -13,12 +13,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Basel Ashraf">
 <meta property="og:title" content="sensortap: every sensor your computer has, one command">
-<meta property="og:description" content="pip install sensortap && sensortap list prints every sensor a machine has. Verified live: 86 sensors, 16 kinds, 74 present, on one ordinary laptop.">
+<meta property="og:description" content="pip install sensortap && sensortap list prints every sensor a machine has. Verified live: 91 sensors, 16 kinds, 79 present, on one ordinary laptop.">
 <meta property="og:url" content="https://baselashraf.com/sensortap/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@BaselAshraf81">
 <meta name="twitter:title" content="sensortap: every sensor your computer has, one command">
-<meta name="twitter:description" content="Verified live: 86 sensors, 16 kinds, 74 present, on one ordinary laptop.">
+<meta name="twitter:description" content="Verified live: 91 sensors, 16 kinds, 79 present, on one ordinary laptop.">
 
 <script type="application/ld+json">
 {
@@ -181,14 +181,14 @@
         on a Dell G3 3779, re-verified before publish. Every figure and row
         below is the actual CLI's output, not a mockup.
       -->
-      <figure class="data-page" aria-label="Summary of sensortap list output: 86 sensors found across 16 kinds, 74 present and 12 absent, all 10 backends loaded.">
+      <figure class="data-page" aria-label="Summary of sensortap list output: 91 sensors found across 16 kinds, 79 present and 12 absent, all 10 backends loaded.">
         <div class="data-page__head">
           <span class="data-page__head-left">PAGE 302/1</span>
           <span class="data-page__head-right">sensortap list</span>
         </div>
         <div class="data-page__figures">
           <div class="figure">
-            <span class="figure__value">86</span>
+            <span class="figure__value">91</span>
             <span class="figure__label">SENSORS</span>
           </div>
           <div class="figure">
@@ -206,14 +206,15 @@
           <div class="dp-row"><span class="dp-row__id">load.hwmon.037e93...</span><span class="dp-row__kind">load</span><span class="dp-row__unit">%</span><span class="dp-row__status--present">present</span></div>
           <div class="dp-row"><span class="dp-row__id">clock.hwmon.08ba84...</span><span class="dp-row__kind">clock</span><span class="dp-row__unit">MHz</span><span class="dp-row__status--present">present</span></div>
           <div class="dp-row"><span class="dp-row__id">voltage.hwmon.2da99...</span><span class="dp-row__kind">voltage</span><span class="dp-row__unit">V</span><span class="dp-row__status--present">present</span></div>
+          <div class="dp-row"><span class="dp-row__id">power.hwmon.72bbfc...</span><span class="dp-row__kind">power</span><span class="dp-row__unit">W</span><span class="dp-row__status--present">present</span></div>
           <div class="dp-row"><span class="dp-row__id">microphone.reference.0</span><span class="dp-row__kind">microphone</span><span class="dp-row__unit"></span><span class="dp-row__status--present">present</span></div>
           <div class="dp-row"><span class="dp-row__id">radio-signal.win-radio.0</span><span class="dp-row__kind">radio-signal</span><span class="dp-row__unit">%</span><span class="dp-row__status--present">present</span></div>
           <div class="dp-row"><span class="dp-row__id">accel.winrt.0</span><span class="dp-row__kind">accel</span><span class="dp-row__unit">m/s2</span><span class="dp-row__status--absent">absent</span></div>
           <div class="dp-row"><span class="dp-row__id">hinge-angle.winrt.0</span><span class="dp-row__kind">hinge-angle</span><span class="dp-row__unit">deg</span><span class="dp-row__status--absent">absent</span></div>
-          <div class="dp-more">... 77 more rows</div>
+          <div class="dp-more">... 81 more rows</div>
         </div>
         <div class="data-page__foot">
-          total sensors: <strong>86</strong>  kinds: <strong>16</strong>  present: <strong>74</strong>  absent: <strong>12</strong>  backends: <strong>10/10</strong>
+          total sensors: <strong>91</strong>  kinds: <strong>16</strong>  present: <strong>79</strong>  absent: <strong>12</strong>  backends: <strong>10/10</strong>
         </div>
       </figure>
     </div>
@@ -233,7 +234,7 @@
         <span></span><span></span><span></span><span></span><span></span>
       </div>
       <p class="statement">
-        86 sensors. 16 kinds. 74 present, 12 absent. 10 of 10 backends loaded, zero failing.
+        91 sensors. 16 kinds. 79 present, 12 absent. 10 of 10 backends loaded, zero failing.
         That is the actual output of running the CLI on an ordinary laptop, a Dell G3 3779,
         re-run right before this page was published.
       </p>
@@ -242,9 +243,9 @@
         Bluetooth radios. The other half is the part most owners have never seen surfaced
         anywhere on this exact machine: a hinge&#8209;angle sensor, an inclinometer,
         per&#8209;core CPU load for all eight logical cores, live die temperatures, individual
-        power rail voltages, and clock speeds. Sixty&#8209;five of the eighty&#8209;six rows
-        this machine can report arrive once sensortap's bundled Windows helper is running,
-        through the same <code>sensortap list</code> call, no extra code.
+        power rail voltages, package power draw in watts, and clock speeds. Seventy of the
+        ninety&#8209;one rows this machine can report arrive once sensortap's bundled Windows
+        helper is running, through the same <code>sensortap list</code> call, no extra code.
       </p>
       <p class="stamp">captured 2026-09-16, re-run before publish</p>
     </div>
@@ -278,7 +279,7 @@
       <dl class="kv">
         <div class="kv-row">
           <dt>hwmon_bridge</dt>
-          <dd>CPU/GPU/board temperature, fan, voltage, current, power, clock, load, via the bundled .NET helper. 65 sensors on this machine.</dd>
+          <dd>CPU/GPU/board temperature, fan, voltage, current, power, clock, load, via the bundled .NET helper. 70 sensors on this machine.</dd>
         </div>
         <div class="kv-row">
           <dt>winrt_motion / winrt_orientation</dt>
@@ -417,6 +418,30 @@ reading = sensortap.read(<span class="str">"accel.winrt.0"</span>)
         </li>
         <li class="step">
           <span class="step__key">KEY 3</span>
+          <h3>Go deeper into the board</h3>
+          <p>
+            Board temperatures, fan tachometers and extra voltage rails live behind
+            motherboard, Super&#8209;IO and embedded&#8209;controller access, which is off by
+            default:
+          </p>
+          <div class="code-block-wrap">
+            <pre class="code-block" id="cmd-mb"><code><span class="prompt">$</span> sensortap list --include-motherboard</code></pre>
+            <button class="copy-btn" type="button" data-copy-target="cmd-mb">Copy</button>
+          </div>
+          <p>
+            It's opt&#8209;in because that path can collide with a vendor tool or another
+            monitoring app already holding the same EC registers, and an unrecognised
+            Super&#8209;IO chip can hand back plausible&#8209;looking nonsense instead of an
+            obvious failure. sensortap still never installs or starts a kernel driver, so on a
+            machine with no Ring&nbsp;0 driver present and no recognised Super&#8209;IO chip
+            this flag safely finds nothing extra, which is exactly what happens on the G3 3779
+            above. A desktop board with a standard Nuvoton or ITE chip usually has more to
+            give. Sensors that appear only under this flag carry <code>hwmon-mb</code> in their
+            id rather than <code>hwmon</code>.
+          </p>
+        </li>
+        <li class="step">
+          <span class="step__key">KEY 4</span>
           <h3>Contribute a sensor</h3>
           <p>
             One sensor family is one adapter file, registered through a standard Python entry
@@ -474,7 +499,7 @@ reading = sensortap.read(<span class="str">"accel.winrt.0"</span>)
           </dd>
         </div>
         <div class="kv-row">
-          <dt>193 tests</dt>
+          <dt>197 tests</dt>
           <dd>None require physical sensor hardware in the default run.</dd>
         </div>
       </dl>
