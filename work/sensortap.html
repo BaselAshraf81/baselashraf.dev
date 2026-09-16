@@ -21,7 +21,7 @@
   </script>
   <title>sensortap: One Registry, Every Sensor a Computer Has</title>
   <meta name="description"
-    content="Case study of sensortap: a Python framework discovering every sensor a computer has through one unified API, verified at 86 sensors across 16 kinds on real hardware. 190 tests, MIT license.">
+    content="Case study of sensortap: a Python framework discovering every sensor a computer has through one unified API, verified at 86 sensors across 16 kinds on real hardware. 193 tests, MIT license.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23111827'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' font-weight='700' fill='%23f9f8f5' text-anchor='middle'%3EBA%3C/text%3E%3C/svg%3E">
   <link rel="canonical" href="https://baselashraf.com/work/sensortap.html">
   <meta name="theme-color" content="#f9f8f5">
@@ -121,7 +121,7 @@
           </div>
           <div class="fact-item">
             <dt>Verification</dt>
-            <dd>190 tests, 86 sensors confirmed live</dd>
+            <dd>193 tests, 86 sensors confirmed live</dd>
           </div>
         </div>
       </header>
@@ -132,7 +132,7 @@
           <section>
             <h2 class="h3">Overview</h2>
             <p>
-              A camera, a microphone, an accelerometer, a battery, a hinge&#8209;angle sensor, per&#8209;core CPU load: every one of them lives behind a different API, on a different platform, in a different SDK. <strong>sensortap</strong> discovers whatever a computer actually has and reads every one of them through the same schema. Not a finished sensor app: it's the layer under one, the piece that made my earlier project, <a href="winduo.html">WinDuo</a>, and Mac&nbsp;Duo before it, a fresh reverse-engineering job per platform.
+              A camera, a microphone, an accelerometer, a battery, a hinge&#8209;angle sensor, per&#8209;core CPU load: every one of them lives behind a different API, on a different platform, in a different SDK. <strong>sensortap</strong> discovers whatever a computer actually has and reads every one of them through the same schema. It's the layer that would have turned my earlier project, <a href="winduo.html">WinDuo</a>, and Mac&nbsp;Duo before it, from a fresh reverse-engineering job per platform into a couple of adapter files.
             </p>
             <p>
               Run <code>sensortap list</code> on my own laptop, a Dell G3 3779, and it reports 86 sensors across 16 kinds through 10 loaded backends, zero failing. Free and open source under MIT.
@@ -142,7 +142,7 @@
           <section>
             <h2 class="h3">One Registry, Adapters That Don't Know About Each Other</h2>
             <p>
-              A camera adapter talks to WinRT's `MediaCapture`. The hardware-telemetry adapter spawns a bundled .NET helper and reads LibreHardwareMonitor over a local named pipe with a per-user security descriptor. Neither shares a line of code with the other, and the registry never needs them to: each sensor family is one adapter, one file, registered through a normal Python entry point. The registry's job is narrow, load every adapter it finds, run discovery concurrently under one shared timeout so a slow backend can't stall the rest, de-duplicate and validate what comes back, and hand the caller one flat, typed list.
+              A camera adapter talks to WinRT's `MediaCapture`. The hardware-telemetry adapter spawns a bundled .NET helper and reads LibreHardwareMonitor over a local named pipe with a per-user security descriptor. Neither shares a line of code with the other, and the registry never needs them to: each sensor family is one adapter, one file, registered through a normal Python entry point. The registry's job is narrow: load every adapter it finds, run discovery concurrently under one shared timeout so a slow backend can't stall the rest, de-duplicate and validate what comes back, and hand the caller one flat, typed list.
             </p>
             <p>
               Every sensor, regardless of source, reports the same shape: a stable id, a closed-vocabulary <code>kind</code>, a unit, a sampling rate, and whether it's currently reachable. A contributor adding a new sensor family runs a Conformance_Check shipped inside the package itself, checkable against their own adapter with no access to sensortap's own repository.
@@ -166,7 +166,7 @@
           <section>
             <h2 class="h3">What's Real, What's Not Built Yet</h2>
             <p>
-              Nine Windows adapters ship today, all run against real hardware rather than mocked: WinRT motion, orientation, light, camera, and microphone; battery; Wi&#8209;Fi and Bluetooth; touchpad; and the .NET helper bridge. Linux is designed into the architecture, nothing in the registry or the adapter interface is Windows-specific, but no Linux backend exists yet; it's the clearest open contribution. The hardware-telemetry helper is an optional, disclosed extra rather than bundled into the base install, so <code>pip install sensortap</code> alone stays small.
+              Nine Windows adapters ship today, all run against real hardware rather than mocked: WinRT motion, orientation, light, camera, and microphone; battery; Wi&#8209;Fi and Bluetooth; touchpad; and the .NET helper bridge. Linux is designed into the architecture; nothing in the registry or the adapter interface is Windows-specific. No Linux backend exists yet, and it's the clearest open contribution. The hardware-telemetry helper is an optional, disclosed extra rather than bundled into the base install, so <code>pip install sensortap</code> alone stays small.
             </p>
           </section>
 
@@ -186,7 +186,7 @@
             <ul class="sidebar-list">
               <li>86 sensors, 16 kinds, verified live</li>
               <li>10 of 10 backends loaded, 0 failing</li>
-              <li>190 tests, none needing physical hardware</li>
+              <li>193 tests, none needing physical hardware</li>
               <li>9 Windows adapters, all real hardware</li>
             </ul>
           </div>
