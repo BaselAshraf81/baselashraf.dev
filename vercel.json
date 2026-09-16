@@ -1,21 +1,23 @@
 {
   "routes": [
     {
-      "src": "^/$",
+      "src": "^/(.*)$",
       "has": [{ "type": "host", "value": "roadwright.baselashraf.com" }],
-      "dest": "/roadwright/"
-    },
-    {
-      "src": "^/(?!roadwright/)(.*)$",
-      "has": [{ "type": "host", "value": "roadwright.baselashraf.com" }],
-      "dest": "/roadwright/$1"
-    },
-    {
-      "src": "^/roadwright/?$",
       "status": 301,
-      "headers": { "Location": "https://roadwright.baselashraf.com/" }
+      "headers": { "Location": "https://baselashraf.com/roadwright/$1" }
     },
-
+    {
+      "src": "^/(.*)$",
+      "has": [{ "type": "host", "value": "winduo.baselashraf.com" }],
+      "status": 301,
+      "headers": { "Location": "https://baselashraf.com/winduo/$1" }
+    },
+    {
+      "src": "^/(.*)$",
+      "has": [{ "type": "host", "value": "sensortap.baselashraf.com" }],
+      "status": 301,
+      "headers": { "Location": "https://baselashraf.com/sensortap/$1" }
+    },
     { "handle": "filesystem" }
   ]
 }

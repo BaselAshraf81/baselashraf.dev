@@ -10,12 +10,51 @@ ORCID: https://orcid.org/0009-0009-3441-6196
 Resume (PDF): https://baselashraf.com/resume.pdf
 Resume (Text): https://baselashraf.com/resume.txt
 Contact: hello@baselashraf.com
-Last updated: 2026-08-24
+Last updated: 2026-09-16
 
 ## Key Projects & Case Studies
 
+### sensortap
+URL: https://baselashraf.com/sensortap/
+Case Study: https://baselashraf.com/work/sensortap.html
+Source: https://github.com/BaselAshraf81/sensortap
+
+A Python framework that discovers every sensor a computer has, camera, microphone, motion,
+battery, radios, and Windows hardware telemetry, and reads all of them through one schema.
+One adapter per sensor family, none aware of the others; the registry loads whatever it finds,
+runs discovery concurrently under a shared timeout, and hands back one flat, typed list.
+
+Verified live on a Dell G3 3779 by running the actual CLI:
+- 86 sensors discovered across 16 kinds
+- 10 of 10 backends loaded, 0 failing
+- 193 tests, none requiring physical sensor hardware in the default run
+
+Enumerating sensors never opens a device or triggers an OS permission prompt, even for a
+camera. Reading or streaming a camera, microphone, or touchpad capacitive-image sensor
+requires explicit consent for that exact sensor id first.
+
+Windows today, nine adapters shipped, all against real hardware. Linux is designed into the
+architecture but not yet built; it is the clearest open contribution.
+
+Free and open source, MIT licence.
+
+### WinDuo
+URL: https://baselashraf.com/winduo/
+Case Study: https://baselashraf.com/work/winduo.html
+Source: https://github.com/BaselAshraf81/winduo
+
+Brings the iPhone Duo fold transition to Windows laptops: the screen tilts, blurs, and dims
+as the lid closes, the way Mac Duo does it on MacBooks using their lid angle sensor. Windows
+laptops mostly have no such sensor, so WinDuo recovers the lid angle from the webcam instead,
+using phase correlation on the vertical image shift a closing lid produces (roughly fifteen
+pixels per degree). Each frame is compared against the one before it and discarded; nothing
+is recorded and nothing leaves the machine.
+
+Verified by 118 tests. Windows 10 version 2004 or later, and Windows 11. Free for personal use
+under PolyForm Noncommercial.
+
 ### Roadwright
-URL: https://roadwright.baselashraf.com/
+URL: https://baselashraf.com/roadwright/
 Case Study: https://baselashraf.com/work/roadwright.html
 Source: https://github.com/BaselAshraf81/roadwright
 

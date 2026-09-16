@@ -7,3 +7,5 @@ shots/
 # first commit -- untrack it before the next one:
 #   git rm -r --cached .kiro shots
 .kiro/
+.vercel
+.env*
