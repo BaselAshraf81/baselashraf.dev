@@ -109,3 +109,66 @@ Things deliberately not done: no scroll-jacking, no reveal-on-scroll animations,
 no cursor followers, no counters that tick up, no testimonials, no logo wall, no
 "let's build something together". The page has one moving element, and it is the
 one that is also a portfolio piece.
+
+## sensortap (/sensortap/)
+
+A separate visual world from the homepage above, scoped to this one surface.
+Direction: broadcast teletext service, dealt as challenger 6 against assigned
+index 5 in a direction round (seed key a9520e18), fused with the product and
+raised with exactness-under-verification as the discipline the source lacked
+on its own.
+
+### Why teletext, not a terminal
+
+sensortap's own claim is "this framework can tell you something true and
+verified about your exact machine." The previous build expressed that as a
+near-black ground, an amber accent, a monospace panel, and a blinking cursor,
+the exact cluster the AI-slop calibration check in this skill's own
+craft-floor.md names as one of three ruts every unsteered model run lands in.
+It looked like every other AI-built developer tool, not like sensortap.
+
+A broadcast teletext service is the real prior art for "one command retrieves
+live data, keyed and held on screen": a viewer keyed a three-digit page and
+got real numbers, not a decorative readout. That's a closer analogue to
+`sensortap list` than a hacker terminal ever was, and it comes from broadcast
+engineering rather than software's own stock imagery.
+
+### Palette
+
+The fixed eight-colour broadcast teletext set, not a designer's palette:
+flat black ground, white body text, yellow for headers and the primary
+action, cyan reserved for every live measured figure, green for a present
+sensor, red reserved for exactly one state: a sensor a visitor has revealed
+and found absent. Blue is the one addition, used only for `kind` labels in
+the data rows, since the broadcast eight has no room for a second data
+colour and the real CLI output needs one.
+
+No gradients, no blur, no glow, no rounded corners. Every border is a flat
+2px rule, the material a CRT actually drew.
+
+### Type
+
+One face, IBM Plex Mono, chosen for the same reason teletext committed to a
+fixed character grid: this page's whole argument is measured data, and a
+monospace face here is doing its real job (aligning sensor ids, units, and
+figures in columns), not wearing "technical" as a costume the way the
+previous build's terminal panel did.
+
+### The data
+
+Every number is the real, current output of `sensortap list --include-elevated`
+on the author's own Dell G3 3779, captured 2026-09-16 and re-verified before
+publish: 86 sensors, 16 kinds, 74 present, 12 absent, 10 of 10 backends
+loaded. The hero's data page renders that exact summary line. The absent
+count gets its own page (104) with a `<details>` reveal per sensor, styled
+as a teletext REVEAL affordance, naming the real reason each one reports
+absent rather than hiding the gap or guessing at a number.
+
+### What was refused
+
+No cards-of-icon-plus-heading, no kicker above the h1 (the wordmark carries
+its own weight), no hero-metric-then-supporting-stats template, no section
+numerals used decoratively (the "101", "102" page numbers here are teletext
+addresses a visitor could key, not a fake sequence). No scroll-triggered
+reveals; the only interactive element is the REVEAL `<details>` list, which
+needed no JavaScript to build.
