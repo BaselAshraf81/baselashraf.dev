@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GM71X3G33E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-GM71X3G33E');
+  </script>
+  <title>sensortap: One Registry, Every Sensor a Computer Has</title>
+  <meta name="description"
+    content="Case study of sensortap: a Python framework discovering every sensor a computer has through one unified API, verified at 86 sensors across 16 kinds on real hardware. 190 tests, MIT license.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23111827'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' font-weight='700' fill='%23f9f8f5' text-anchor='middle'%3EBA%3C/text%3E%3C/svg%3E">
+  <link rel="canonical" href="https://baselashraf.com/work/sensortap.html">
+  <meta name="theme-color" content="#f9f8f5">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="sensortap: One Registry, Every Sensor a Computer Has">
+  <meta property="og:description"
+    content="Case study of sensortap: a Python framework discovering every sensor a computer has through one unified API, verified at 86 sensors across 16 kinds on real hardware.">
+  <meta property="og:url" content="https://baselashraf.com/work/sensortap.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@BaselAshraf81">
+  <meta name="twitter:title" content="sensortap: One Registry, Every Sensor a Computer Has">
+  <meta name="twitter:description"
+    content="A Python framework discovering every sensor a computer has through one unified API, verified at 86 sensors across 16 kinds on real hardware.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="../styles.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://baselashraf.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "sensortap Case Study",
+          "item": "https://baselashraf.com/work/sensortap.html"
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://baselashraf.com/#sensortap",
+      "name": "sensortap",
+      "url": "https://sensortap.baselashraf.com/",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Windows (Linux planned)",
+      "codeRepository": "https://github.com/BaselAshraf81/sensortap",
+      "license": "https://opensource.org/licenses/MIT",
+      "author": { "@type": "Person", "name": "Basel Ashraf", "url": "https://baselashraf.com/" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header__inner">
+      <a class="header__brand" href="../">Basel Ashraf</a>
+
+      <nav class="header__nav" aria-label="Main Navigation">
+        <a class="nav__link" href="../#work">Work</a>
+        <a class="nav__link" href="../#systems">Systems</a>
+        <a class="nav__link" href="../#about">Background</a>
+        <a class="nav__link" href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="nav__link nav__link--cta" href="mailto:hello@baselashraf.com">Get in touch</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <span id="theme-text">Dark</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="case-study">
+    <div class="shell">
+      <a class="case-study__back" href="../#work">
+        &larr; Back to Work
+      </a>
+
+      <header class="case-study__header">
+        <h1 class="case-study__title">sensortap</h1>
+        <div class="case-study__subtitle">One Registry, Every Sensor a Computer Has</div>
+
+        <div class="case-study__facts">
+          <div class="fact-item">
+            <dt>Role &amp; Team</dt>
+            <dd>Creator &amp; Sole Author</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Timeline</dt>
+            <dd>Sep 2026</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Stack</dt>
+            <dd>Python, WinRT, .NET, Named Pipes</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Verification</dt>
+            <dd>190 tests, 86 sensors confirmed live</dd>
+          </div>
+        </div>
+      </header>
+
+      <div class="case-study__layout">
+        <article class="case-study__main">
+
+          <section>
+            <h2 class="h3">Overview</h2>
+            <p>
+              A camera, a microphone, an accelerometer, a battery, a hinge&#8209;angle sensor, per&#8209;core CPU load: every one of them lives behind a different API, on a different platform, in a different SDK. <strong>sensortap</strong> discovers whatever a computer actually has and reads every one of them through the same schema. Not a finished sensor app: it's the layer under one, the piece that made my earlier project, <a href="winduo.html">WinDuo</a>, and Mac&nbsp;Duo before it, a fresh reverse-engineering job per platform.
+            </p>
+            <p>
+              Run <code>sensortap list</code> on my own laptop, a Dell G3 3779, and it reports 86 sensors across 16 kinds through 10 loaded backends, zero failing. Free and open source under MIT.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="h3">One Registry, Adapters That Don't Know About Each Other</h2>
+            <p>
+              A camera adapter talks to WinRT's `MediaCapture`. The hardware-telemetry adapter spawns a bundled .NET helper and reads LibreHardwareMonitor over a local named pipe with a per-user security descriptor. Neither shares a line of code with the other, and the registry never needs them to: each sensor family is one adapter, one file, registered through a normal Python entry point. The registry's job is narrow, load every adapter it finds, run discovery concurrently under one shared timeout so a slow backend can't stall the rest, de-duplicate and validate what comes back, and hand the caller one flat, typed list.
+            </p>
+            <p>
+              Every sensor, regardless of source, reports the same shape: a stable id, a closed-vocabulary <code>kind</code>, a unit, a sampling rate, and whether it's currently reachable. A contributor adding a new sensor family runs a Conformance_Check shipped inside the package itself, checkable against their own adapter with no access to sensortap's own repository.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="h3">A Real Bug the Compile Couldn't Catch</h2>
+            <p>
+              The .NET helper and the Python client authenticate over the pipe with a one-time token: the helper sends <code>HELLO {token}</code> as its first message, and Python rejects anything that doesn't match byte-for-byte. It compiled clean, zero warnings, and still failed every real handshake. .NET's default UTF-8 encoding writes a byte-order mark on a stream's first write, silently prepending three bytes to that exact line. The fix was writing the handshake as raw bytes, bypassing the encoding layer for that one message. Nothing in a static review or a green build would have surfaced it; only running the compiled helper against the real client did.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="h3">Enumeration Never Opens a Device</h2>
+            <p>
+              Listing sensors never turns on the camera light or triggers an OS permission prompt, even for camera and microphone entries. Reading or streaming one of those, or a touchpad's raw capacitive image, requires the caller to name that exact sensor id in a consent grant first. Grants live in memory only, are never written to disk, and end automatically. Motion, battery, radios, and hardware telemetry carry no personal information and need no grant at all.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="h3">What's Real, What's Not Built Yet</h2>
+            <p>
+              Nine Windows adapters ship today, all run against real hardware rather than mocked: WinRT motion, orientation, light, camera, and microphone; battery; Wi&#8209;Fi and Bluetooth; touchpad; and the .NET helper bridge. Linux is designed into the architecture, nothing in the registry or the adapter interface is Windows-specific, but no Linux backend exists yet; it's the clearest open contribution. The hardware-telemetry helper is an optional, disclosed extra rather than bundled into the base install, so <code>pip install sensortap</code> alone stays small.
+            </p>
+          </section>
+
+        </article>
+
+        <aside class="case-sidebar">
+          <div class="sidebar-block">
+            <h3 class="sidebar-block__title">Links</h3>
+            <ul class="sidebar-list">
+              <li><a href="https://sensortap.baselashraf.com/" target="_blank" rel="noopener">Live site &nearr;</a></li>
+              <li><a href="https://github.com/BaselAshraf81/sensortap" target="_blank" rel="noopener">Source &nearr;</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-block">
+            <h3 class="sidebar-block__title">Measured</h3>
+            <ul class="sidebar-list">
+              <li>86 sensors, 16 kinds, verified live</li>
+              <li>10 of 10 backends loaded, 0 failing</li>
+              <li>190 tests, none needing physical hardware</li>
+              <li>9 Windows adapters, all real hardware</li>
+            </ul>
+          </div>
+
+          <div class="sidebar-block">
+            <h3 class="sidebar-block__title">Prior Art</h3>
+            <ul class="sidebar-list">
+              <li>Makito, <a href="https://github.com/sumimakito/Mac-Duo" target="_blank" rel="noopener">Mac Duo</a>, one sensor, one effect</li>
+              <li>Basel Ashraf, <a href="winduo.html">WinDuo</a>, same pattern on Windows</li>
+              <li>sensortap: the layer under both</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const label = document.getElementById('theme-text');
+    const sync = () => {
+      const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (label) label.textContent = dark ? 'Light' : 'Dark';
+    };
+    sync();
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+        document.documentElement.setAttribute('data-theme', dark ? 'light' : 'dark');
+        localStorage.setItem('theme', dark ? 'light' : 'dark');
+        sync();
+      });
+    }
+  </script>
+</body>
+</html>

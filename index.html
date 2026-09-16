@@ -110,6 +110,18 @@
     },
     {
       "@type": "SoftwareApplication",
+      "@id": "https://baselashraf.com/#sensortap",
+      "name": "sensortap",
+      "url": "https://sensortap.baselashraf.com/",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Windows (Linux planned)",
+      "description": "A cross-platform Python framework that discovers every sensor a computer has and exposes raw readings through one unified API, verified at 86 sensors across 16 kinds on real hardware.",
+      "author": { "@id": "https://baselashraf.com/#person" },
+      "codeRepository": "https://github.com/BaselAshraf81/sensortap",
+      "license": "https://opensource.org/licenses/MIT"
+    },
+    {
+      "@type": "SoftwareApplication",
       "@id": "https://baselashraf.com/#eigendrum",
       "name": "Eigendrum",
       "url": "https://eigendrum.com/",
@@ -252,7 +264,37 @@
 
         <div class="project-grid">
 
-          <!-- Card 0: WinDuo -->
+          <!-- Card 0: sensortap -->
+          <article class="project-card">
+            <a class="project-card__thumb project-card__thumb--noimg" href="https://sensortap.baselashraf.com/" target="_blank" rel="noopener" aria-label="sensortap live site">
+              <pre class="thumb-term" aria-hidden="true">$ sensortap list
+total sensors: 86
+kinds: 16
+backends: 10/10</pre>
+            </a>
+            <div class="project-card__content">
+              <h3 class="project-card__title"><a href="work/sensortap.html">sensortap</a></h3>
+              <div class="project-card__tagline">One registry, every sensor a computer has, one API</div>
+              <p class="project-card__desc">
+                Discovers every sensor a machine can reach, camera, microphone, motion, battery, radios, and Windows hardware telemetry, and reads all of them through one schema. One adapter per sensor family, none aware of the others, verified live at 86 sensors across 16 kinds on one ordinary laptop.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag-item">Python</span>
+                <span class="tag-item">WinRT</span>
+                <span class="tag-item">.NET</span>
+                <span class="tag-item">Named Pipes</span>
+              </div>
+              <div class="project-card__footer">
+                <div class="project-card__links">
+                  <a class="card-link" href="https://sensortap.baselashraf.com/" target="_blank" rel="noopener">Live Site &nearr;</a>
+                  <a class="card-link" href="https://github.com/BaselAshraf81/sensortap" target="_blank" rel="noopener">Source &nearr;</a>
+                </div>
+                <a class="card-link card-link--case" href="work/sensortap.html">Case Study &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 1: WinDuo -->
           <article class="project-card">
             <a class="project-card__thumb" href="https://winduo.baselashraf.com/" target="_blank" rel="noopener">
               <img src="media/winduo-hero.jpg" width="1080" height="1920" loading="lazy" decoding="async"

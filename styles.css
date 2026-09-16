@@ -587,6 +587,27 @@ kbd {
   transform: scale(1.03);
 }
 
+/* sensortap has no photographed hero, just a terminal transcript rendered
+   in the site's own mono face against the instrument-dark ground its own
+   subdomain uses, so the thumbnail slot doesn't sit on a plain black rect. */
+.project-card__thumb--noimg {
+  background: #0a0d0f;
+  display: flex;
+  align-items: center;
+  padding: var(--s3);
+}
+
+.thumb-term {
+  margin: 0;
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: #9aa5ab;
+  white-space: pre;
+}
+.thumb-term::first-line { color: #5fb3d9; }
+
 .project-card__content {
   display: flex;
   flex-direction: column;
