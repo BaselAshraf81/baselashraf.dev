@@ -18,6 +18,14 @@
       "status": 301,
       "headers": { "Location": "https://baselashraf.com/sensortap/$1" }
     },
+    {
+      "src": "^/.*\\.md$",
+      "headers": {
+        "content-type": "text/plain; charset=utf-8",
+        "cache-control": "public, max-age=0, must-revalidate"
+      },
+      "continue": true
+    },
     { "handle": "filesystem" }
   ]
 }
