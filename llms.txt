@@ -14,6 +14,17 @@ Last updated: 2026-09-16
 
 ## Key Projects & Case Studies
 
+### wordwar
+URL: https://baselashraf.com/wordwar/
+Source: https://github.com/BaselAshraf81/wordwar
+A browser battle simulator: type any two armies ("100 men" vs "1 gorilla", "50 geese with
+knives" vs "a medieval knight") and watch wobbly ragdolls fight it out. Jev, TypeSafe's
+typed-decision model, answers about 90 closed-list questions per phrase (body frame, limbs,
+material, attacks, weaknesses, size, weight, bravery); code turns the answers into jointed
+bodies and a deterministic Rapier 2D simulation decides the winner. The AI never sees the
+opponent, so it cannot pick who wins. Same seed, same fight on every device; share links carry
+the designed armies, so replays never call the AI again.
+
 ### sensortap
 URL: https://baselashraf.com/sensortap/
 Case Study: https://baselashraf.com/work/sensortap.html

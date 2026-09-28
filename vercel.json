@@ -19,7 +19,7 @@
       "headers": { "Location": "https://baselashraf.com/sensortap/$1" }
     },
     {
-      "src": "^/(roadwright|sensortap|sensortap/docs|winduo)$",
+      "src": "^/(roadwright|sensortap|sensortap/docs|winduo|wordwar)$",
       "status": 308,
       "headers": { "Location": "/$1/" }
     },
