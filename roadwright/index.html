@@ -64,7 +64,6 @@
       baselashraf.com, so this path's traffic lands in the same property and
       the same sessions as the rest of the site.
     -->
-
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GM71X3G33E"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -74,8 +73,8 @@
       gtag("js", new Date());
       gtag("config", "G-GM71X3G33E");
     </script>
-    <script type="module" crossorigin src="/roadwright/assets/index-2OUEckWL.js"></script>
-    <link rel="stylesheet" crossorigin href="/roadwright/assets/index-wfWpUwT2.css">
+    <script type="module" crossorigin src="/roadwright/assets/index-B7FgoNmD.js"></script>
+    <link rel="stylesheet" crossorigin href="/roadwright/assets/index-Gyb53hTY.css">
   </head>
   <body>
     <main class="sheet" aria-labelledby="sheet-title">
@@ -83,6 +82,22 @@
         <h1 id="sheet-title">Roadwright</h1>
         <p class="sheet-sub">Draw a wheel. See the road it rolls on.</p>
       </header>
+
+      <!-- Shape choice and Play sit above the figures, in the first viewport. They
+           used to live in the title block below the road, where a visitor had to
+           scroll to find the one control that changes the whole sheet. -->
+      <div class="shape-bar">
+        <span class="tb-label" id="forms-label">Shape</span>
+        <div
+          class="form-list"
+          id="form-list"
+          role="group"
+          aria-labelledby="forms-label"
+        ></div>
+        <button id="stop-btn" class="btn btn-play" type="button" aria-pressed="false">
+          Play roll
+        </button>
+      </div>
 
       <div class="bands">
         <section class="band band-detail" aria-labelledby="detail-heading">
@@ -132,16 +147,6 @@
       </aside>
 
       <div class="title-block">
-        <div class="tb-row tb-forms">
-          <span class="tb-label" id="forms-label">Shape</span>
-          <div
-            class="form-list"
-            id="form-list"
-            role="group"
-            aria-labelledby="forms-label"
-          ></div>
-        </div>
-
         <div class="tb-row">
           <span class="tb-label" id="gauge-label">Catches by</span>
           <div class="gauge" id="gauge" role="img" aria-labelledby="gauge-label">
@@ -204,8 +209,7 @@
         </p>
 
         <div class="tb-row tb-actions">
-          <span class="tb-label">Playback</span>
-          <button id="stop-btn" class="btn" type="button">Pause roll</button>
+          <span class="tb-label">Sound</span>
           <button
             id="sound-btn"
             class="btn"

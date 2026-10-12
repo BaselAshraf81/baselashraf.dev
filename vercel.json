@@ -3,8 +3,7 @@
     {
       "src": "^/(.*)$",
       "has": [{ "type": "host", "value": "roadwright.baselashraf.com" }],
-      "status": 301,
-      "headers": { "Location": "https://baselashraf.com/roadwright/$1" }
+      "dest": "/roadwright/$1"
     },
     {
       "src": "^/(.*)$",
