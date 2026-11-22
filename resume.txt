@@ -1,47 +1,45 @@
 BASEL ASHRAF FIKRY
-hello@baselashraf.com · baselashraf.com · github.com/BaselAshraf81 · linkedin.com/in/basel-askar
+hello@baselashraf.com | baselashraf.com | github.com/BaselAshraf81 | linkedin.com/in/basel-askar
 
-Solo systems and software engineer building production tools with a zero-dependency, client-first philosophy. Work spans in-browser numerical PDE solvers, layout engine internals, MCP developer tools, and scalable web platforms. Multiple projects organically validated by 100K+ users, Hacker News front page (×2), Wikipedia citations, and a citable Zenodo DOI.
+Computer engineer who designs and ships software on his own, mostly tools that run entirely in the browser with no outside libraries. Projects include a finite-element drum simulator, a fast layout engine, and a community platform with 100,000+ page views, built with no marketing budget. His work has reached the Hacker News front page twice, is linked from Wikipedia, and has a citable Zenodo DOI.
 
 FEATURED ENGINEERING & PRODUCTS
 
-Eigendrum | Creator & Solo Engineer · eigendrum.com | Aug 2026 - Present
-• Built a browser physics engine meshing arbitrary outlines and solving 2D Dirichlet Laplacian eigenvalue problems via custom P1 finite elements; synthesizes modal acoustics in ~800 ms in a Web Worker (zero dependencies, no backend).
-• Computationally verified the 1992 resolution to Mark Kac's 1966 open problem ("Can one hear the shape of a drum?"), proving Gordon-Webb-Wolpert isospectral drum frequencies match published spectra to 1.07×10⁻⁷%.
-• Earned 150 GitHub stars, registered DOI (10.5281/zenodo.22019539), and featured on Hacker News (front page ×2), Wikipedia external links, kottke.org, and 52+ publications across 8 languages.
+Eigendrum | Creator | eigendrum.com | Aug 2026 - Present
+- Draw any shape and hear it as a real drum. Eigendrum splits the shape into thousands of small triangles, solves for the drumhead's vibration modes with a finite element solver written from scratch, and plays the result in under a second, entirely in the browser with no libraries and no server.
+- Checked against four shapes with exact known answers. The worst error over the lowest eight frequencies is under 0.25% at 6,000 nodes, and the project has 61 automated tests.
+- Reproduced the 1992 Gordon-Webb-Wolpert answer to Mark Kac's question "Can one hear the shape of a drum?": two different drum shapes whose frequencies agree to within 1.07x10^-7%.
+- Has 178 GitHub stars and a Zenodo DOI (10.5281/zenodo.22019539). It reached the Hacker News front page twice, is linked from Wikipedia, and was covered by kottke.org and 52+ other publications in 8 languages.
 
-Prolific Tea | Creator & Solo Engineer · prolifictea.com | Apr 2026 - Present
-• Built a community-funded researcher review and pay transparency platform serving 100,000+ page views and 1,582 indexed researchers with zero ads, investors, or accounts required (Next.js, PostgreSQL, PWA).
-• Developed a companion Chrome extension intercepting study network traffic to match and display researcher fairness and rejection ratings inline before participants accept tasks.
+Prolific Tea | Creator | prolifictea.com | Apr 2026 - Present
+- A community-funded site where study participants review researchers: 2,000+ researchers listed, 100,000+ page views, and hundreds of regular users. It grew with no ads, no investors, no marketing budget, and no account needed to browse.
+- Designed and run the full stack alone: Next.js, PostgreSQL with a 34-table schema, and a progressive web app (PWA).
+- A Chrome extension reads the study data the platform already loads and shows each researcher's fairness and rejection ratings next to the study, before the participant accepts it.
 
-holystitch (23 ★) | Creator · github.com/BaselAshraf81/holystitch | TypeScript · MCP Server
-• Built a Model Context Protocol (MCP) server that compiles Google Stitch designs directly into production React and Next.js component trees via native API calls without consuming LLM inference tokens.
+holystitch | Creator | github.com/BaselAshraf81/holystitch (24 stars) | TypeScript
+- Turns Google Stitch designs into React and Next.js components through Stitch's own API, without using an AI model to write the code. It runs as a Model Context Protocol (MCP) server, so AI coding tools can call it.
 
-layout-sans (67 ★) | Creator · npmjs.com/package/layout-sans | TypeScript · npm package
-• Engineered a 2D flex/grid layout engine in ~17 kB gzipped (0 dependencies, no DOM/WASM) executing 2-3× faster than Meta's Yoga with an 18× smaller bundle. Implemented interactive canvas text selection, clipboard copy, Ctrl+F, and accessibility tree on pretext.
+layout-sans | Creator | github.com/BaselAshraf81/layout-sans (68 stars) | TypeScript | npm package
+- A flexbox and grid layout engine in about 17 kB with no dependencies, no browser, and no WebAssembly. It runs 2 to 3 times faster than Meta's Yoga and is 18 times smaller.
+- Adds text selection, copy, Ctrl+F search, and screen-reader support to text drawn on a canvas.
 
 SELECTED SYSTEMS, SECURITY & DATA
 
-• Legal Document RAG (Python · LlamaIndex · FAISS): Built hybrid vector/keyword search over 25,303 legal documents, serving 230+ concurrent users on a single T4 GPU via a custom asynchronous request queue with zero out-of-memory errors.
-• fastemporal (Rust · docs.rs/fastemporal): Reimplemented Luxon and TC39 Temporal datetime APIs in pure Rust with embedded IANA timezone data and zero heap allocations in hot paths (benchmarked 7-216× faster than JS Luxon), passing 332 ported conformance tests.
-• Photophane (TypeScript · WebGL): Computed 3D-printable continuous optical relief plates (10.97 mm depth) projecting photographs onto walls via refracted caustic light rays (72 upvotes on r/photogrammetry).
-• M-Pesa Bug Bounty & OSS (HackerOne): Discovered Stored XSS in M-Pesa's PDF generator via font descriptor injection (accepted on HackerOne); upgraded Electron+Next.js framework to Next 16 / React 19 across 33 files, shipped as nextron@9.6.0.
-• Passion of Rugs (Python ETL · Part-time): Automated ETL restructuring 120,000+ records from 1,200+ spreadsheets into a normalized CRM schema with OpenAI API schema mapping, reducing API costs by 13% via deduplication.
+- Legal Document Search (Python, LlamaIndex, FAISS): searches 25,303 legal documents by meaning and by keyword. A custom request queue lets 230+ people search at once on one T4 GPU without running out of memory.
+- fastemporal (Rust, docs.rs/fastemporal): Luxon and JavaScript's Temporal date API rewritten in Rust. It runs 7 to 216 times faster in benchmarks and passes 332 tests ported from the originals.
+- Photophane (TypeScript, WebGL): designs clear 3D-printable plates, up to 10.97 mm deep, that bend light into a photograph on the wall when a lamp shines through them. The project got 72 upvotes on r/photogrammetry.
+- M-Pesa Bug Bounty (HackerOne): found and reported a stored cross-site scripting (XSS) bug in M-Pesa's PDF receipt generator, injected through a font field. Accepted on HackerOne.
+- Passion of Rugs Data Pipeline (Python, part-time): an unattended pipeline that moved 120,000+ records from 1,200+ messy spreadsheets into one clean CRM, using the OpenAI API to match columns. Skipping duplicates and caching results cut API costs by 13%.
 
 SKILLS
 
 Languages: TypeScript, JavaScript, Rust, Python, Java, SQL
-Frontend & Web: Next.js, React, Node.js, Web Audio API, Web Workers, Chrome Extension API, Canvas API, Tailwind CSS
-Systems & AI: Finite Element Method (FEM), Model Context Protocol (MCP), LlamaIndex, FAISS, PostgreSQL, Supabase, Docker, Linux, Git
-Security & Testing: Burp Suite, Web Security Research, Conformance Testing (TC39 / Luxon)
+Web: Next.js, React, Node.js, Web Audio, Web Workers, Canvas, Chrome extensions, Tailwind CSS
+Systems and AI: Finite element method, Model Context Protocol (MCP), LlamaIndex, FAISS, PostgreSQL, Supabase, Docker, Linux, Git
+Security and testing: Burp Suite, web security research, conformance testing
 
 EDUCATION
 
-BSc in Computer Engineering and Software Systems (Dual Degree) | Feb 2021 - Expected Nov 2026
-University of East London & Ain Shams University
-
-Università di Pisa :  Graduate Summer School | Sep 2025
-Human-Centric ICT for Industry 5.0, Pisa, Italy (Scholarship) | Grade: 29/30
-
-Hanyang University :  Foreign Exchange in Computer Science | Sep 2024 - Jan 2025
-Seoul, South Korea | GPA: 4.0/4.5
+BSc in Computer Engineering and Software Systems (dual degree), University of East London and Ain Shams University, Feb 2021 - Expected Nov 2026
+Graduate Summer School, Università di Pisa, Human-Centric ICT for Industry 5.0, Pisa, Italy. Scholarship, graded 29/30. Sep 2025
+Exchange Semester, Hanyang University, Seoul, South Korea. GPA 4.0/4.5. Sep 2024 - Jan 2025
