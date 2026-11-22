@@ -170,62 +170,65 @@
 </div>
 
 <p class="summary">
-Solo systems and software engineer building production tools with a zero-dependency, client-first philosophy. Work spans in-browser numerical PDE solvers, layout engine internals, MCP developer tools, and scalable web platforms. Multiple projects organically validated by 100K+ users, Hacker News front page (&times;2), Wikipedia citations, and a citable Zenodo DOI.
+Computer engineer who designs and ships software on his own, mostly tools that run entirely in the browser with no outside libraries. Projects include a finite-element drum simulator, a fast layout engine, and a community platform with 100,000+ page views, built with no marketing budget. His work has reached the Hacker News front page twice, is linked from Wikipedia, and has a citable Zenodo DOI.
 </p>
 
 <div class="section-h">Featured Engineering &amp; Products</div>
 
 <div class="entry">
   <div class="entry-head">
-    <div><span class="entry-title">Eigendrum</span> <span class="entry-sub">&middot; Creator &amp; Solo Engineer &middot; <a href="https://eigendrum.com">eigendrum.com</a></span></div>
-    <div class="entry-date">Aug 2026  to  Present</div>
+    <div><span class="entry-title">Eigendrum</span> <span class="entry-sub">&middot; Creator &middot; <a href="https://eigendrum.com">eigendrum.com</a></span></div>
+    <div class="entry-date">Aug 2026 - Present</div>
   </div>
   <ul>
-    <li>Built a browser physics engine meshing arbitrary outlines and solving 2D Dirichlet Laplacian eigenvalue problems via custom P1 finite elements; synthesizes modal acoustics in ~800 ms in a Web Worker (zero dependencies, no backend).</li>
-    <li>Computationally verified the 1992 resolution to Mark Kac's 1966 open problem (<em>"Can one hear the shape of a drum?"</em>), confirming Gordon to Webb to Wolpert isospectral drum frequencies match published spectra to <strong>1.07&times;10<sup>-7</sup>%</strong>.</li>
-    <li>Earned <strong>150 GitHub stars</strong>, registered DOI (<a href="https://doi.org/10.5281/zenodo.22019539">10.5281/zenodo.22019539</a>), and was featured on Hacker News (front page &times;2), Wikipedia's external links, kottke.org, and 52+ publications across 8 languages.</li>
+    <li>Draw any shape and hear it as a real drum. Eigendrum splits the shape into thousands of small triangles, solves for the drumhead's vibration modes with a finite element solver written from scratch, and plays the result in under a second, entirely in the browser with no libraries and no server.</li>
+    <li>Checked against four shapes with exact known answers. The worst error over the lowest eight frequencies is under <strong>0.25%</strong> at 6,000 nodes, and the project has <strong>61 automated tests</strong>.</li>
+    <li>Reproduced the 1992 Gordon-Webb-Wolpert answer to Mark Kac's question <em>"Can one hear the shape of a drum?"</em>: two different drum shapes whose frequencies agree to within <strong>1.07&times;10<sup>-7</sup>%</strong>.</li>
+    <li>Has <strong>178 GitHub stars</strong> and a Zenodo DOI (<a href="https://doi.org/10.5281/zenodo.22019539">10.5281/zenodo.22019539</a>). It reached the Hacker News front page twice, is linked from Wikipedia, and was covered by kottke.org and 52+ other publications in 8 languages.</li>
   </ul>
 </div>
 
 <div class="entry">
   <div class="entry-head">
-    <div><span class="entry-title">Prolific Tea</span> <span class="entry-sub">&middot; Creator &amp; Solo Engineer &middot; <a href="https://prolifictea.com">prolifictea.com</a></span></div>
-    <div class="entry-date">Apr 2026  to  Present</div>
+    <div><span class="entry-title">Prolific Tea</span> <span class="entry-sub">&middot; Creator &middot; <a href="https://prolifictea.com">prolifictea.com</a></span></div>
+    <div class="entry-date">Apr 2026 - Present</div>
   </div>
   <ul>
-    <li>Built a community-funded researcher review and pay-transparency platform serving <strong>100,000+ page views</strong> and 1,582 indexed researchers, with zero ads, investors, or required accounts (Next.js, PostgreSQL, PWA).</li>
-    <li>Developed a companion Chrome extension that intercepts study network traffic to match and surface researcher fairness and rejection ratings inline, before participants accept a task.</li>
+    <li>A community-funded site where study participants review researchers: <strong>2,000+ researchers</strong> listed, <strong>100,000+ page views</strong>, and hundreds of regular users. It grew with no ads, no investors, no marketing budget, and no account needed to browse.</li>
+    <li>Designed and run the full stack alone: Next.js, PostgreSQL with a <strong>34-table</strong> schema, and a progressive web app (PWA).</li>
+    <li>A Chrome extension reads the study data the platform already loads and shows each researcher's fairness and rejection ratings next to the study, before the participant accepts it.</li>
   </ul>
 </div>
 
 <div class="entry">
   <div class="entry-head">
-    <div><span class="entry-title">holystitch</span> <span class="entry-sub">&middot; Creator &middot; <a href="https://github.com/BaselAshraf81/holystitch">github.com/BaselAshraf81/holystitch</a> (23&nbsp;&bigstar;) &middot; TypeScript &middot; MCP Server</span></div>
+    <div><span class="entry-title">holystitch</span> <span class="entry-sub">&middot; Creator &middot; <a href="https://github.com/BaselAshraf81/holystitch">github.com/BaselAshraf81/holystitch</a> (24&nbsp;&bigstar;) &middot; TypeScript</span></div>
     <div class="entry-date"></div>
   </div>
   <ul>
-    <li>Built a Model Context Protocol (MCP) server that compiles Google Stitch designs directly into production React and Next.js component trees via native API calls, with zero LLM inference tokens spent.</li>
+    <li>Turns Google Stitch designs into React and Next.js components through Stitch's own API, without using an AI model to write the code. It runs as a Model Context Protocol (MCP) server, so AI coding tools can call it.</li>
   </ul>
 </div>
 
 <div class="entry">
   <div class="entry-head">
-    <div><span class="entry-title">layout-sans</span> <span class="entry-sub">&middot; Creator &middot; <a href="https://github.com/BaselAshraf81/layout-sans">github.com/BaselAshraf81/layout-sans</a> (67&nbsp;&bigstar;) &middot; TypeScript &middot; <a href="https://www.npmjs.com/package/layout-sans">npm package</a></span></div>
+    <div><span class="entry-title">layout-sans</span> <span class="entry-sub">&middot; Creator &middot; <a href="https://github.com/BaselAshraf81/layout-sans">github.com/BaselAshraf81/layout-sans</a> (68&nbsp;&bigstar;) &middot; TypeScript &middot; <a href="https://www.npmjs.com/package/layout-sans">npm package</a></span></div>
     <div class="entry-date"></div>
   </div>
   <ul>
-    <li>Engineered a 2D flex/grid layout engine in ~17 kB gzipped (zero dependencies, no DOM/WASM), running <strong>2 to 3&times; faster</strong> than Meta's Yoga with an 18&times; smaller bundle. Added interactive canvas text: selection, clipboard copy, Ctrl+F search, and a screen-reader accessibility tree.</li>
+    <li>A flexbox and grid layout engine in about 17 kB with no dependencies, no browser, and no WebAssembly. It runs <strong>2 to 3&times; faster</strong> than Meta's Yoga and is <strong>18&times; smaller</strong>.</li>
+    <li>Adds text selection, copy, Ctrl+F search, and screen-reader support to text drawn on a canvas.</li>
   </ul>
 </div>
 
 <div class="section-h">Selected Systems, Security &amp; Data</div>
 
 <ul>
-  <li><strong>Legal Document RAG</strong> <span class="tag">(Python &middot; LlamaIndex &middot; FAISS)</span> :  Built hybrid vector/keyword search over <strong>25,303 legal documents</strong>, serving <strong>230+ concurrent users</strong> on a single T4 GPU via a custom asynchronous request queue with zero out-of-memory failures.</li>
-  <li><strong>fastemporal</strong> <span class="tag">(Rust &middot; <a href="https://docs.rs/fastemporal">docs.rs</a>)</span> :  Reimplemented Luxon and TC39 Temporal in pure Rust, benchmarked <strong>7 to 216&times; faster</strong> and validated against <strong>332 ported conformance tests</strong>.</li>
-  <li><strong>Photophane</strong> <span class="tag">(TypeScript &middot; WebGL)</span> :  Computed 3D-printable optical relief plates (10.97 mm depth) projecting photographs onto a wall via refracted caustic light (<strong>72 upvotes</strong> on r/photogrammetry).</li>
-  <li><strong>M-Pesa Bug Bounty</strong> <span class="tag">(HackerOne)</span> :  Found and reported a stored XSS in M-Pesa's PDF receipt generator via font descriptor injection; accepted through HackerOne.</li>
-  <li><strong>Passion of Rugs ETL</strong> <span class="tag">(Python, part-time)</span> :  Unattended pipeline restructuring <strong>120,000+ records</strong> from 1,200+ inconsistent spreadsheets into a normalized CRM schema, using the OpenAI API for field mapping; cut API costs 13% via deduplication and caching.</li>
+  <li><strong>Legal Document Search</strong> <span class="tag">(Python &middot; LlamaIndex &middot; FAISS)</span>: searches <strong>25,303 legal documents</strong> by meaning and by keyword. A custom request queue lets <strong>230+ people</strong> search at once on one T4 GPU without running out of memory.</li>
+  <li><strong>fastemporal</strong> <span class="tag">(Rust &middot; <a href="https://docs.rs/fastemporal">docs.rs</a>)</span>: Luxon and JavaScript's Temporal date API rewritten in Rust. It runs <strong>7 to 216&times; faster</strong> in benchmarks and passes <strong>332 tests</strong> ported from the originals.</li>
+  <li><strong>Photophane</strong> <span class="tag">(TypeScript &middot; WebGL)</span>: designs clear 3D-printable plates, up to <strong>10.97 mm</strong> deep, that bend light into a photograph on the wall when a lamp shines through them. The project got <strong>72 upvotes</strong> on r/photogrammetry.</li>
+  <li><strong>M-Pesa Bug Bounty</strong> <span class="tag">(HackerOne)</span>: found and reported a stored cross-site scripting (XSS) bug in M-Pesa's PDF receipt generator, injected through a font field. Accepted on HackerOne.</li>
+  <li><strong>Passion of Rugs Data Pipeline</strong> <span class="tag">(Python, part-time)</span>: an unattended pipeline that moved <strong>120,000+ records</strong> from <strong>1,200+</strong> messy spreadsheets into one clean CRM, using the OpenAI API to match columns. Skipping duplicates and caching results cut API costs by <strong>13%</strong>.</li>
 </ul>
 
 <div class="section-h">Skills</div>
@@ -236,16 +239,16 @@ Solo systems and software engineer building production tools with a zero-depende
     <td class="skills-val">TypeScript, JavaScript, Rust, Python, Java, SQL</td>
   </tr>
   <tr>
-    <td class="skills-cat">Frontend &amp; Web</td>
-    <td class="skills-val">Next.js, React, Node.js, Web Audio API, Web Workers, Chrome Extension API, Canvas API, Tailwind CSS</td>
+    <td class="skills-cat">Web</td>
+    <td class="skills-val">Next.js, React, Node.js, Web Audio, Web Workers, Canvas, Chrome extensions, Tailwind CSS</td>
   </tr>
   <tr>
-    <td class="skills-cat">Systems &amp; AI</td>
-    <td class="skills-val">Finite Element Method (FEM), Model Context Protocol (MCP), LlamaIndex, FAISS, PostgreSQL, Supabase, Docker, Linux, Git</td>
+    <td class="skills-cat">Systems and AI</td>
+    <td class="skills-val">Finite element method, Model Context Protocol (MCP), LlamaIndex, FAISS, PostgreSQL, Supabase, Docker, Linux, Git</td>
   </tr>
   <tr>
-    <td class="skills-cat">Security &amp; Testing</td>
-    <td class="skills-val">Burp Suite, web security research, conformance testing (TC39 / Luxon)</td>
+    <td class="skills-cat">Security and testing</td>
+    <td class="skills-val">Burp Suite, web security research, conformance testing</td>
   </tr>
 </table>
 
@@ -253,22 +256,22 @@ Solo systems and software engineer building production tools with a zero-depende
 
 <div class="entry">
   <div class="entry-head">
-    <div><span class="entry-title">BSc in Computer Engineering and Software Systems</span> <span class="entry-sub"><em>(Dual Degree)</em> &middot; University of East London &amp; Ain Shams University</span></div>
-    <div class="entry-date">Feb 2021  to  Expected Nov 2026</div>
+    <div><span class="entry-title">BSc in Computer Engineering and Software Systems</span> <span class="entry-sub"><em>(dual degree)</em> &middot; University of East London and Ain Shams University</span></div>
+    <div class="entry-date">Feb 2021 - Expected Nov 2026</div>
   </div>
 </div>
 
 <div class="entry">
   <div class="entry-head">
-    <div><span class="entry-title">Graduate Summer School :  Universit&agrave; di Pisa</span> <span class="entry-sub">Human-Centric ICT for Industry 5.0, Pisa, Italy :  scholarship, graded 29/30</span></div>
+    <div><span class="entry-title">Graduate Summer School, Universit&agrave; di Pisa</span> <span class="entry-sub">Human-Centric ICT for Industry 5.0, Pisa, Italy. Scholarship, graded 29/30.</span></div>
     <div class="entry-date">Sep 2025</div>
   </div>
 </div>
 
 <div class="entry">
   <div class="entry-head">
-    <div><span class="entry-title">Foreign Exchange, Hanyang University</span> <span class="entry-sub">Seoul, South Korea :  GPA 4.0/4.5</span></div>
-    <div class="entry-date">Sep 2024  to  Jan 2025</div>
+    <div><span class="entry-title">Exchange Semester, Hanyang University</span> <span class="entry-sub">Seoul, South Korea. GPA 4.0/4.5.</span></div>
+    <div class="entry-date">Sep 2024 - Jan 2025</div>
   </div>
 </div>
 
