@@ -95,7 +95,7 @@ Note: npm downloads are ~900 for the trailing year. Deliberately not published o
 because the figure is weak and would undercut the star count and the benchmark.
 
 ProlificTea (prolifictea.com, live, HTTP 200): the site itself reports 100,000+ page views and
-1,582 researchers indexed. Chrome extension, PWA push, threaded comments, image uploads, admin
+2,000+ researchers indexed. Chrome extension, PWA push, threaded comments, image uploads, admin
 moderation.
 
 Nextron PR #531, verified via GitHub API: state MERGED, merged 2026-03-23, 33 files changed,
@@ -123,7 +123,7 @@ docs.rs/fastemporal, baselashraf81.github.io/photophane/, baselashraf81.github.i
 baselashraf81.github.io/layout-sans/demo/interactive-text.html.
 
 Education: BSc Computer Engineering and Software Systems, dual degree, University of East
-London and Ain Shams University, Feb 2021 to expected Nov 2026. Università di Pisa graduate
+London and Ain Shams University, Feb 2021 to Jul 2026. Università di Pisa graduate
 summer school, Sep 2025, scholarship, 29/30. Hanyang University exchange, Seoul,
 Sep 2024 to Jan 2025, GPA 4.0/4.5.
 

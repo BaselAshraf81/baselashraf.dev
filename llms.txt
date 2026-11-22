@@ -159,7 +159,7 @@ A review platform for Prolific research participants to rate researchers on fair
 rejection behaviour. Built alone with Next.js, a Chrome extension, PWA push notifications,
 image uploads, threaded comments, and moderation tooling.
 - 100,000+ page views
-- 1,582 researchers indexed
+- 2,000+ researchers indexed
 - 5 languages
 
 ---
@@ -191,7 +191,7 @@ simulation on the baselashraf.com homepage.
 ## Background
 
 - BSc Computer Engineering and Software Systems - University of East London &
-  Ain Shams University (dual degree, expected Nov 2026)
+  Ain Shams University (dual degree, Jul 2026)
 - Exchange year - Hanyang University, Seoul, GPA 4.0 / 4.5
 - Graduate summer school - Università di Pisa, Human-Centric ICT for Industry 5.0,
   graded 29/30 on scholarship
