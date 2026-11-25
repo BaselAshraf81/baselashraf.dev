@@ -293,6 +293,22 @@ code {
   line-height: 0.82;
   margin-bottom: 0.34em;
 }
+.wordmark__sub {
+  display: block;
+  font-size: clamp(1.15rem, 0.9rem + 1.4vw, 1.9rem);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.2;
+  margin-top: 0.55em;
+}
+.wordmark__colon {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
 
 /* The sightline: the seat the painted illusion is built for. */
 .wordmark::after {

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GM71X3G33E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-GM71X3G33E');
+  </script>
+  <title>Basel Ashraf: Resume</title>
+  <meta name="description" content="Resume of Basel Ashraf: Eigendrum, Prolific Tea, holystitch and layout-sans, plus systems, security and data work, skills and education.">
+  <link rel="canonical" href="https://baselashraf.com/resume/">
+  <meta name="theme-color" content="#f9f8f5">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Basel Ashraf: Resume">
+  <meta property="og:description" content="Resume of Basel Ashraf: Eigendrum, Prolific Tea, holystitch and layout-sans, plus systems, security and data work, skills and education.">
+  <meta property="og:url" content="https://baselashraf.com/resume/">
+  <meta property="og:image" content="https://baselashraf.com/media/og-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@BaselAshraf81">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>  <header class="site-header">
+    <div class="shell header__inner">
+      <a class="header__brand" href="/">Basel Ashraf</a>
+
+      <nav class="header__nav" aria-label="Main Navigation">
+        <a class="nav__link" href="/#work">Work</a>
+        <a class="nav__link" href="/#systems">Systems</a>
+        <a class="nav__link" href="/#about">Background</a>
+        <a class="nav__link" href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="nav__link nav__link--cta" href="mailto:hello@baselashraf.com">Get in touch</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <span id="theme-text">Dark</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+  <main class="case-study">
+    <div class="shell">
+      <a class="case-study__back" href="/">
+        &larr; Back to home
+      </a>
+
+      <header class="case-study__header">
+        <h1 class="case-study__title">Basel Ashraf Fikry</h1>
+        <p><a href="mailto:hello@baselashraf.com">hello@baselashraf.com</a> &middot; <a href="/">baselashraf.com</a> &middot; <a href="https://github.com/BaselAshraf81">github.com/BaselAshraf81</a> &middot; <a href="https://www.linkedin.com/in/basel-askar/">linkedin.com/in/basel-askar</a></p>
+        <p><a href="/resume.pdf">Download the PDF version</a></p>
+      </header>
+
+      <article class="case-study__main">
+        <section>
+          <p>Computer engineer who designs and ships software on his own, mostly tools that run entirely in the browser with no outside libraries. Projects include a finite-element drum simulator, a fast layout engine, and a community platform with 100,000+ page views, built with no marketing budget. His work has reached the Hacker News front page twice, is linked from Wikipedia, and has a citable Zenodo DOI.</p>
+        </section>
+
+        <section>
+          <h2 class="h2">Featured engineering &amp; products</h2>
+
+          <h3 class="h3">Eigendrum</h3>
+          <p>Creator &middot; <a href="https://eigendrum.com/">eigendrum.com</a> &middot; Aug 2026 - Present</p>
+          <ul>
+            <li>Draw any shape and hear it as a real drum. Eigendrum splits the shape into thousands of small triangles, solves for the drumhead's vibration modes with a finite element solver written from scratch, and plays the result in under a second, entirely in the browser with no libraries and no server.</li>
+            <li>Checked against four shapes with exact known answers. The worst error over the lowest eight frequencies is under 0.25% at 6,000 nodes, and the project has 61 automated tests.</li>
+            <li>Reproduced the 1992 Gordon-Webb-Wolpert answer to Mark Kac's question "Can one hear the shape of a drum?": two different drum shapes whose frequencies agree to within 1.07&times;10<sup>-7</sup>%.</li>
+            <li>Has 178 GitHub stars and a Zenodo DOI (<a href="https://doi.org/10.5281/zenodo.22019539">10.5281/zenodo.22019539</a>). It reached the Hacker News front page twice, is linked from Wikipedia, and was covered by kottke.org and 52+ other publications in 8 languages.</li>
+          </ul>
+
+          <h3 class="h3">Prolific Tea</h3>
+          <p>Creator &middot; <a href="https://prolifictea.com/">prolifictea.com</a> &middot; Apr 2026 - Present</p>
+          <ul>
+            <li>A community-funded site where study participants review researchers: 2,000+ researchers listed, 100,000+ page views, and hundreds of regular users. It grew with no ads, no investors, no marketing budget, and no account needed to browse.</li>
+            <li>Designed and run the full stack alone: Next.js, PostgreSQL with a 34-table schema, and a progressive web app (PWA).</li>
+            <li>A Chrome extension reads the study data the platform already loads and shows each researcher's fairness and rejection ratings next to the study, before the participant accepts it.</li>
+          </ul>
+
+          <h3 class="h3">holystitch</h3>
+          <p>Creator &middot; <a href="https://github.com/BaselAshraf81/holystitch">github.com/BaselAshraf81/holystitch</a> (24 stars) &middot; TypeScript</p>
+          <ul>
+            <li>Turns Google Stitch designs into React and Next.js components through Stitch's own API, without using an AI model to write the code. It runs as a Model Context Protocol (MCP) server, so AI coding tools can call it.</li>
+          </ul>
+
+          <h3 class="h3">layout-sans</h3>
+          <p>Creator &middot; <a href="https://github.com/BaselAshraf81/layout-sans">github.com/BaselAshraf81/layout-sans</a> (68 stars) &middot; TypeScript &middot; npm package</p>
+          <ul>
+            <li>A flexbox and grid layout engine in about 17 kB with no dependencies, no browser, and no WebAssembly. It runs 2 to 3 times faster than Meta's Yoga and is 18 times smaller.</li>
+            <li>Adds text selection, copy, Ctrl+F search, and screen-reader support to text drawn on a canvas.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="h2">Selected systems, security &amp; data</h2>
+          <ul>
+            <li><strong>Legal Document Search</strong> (Python, LlamaIndex, FAISS): searches 25,303 legal documents by meaning and by keyword. A custom request queue lets 230+ people search at once on one T4 GPU without running out of memory.</li>
+            <li><strong>fastemporal</strong> (Rust, docs.rs/fastemporal): Luxon and JavaScript's Temporal date API rewritten in Rust. It runs 7 to 216 times faster in benchmarks and passes 332 tests ported from the originals.</li>
+            <li><strong>Photophane</strong> (TypeScript, WebGL): designs clear 3D-printable plates, up to 10.97 mm deep, that bend light into a photograph on the wall when a lamp shines through them. The project got 72 upvotes on r/photogrammetry.</li>
+            <li><strong>M-Pesa Bug Bounty</strong> (HackerOne): found and reported a stored cross-site scripting (XSS) bug in M-Pesa's PDF receipt generator, injected through a font field. Accepted on HackerOne.</li>
+            <li><strong>Passion of Rugs Data Pipeline</strong> (Python, part-time): an unattended pipeline that moved 120,000+ records from 1,200+ messy spreadsheets into one clean CRM, using the OpenAI API to match columns. Skipping duplicates and caching results cut API costs by 13%.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="h2">Skills</h2>
+          <ul>
+            <li><strong>Languages:</strong> TypeScript, JavaScript, Rust, Python, Java, SQL</li>
+            <li><strong>Web:</strong> Next.js, React, Node.js, Web Audio, Web Workers, Canvas, Chrome extensions, Tailwind CSS</li>
+            <li><strong>Systems and AI:</strong> Finite element method, Model Context Protocol (MCP), LlamaIndex, FAISS, PostgreSQL, Supabase, Docker, Linux, Git</li>
+            <li><strong>Security and testing:</strong> Burp Suite, web security research, conformance testing</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="h2">Education</h2>
+          <ul>
+            <li>BSc in Computer Engineering and Software Systems (dual degree), University of East London and Ain Shams University, Feb 2021 - Jul 2026</li>
+            <li>Graduate Summer School, Universit&agrave; di Pisa, Human-Centric ICT for Industry 5.0, Pisa, Italy. Scholarship, graded 29/30. Sep 2025</li>
+            <li>Exchange Semester, Hanyang University, Seoul, South Korea. GPA 4.0/4.5. Sep 2024 - Jan 2025</li>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="shell" style="text-align: center;">
+      <p style="color: var(--ink-muted); font-size: 0.8125rem;">
+        &copy; 2026 Basel Ashraf &middot; <a href="/#work">Work</a> &middot; <a href="mailto:hello@baselashraf.com">hello@baselashraf.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const themeText = document.getElementById('theme-text');
+    
+    function updateThemeUI(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      if (themeText) {
+        themeText.textContent = theme === 'dark' ? 'Light' : 'Dark';
+      }
+    }
+
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    updateThemeUI(currentTheme);
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        const nextTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        updateThemeUI(nextTheme);
+      });
+    }
+  </script>
+</body>
+
+</html>
