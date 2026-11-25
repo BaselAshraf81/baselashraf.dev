@@ -67,6 +67,16 @@
       "@type": "Question",
       "name": "Which versions of Windows does WinDuo support?",
       "acceptedAnswer": { "@type": "Answer", "text": "Windows 10 version 2004 or later, and Windows 11. Keeping the overlay out of its own screen capture needs an API introduced in that build, and there is no workaround on older versions." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is WinDuo safe to install?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The full source code is public on GitHub, so you can read it before running it, or install it from source with pip instead of using the executable. WinDuo needs your webcam to measure the lid angle. Each camera frame is compared with the previous one and then discarded, and nothing is recorded or leaves your machine. It is free for noncommercial use under the PolyForm Noncommercial License." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I download WinDuo?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Use the Download button on this page to get WinDuo.exe, a single file with nothing else to install and no Python needed. It is hosted on the project GitHub releases page. If you already have Python, you can instead run pip install git+https://github.com/BaselAshraf81/winduo and then python -m winduo. It is free to download." }
     }
   ]
 }
@@ -213,7 +223,7 @@
 
   <div class="flat__inner">
     <div class="flat__say">
-      <h1 class="wordmark">WinDuo</h1>
+      <h1 class="wordmark">WinDuo<span class="wordmark__sub"><span class="wordmark__colon">: </span>iPhone Duo fold effect for Windows</span></h1>
       <p class="lede">
         Close your laptop and the screen leans away, blurring and dimming, the way
         an <strong>iPhone&nbsp;Duo</strong> does as it folds shut.
@@ -632,6 +642,33 @@
 
   <hr class="snap" aria-hidden="true">
 
+<hr class="snap" aria-hidden="true">
+
+  <section class="bay bay--limits" id="faq">
+    <div class="bay__measure">
+      <h2>Questions</h2>
+    </div>
+
+    <dl class="limits">
+      <dt>Does WinDuo need a lid angle sensor?</dt>
+      <dd>No. Almost no laptop outside recent MacBooks has one. WinDuo recovers the lid angle from the webcam instead: the camera is mounted in the lid, so closing the lid slides the whole camera image vertically by a predictable amount, roughly fifteen pixels per degree.</dd>
+
+      <dt>Is WinDuo recording me?</dt>
+      <dd>No. Each camera frame is compared with the frame before it and then discarded. Nothing is written to disk and nothing leaves the machine. The camera indicator light stays lit while WinDuo runs, because the app has to be watching before the lid starts moving.</dd>
+
+      <dt>What is the iPhone Duo fold effect?</dt>
+      <dd>On Apple's iPhone Duo, the interface blurs and stretches under perspective as the phone folds between its two displays, so the change in shape feels continuous rather than abrupt. Mac Duo brought the same effect to MacBooks using the lid angle sensor. WinDuo brings it to Windows laptops without one.</dd>
+
+      <dt>Which versions of Windows does WinDuo support?</dt>
+      <dd>Windows 10 version 2004 or later, and Windows 11. Keeping the overlay out of its own screen capture needs an API introduced in that build, and there is no workaround on older versions.</dd>
+
+      <dt>Is WinDuo safe to install?</dt>
+      <dd>The full source code is public on <a href="https://github.com/BaselAshraf81/winduo">GitHub</a>, so you can read it before running it, or install it from source with pip instead of using the executable. WinDuo needs your webcam to measure the lid angle. Each camera frame is compared with the previous one and then discarded, and nothing is recorded or leaves your machine. It is free for noncommercial use under the PolyForm Noncommercial License.</dd>
+
+      <dt>How do I download WinDuo?</dt>
+      <dd>Use the <a href="download.html">Download</a> button on this page to get <code>WinDuo.exe</code>, a single file with nothing else to install and no Python needed. It is hosted on the project's GitHub releases page. If you already have Python, you can instead run <code>pip install git+https://github.com/BaselAshraf81/winduo</code> and then <code>python -m winduo</code>. It is free to download.</dd>
+    </dl>
+  </section>
   <!-- Close: anchored by the action, not a summary. -->
   <section class="bay bay--close" id="install">
     <div class="bay__wide">

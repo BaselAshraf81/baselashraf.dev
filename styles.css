@@ -1511,3 +1511,7 @@ kbd {
   .hero__caustic, .site-header { display: none; }
   a { color: #000; }
 }
+
+.case-study__live {
+  margin-bottom: var(--s4);
+}
